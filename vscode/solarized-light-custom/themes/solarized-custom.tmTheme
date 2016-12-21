@@ -177,7 +177,7 @@ text.mt meta.tag.inline.any string.quoted.double</string>
                 meta.punctuation.js,
                 meta.punctuation.java,
                 meta.punctuation.json,
-                meta.punctuation.typescript</string>
+                meta.punctuation.ts</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -505,6 +505,21 @@ block.support.function.variable.property</string>
 			<dict>
 				<key>foreground</key>
 				<string>#268BD2</string>
+			</dict>
+		</dict>
+          <dict>
+			<key>name</key>
+			<string>TS: Decorator</string>
+			<key>scope</key>
+			<string>
+                meta.ts.decorator.entity.name
+            </string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#B58900</string>
+                <key>fontStyle</key>
+                <string>bold</string>
 			</dict>
 		</dict>
          <dict>
