@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/bbrakenhoff/solarized-light-custom"
+        "url": "https://github.com/bbrakenhoff/solarized-light-custom/tree/master/vscode/solarized-light-custom"
     },
     "categories": [
         "Themes"

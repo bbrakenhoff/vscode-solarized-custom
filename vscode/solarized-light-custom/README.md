@@ -1,13 +1,8 @@
-# README
-## This is the README for your extension "solarized-light-custom"
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+# Solarized Light (Custom)
+Custom solarized theme for [Visual Studio Code](https://code.visualstudio.com),
+optimized for JavaScript, Typescript, CSS and HTML and lightly supports Java and JSON.
 
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+### Screenshot
+![Screenshot]("https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/vscode/solarized-light-custom/screenshot.png")
 
 **Enjoy!**
