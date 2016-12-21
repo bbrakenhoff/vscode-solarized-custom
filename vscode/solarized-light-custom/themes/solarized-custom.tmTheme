@@ -173,7 +173,11 @@ text.mt meta.tag.inline.any string.quoted.double</string>
 			<key>name</key>
 			<string>Punctuation</string>
 			<key>scope</key>
-			<string> meta.punctuation.js, meta.punctuation.java, meta.punctuation.typescript</string>
+			<string>
+                meta.punctuation.js,
+                meta.punctuation.java,
+                meta.punctuation.json,
+                meta.punctuation.typescript</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -196,6 +200,7 @@ text.mt meta.tag.inline.any string.quoted.double</string>
                 keyword.control,
                 constant.boolean,
                 constant.null,
+                constant.value,
                 keyword.operator.import,
                 keyword.control.java
                 support.constant,
@@ -513,6 +518,17 @@ block.support.function.variable.property</string>
                 <string>#657B83</string>
                 <key>fontStyle</key>
                 <string>bold</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>JSON: Property name</string>
+            <key>scope</key>
+            <string>json.property-name</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#B58900</string>
             </dict>
         </dict>
 	</array>
