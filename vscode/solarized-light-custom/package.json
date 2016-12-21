@@ -1,0 +1,22 @@
+{
+    "name": "solarized-light-custom",
+    "displayName": "Solarized Light (Custom)",
+    "description": "Custom Solarized Light theme",
+    "version": "0.0.1",
+    "publisher": "bbrakenhoff",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Solarized Light (Custom)",
+                "uiTheme": "vs",
+                "path": "./themes/solarized-custom.tmTheme"
+            }
+        ]
+    }
+}
