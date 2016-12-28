@@ -212,7 +212,9 @@ text.mt meta.tag.inline.any string.quoted.double</string>
                 storage.modifier,
                 token.variable.language,
                 java.keyword.import,
-                java.keyword.other
+                java.keyword.other,
+                ts.storage.type,
+                ts.type.field.declaration.primitive
 </string>
 			<key>settings</key>
 			<dict>
