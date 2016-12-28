@@ -207,7 +207,8 @@ text.mt meta.tag.inline.any string.quoted.double</string>
                 language.variable
                 language.constant,
                 language.constant.java,
-                js.storage.type,
+                js.storage.type.var,
+                js.keyword.of,
                 storage.type.return-type.primitive,
                 storage.modifier,
                 token.variable.language,
