@@ -1,7 +1,12 @@
 # Change Log
 All notable changes to the "solarized-light-custom" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+<!--Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.-->
 
-## [Unreleased]
-- Initial release
+## [1.0.0] - 2016-12-21
+### Added
+- Initial release.
+
+## [1.0.1] - 2016-12-28
+### Fixed
+- Fix keyword styles for TypeScript.
