@@ -44,7 +44,10 @@
 			<key>name</key>
 			<string>HTML/XML: Tag</string>
 			<key>scope</key>
-			<string>meta.punctuation.html</string>
+			<string>
+                meta.punctuation.html,
+                meta.punctuation.xml
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -55,7 +58,10 @@
 			<key>name</key>
 			<string>HTML/XML: Tag name</string>
 			<key>scope</key>
-			<string> entity.tag.name.html</string>
+			<string>
+                entity.tag.name.html,
+                entity.tag.name.xml
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -75,9 +81,12 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>HTML/XML: Attribute</string>
+			<string>HTML/XML: Attribute`</string>
 			<key>scope</key>
-			<string>html.entity.attribute-name</string>
+			<string>
+                html.entity.attribute-name,
+                xml.entity.attribute-name
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -88,8 +97,10 @@
 			<key>name</key>
 			<string>HTML: DOCTYPE</string>
 			<key>scope</key>
-			<string>text.mt meta.tag.sgml meta.tag.sgml.doctype,
-text.mt meta.tag.sgml punctuation.definition.tag</string>
+			<string>
+                meta.tag.doctype.keyword,
+                meta.tag.doctype.html
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -207,7 +218,7 @@ text.mt meta.tag.inline.any string.quoted.double</string>
                 language.variable
                 language.constant,
                 language.constant.java,
-                js.storage.type.var,
+                js.storage.type,
                 js.keyword.of,
                 storage.type.return-type.primitive,
                 storage.modifier,
@@ -215,7 +226,10 @@ text.mt meta.tag.inline.any string.quoted.double</string>
                 java.keyword.import,
                 java.keyword.other,
                 ts.storage.type,
-                ts.type.field.declaration.primitive
+                ts.type.field.declaration.primitive,
+                php.class,
+                php.keyword,
+                php.storage.type
 </string>
 			<key>settings</key>
 			<dict>
@@ -547,6 +561,30 @@ block.support.function.variable.property</string>
             <dict>
                 <key>foreground</key>
                 <string>#B58900</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>PHP: Metatag</string>
+            <key>scope</key>
+            <string>php.metatag</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#dc322f</string>
+                <key>fontStyle</key>
+                <string>italic</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>PHP: Global variable</string>
+            <key>scope</key>
+            <string>php.variable.global</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#b58900</string>
             </dict>
         </dict>
 	</array>
