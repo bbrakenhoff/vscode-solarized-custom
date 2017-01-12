@@ -10,3 +10,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ## [1.0.1] - 2016-12-28
 ### Fixed
 - Fix keyword styles for TypeScript.
+
+## [1.0.2] - 2016-01-12
+### Added
+- Very light PHP support
