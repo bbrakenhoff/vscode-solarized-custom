@@ -33,7 +33,10 @@
 			<key>name</key>
 			<string>HTML/XML: Content</string>
 			<key>scope</key>
-			<string>text.mt</string>
+			<string>
+                text.html,
+                text.xml
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -45,13 +48,13 @@
 			<string>HTML/XML: Tag</string>
 			<key>scope</key>
 			<string>
-                meta.punctuation.html,
-                meta.punctuation.xml
+                punctuation.definition.tag.html,
+                punctuation.definition.tag.xml
             </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#CB4B16</string>
+				<string>#073642</string>
 			</dict>
 		</dict>
 		<dict>
@@ -59,8 +62,9 @@
 			<string>HTML/XML: Tag name</string>
 			<key>scope</key>
 			<string>
-                entity.tag.name.html,
-                entity.tag.name.xml
+               punctuation.definition.tag.name.html,
+               punctuation.definition.tag.name.xml,
+               entity.name.tag
             </string>
 			<key>settings</key>
 			<dict>
@@ -81,11 +85,10 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>HTML/XML: Attribute`</string>
+			<string>HTML/XML: Attribute</string>
 			<key>scope</key>
 			<string>
-                html.entity.attribute-name,
-                xml.entity.attribute-name
+                entity.other.attribute-name
             </string>
 			<key>settings</key>
 			<dict>
@@ -93,35 +96,35 @@
 				<string>#B58900</string>
 			</dict>
 		</dict>
-		<dict>
+        <!-- TODO: SEEMS NOT TO BE WORKING -->
+		<!--<dict>
 			<key>name</key>
-			<string>HTML: DOCTYPE</string>
+			<string>HTML/XML: DOCTYPE</string>
 			<key>scope</key>
 			<string>
-                meta.tag.doctype.keyword,
-                meta.tag.doctype.html
+              doctype,
             </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#6C71C4</string>
 			</dict>
-		</dict>
+		</dict>-->
 		<dict>
 			<key>name</key>
 			<string>HTML/XML: Attribute value</string>
 			<key>scope</key>
-		<string>text.mt meta.tag.inline.any string.quoted.double punctuation.definition.string.begin,
-text.mt meta.tag.structure.any string.quoted.double,
-text.mt meta.tag.block.any string.quoted.double,
-text.mt meta.tag.inline.any string.quoted.double</string>
+            <string>
+                string.quoted.double.html,
+                string.quoted.double.xml
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#2AA198</string>
 			</dict>
 		</dict>
-		<dict>
+		<!--<dict>
 			<key>name</key>
 			<string>CSS: Tag</string>
 			<key>scope</key>
@@ -132,8 +135,8 @@ text.mt meta.tag.inline.any string.quoted.double</string>
 				<key>foreground</key>
 				<string>#268BD2</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>CSS: Property name</string>
 			<key>scope</key>
@@ -143,8 +146,8 @@ text.mt meta.tag.inline.any string.quoted.double</string>
 				<key>foreground</key>
 				<string>#859900</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>CSS: Class</string>
 			<key>scope</key>
@@ -155,8 +158,8 @@ text.mt meta.tag.inline.any string.quoted.double</string>
 				<key>foreground</key>
 				<string>#B58900</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>CSS: Id</string>
 			<key>scope</key>
@@ -168,8 +171,8 @@ text.mt meta.tag.inline.any string.quoted.double</string>
 				<key>fontStyle</key>
 				<string> bold</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>Number</string>
 			<key>scope</key>
@@ -179,8 +182,8 @@ text.mt meta.tag.inline.any string.quoted.double</string>
 				<key>foreground</key>
 				<string>#6C71C4</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>Punctuation</string>
 			<key>scope</key>
@@ -194,52 +197,51 @@ text.mt meta.tag.inline.any string.quoted.double</string>
 				<key>fontStyle</key>
 				<string> bold</string>
 			</dict>
-		</dict>
+		</dict>-->
 		<dict>
 			<key>name</key>
 			<string>Keyword</string>
 			<key>scope</key>
 			<string>
-                keyword.operator.new,
-                keyword.operator.delete,
+                keyword,
                 keyword.operator.static,
+                keyword.operator.new,
                 keyword.operator.this,
-                keyword.expression.typeof,
-                keyword.expression.instanceof,
-                keyword.type.expression.typeof
-                keyword.important,
-                keyword.control,
-                constant.boolean,
-                constant.null,
-                constant.value,
-                keyword.operator.import,
-                keyword.control.java
-                support.constant,
-                language.variable
-                language.constant,
-                language.constant.java,
-                js.storage.type,
-                js.keyword.of,
-                storage.type.return-type.primitive,
+                keyword.operator.expression,
+                keyword.operator.delete,
+                storage.type,
                 storage.modifier,
-                token.variable.language,
-                java.keyword.import,
-                java.keyword.other,
-                ts.storage.type,
-                ts.type.field.declaration.primitive,
-                php.class,
-                php.keyword,
-                php.storage.type
-</string>
+                storage.arrow,
+                variable.language.this,
+                constant.language.boolean,
+                constant.language.null
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string> bold</string>
+				<string>bold</string>
 				<key>foreground</key>
 				<string>#D33682</string>
 			</dict>
 		</dict>
         <dict>
+            <key>name</key>
+            <string>Non-keyword</string>
+            <key>scope</key>
+            <string>
+                keyword.operator.assignment,
+                keyword.operator.comparison,
+                keyword.operator.logical,
+            </string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>normal</string>
+                <key>foreground</key>
+                <string>#657B83</string>
+            </dict>
+        </dict>
+        <!--<dict>
 			<key>name</key>
 			<string>Constant</string>
 			<key>scope</key>
@@ -251,8 +253,8 @@ text.mt meta.tag.inline.any string.quoted.double</string>
                 <key>fontStyle</key>
                 <string>italic</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>Operator</string>
 			<key>scope</key>
@@ -264,54 +266,58 @@ text.mt meta.tag.inline.any string.quoted.double</string>
 				<key>foreground</key>
 				<string>#657B83</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>String</string>
 			<key>scope</key>
-			<string>string, html.meta.tag.string</string>
+			<string>
+                string,
+                string.character.escape,
+                string.template.quoted,
+                string.template.quoted.punctuation,
+                string.template.quoted.punctuation.single,
+                string.template.quoted.punctuation.double,
+                string.type.declaration.annotation,
+                string.template.quoted.punctuation.tag
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#2AA198</string>
 			</dict>
-		</dict>
+		</dict>-->
 		<dict>
 			<key>name</key>
 			<string>Class</string>
 			<key>scope</key>
-			<string>type.entity.name.class,
-type.java,
-storage.type.java</string>
+			<string>
+                entity.name.type.class,
+                storage.type.java
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#859900</string>
+                <key>fontStyle</key>
+                <string>normal</key>
 			</dict>
 		</dict>
-		<dict>
-			<key>name</key>
-			<string>Semicolon</string>
-			<key>scope</key>
-			<string></string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string> bold</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Colon</string>
-			<key>scope</key>
-			<string></string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string> bold</string>
-			</dict>
-		</dict>
-		<dict>
+        <dict>
+            <key>name</key>
+            <string>String</string>
+            <key>scope</key>
+            <string>
+                string.quoted.single.js,
+                string.quoted.double.js
+            </string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#2AA198</string>
+            </dict>
+        </dict>
+	    <!--<dict>
 			<key>name</key>
 			<string>CSS: Pseudo element&#x2f;class</string>
 			<key>scope</key>
@@ -326,8 +332,8 @@ storage.type.java</string>
 				<key>fontStyle</key>
 				<string> italic</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>CSS: Unit</string>
 			<key>scope</key>
@@ -338,8 +344,8 @@ storage.type.java</string>
 				<key>foreground</key>
 				<string>#93A1A1</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>CSS: Hex color</string>
 			<key>scope</key>
@@ -349,8 +355,8 @@ storage.type.java</string>
 				<key>foreground</key>
 				<string>#DB322F</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>JS: Support constant</string>
 			<key>scope</key>
@@ -361,8 +367,8 @@ source.js variable.language.js</string>
 				<key>foreground</key>
 				<string>#D33682</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>Brackets</string>
 			<key>scope</key>
@@ -372,20 +378,47 @@ source.js variable.language.js</string>
 				<key>fontStyle</key>
 				<string> bold</string>
 			</dict>
-		</dict>
+		</dict>-->
 		<dict>
 			<key>name</key>
 			<string>JS: Function name</string>
 			<key>scope</key>
-			<string> function.support,
-                entity.name.function</string>
+			<string>
+                support.function,
+                entity.name.function
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#268BD2</string>
 			</dict>
 		</dict>
-		<dict>
+        <dict>
+            <key>name</key>
+            <string>Function argument</string>
+            <key>scope</key>
+            <string>variable.parameter</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#657B83</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Variable, property</string>
+            <key>scope</key>
+			<string>
+                variable.property,
+                variable.other.readwrite.js
+            </string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#657B83</string>
+            </dict>
+        </dict>
+		<!--<dict>
 			<key>name</key>
 			<string>Parentheses</string>
 			<key>scope</key>
@@ -395,8 +428,8 @@ source.js variable.language.js</string>
 				<key>foreground</key>
 				<string>#657B83</string>
 			</dict>
-		</dict>
-		<dict>
+		</dict>-->
+		<!--<dict>
 			<key>name</key>
 			<string>Java: Constant</string>
 			<key>scope</key>
@@ -408,8 +441,8 @@ source.js variable.language.js</string>
 				<key>foreground</key>
 				<string>#B58900</string>
 			</dict>
-		</dict>
-        <dict>
+		</dict>-->
+        <!--<dict>
 			<key>name</key>
 			<string>Class Inheritances</string>
 			<key>scope</key>
@@ -419,12 +452,14 @@ source.js variable.language.js</string>
 				<key>foreground</key>
 				<string>#CB4B16</string>
 			</dict>
-		</dict>
+		</dict>-->
 		<dict>
 			<key>name</key>
 			<string>JS Doc: Tag</string>
 			<key>scope</key>
-			<string>storage.type.class.jsdoc</string>
+			<string>
+                storage.type.class.jsdoc
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -437,41 +472,35 @@ source.js variable.language.js</string>
 			<key>name</key>
 			<string>JS Doc: Param type</string>
 			<key>scope</key>
-			<string>documentation.jsdoc.meta.entity.name</string>
+			<string>
+                entity.name.type.instance.jsdoc,
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#CB4B16</string>
+				<string>#073642</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Instance field</string>
 			<key>scope</key>
-			<string>variable.property, variable.constant,
-variable.other.property, variable.other.constant,
-block.support.variable.property,
-block.support.function.variable.property</string>
+			<string>
+                variable.property,
+                variable.constant,
+                variable.other.property,
+                variable.other.constant,
+                block.support.variable.property,
+                block.support.function.variable.property,
+                variable.other.object.property
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#6C71C4</string>
 			</dict>
 		</dict>
-		<dict>
-			<key>name</key>
-			<string>Java Doc: Tag</string>
-			<key>scope</key>
-			<string>comment.block.documentation.java keyword.other.documentation.javadoc.java</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#93A1A1</string>
-				<key>fontStyle</key>
-				<string> bold</string>
-			</dict>
-		</dict>
-		<dict>
+		<!--<dict>
 			<key>name</key>
 			<string>Java: Language variable</string>
 			<key>scope</key>
@@ -483,8 +512,8 @@ block.support.function.variable.property</string>
 				<key>foreground</key>
 				<string>#D33682</string>
 			</dict>
-		</dict>
-        <dict>
+		</dict>-->
+        <!--<dict>
             <key>name</key>
             <string>Java: Annotation</string>
             <key>scope</key>
@@ -496,8 +525,8 @@ block.support.function.variable.property</string>
                 <key>foreground</key>
                 <string>#6C71C4</string>
             </dict>
-        </dict>
-         <dict>
+        </dict>-->
+         <!--<dict>
             <key>name</key>
             <string>Java: Imports</string>
             <key>scope</key>
@@ -507,8 +536,8 @@ block.support.function.variable.property</string>
                 <key>foreground</key>
                 <string>#859900</string>
             </dict>
-        </dict>
-        <dict>
+        </dict>-->
+        <!--<dict>
 			<key>name</key>
 			<string>TS: Method declaration</string>
 			<key>scope</key>
@@ -523,8 +552,8 @@ block.support.function.variable.property</string>
 				<key>foreground</key>
 				<string>#268BD2</string>
 			</dict>
-		</dict>
-          <dict>
+		</dict>-->
+          <!--<dict>
 			<key>name</key>
 			<string>TS: Decorator</string>
 			<key>scope</key>
@@ -538,8 +567,8 @@ block.support.function.variable.property</string>
                 <key>fontStyle</key>
                 <string>bold</string>
 			</dict>
-		</dict>
-         <dict>
+		</dict>-->
+         <!--<dict>
             <key>name</key>
             <string>JS: Arrow function</string>
             <key>scope</key>
@@ -551,8 +580,8 @@ block.support.function.variable.property</string>
                 <key>fontStyle</key>
                 <string>bold</string>
             </dict>
-        </dict>
-        <dict>
+        </dict>-->
+        <!--<dict>
             <key>name</key>
             <string>JSON: Property name</string>
             <key>scope</key>
@@ -562,8 +591,8 @@ block.support.function.variable.property</string>
                 <key>foreground</key>
                 <string>#B58900</string>
             </dict>
-        </dict>
-        <dict>
+        </dict>-->
+        <!--<dict>
             <key>name</key>
             <string>PHP: Metatag</string>
             <key>scope</key>
@@ -575,8 +604,8 @@ block.support.function.variable.property</string>
                 <key>fontStyle</key>
                 <string>italic</string>
             </dict>
-        </dict>
-        <dict>
+        </dict>-->
+        <!--<dict>
             <key>name</key>
             <string>PHP: Global variable</string>
             <key>scope</key>
@@ -586,7 +615,7 @@ block.support.function.variable.property</string>
                 <key>foreground</key>
                 <string>#b58900</string>
             </dict>
-        </dict>
+        </dict>-->
 	</array>
     <key>uuid</key>
     <string>693ee9de-bc28-4caf-9ae7-3258b05f1a4f</string>
