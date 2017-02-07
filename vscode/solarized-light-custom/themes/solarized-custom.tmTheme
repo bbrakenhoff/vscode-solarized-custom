@@ -172,17 +172,17 @@
 				<string> bold</string>
 			</dict>
 		</dict>-->
-		<!--<dict>
+		<dict>
 			<key>name</key>
 			<string>Number</string>
 			<key>scope</key>
-			<string>numeric</string>
+			<string>constant.numeric</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#6C71C4</string>
 			</dict>
-		</dict>-->
+		</dict>
 		<!--<dict>
 			<key>name</key>
 			<string>Punctuation</string>
@@ -581,17 +581,29 @@ source.js variable.language.js</string>
                 <string>bold</string>
             </dict>
         </dict>-->
-        <!--<dict>
+        <dict>
             <key>name</key>
             <string>JSON: Property name</string>
             <key>scope</key>
-            <string>json.property-name</string>
+            <string>support.type.property-name</string>
             <key>settings</key>
             <dict>
                 <key>foreground</key>
                 <string>#B58900</string>
             </dict>
-        </dict>-->
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>JSON: Property value</string>
+            <key>scope</key>
+            <string>string.quoted.double.json</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#2AA198</string>
+            </dict>
+        </dict>
+
         <!--<dict>
             <key>name</key>
             <string>PHP: Metatag</string>
