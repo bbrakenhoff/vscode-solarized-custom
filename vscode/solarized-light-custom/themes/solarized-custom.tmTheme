@@ -214,7 +214,8 @@
                 storage.arrow,
                 variable.language.this,
                 constant.language.boolean,
-                constant.language.null
+                constant.language.null,
+                constant.language.json
             </string>
 			<key>settings</key>
 			<dict>
