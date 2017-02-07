@@ -11,6 +11,10 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ### Fixed
 - Fix keyword styles for TypeScript.
 
-## [1.0.2] - 2016-01-12
+## [1.0.2] - 2017-01-12
 ### Added
 - Very light PHP support
+
+## [1.0.3] - 2017-02-07
+### Fixed
+- Fix colors for JS and JSON after VSCode update to 1.9
