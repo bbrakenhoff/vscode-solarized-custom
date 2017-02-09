@@ -18,3 +18,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ## [1.0.3] - 2017-02-07
 ### Fixed
 - Fix colors for JS and JSON after VSCode update to 1.9
+
+## [1.0.4] - 2017-02-09
+### Fixed
+- Fix colors for Java and CSS/SCSS after VSCode update to 1.9
