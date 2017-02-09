@@ -34,7 +34,7 @@
 			<string>HTML/XML: Content</string>
 			<key>scope</key>
 			<string>
-                text.html,
+                text.html.basic,
                 text.xml
             </string>
 			<key>settings</key>
@@ -49,12 +49,16 @@
 			<key>scope</key>
 			<string>
                 punctuation.definition.tag.html,
-                punctuation.definition.tag.xml
+                punctuation.definition.tag.begin.html,
+                punctuation.definition.tag.end.html,
+                punctuation.definition.tag.xml,
+                meta.tag.other.html,
+                meta.tag.any.html
             </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#073642</string>
+				<string>#657B83</string>
 			</dict>
 		</dict>
 		<dict>
@@ -76,7 +80,10 @@
 			<key>name</key>
 			<string>Comment</string>
 			<key>scope</key>
-			<string>comment</string>
+			<string>
+                comment,
+                comment.block.documentation.javadoc
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -96,20 +103,19 @@
 				<string>#B58900</string>
 			</dict>
 		</dict>
-        <!-- TODO: SEEMS NOT TO BE WORKING -->
-		<!--<dict>
+		<dict>
 			<key>name</key>
 			<string>HTML/XML: DOCTYPE</string>
 			<key>scope</key>
 			<string>
-              doctype,
+              meta.tag.sgml.doctype.html
             </string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#6C71C4</string>
+				<string>#D33682</string>
 			</dict>
-		</dict>-->
+		</dict>
 		<dict>
 			<key>name</key>
 			<string>HTML/XML: Attribute value</string>
@@ -183,21 +189,6 @@
 				<string>#6C71C4</string>
 			</dict>
 		</dict>
-		<!--<dict>
-			<key>name</key>
-			<string>Punctuation</string>
-			<key>scope</key>
-			<string>
-                meta.punctuation.js,
-                meta.punctuation.java,
-                meta.punctuation.json,
-                meta.punctuation.ts</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string> bold</string>
-			</dict>
-		</dict>-->
 		<dict>
 			<key>name</key>
 			<string>Keyword</string>
@@ -215,7 +206,9 @@
                 variable.language.this,
                 constant.language.boolean,
                 constant.language.null,
-                constant.language.json
+                constant.language.json,
+                constant.language.java,
+                variable.language.java
             </string>
 			<key>settings</key>
 			<dict>
@@ -227,68 +220,35 @@
 		</dict>
         <dict>
             <key>name</key>
-            <string>Non-keyword</string>
+            <string>Braces, brackets, operators</string>
             <key>scope</key>
             <string>
+                punctuation.section,
                 keyword.operator.assignment,
+                keyword.operator.arithmetic,
+                keyword.operator.ternary,
+                punctuation.terminator,
+                punctuation.definition.block,
+                punctuation.accessor,
+                keyword.operator.dereference.java,
+                punctuation.definition.parameters,
+                meta.brace.round.js,
+                meta.brace.square.js,
+                meta.method.identifier.java,
+                keyword.operator.increment-decrement.java,
                 keyword.operator.comparison,
-                keyword.operator.logical,
+                keyword.operator.relational,
+                keyword.operator.logical
             </string>
             <key>settings</key>
             <dict>
                 <key>fontStyle</key>
                 <string>normal</string>
                 <key>foreground</key>
-                <string>#657B83</string>
+                <string>#073642</string>
             </dict>
         </dict>
-        <!--<dict>
-			<key>name</key>
-			<string>Constant</string>
-			<key>scope</key>
-			<string>constant.character, constant.other</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#B58900</string>
-                <key>fontStyle</key>
-                <string>italic</string>
-			</dict>
-		</dict>-->
-		<!--<dict>
-			<key>name</key>
-			<string>Operator</string>
-			<key>scope</key>
-			<string>operator, keyword.operator.comparison, keyword.operator.java</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string> bold</string>
-				<key>foreground</key>
-				<string>#657B83</string>
-			</dict>
-		</dict>-->
-		<!--<dict>
-			<key>name</key>
-			<string>String</string>
-			<key>scope</key>
-			<string>
-                string,
-                string.character.escape,
-                string.template.quoted,
-                string.template.quoted.punctuation,
-                string.template.quoted.punctuation.single,
-                string.template.quoted.punctuation.double,
-                string.type.declaration.annotation,
-                string.template.quoted.punctuation.tag
-            </string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#2AA198</string>
-			</dict>
-		</dict>-->
-		<dict>
+        <dict>
 			<key>name</key>
 			<string>Class</string>
 			<key>scope</key>
@@ -310,7 +270,8 @@
             <key>scope</key>
             <string>
                 string.quoted.single.js,
-                string.quoted.double.js
+                string.quoted.double.js,
+                string.quoted.double.java
             </string>
             <key>settings</key>
             <dict>
@@ -419,41 +380,22 @@ source.js variable.language.js</string>
                 <string>#657B83</string>
             </dict>
         </dict>
-		<!--<dict>
-			<key>name</key>
-			<string>Parentheses</string>
-			<key>scope</key>
-			<string>punctuation.parameters</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#657B83</string>
-			</dict>
-		</dict>-->
-		<!--<dict>
+		<dict>
 			<key>name</key>
 			<string>Java: Constant</string>
 			<key>scope</key>
-			<string>constant.other.java, constant.other.definition.java</string>
+			<string>
+                constant.other.java,
+                constant.other.definition.java
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string> italic</string>
 				<key>foreground</key>
-				<string>#B58900</string>
+				<string>#cb4b16</string>
 			</dict>
-		</dict>-->
-        <!--<dict>
-			<key>name</key>
-			<string>Class Inheritances</string>
-			<key>scope</key>
-			<string>entity.inherited-class</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#CB4B16</string>
-			</dict>
-		</dict>-->
+		</dict>
 		<dict>
 			<key>name</key>
 			<string>JS Doc: Tag</string>
@@ -464,7 +406,7 @@ source.js variable.language.js</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string> bold</string>
+				<string>bold</string>
 				<key>foreground</key>
 				<string>#93A1A1</string>
 			</dict>
@@ -476,8 +418,8 @@ source.js variable.language.js</string>
 			<string>entity.name.type.instance.jsdoc</string>
 			<key>settings</key>
 			<dict>
-				<key>foreground</key>
-				<string>#073642</string>
+				<key>fontStyle</key>
+				<string>italic</string>
 			</dict>
 		</dict>
 		<dict>
@@ -499,87 +441,49 @@ source.js variable.language.js</string>
 				<string>#6C71C4</string>
 			</dict>
 		</dict>
-		<!--<dict>
-			<key>name</key>
-			<string>Java: Language variable</string>
-			<key>scope</key>
-			<string>variable.language.java</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>bold</string>
-				<key>foreground</key>
-				<string>#D33682</string>
-			</dict>
-		</dict>-->
-        <!--<dict>
+        <dict>
             <key>name</key>
             <string>Java: Annotation</string>
             <key>scope</key>
-            <string>java.storage.type.annotation</string>
+            <string>storage.type.annotation.java</string>
             <key>settings</key>
             <dict>
                 <key>fontStyle</key>
                 <string>bold</string>
                 <key>foreground</key>
-                <string>#6C71C4</string>
+                <string>#B58900</string>
             </dict>
-        </dict>-->
-         <!--<dict>
+        </dict>
+        <dict>
+           <key>name</key>
+           <string>JavaDoc: Tag</string>
+           <key>scope</key>
+           <string>
+                keyword.other.documentation.return.javadoc,
+                keyword.other.documentation.param.javadoc,
+                keyword.other.documentation.see.javadoc
+           </string>
+           <key>settings</key>
+           <dict>
+                <key>fontStyle</key>
+				<string>italic</string>
+                <key>foreground</key>
+				<string>#93A1A1</string>
+           </dict>
+        </dict>
+         <dict>
             <key>name</key>
             <string>Java: Imports</string>
             <key>scope</key>
-            <string>java.storage.modifier.import</string>
+            <string>storage.modifier.import.java</string>
             <key>settings</key>
             <dict>
                 <key>foreground</key>
                 <string>#859900</string>
-            </dict>
-        </dict>-->
-        <!--<dict>
-			<key>name</key>
-			<string>TS: Method declaration</string>
-			<key>scope</key>
-			<string>
-                function-declaration,
-                method-declaration,
-                method-overload-declaration,
-                type-fn-type-parameters
-            </string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#268BD2</string>
-			</dict>
-		</dict>-->
-          <!--<dict>
-			<key>name</key>
-			<string>TS: Decorator</string>
-			<key>scope</key>
-			<string>
-                meta.ts.decorator.entity.name
-            </string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#B58900</string>
                 <key>fontStyle</key>
-                <string>bold</string>
-			</dict>
-		</dict>-->
-         <!--<dict>
-            <key>name</key>
-            <string>JS: Arrow function</string>
-            <key>scope</key>
-            <string>storage.arrow</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#657B83</string>
-                <key>fontStyle</key>
-                <string>bold</string>
+                <string>normal</string>
             </dict>
-        </dict>-->
+        </dict>
         <dict>
             <key>name</key>
             <string>JSON: Property name</string>
