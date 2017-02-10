@@ -95,7 +95,9 @@
 			<string>HTML/XML: Attribute</string>
 			<key>scope</key>
 			<string>
-                entity.other.attribute-name.html
+                entity.other.attribute-name.html,
+                entity.other.attribute-name.xml,
+                entity.other.attribute-name.localname.xml
             </string>
 			<key>settings</key>
 			<dict>
@@ -265,7 +267,8 @@
                 constant.language.null,
                 constant.language.json,
                 constant.language.java,
-                variable.language.java
+                variable.language.java,
+                constant.language.php
             </string>
 			<key>settings</key>
 			<dict>
@@ -293,10 +296,13 @@
                 meta.brace.square.js,
                 meta.method.identifier.java,
                 keyword.operator.increment-decrement.java,
+                keyword.control.ternary.java,
                 keyword.operator.comparison,
                 keyword.operator.relational,
                 keyword.operator.logical,
-                keyword.operator.css
+                keyword.operator.css,
+                keyword.operator.class.php,
+                keyword.operator.key.php
             </string>
             <key>settings</key>
             <dict>
@@ -312,7 +318,9 @@
 			<key>scope</key>
 			<string>
                 entity.name.type.class,
-                storage.type.java
+                storage.type.java,
+                support.class.php,
+                support.other.namespace.use-as.php
             </string>
 			<key>settings</key>
 			<dict>
@@ -324,12 +332,26 @@
 		</dict>
         <dict>
             <key>name</key>
+            <string>Abstract class + interface</string>
+            <key>scope</key>
+            <string>entity.name.type.interface.php</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+				<string>#859900</string>
+                <key>fontStyle</key>
+                <string>italic</key>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
             <string>String</string>
             <key>scope</key>
             <string>
                 string.quoted.single.js,
                 string.quoted.double.js,
-                string.quoted.double.java
+                string.quoted.double.java,
+                string.quoted.single.php
             </string>
             <key>settings</key>
             <dict>
@@ -402,8 +424,6 @@
             </string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string> italic</string>
 				<key>foreground</key>
 				<string>#cb4b16</string>
 			</dict>
@@ -518,31 +538,71 @@
                 <string>#2AA198</string>
             </dict>
         </dict>
-
-        <!--<dict>
-            <key>name</key>
-            <string>PHP: Metatag</string>
-            <key>scope</key>
-            <string>php.metatag</string>
-            <key>settings</key>
-            <dict>
+        <dict>
+           <key>name</key>
+           <string>PHP: tag</string>
+           <key>scope</key>
+           <string>punctuation.section.embedded.begin.metatag.php</string>
+           <key>settings</key>
+           <dict>
                 <key>foreground</key>
                 <string>#dc322f</string>
                 <key>fontStyle</key>
+                <string>bold</string>
+           </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>PHP: support function</string>
+            <key>scope</key>
+            <string>support.function.array.php</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
                 <string>italic</string>
             </dict>
-        </dict>-->
-        <!--<dict>
+        </dict>
+        <dict>
             <key>name</key>
-            <string>PHP: Global variable</string>
+            <string>PHP: variable</string>
             <key>scope</key>
-            <string>php.variable.global</string>
+            <string>
+                variable.other.php,
+                punctuation.definition.variable.php
+            </string>
             <key>settings</key>
             <dict>
                 <key>foreground</key>
                 <string>#b58900</string>
             </dict>
-        </dict>-->
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>PHP: Constant</string>
+            <key>scope</key>
+            <string>
+                constant.other.php,
+                constant.other.class.php
+            </string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#cb4b16</string>
+            </dict>
+        </dict>
+        <dict>
+           <key>name</key>
+           <string>PHP Doc: Keyword</string>
+           <key>scope</key>
+           <string>keyword.other.phpdoc.php</string>
+           <key>settings</key>
+           <dict>
+                <key>fontStyle</key>
+                <string>bold</string>
+                <key>foreground</key>
+                <string>#93A1A1</string>
+           </dict>
+        </dict>
 	</array>
     <key>uuid</key>
     <string>693ee9de-bc28-4caf-9ae7-3258b05f1a4f</string>
