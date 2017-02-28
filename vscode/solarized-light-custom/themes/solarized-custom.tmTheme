@@ -320,7 +320,9 @@
                 entity.name.type.class,
                 storage.type.java,
                 support.class.php,
-                support.other.namespace.use-as.php
+                support.other.namespace.use-as.php,
+                entity.other.inherited-class.php,
+                meta.other.inherited-class.php
             </string>
 			<key>settings</key>
 			<dict>
@@ -351,7 +353,8 @@
                 string.quoted.single.js,
                 string.quoted.double.js,
                 string.quoted.double.java,
-                string.quoted.single.php
+                string.quoted.single.php,
+                string.quoted.single.ts
             </string>
             <key>settings</key>
             <dict>
@@ -588,6 +591,19 @@
             <dict>
                 <key>foreground</key>
                 <string>#cb4b16</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>PHP: Builtin class</string>
+            <key>scope</key>
+            <string>support.class.builtin.php</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#859900</string>
+                <key>fontStyle</key>
+                <string>bold</string>
             </dict>
         </dict>
         <dict>
