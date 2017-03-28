@@ -322,7 +322,8 @@
                 support.class.php,
                 support.other.namespace.use-as.php,
                 entity.other.inherited-class.php,
-                meta.other.inherited-class.php
+                meta.other.inherited-class.php,
+                entity.other.inherited-class.ts
             </string>
 			<key>settings</key>
 			<dict>
@@ -388,6 +389,8 @@
             </string>
 			<key>settings</key>
 			<dict>
+                <key>fontStyle</key>
+                <string>normal</string>
 				<key>foreground</key>
 				<string>#268BD2</string>
 			</dict>
@@ -450,7 +453,9 @@
 			<key>name</key>
 			<string>JS Doc: Param type</string>
 			<key>scope</key>
-			<string>entity.name.type.instance.jsdoc</string>
+			<string>
+                entity.name.type.instance.jsdoc
+            </string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -618,6 +623,20 @@
                 <key>foreground</key>
                 <string>#93A1A1</string>
            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>TypeScript: type</string>
+            <key>scope</key>
+            <string>
+                entity.name.type.ts,
+                support.type.primitive.ts
+            </string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#af8700</string>
+            </dict>
         </dict>
 	</array>
     <key>uuid</key>

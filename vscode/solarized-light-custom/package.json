@@ -1,7 +1,7 @@
 {
-    "name": "solarized-light-custom",
-    "displayName": "Solarized Light (Custom)",
-    "description": "Custom Solarized Light theme",
+    "name": "solarized-custom",
+    "displayName": "Solarized Custom",
+    "description": "Customized Solarized",
     "version": "1.0.5",
     "publisher": "bbrakenhoff",
     "engines": {
@@ -17,9 +17,19 @@
     "contributes": {
         "themes": [
             {
-                "label": "Solarized Light (Custom)",
+                "label": "Solarized Light Custom",
                 "uiTheme": "vs",
                 "path": "./themes/solarized-custom.tmTheme"
+            },
+            {
+                "label": "Solarized Light Custom 2",
+                "uiTheme": "vs",
+                "path": "./themes/solarized-custom-2.tmTheme"
+            },
+            {
+                "label": "Solarized Dark Custom 2",
+                "uiTheme": "vs-dark",
+                "path": "./themes/solarized-dark-custom.tmTheme"
             }
         ]
     },
