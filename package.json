@@ -2,7 +2,7 @@
     "name": "solarized-custom",
     "displayName": "Solarized Custom",
     "description": "Customized Solarized",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "publisher": "bbrakenhoff",
     "engines": {
         "vscode": "*"
