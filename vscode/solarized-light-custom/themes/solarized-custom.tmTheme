@@ -25,7 +25,7 @@
 				<string>#EEE8D5</string>
 				<key>selection</key>
 				<string>#EEE8D5</string>
-                <key>line-numbers</key>
+                <key>lineNumbers</key>
                 <string>#fff000</string>
 			</dict>
 		</dict>

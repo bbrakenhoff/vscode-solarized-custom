@@ -5,7 +5,7 @@
     "version": "1.0.5",
     "publisher": "bbrakenhoff",
     "engines": {
-        "vscode": "^1.5.0"
+        "vscode": "*"
     },
     "repository": {
         "type": "git",
@@ -19,17 +19,7 @@
             {
                 "label": "Solarized Light Custom",
                 "uiTheme": "vs",
-                "path": "./themes/solarized-custom.tmTheme"
-            },
-            {
-                "label": "Solarized Light Custom 2",
-                "uiTheme": "vs",
-                "path": "./themes/solarized-custom-2.tmTheme"
-            },
-            {
-                "label": "Solarized Dark Custom 2",
-                "uiTheme": "vs-dark",
-                "path": "./themes/solarized-dark-custom.tmTheme"
+                "path": "./themes/solarized-light-custom.json"
             }
         ]
     },
