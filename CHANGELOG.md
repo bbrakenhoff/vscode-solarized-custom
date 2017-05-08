@@ -35,3 +35,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ## [1.1.1] - 2017/05/08
 ### Changed
 - Updated readme
+
+## [1.1.2] - 2017/05/08
+### Fixed
+- Fixed broken link to repository
