@@ -32,6 +32,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Convert theme to JSON
 ### Added
 - Light workbench theming
+
 ## [1.1.1] - 2017/05/08
 ### Changed
 - Updated readme
@@ -39,3 +40,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ## [1.1.2] - 2017/05/08
 ### Fixed
 - Fixed broken link to repository
+
+## [1.1.3] - 2017/05/08
+### Fixed
+- This should be an update of the custom solarized light theme, instead of being uploaded as a complete new theme

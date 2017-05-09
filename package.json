@@ -1,8 +1,8 @@
 {
-    "name": "solarized-custom",
-    "displayName": "Solarized Custom",
-    "description": "Customized Solarized",
-    "version": "1.1.2",
+    "name": "solarized-light-custom",
+    "displayName": "Solarized Light (Custom)",
+    "description": "Custom Solarized Light theme",
+    "version": "1.1.3",
     "publisher": "bbrakenhoff",
     "engines": {
         "vscode": "*"
