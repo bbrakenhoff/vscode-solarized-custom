@@ -5,4 +5,4 @@ optimized for JavaScript, CSS, HTML, Java and JSON, with light support for PHP.
 ### Screenshot
 ![Screenshot](https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/screenshot.png)
 
-**Enjoy!**
+**Please let me know any suggestions, requests or issues in Github**
