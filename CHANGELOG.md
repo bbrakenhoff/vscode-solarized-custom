@@ -44,3 +44,10 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ## [1.1.3] - 2017/05/08
 ### Fixed
 - This should be an update of the custom solarized light theme, instead of being uploaded as a complete new theme
+
+## [1.2.0] -
+### Added
+- Workspace colors
+### Fixed
+- String color in SCSS
+- '&' sign in SCSS

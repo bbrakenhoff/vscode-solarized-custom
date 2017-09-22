@@ -9,7 +9,7 @@
 
 		// "widget.shadow": "",
 
-		"input.background": "#ddd6c1",
+		"input.background": "#fff9e8",
 		// "input.border": "",
 		"input.foreground": "#586E75",
 		"input.placeholderForeground": "#586e75aa",
@@ -33,11 +33,11 @@
 
 		"selection.background": "#ccc4b0",
 
-		"list.activeSelectionBackground": "#268bd2",
+		"list.activeSelectionBackground": "#586e7566",
 		"list.activeSelectionForeground": "#6c6c6c",
-		"list.focusBackground": "#268bd266",
-		"list.hoverBackground": "#268bd244",
-		"list.inactiveSelectionBackground": "#268bd277",
+		"list.focusBackground": "#586e7555",
+		"list.hoverBackground": "#586e7533",
+		"list.inactiveSelectionBackground": "#586e7566",
 		"list.highlightForeground": "#dc322f",
 
 		// "scrollbar.shadow": "",
@@ -123,7 +123,7 @@
 
 		// Workbench: Activity Bar
 		"activityBar.background": "#073642",
-		"activityBar.foreground": "#eee8d5",
+		"activityBar.foreground": "#FFFCF5",
 		"activityBar.dropBackground": "#eee8d5",
 		"activityBarBadge.background": "#d33682",
 		// "activityBarBadge.foreground": "",
@@ -136,8 +136,9 @@
 		// "panelTitle.inactiveForeground": "",
 
 		// Workbench: Side Bar
-		"sideBar.background": "#eee8d5",
-		"sideBarTitle.foreground": "#586E75",
+		// "sideBar.background": "#eee8d5",
+		"sideBar.background": "#fff9e8",
+		"sideBarTitle.foreground": "#586e75",
 		// "sideBarSectionHeader.background": "",
 
 		// Workbench: Status Bar
@@ -259,7 +260,7 @@
 		},
 		{
 			"name": "CSS/SCSS: Class",
-			"scope": "entity.other.attribute-name.class, entity.other.attribute-name.parent-selector-suffix.scss",
+			"scope": "entity.other.attribute-name.class, punctuation.definition.entity.css, entity.other.attribute-name.parent-selector-suffix.scss",
 			"settings": {
 				"foreground": "#268bd2"
 			}
@@ -342,7 +343,7 @@
 		},
 		{
 			"name": "String",
-			"scope": "string.quoted.single.js, string.quoted.double.js, string.quoted.double.java, string.quoted.single.php, string.quoted.single.ts",
+			"scope": "string.quoted.single.js, string.quoted.single.scss, string.quoted.double.js, string.quoted.double.java, string.quoted.single.php, string.quoted.single.ts",
 			"settings": {
 				"foreground": "#2aa198"
 			}
