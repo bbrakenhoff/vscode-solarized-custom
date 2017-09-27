@@ -326,7 +326,7 @@
 			"name": "Class",
 			"scope": "entity.name.type.class, storage.type.java, support.class.php, support.other.namespace.use-as.php, entity.other.inherited-class.php, meta.other.inherited-class.php, entity.other.inherited-class.ts",
 			"settings": {
-				"foreground": "#859900",
+				"foreground": "#268bd2",
 				"fontStyle": "normal"
 			}
 		},
@@ -401,7 +401,7 @@
 			"name": "Instance field",
 			"scope": "variable.property, variable.constant, variable.other.property, variable.other.constant, block.support.variable.property, block.support.function.variable.property, variable.other.object.property",
 			"settings": {
-				"foreground": "#6c71c4"
+				"foreground": "#b58900"
 			}
 		},
 		{
@@ -491,7 +491,7 @@
 			"name": "TypeScript: type",
 			"scope": "entity.name.type.ts, support.type.primitive.ts",
 			"settings": {
-				"foreground": "#af8700"
+				"foreground": "#cb4b16"
 			}
 		},
 		{
