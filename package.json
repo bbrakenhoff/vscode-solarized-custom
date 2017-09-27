@@ -20,6 +20,11 @@
                 "label": "Solarized Light Custom",
                 "uiTheme": "vs",
                 "path": "./themes/solarized-light-custom.json"
+            },
+            {
+                "label": "Solarized Dark Custom",
+                "uiTheme": "vs-dark",
+                "path": "./themes/solarized-dark-custom.json"
             }
         ]
     },

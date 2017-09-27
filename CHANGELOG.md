@@ -51,3 +51,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ### Fixed
 - String color in SCSS
 - '&' sign in SCSS
+
+## [2.0.0] - 2017//
+### Added
+- Solarized dark theme
