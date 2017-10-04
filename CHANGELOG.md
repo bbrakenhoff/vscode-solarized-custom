@@ -55,3 +55,6 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ## [2.0.0] - 2017//
 ### Added
 - Solarized dark theme
+
+### Fixed
+- Icon cannot be a SVG file
