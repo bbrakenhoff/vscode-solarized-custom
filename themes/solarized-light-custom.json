@@ -47,9 +47,9 @@
 
 		// Editor
 		"editor.background": "#fdf6e3",
-		// "editor.foreground": "#6688cc",
+		"editor.foreground": "#657b83",
 		"editorWidget.background": "#eee8d5",
-		"editorCursor.foreground": "#657B83",
+		"editorCursor.foreground": "#6c71c4",
 		"editorWhitespace.foreground": "#93a1a144",
 		"editor.lineHighlightBackground": "#eee8d5",
 		"editor.selectionBackground": "#eee8d5",
@@ -246,9 +246,9 @@
 		},
 		{
 			"name": "CSS: Tag",
-			"scope": "css.entity.name.tag, scss.entity.name.tag",
+			"scope": "entity.name.tag.css, entity.name.tag.custom.scss",
 			"settings": {
-				"foreground": "#268bd2"
+				"foreground": "#b58900"
 			}
 		},
 		{
@@ -318,13 +318,21 @@
 			}
 		},
 		{
-			"name": "Braces, brackets, operators",
-			"scope": "punctuation.section, keyword.operator.assignment, keyword.operator.arithmetic, keyword.operator.ternary, punctuation.terminator, punctuation.definition.block, punctuation.accessor, keyword.operator.dereference.java, punctuation.definition.parameters, meta.brace.round.js, meta.brace.square.js, meta.method.identifier.java, keyword.operator.increment-decrement.java, keyword.control.ternary.java, keyword.operator.comparison, keyword.operator.relational, keyword.operator.logical, keyword.operator.css, keyword.operator.class.php, keyword.operator.key.php",
+			"name": "Braces, brackets",
+			"scope": "punctuation.section, keyword.operator.assignment, keyword.operator.ternary, punctuation.terminator, punctuation.definition.block, punctuation.accessor, keyword.operator.dereference.java, punctuation.definition.parameters, meta.brace.round, meta.brace.square, meta.method.identifier.java, keyword.operator.increment-decrement.java, keyword.control.ternary.java, keyword.operator.comparison, keyword.operator.relational, keyword.operator.logical, keyword.operator.css, keyword.operator.class.php, keyword.operator.key.php, punctuation.definition.parameters.begin.ts, punctuation.definition.parameters.end.ts",
 			"settings": {
 				"fontStyle": "normal",
 				"foreground": "#073642"
 			}
-		},
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator.arithmetic",
+            "settings": {
+				"fontStyle": "normal",
+				"foreground": "#657b83"
+			}
+        },
 		{
 			"name": "Class",
 			"scope": "entity.name.type.class, storage.type.java, support.class.php, support.other.namespace.use-as.php, entity.other.inherited-class.php, meta.other.inherited-class.php, entity.other.inherited-class.ts",
@@ -343,7 +351,7 @@
 		},
 		{
 			"name": "String",
-			"scope": "string.quoted.single.js, string.quoted.single.scss, string.quoted.double.js, string.quoted.double.java, string.quoted.single.php, string.quoted.single.ts",
+			"scope": "string.quoted.single, string.quoted.double",
 			"settings": {
 				"foreground": "#2aa198"
 			}
@@ -489,14 +497,28 @@
 				"fontStyle": "bold",
 				"foreground": "#93a1a1"
 			}
-		},
+        },
+        {
+            "name": "PHP: Namespace",
+            "scope": "entity.name.type.namespace.php, support.other.namespace.php",
+            "settings": {
+                "foreground":"#657b83"
+            }
+        },
 		{
 			"name": "TypeScript: type",
 			"scope": "entity.name.type.ts, support.type.primitive.ts",
 			"settings": {
 				"foreground": "#af8700"
 			}
-		},
+        },
+        {
+            "name": "TypeScript: Object literal",
+            "scope": "meta.objectliteral.ts",
+            "settings": {
+                "foreground": "#657b83"
+            }
+        },
 		{
 			"scope": "token.info-token",
 			"settings": {

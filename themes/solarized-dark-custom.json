@@ -54,7 +54,7 @@
 		"editor.background": "#002B36",
 		// "editor.foreground": "#6688cc",
 		"editorWidget.background": "#00212B",
-		"editorCursor.foreground": "#D30102",
+		"editorCursor.foreground": "#6C71C480",
 		"editorWhitespace.foreground": "#93A1A140",
 		"editor.lineHighlightBackground": "#073642",
 		"editor.selectionBackground": "#073642",
@@ -325,8 +325,9 @@
 		{
 			"name": "Class",
 			"scope": "entity.name.type.class, storage.type.java, support.class.php, support.other.namespace.use-as.php, entity.other.inherited-class.php, meta.other.inherited-class.php, entity.other.inherited-class.ts",
+			"scope": "entity.name.type.class, storage.type.java, support.class.php, support.other.namespace.use-as.php, entity.other.inherited-class.php, meta.other.inherited-class.php, entity.other.inherited-class.ts",
 			"settings": {
-				"foreground": "#268bd2",
+				"foreground": "#cb4b16",
 				"fontStyle": "normal"
 			}
 		},
@@ -340,7 +341,7 @@
 		},
 		{
 			"name": "String",
-			"scope": "string.quoted.single.js, string.quoted.single.scss, string.quoted.double.js, string.quoted.double.java, string.quoted.single.php, string.quoted.single.ts",
+			"scope": "string.quoted.single, string.quoted.double",
 			"settings": {
 				"foreground": "#2aa198"
 			}
@@ -491,7 +492,7 @@
 			"name": "TypeScript: type",
 			"scope": "entity.name.type.ts, support.type.primitive.ts",
 			"settings": {
-				"foreground": "#cb4b16"
+				"foreground": "#6c71c4"
 			}
 		},
 		{

@@ -59,3 +59,14 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ## [2.0.1] - 2017/10/04
 ### Fixed
 - Icon cannot be a SVG file
+
+## [2.0.2] - 2018/06/05
+### Fixed
+- Simple selector for strings
+- Changed cursor color light theme
+- Changed cursor color dark theme
+- Colors of operator less dark in light theme
+- Colors of class changed in dark theme
+- Object literal colors
+- Change color of tag in CSS
+

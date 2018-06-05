@@ -1,32 +1,37 @@
 {
-    "name": "solarized-light-custom",
-    "displayName": "Solarized Light (Custom)",
-    "description": "Custom Solarized Light theme",
-    "version": "2.0.1",
-    "publisher": "bbrakenhoff",
-    "engines": {
-        "vscode": "*"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/bbrakenhoff/solarized-light-custom/tree/master"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Solarized Light Custom",
-                "uiTheme": "vs",
-                "path": "./themes/solarized-light-custom.json"
-            },
-            {
-                "label": "Solarized Dark Custom",
-                "uiTheme": "vs-dark",
-                "path": "./themes/solarized-dark-custom.json"
-            }
-        ]
-    },
-    "icon": "icon.png"
+	"name": "solarized-light-custom",
+	"displayName": "Solarized Light (Custom)",
+	"description": "Custom Solarized Light theme",
+	"version": "2.0.1",
+	"publisher": "bbrakenhoff",
+	"engines": {
+		"vscode": "*"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bbrakenhoff/solarized-light-custom/tree/master"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Solarized Light Custom",
+				"uiTheme": "vs",
+				"path": "./themes/solarized-light-custom.json"
+			},
+			{
+				"label": "Solarized Dark Custom",
+				"uiTheme": "vs-dark",
+				"path": "./themes/solarized-dark-custom.json"
+			}
+		]
+	},
+	"icon": "icon.png",
+	"__metadata": {
+		"id": "1a8bca67-d8c0-4728-8e1b-8bd2d4aa0971",
+		"publisherDisplayName": "bbrakenhoff",
+		"publisherId": "b60c9515-f4ce-49eb-b537-93f7a2150625"
+	}
 }
