@@ -60,7 +60,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ### Fixed
 - Icon cannot be a SVG file
 
-## [2.0.2] - 2018/06/05
+## [2.0.2] - 2018/06/06
 ### Fixed
 - Simple selector for strings
 - Changed cursor color light theme
