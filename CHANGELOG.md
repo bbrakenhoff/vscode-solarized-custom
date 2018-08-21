@@ -70,3 +70,8 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Object literal colors
 - Change color of tag in CSS
 
+## [2.1.0] - 2018/08/21
+### Added
+- Darker solarized theme, with a darker background (not finished yet)
+### Fixed
+- Start using array strings as selectors instead of comma separated strings

@@ -28,8 +28,8 @@
 
 		"errorForeground": "#ffeaea",
 
-		"badge.background": "#047aa6",
-		"progressBar.background": "#047aa6",
+		"badge.background": "#cb4b16",
+		"progressBar.background": "#cb4b16",
 
 		"dropdown.background": "#00212B",
 		"dropdown.border": "#2AA19899",
@@ -129,11 +129,10 @@
 
 		// Workbench: Activity Bar
 		"activityBar.background": "#242d32",
-		// "activityBar.background": "#003847",
-		// "activityBarBadge.background": "",
+		"activityBarBadge.background": "#cb4b16",
 		// "activityBar.dropBackground": "",
-		// "activityBar.foreground": "",
-		// "activityBarBadge.foreground": "",
+		// "activityBar.foreground": "#1ebcc5",
+		// "activityBarBadge.foreground": "#1ebcc5",
 
 		// Workbench: Panel
 		// "panel.background": "",
