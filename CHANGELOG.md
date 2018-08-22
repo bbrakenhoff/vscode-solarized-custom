@@ -76,7 +76,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ### Fixed
 - Start using array strings as selectors instead of comma separated strings
 
-## [2.1.1] - 2018/08
+## [2.1.1] - 2018/08/22
 
 ### Changed 
 - Updated README with new screenshots
