@@ -2,7 +2,7 @@
     "name": "solarized-light-custom",
     "displayName": "Solarized Light (Custom)",
     "description": "Custom Solarized Light theme",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "publisher": "bbrakenhoff",
     "engines": {
         "vscode": "*"

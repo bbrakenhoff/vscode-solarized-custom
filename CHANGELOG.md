@@ -80,3 +80,8 @@ All notable changes to the "solarized-light-custom" extension will be documented
 
 ### Changed 
 - Updated README with new screenshots
+
+## [2.1.2] - 2018/09/14
+
+### Fixed
+- Default text color dark themes
