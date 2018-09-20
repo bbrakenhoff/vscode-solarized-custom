@@ -121,10 +121,10 @@
 		"editorGroupHeader.tabsBackground": "#242d32",
 
 		// Workbench: Tabs
-		"tab.activeForeground": "#d6dbdb",
-		"tab.activeBackground": "#1f272b",
-		"tab.inactiveForeground": "#93A1A1",
-		"tab.inactiveBackground": "#242d32",
+		"tab.activeForeground": "#93A1A1",
+		"tab.activeBackground": "#283237",
+		"tab.inactiveForeground": "#d6dbdb",
+		"tab.inactiveBackground": "#1f272b",
 		"tab.border": "#1b2226",
 
 		// Workbench: Activity Bar
