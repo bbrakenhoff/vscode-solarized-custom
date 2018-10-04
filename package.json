@@ -2,7 +2,7 @@
     "name": "solarized-light-custom",
     "displayName": "Solarized Light (Custom)",
     "description": "Custom Solarized Light theme",
-    "version": "2.1.3",
+    "version": "2.2.0",
     "publisher": "bbrakenhoff",
     "engines": {
         "vscode": "*"
@@ -30,6 +30,11 @@
                 "label": "Solarized Extra Dark Custom",
                 "uiTheme": "vs-dark",
                 "path": "./themes/solarized-extra-dark-custom.json"
+            },
+            {
+                "label": "Solarized Extra Dark Custom Alternate",
+                "uiTheme": "vs-dark",
+                "path": "./themes/solarized-extra-dark-custom-alternate.json"
             }
         ]
     },
