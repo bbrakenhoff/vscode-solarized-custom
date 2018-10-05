@@ -325,9 +325,8 @@
 		{
 			"name": "Class",
 			"scope": "entity.name.type.class, storage.type.java, support.class.php, support.other.namespace.use-as.php, entity.other.inherited-class.php, meta.other.inherited-class.php, entity.other.inherited-class.ts",
-			"scope": "entity.name.type.class, storage.type.java, support.class.php, support.other.namespace.use-as.php, entity.other.inherited-class.php, meta.other.inherited-class.php, entity.other.inherited-class.ts",
 			"settings": {
-				"foreground": "#cb4b16",
+				"foreground": "#6c71c4",
 				"fontStyle": "normal"
 			}
 		},
@@ -335,7 +334,7 @@
 			"name": "Abstract class + interface",
 			"scope": "entity.name.type.interface.php",
 			"settings": {
-				"foreground": "#859900",
+				"foreground": "#6c71c4",
 				"fontStyle": "italic"
 			}
 		},
@@ -366,7 +365,7 @@
 			"name": "Function argument",
 			"scope": "variable.parameter",
 			"settings": {
-				"foreground": "#657b83"
+				"fontStyle": "italic"
 			}
 		},
 		{
@@ -492,7 +491,7 @@
 			"name": "TypeScript: type",
 			"scope": "entity.name.type.ts, support.type.primitive.ts",
 			"settings": {
-				"foreground": "#6c71c4"
+				"foreground": "#cb4b16"
 			}
 		},
 		{

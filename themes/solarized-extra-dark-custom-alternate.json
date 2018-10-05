@@ -1,5 +1,5 @@
 {
-	"type": "light",
+	"type": "dark",
     "colors": {
 
 		// Base
@@ -353,14 +353,6 @@
 			"settings": {
 				"fontStyle": "normal",
 				"foreground": "#93a1a1"
-			}
-		},
-		{
-			"name": "Operators",
-			"scope": "keyword.operator.arithmetic",
-			"settings": {
-				"fontStyle": "normal",
-				"foreground": "#657b83"
 			}
 		},
 		{
