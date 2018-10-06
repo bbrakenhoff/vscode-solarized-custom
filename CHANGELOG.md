@@ -86,7 +86,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ### Fixed
 - Default text color dark themes
 
-## [2.2.0] - 2018/09
+## [3.0.0] - 2018/09
 
 ### Added
 - Alternate extra dark theme; using the same syntax colors as the light theme
@@ -94,4 +94,4 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ### Changed
 - Highlight the active tab in extra dark theme
 - Font style italic for function argument
-
+- Refactored order of tokens, so it is the same in all themes

@@ -194,6 +194,37 @@
 				"foreground": "#657b83ff",
 				"background": "#fdf6e3ff"
 			}
+        },
+        {
+			"name": "Comment",
+			"scope": [
+				"comment",
+				"comment.block.documentation.javadoc"
+			],
+			"settings": {
+				"foreground": "#93a1a1"
+			}
+        },
+        {
+			"name": "HTML/XML: Attribute",
+			"scope": [
+				"entity.other.attribute-name.html",
+				"entity.other.attribute-name.xml",
+				"entity.other.attribute-name.localname.xml"
+			],
+			"settings": {
+				"foreground": "#b58900"
+			}
+        },
+        {
+			"name": "HTML/XML: Attribute value",
+			"scope": [
+				"string.quoted.double.html",
+				"string.quoted.double.xml"
+			],
+			"settings": {
+				"foreground": "#2aa198"
+			}
 		},
 		{
 			"name": "HTML/XML: Content",
@@ -203,6 +234,13 @@
 			],
 			"settings": {
 				"foreground": "#cb4b16"
+			}
+        },
+        {
+			"name": "HTML/XML: DOCTYPE",
+			"scope": "meta.tag.sgml.doctype.html",
+			"settings": {
+				"foreground": "#d33682"
 			}
 		},
 		{
@@ -230,46 +268,9 @@
 				"foreground": "#268bd2"
 			}
 		},
+
 		{
-			"name": "Comment",
-			"scope": [
-				"comment",
-				"comment.block.documentation.javadoc"
-			],
-			"settings": {
-				"foreground": "#93a1a1"
-			}
-		},
-		{
-			"name": "HTML/XML: Attribute",
-			"scope": [
-				"entity.other.attribute-name.html",
-				"entity.other.attribute-name.xml",
-				"entity.other.attribute-name.localname.xml"
-			],
-			"settings": {
-				"foreground": "#b58900"
-			}
-		},
-		{
-			"name": "HTML/XML: DOCTYPE",
-			"scope": "meta.tag.sgml.doctype.html",
-			"settings": {
-				"foreground": "#d33682"
-			}
-		},
-		{
-			"name": "HTML/XML: Attribute value",
-			"scope": [
-				"string.quoted.double.html",
-				"string.quoted.double.xml"
-			],
-			"settings": {
-				"foreground": "#2aa198"
-			}
-		},
-		{
-			"name": "CSS: Tag",
+			"name": "CSS/SCSS: Tag",
 			"scope": [
 				"entity.name.tag.css",
 				"entity.name.tag.custom.scss"
