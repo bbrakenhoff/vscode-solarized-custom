@@ -265,7 +265,8 @@
                 "storage.modifier",
                 "constant.language.boolean",
                 // Typescript
-                "variable.language.this"
+                "variable.language.this",
+                "keyword.operator.new.ts"
             ],
             "settings": {
                 "fontStyle": "bold",
