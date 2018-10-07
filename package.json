@@ -22,6 +22,16 @@
                 "path": "./themes/solarized-light-custom.json"
             },
             {
+                "label": "Solarized Custom Light Alternate",
+                "uiTheme": "vs",
+                "path": "./themes/solarized-light-custom-alternate.json"
+            },
+            {
+                "label": "Solarized Custom Light 1",
+                "uiTheme": "vs",
+                "path": "./themes/solarized-light-custom.1.json"
+            },
+            {
                 "label": "Solarized Custom Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/solarized-dark-custom.json"
