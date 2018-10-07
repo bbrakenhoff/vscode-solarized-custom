@@ -19,32 +19,32 @@
             {
                 "label": "Solarized Custom Light",
                 "uiTheme": "vs",
-                "path": "./themes/solarized-light-custom.json"
+                "path": "./themes/solarized-custom-light.json"
             },
             {
                 "label": "Solarized Custom Light Alternate",
                 "uiTheme": "vs",
-                "path": "./themes/solarized-light-custom-alternate.json"
+                "path": "./themes/solarized-custom-light-alternate.json"
             },
             {
                 "label": "Solarized Custom Dark",
                 "uiTheme": "vs-dark",
-                "path": "./themes/solarized-dark-custom.json"
+                "path": "./themes/solarized-custom-dark.json"
             },
             {
                 "label": "Solarized Custom Dark Alternate",
                 "uiTheme": "vs-dark",
-                "path": "./themes/solarized-dark-custom-alternate.json"
+                "path": "./themes/solarized-custom-dark-alternate.json"
             },
             {
                 "label": "Solarized Custom Extra Dark",
                 "uiTheme": "vs-dark",
-                "path": "./themes/solarized-extra-dark-custom.json"
+                "path": "./themes/solarized-custom-extra-dark.json"
             },
             {
                 "label": "Solarized Custom Extra Dark Alternate",
                 "uiTheme": "vs-dark",
-                "path": "./themes/solarized-extra-dark-custom-alternate.json"
+                "path": "./themes/solarized-custom-extra-dark-alternate.json"
             }
         ]
     },
