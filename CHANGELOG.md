@@ -95,3 +95,4 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Highlight the active tab in extra dark theme
 - Font style italic for function argument
 - Refactored order of tokens, so it is the same in all themes
+- Renamed theme files
