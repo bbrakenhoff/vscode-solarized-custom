@@ -27,6 +27,11 @@
                 "path": "./themes/solarized-dark-custom.json"
             },
             {
+                "label": "Solarized Custom Dark Alternate",
+                "uiTheme": "vs-dark",
+                "path": "./themes/solarized-dark-custom-alternate.json"
+            },
+            {
                 "label": "Solarized Custom Extra Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/solarized-extra-dark-custom.json"
