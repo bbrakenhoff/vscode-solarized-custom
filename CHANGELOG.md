@@ -96,3 +96,4 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Font style italic for function argument
 - Refactored order of tokens, so it is the same in all themes
 - Renamed theme files
+- Use solarized colors in workbench terminal
