@@ -8,7 +8,6 @@
 		// "contrastBorder": "",
 		// "widget.shadow": "",
 		"selection.background": "#0c0f10",
-		// "input.background": "#003847",
 		"input.background": "#242d32",
 		"input.foreground": "#93A1A1",
 		"input.placeholderForeground": "#93A1A1AA",
@@ -41,7 +40,6 @@
 		// "scrollbarSlider.hoverBackground": "",
 
 		// Editor
-		// "editor.background": "#002B36",
 		"editor.background": "#283237",
 		"editor.foreground": "#839496",
 		"editorWidget.background": "#00212B",
@@ -106,7 +104,6 @@
 		"editorGroup.border": "#00212B",
 		"editorGroup.background": "#242d32",
 		"editorGroup.dropBackground": "#1b222670",
-		// "editorGroup.dropBackground": "#242d3210",
 		"editorGroupHeader.tabsBackground": "#242d32",
 
 		// Workbench: Tabs
@@ -157,13 +154,12 @@
 		// Workbench: Quick Open
 		"pickerGroup.foreground": "#212a2e",
         "pickerGroup.border": "#2AA19899",
-        
+
          // Extensions
 		// "extensionButton.prominentBackground": "#b58900",
 		// "extensionButton.prominentHoverBackground": "#584c27aa",
 
 		// Workbench: Terminal
-		// Colors sourced from the official palette http://ethanschoonover.com/solarized
 		"terminal.ansiBlack": "#073642",
 		"terminal.ansiRed": "#dc322f",
 		"terminal.ansiGreen": "#859900",

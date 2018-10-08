@@ -86,7 +86,7 @@
         // "peekViewResult.matchHighlightBackground": "",
         // "peekViewTitleLabel.foreground": "",
         // "peekViewTitleDescription.foreground": "",
-        
+
         // Editor: Diff
         // "diffEditor.insertedTextBackground": "",
         // "diffEditor.insertedTextBorder": "",
@@ -111,10 +111,6 @@
         "tab.activeBackground": "#002B37",
         "tab.inactiveForeground": "#93A1A1",
         "tab.inactiveBackground": "#004052",
-        // "tab.activeForeground": "#93A1A1",
-        // "tab.activeBackground": "#004052",
-        // "tab.inactiveForeground": "#d6dbdb",
-        // "tab.inactiveBackground": "#002B37",
         "tab.border": "#003847",
 
         // Workbench: Activity Bar
@@ -123,14 +119,14 @@
         // "activityBar.dropBackground": "",
         // "activityBar.foreground": "",
         // "activityBarBadge.foreground": "",
-        
+
         // Workbench: Panel
         // "panel.background": "",
         "panel.border": "#2b2b4a",
         // "panelTitle.activeBorder": "",
         // "panelTitle.activeForeground": "",
         // "panelTitle.inactiveForeground": "",
-        
+
         // Workbench: Side Bar
         "sideBar.background": "#00212B",
         "sideBarTitle.foreground": "#93A1A1",
@@ -154,7 +150,7 @@
         // Workbench: Notifications
         "notification.background": "#003847",
         // "notification.foreground": "",
-        
+
         // Workbench: Quick Open
         "pickerGroup.foreground": "#2AA19899",
         "pickerGroup.border": "#2AA19899",
@@ -162,7 +158,7 @@
          // Extensions
 		// "extensionButton.prominentBackground": "#b58900",
 		// "extensionButton.prominentHoverBackground": "#584c27aa",
-        
+
         // Workbench: Terminal
         "terminal.ansiBlack": "#073642",
         "terminal.ansiRed": "#dc322f",

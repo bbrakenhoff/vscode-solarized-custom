@@ -111,10 +111,6 @@
         "tab.activeBackground": "#002B37",
         "tab.inactiveForeground": "#93A1A1",
         "tab.inactiveBackground": "#004052",
-        // "tab.activeForeground": "#93A1A1",
-        // "tab.activeBackground": "#004052",
-        // "tab.inactiveForeground": "#d6dbdb",
-        // "tab.inactiveBackground": "#002B37",
         "tab.border": "#003847",
 
         // Workbench: Activity Bar
