@@ -173,6 +173,16 @@
             }
         },
         {
+            "name": "abstractClassesInterfaces",
+            "scope": [
+                "entity.name.type.interface"
+            ],
+            "settings": {
+                "foreground": "#cb4b16",
+                "fontStyle": "italic"
+            }
+        },
+        {
             "name": "bracesParenthesesOperators",
             "scope": [
                 "punctuation.definition",
@@ -189,22 +199,12 @@
             "name": "classes",
             "scope": [
                 "entity.name.type",
-                "entity.other.inherited-class.java",
+                "entity.other.inherited-class",
                 "storage.type.java"
             ],
             "settings": {
                 "foreground": "#cb4b16",
                 "fontStyle": "normal"
-            }
-        },
-        {
-            "name": "abstractClassesInterfaces",
-            "scope": [
-                "entity.name.type.interface"
-            ],
-            "settings": {
-                "foreground": "#cb4b16",
-                "fontStyle": "italic"
             }
         },
         {

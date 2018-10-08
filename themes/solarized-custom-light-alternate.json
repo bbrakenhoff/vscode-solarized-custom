@@ -199,7 +199,7 @@
             "name": "classes",
             "scope": [
                 "entity.name.type",
-                "entity.other.inherited-class.java",
+                "entity.other.inherited-class",
                 "storage.type.java"
             ],
             "settings": {
