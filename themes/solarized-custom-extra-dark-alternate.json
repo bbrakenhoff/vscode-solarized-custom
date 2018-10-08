@@ -23,8 +23,8 @@
 		"badge.background": "#cb4b16",
 		"progressBar.background": "#cb4b16",
 		"dropdown.background": "#00212B",
-		"dropdown.border": "#2AA19899",
 		// "dropdown.foreground": "",
+		"dropdown.border": "#2AA19899",
 		"button.background": "#2AA19899",
 		// "button.foreground": "",
 		"list.activeSelectionBackground": "#0c0f10",
@@ -95,8 +95,8 @@
 
 		// Workbench: Title
 		"titleBar.activeBackground": "#1f272b",
-		// "titleBar.inactiveBackground": "",
 		// "titleBar.activeForeground": "",
+		// "titleBar.inactiveBackground": "",
 		// "titleBar.inactiveForeground": "",
 
 		// Workbench: Editors
@@ -115,9 +115,9 @@
 
 		// Workbench: Activity Bar
 		"activityBar.background": "#242d32",
-		"activityBarBadge.background": "#cb4b16",
-		// "activityBar.dropBackground": "",
 		// "activityBar.foreground": "#1ebcc5",
+		// "activityBar.dropBackground": "",
+		"activityBarBadge.background": "#cb4b16",
 		// "activityBarBadge.foreground": "#1ebcc5",
 
 		// Workbench: Panel

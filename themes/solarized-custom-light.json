@@ -31,7 +31,8 @@
 		"list.activeSelectionForeground": "#6c6c6c",
 		"list.focusBackground": "#586e7555",
 		"list.hoverBackground": "#586e7533",
-		"list.inactiveSelectionBackground": "#586e7566",
+        "list.inactiveSelectionBackground": "#586e7566",
+        // "list.dropBackground": "#00445488",
 		"list.highlightForeground": "#dc322f",
 		// "scrollbar.shadow": "",
 		// "scrollbarSlider.activeBackground": "",
@@ -105,11 +106,12 @@
 		"editorGroup.dropBackground": "#ddd6c1AA",
         "editorGroupHeader.tabsBackground": "#D9D2C2",
 
-		// Workbench: Tabs
-		"tab.border": "#ddd6c1",
+        // Workbench: Tabs
+        // "tab.activeForeground": "",
 		"tab.activeBackground": "#fdf6e3",
 		"tab.inactiveForeground": "#586E75",
 		"tab.inactiveBackground": "#d3cbb7",
+		"tab.border": "#ddd6c1",
 
 		// Workbench: Activity Bar
 		"activityBar.background": "#073642",

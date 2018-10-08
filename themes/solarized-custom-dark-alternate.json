@@ -23,8 +23,8 @@
         "badge.background": "#047aa6",
         "progressBar.background": "#047aa6",
         "dropdown.background": "#00212B",
-        "dropdown.border": "#2AA19899",
         // "dropdown.foreground": "",
+        "dropdown.border": "#2AA19899",
         "button.background": "#2AA19899",
         // "button.foreground": "",
         "list.activeSelectionBackground": "#005A6F",
@@ -95,8 +95,8 @@
 
         // Workbench: Title
         "titleBar.activeBackground": "#002C39",
-        // "titleBar.inactiveBackground": "",
         // "titleBar.activeForeground": "",
+		// "titleBar.inactiveBackground": "",
         // "titleBar.inactiveForeground": "",
 
         // Workbench: Editors
@@ -115,9 +115,9 @@
 
         // Workbench: Activity Bar
         "activityBar.background": "#003847",
-        // "activityBarBadge.background": "",
-        // "activityBar.dropBackground": "",
         // "activityBar.foreground": "",
+        // "activityBar.dropBackground": "",
+        // "activityBarBadge.background": "",
         // "activityBarBadge.foreground": "",
 
         // Workbench: Panel
@@ -151,9 +151,9 @@
         "notification.background": "#003847",
         // "notification.foreground": "",
 
-        // Workbench: Quick Open
-        "pickerGroup.foreground": "#2AA19899",
-        "pickerGroup.border": "#2AA19899",
+		// Workbench: Quick Open
+		"pickerGroup.foreground": "#2AA19899",
+		"pickerGroup.border": "#2AA19899",
 
         // Extensions
         // "extensionButton.prominentBackground": "#b58900",
