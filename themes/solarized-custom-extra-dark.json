@@ -1,23 +1,18 @@
 {
 	"type": "dark",
 	"colors": {
-
 		// Base
 		// "foreground": "",
 		"focusBorder": "#2AA19899",
 		// "contrastActiveBorder": "",
 		// "contrastBorder": "",
-
 		// "widget.shadow": "",
-
 		"selection.background": "#0c0f10",
-
 		// "input.background": "#003847",
 		"input.background": "#242d32",
 		"input.foreground": "#93A1A1",
 		"input.placeholderForeground": "#93A1A1AA",
 		// "input.border": "",
-
 		"inputOption.activeBorder": "#2AA19899",
 		"inputValidation.infoBorder": "#363b5f",
 		"inputValidation.infoBackground": "#052730",
@@ -25,19 +20,14 @@
 		"inputValidation.warningBorder": "#9d8a5e",
 		"inputValidation.errorBackground": "#571b26",
 		"inputValidation.errorBorder": "#a92049",
-
 		"errorForeground": "#ffeaea",
-
 		"badge.background": "#cb4b16",
 		"progressBar.background": "#cb4b16",
-
 		"dropdown.background": "#00212B",
 		"dropdown.border": "#2AA19899",
 		// "dropdown.foreground": "",
-
 		"button.background": "#2AA19899",
 		// "button.foreground": "",
-
 		"list.activeSelectionBackground": "#0c0f10",
 		// "list.activeSelectionForeground": "",
 		"list.focusBackground": "#0c0f10",
@@ -45,7 +35,6 @@
 		"list.inactiveSelectionBackground": "#00445488",
 		"list.dropBackground": "#00445488",
 		"list.highlightForeground": "#1ebcc5",
-
 		// "scrollbar.shadow": "",
 		// "scrollbarSlider.activeBackground": "",
 		// "scrollbarSlider.background": "",
@@ -167,7 +156,11 @@
 
 		// Workbench: Quick Open
 		"pickerGroup.foreground": "#212a2e",
-		"pickerGroup.border": "#2AA19899",
+        "pickerGroup.border": "#2AA19899",
+        
+         // Extensions
+		// "extensionButton.prominentBackground": "#b58900",
+		// "extensionButton.prominentHoverBackground": "#584c27aa",
 
 		// Workbench: Terminal
 		// Colors sourced from the official palette http://ethanschoonover.com/solarized
@@ -291,9 +284,8 @@
                 "storage.type",
                 "storage.modifier",
                 "constant.language.boolean",
-                // Typescript
-                "variable.language.this",
-                "keyword.operator.new.ts"
+                "keyword.operator.new",
+                "constant.language.null"
             ],
             "settings": {
                 "fontStyle": "bold",
