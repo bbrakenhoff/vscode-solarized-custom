@@ -115,15 +115,15 @@
 
         // Workbench: Activity Bar
         "activityBar.background": "#003847",
-        // "activityBar.foreground": "",
-        // "activityBar.dropBackground": "",
-        // "activityBarBadge.background": "",
-        // "activityBarBadge.foreground": "",
+		"activityBar.foreground": "#FFFCF5",
+		"activityBar.dropBackground": "#eee8d5",
+		"activityBarBadge.background": "#d33682",
+		"activityBarBadge.foreground": "#FFFCF5",
 
         // Workbench: Panel
         // "panel.background": "",
-        "panel.border": "#2b2b4a",
-        // "panelTitle.activeBorder": "",
+        "panel.border": "#00212B",
+        "panelTitle.activeBorder": "#d33682",
         // "panelTitle.activeForeground": "",
         // "panelTitle.inactiveForeground": "",
 

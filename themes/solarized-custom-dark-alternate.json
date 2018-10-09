@@ -115,15 +115,15 @@
 
         // Workbench: Activity Bar
         "activityBar.background": "#003847",
-        // "activityBar.foreground": "",
-        // "activityBar.dropBackground": "",
-        // "activityBarBadge.background": "",
-        // "activityBarBadge.foreground": "",
+        "activityBar.foreground": "#FFFCF5",
+        "activityBar.dropBackground": "#eee8d5",
+        "activityBarBadge.background": "#859900",
+        "activityBarBadge.foreground": "#FFFCF5",
 
         // Workbench: Panel
         // "panel.background": "",
-        "panel.border": "#2b2b4a",
-        // "panelTitle.activeBorder": "",
+        "panel.border": "#00212B",
+        "panelTitle.activeBorder": "#859900",
         // "panelTitle.activeForeground": "",
         // "panelTitle.inactiveForeground": "",
 
@@ -316,7 +316,7 @@
                 "support.type.primitive"
             ],
             "settings": {
-                "foreground": "#6c71c4"
+                "foreground": "#cb4b16"
             }
         },
         {

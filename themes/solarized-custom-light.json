@@ -118,12 +118,12 @@
 		"activityBar.foreground": "#FFFCF5",
 		"activityBar.dropBackground": "#eee8d5",
 		"activityBarBadge.background": "#d33682",
-		// "activityBarBadge.foreground": "",
+		"activityBarBadge.foreground": "#FFFCF5",
 
         // Workbench: Panel
 		// "panel.background": "",
 		"panel.border": "#ddd6c1",
-		// "panelTitle.activeBorder": "",
+		"panelTitle.activeBorder": "#d33682",
 		// "panelTitle.activeForeground": "",
         // "panelTitle.inactiveForeground": "",
 
