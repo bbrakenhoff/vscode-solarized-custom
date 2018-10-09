@@ -280,7 +280,6 @@
                 "storage.type",
                 "storage.modifier",
                 "constant.language.boolean",
-                // Typescript
                 "variable.language.this",
                 "keyword.operator.new",
                 "constant.language.null",

@@ -280,6 +280,7 @@
                 "storage.type",
                 "storage.modifier",
                 "constant.language.boolean",
+                "variable.language.this",
                 "keyword.operator.new",
                 "constant.language.null",
                 "constant.language.json"
