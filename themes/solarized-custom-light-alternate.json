@@ -281,7 +281,8 @@
                 "storage.modifier",
                 "constant.language.boolean",
                 "keyword.operator.new",
-                "constant.language.null"
+                "constant.language.null",
+                "constant.language.json"
             ],
             "settings": {
                 "fontStyle": "bold",
