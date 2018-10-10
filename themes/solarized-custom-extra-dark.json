@@ -22,7 +22,7 @@
 		"errorForeground": "#ffeaea",
 		"badge.background": "#cb4b16",
 		"progressBar.background": "#cb4b16",
-        "dropdown.background": "#00212B",
+		"dropdown.background": "#242d32",
         // "dropdown.foreground": "",
 		"dropdown.border": "#2AA19899",
 		"button.background": "#2AA19899",
