@@ -283,7 +283,8 @@
                 "variable.language.this",
                 "keyword.operator.new",
                 "constant.language.null",
-                "constant.language.json"
+                "constant.language.json",
+                "keyword.operator.expression.of.ts"
             ],
             "settings": {
                 "fontStyle": "bold",
