@@ -284,7 +284,8 @@
                 "keyword.operator.new",
                 "constant.language.null",
                 "constant.language.json",
-                "keyword.operator.expression.of.ts"
+                "keyword.operator.expression.of.ts",
+                "keyword.operator.expression.instanceof"
             ],
             "settings": {
                 "fontStyle": "bold",
