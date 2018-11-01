@@ -286,7 +286,9 @@
                 "constant.language.json",
                 "keyword.operator.expression.of.ts",
                 "keyword.operator.expression.instanceof",
-                "keyword.operator.expression.typeof"
+                "keyword.operator.expression.typeof",  
+                "constant.language.undefined",
+                "variable.language.super"
             ],
             "settings": {
                 "fontStyle": "bold",
