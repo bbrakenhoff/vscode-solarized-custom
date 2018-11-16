@@ -337,6 +337,16 @@
         },
         // CSS
         {
+            "name": "CSS.classes",
+            "scope": [
+                "entity.other.attribute-name.class.css"
+            ],
+            "settings": {
+                "foreground": "#859900",
+                "fontStyle": "normal"
+            }
+        },
+        {
             "name": "CSS.id",
             "scope": [
                 "entity.other.attribute-name.id.css"
@@ -411,12 +421,20 @@
                 "foreground": "#6c71c4"
             }
         },
-        // HTML/ZML
+        // HTML/XML
         {
             "name": "HTML.XML.content",
-            "scope": [],
+            "scope": ["text.html.derivative"],
             "settings": {
                 "foreground": "#93a1a1"
+            }
+        },
+        {
+            "name": "HTML.XML.specialChar",
+            "scope":["constant.character.entity.named.nbsp.html"],
+            "settings": {
+                "foreground": "#cb4b16",
+                "fontStyle": "bold"
             }
         },
         {
@@ -425,7 +443,7 @@
                 "punctuation.definition.tag"
             ],
             "settings": {
-                "foreground": "#657b83"
+                "foreground": "#859900"
             }
         },
         {
@@ -443,7 +461,15 @@
                 "entity.other.attribute-name"
             ],
             "settings": {
-                "foreground": "#b58900"
+                "foreground": "#b58900",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "HTML.XML.attributeSeparator",
+            "scope":["punctuation.separator.key-value.html"],
+            "settings": {
+                "foreground": "#859900"
             }
         },
         // JSON
