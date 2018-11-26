@@ -70,7 +70,8 @@
 		// "editor.selectionHighlightBorder": "#ccc4b0",
 		"editor.wordHighlightBackground": "#93a1a130",
 		"editor.wordHighlightBorder": "#ccc4b0",
-        // "editor.wordHighlightStrongBackground": "",
+        "editor.wordHighlightStrongBackground": "#93a1a130",
+        "editor.wordHighlightStrongBorder": "#ccc4b0",
 
 		// Editor: Suggest
 		// "editorSuggestWidget.background": "",

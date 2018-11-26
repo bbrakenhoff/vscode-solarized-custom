@@ -98,3 +98,5 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Renamed theme files
 - Use solarized colors in workbench terminal
 - Change syntax highlighting for HTML/XML
+- Better workbench colors for extra dark theme
+- Highlight colors improved 
