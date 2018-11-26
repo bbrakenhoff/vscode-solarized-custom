@@ -107,7 +107,7 @@
 		// "editorGroupHeader.noTabsBackground": "",
 		"editorGroup.border": "#1d2528",
 		"editorGroup.background": "#242d32",
-		"editorGroup.dropBackground": "#1b222670",
+		"editorGroup.dropBackground": "#0c0f1070",
 		"editorGroupHeader.tabsBackground": "#242d32",
 
 		// Workbench: Tabs
@@ -487,7 +487,7 @@
                 "punctuation.support.type.property-name.end.json"
             ],
             "settings": {
-                "foreground": "#268bd2"
+                "foreground": "#b58900"
             }
         },
         {
@@ -496,7 +496,7 @@
                 "support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#b58900"
+                "foreground": "#6c71c4"
             }
         },
         // PHP

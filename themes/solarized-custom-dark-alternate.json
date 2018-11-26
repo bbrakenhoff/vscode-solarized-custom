@@ -485,7 +485,7 @@
                 "punctuation.support.type.property-name.end.json"
             ],
             "settings": {
-                "foreground": "#268bd2"
+                "foreground": "#b58900"
             }
         },
         {
@@ -494,7 +494,7 @@
                 "support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#b58900"
+                "foreground": "#6c71c4"
             }
         },
         // PHP
