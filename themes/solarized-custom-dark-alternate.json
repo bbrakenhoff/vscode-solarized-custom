@@ -20,20 +20,20 @@
         "inputValidation.errorBackground": "#571b26",
         "inputValidation.errorBorder": "#a92049",
         "errorForeground": "#ffeaea",
-        "badge.background": "#047aa6",
-        "progressBar.background": "#047aa6",
+        "badge.background": "#cb4b16",
+        "progressBar.background": "#cb4b16",
         "dropdown.background": "#00212B",
         // "dropdown.foreground": "",
         "dropdown.border": "#2AA19899",
         "button.background": "#2AA19899",
         // "button.foreground": "",
-        "list.activeSelectionBackground": "#005A6F",
+        "list.activeSelectionBackground": "#a13d1290",
         // "list.activeSelectionForeground": "",
-        "list.focusBackground": "#005A6F",
-        "list.hoverBackground": "#004454AA",
-        "list.inactiveSelectionBackground": "#00445488",
-        "list.dropBackground": "#00445488",
-        "list.highlightForeground": "#1ebcc5",
+		"list.focusBackground": "#a13d1290",
+		"list.hoverBackground": "#a13d1290",
+		"list.inactiveSelectionBackground": "#cb4b1650",
+		"list.dropBackground": "#cb4b1660",
+		"list.highlightForeground": "#cb4b16",
         // "scrollbar.shadow": "",
         // "scrollbarSlider.activeBackground": "",
         // "scrollbarSlider.background": "",
@@ -51,7 +51,7 @@
         "editorHoverWidget.background": "#004052",
         // "editorHoverWidget.border": "",
         "editorLineNumber.foreground": "#93A1A1",
-        "editorBracketMatch.background": "#00212B70",
+        "editorBracketMatch.background": "#00212B",
         "editorBracketMatch.border": "#586e7570",
         // "editorMarkerNavigation.background": "",
         "editorMarkerNavigationError.background": "#AB395B",
@@ -64,11 +64,11 @@
         // "editor.inactiveSelectionBackground": "",
         // "editor.lineHighlightBorder": "",
         // "editor.rangeHighlightBackground": "",
-        "editor.wordHighlightBackground": "#00212B70",
+        "editor.wordHighlightBackground": "#00212B",
 		"editor.wordHighlightBorder": "#586e7570",
-		"editor.wordHighlightStrongBackground": "#00212B70",
-		"editor.wordHighlightStrongBorder": "#586e7570",
-
+		"editor.wordHighlightStrongBackground": "#00212B",
+        "editor.wordHighlightStrongBorder": "#586e7570",
+        
         // Editor: Suggest
         // "editorSuggestWidget.background": "",
         // "editorSuggestWidget.border": "",
@@ -99,7 +99,7 @@
         // Workbench: Title
         "titleBar.activeBackground": "#002C39",
         // "titleBar.activeForeground": "",
-		// "titleBar.inactiveBackground": "",
+        // "titleBar.inactiveBackground": "",
         // "titleBar.inactiveForeground": "",
 
         // Workbench: Editors
@@ -115,18 +115,19 @@
         "tab.inactiveForeground": "#93A1A1",
         "tab.inactiveBackground": "#004052",
         "tab.border": "#003847",
+        "tab.activeBorderTop": "#cb4b16",
 
         // Workbench: Activity Bar
         "activityBar.background": "#003847",
-        "activityBar.foreground": "#FFFCF5",
-        "activityBar.dropBackground": "#eee8d5",
-        "activityBarBadge.background": "#b58900",
-        "activityBarBadge.foreground": "#FFFCF5",
+		"activityBar.foreground": "#FFFCF5",
+		"activityBar.dropBackground": "#eee8d5",
+		"activityBarBadge.background": "#cb4b16",
+		"activityBarBadge.foreground": "#FFFCF5",
 
         // Workbench: Panel
         // "panel.background": "",
         "panel.border": "#00212B",
-        "panelTitle.activeBorder": "#b58900",
+        "panelTitle.activeBorder": "#cb4b16",
         // "panelTitle.activeForeground": "",
         // "panelTitle.inactiveForeground": "",
 
@@ -154,13 +155,13 @@
         "notification.background": "#003847",
         // "notification.foreground": "",
 
-		// Workbench: Quick Open
-		"pickerGroup.foreground": "#2AA19899",
-		"pickerGroup.border": "#2AA19899",
+        // Workbench: Quick Open
+        "pickerGroup.foreground": "#2AA19899",
+        "pickerGroup.border": "#2AA19899",
 
-        // Extensions
-        // "extensionButton.prominentBackground": "#b58900",
-        // "extensionButton.prominentHoverBackground": "#584c27aa",
+         // Extensions
+		// "extensionButton.prominentBackground": "#b58900",
+		// "extensionButton.prominentHoverBackground": "#584c27aa",
 
         // Workbench: Terminal
         "terminal.ansiBlack": "#073642",

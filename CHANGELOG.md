@@ -100,3 +100,5 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Change syntax highlighting for HTML/XML
 - Better workbench colors for extra dark theme
 - Highlight colors improved 
+- Better colors in the side bar
+- Highlight active tab
