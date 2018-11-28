@@ -68,7 +68,7 @@
 		"editor.wordHighlightBorder": "#586e7570",
 		"editor.wordHighlightStrongBackground": "#00212B",
         "editor.wordHighlightStrongBorder": "#586e7570",
-        
+
         // Editor: Suggest
         // "editorSuggestWidget.background": "",
         // "editorSuggestWidget.border": "",
@@ -84,7 +84,8 @@
         "peekViewEditor.background": "#10192c",
         "peekViewTitle.background": "#00212B",
         "peekView.border": "#2b2b4a",
-        "peekViewEditor.matchHighlightBackground": "#7744AA40",
+        "peekViewEditor.matchHighlightBackground": "#00212B",
+        "peekViewEditor.matchHighlightBorder": "#586e7570",
         // "peekViewResult.fileForeground": "",
         // "peekViewResult.matchHighlightBackground": "",
         // "peekViewTitleLabel.foreground": "",
@@ -291,7 +292,7 @@
                 "constant.language.json",
                 "keyword.operator.expression.of.ts",
                 "keyword.operator.expression.instanceof",
-                "keyword.operator.expression.typeof",  
+                "keyword.operator.expression.typeof",
                 "constant.language.undefined",
                 "variable.language.super"
             ],
