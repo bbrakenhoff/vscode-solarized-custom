@@ -48,7 +48,7 @@
 		"editor.lineHighlightBackground": "#232c31",
 		"editor.selectionBackground": "#232c31",
 		"editorIndentGuide.background": "#93A1A120",
-		"editorHoverWidget.background": "#004052",
+		"editorHoverWidget.background": "#242d32",
 		// "editorHoverWidget.border": "",
         "editorLineNumber.foreground": "#93A1A1",
         "editorBracketMatch.background": "#151b1e40",
@@ -82,10 +82,11 @@
 		// "peekViewResult.lineForeground": "",
 		// "peekViewResult.selectionBackground": "",
 		// "peekViewResult.selectionForeground": "",
-		"peekViewEditor.background": "#10192c",
+		"peekViewEditor.background": "#002833",
 		"peekViewTitle.background": "#1d2528",
-		"peekView.border": "#2b2b4a",
-		"peekViewEditor.matchHighlightBackground": "#7744AA40",
+		"peekView.border": "#003847",
+		"peekViewEditor.matchHighlightBackground": "#151b1e40",
+		"peekViewEditor.matchHighlightBorder": "#586e7570",
 		// "peekViewResult.fileForeground": "",
 		// "peekViewResult.matchHighlightBackground": "",
 		// "peekViewTitleLabel.foreground": "",
@@ -117,7 +118,7 @@
 		"tab.inactiveBackground": "#1f272b",
         "tab.border": "#1b2226",
         "tab.activeBorderTop": "#b58900",
-        
+
 		// Workbench: Activity Bar
         "activityBar.background": "#334047",
         "activityBar.foreground": "#FFFCF5",
