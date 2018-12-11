@@ -292,6 +292,7 @@
                 "constant.language.null",
                 "constant.language.json",
                 "keyword.operator.expression.of.ts",
+                "keyword.operator.expression.in.ts",
                 "keyword.operator.expression.instanceof",
                 "keyword.operator.expression.typeof",
                 "constant.language.undefined",
