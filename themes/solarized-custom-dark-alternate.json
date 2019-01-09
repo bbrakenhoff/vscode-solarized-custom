@@ -43,7 +43,7 @@
         "editor.background": "#002B36",
         "editor.foreground": "#839496",
         "editorWidget.background": "#00212B",
-        "editorCursor.foreground": "#6C71C480",
+		"editorCursor.foreground": "#dc322f",
         "editorWhitespace.foreground": "#93A1A140",
         "editor.lineHighlightBackground": "#073642",
         "editor.selectionBackground": "#073642",
@@ -204,10 +204,8 @@
             "name": "bracesParenthesesOperators",
             "scope": [
                 "punctuation.definition",
-                "keyword.operator",
                 "meta.brace.round.ts",
-                "meta.brace.square.ts",
-                "punctuation.terminator.statement.ts"
+                "meta.brace.square.ts"
             ],
             "settings": {
                 "fontStyle": "normal",
@@ -329,6 +327,19 @@
             ],
             "settings": {
                 "foreground": "#cb4b16"
+            }
+        },
+        {
+            "name": "punctuation", 
+            "scope": [
+                "keyword.operator",
+                "punctuation.accessor",
+                "punctuation.terminator.statement.ts",
+                "punctuation.separator"
+            ],
+            "settings":{
+                "foreground": "#b58900",
+                "fontStyle": "bold"
             }
         },
         {
