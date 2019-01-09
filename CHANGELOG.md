@@ -88,10 +88,8 @@ All notable changes to the "solarized-light-custom" extension will be documented
 
 ## [3.0.0] - 2018/09
 
-### Added
-- Alternate extra dark theme; using the same syntax colors as the light theme
-
 ### Changed
+- Dark themes now match the light theme colors except for the background
 - Highlight the active tab in extra dark theme
 - Font style italic for function argument
 - Refactored order of tokens, so it is the same in all themes
@@ -102,3 +100,5 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Highlight colors improved 
 - Better colors in the side bar
 - Highlight active tab
+- Color for punctuation
+- Cursor color
