@@ -22,29 +22,14 @@
                 "path": "./themes/solarized-custom-light.json"
             },
             {
-                "label": "Solarized Custom Light Alternate",
-                "uiTheme": "vs",
-                "path": "./themes/solarized-custom-light-alternate.json"
-            },
-            {
                 "label": "Solarized Custom Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/solarized-custom-dark.json"
             },
             {
-                "label": "Solarized Custom Dark Alternate",
-                "uiTheme": "vs-dark",
-                "path": "./themes/solarized-custom-dark-alternate.json"
-            },
-            {
                 "label": "Solarized Custom Extra Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/solarized-custom-extra-dark.json"
-            },
-            {
-                "label": "Solarized Custom Extra Dark Alternate",
-                "uiTheme": "vs-dark",
-                "path": "./themes/solarized-custom-extra-dark-alternate.json"
             }
         ]
     },

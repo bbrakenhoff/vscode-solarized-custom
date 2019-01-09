@@ -1,6 +1,6 @@
 {
 	"type": "dark",
-	"colors": {
+    "colors": {
 		// Base
 		// "foreground": "",
 		"focusBorder": "#2AA19899",
@@ -85,8 +85,8 @@
 		"peekViewEditor.background": "#002833",
 		"peekViewTitle.background": "#1d2528",
 		"peekView.border": "#003847",
-        "peekViewEditor.matchHighlightBackground": "#151b1e40",
-        "peekViewEditor.matchHighlightBorder": "#586e7570",
+		"peekViewEditor.matchHighlightBackground": "#151b1e40",
+		"peekViewEditor.matchHighlightBorder": "#586e7570",
 		// "peekViewResult.fileForeground": "",
 		// "peekViewResult.matchHighlightBackground": "",
 		// "peekViewTitleLabel.foreground": "",
@@ -197,7 +197,7 @@
                 "entity.name.type.interface"
             ],
             "settings": {
-                "foreground": "#cb4b16",
+                "foreground": "#859900",
                 "fontStyle": "italic"
             }
         },
@@ -221,7 +221,7 @@
                 "storage.type.java"
             ],
             "settings": {
-                "foreground": "#cb4b16",
+                "foreground": "#859900",
                 "fontStyle": "normal"
             }
         },
@@ -298,7 +298,7 @@
             ],
             "settings": {
                 "fontStyle": "bold",
-                "foreground": "#859900"
+                "foreground": "#d33682"
             }
         },
         {
@@ -309,7 +309,7 @@
                 "meta.field.declaration"
             ],
             "settings": {
-                "foreground": "#b58900"
+                "foreground": "#6c71c4"
             }
         },
         {
@@ -318,7 +318,7 @@
                 "constant.numeric"
             ],
             "settings": {
-                "foreground": "#d33682"
+                "foreground": "#b58900"
             }
         },
         {
@@ -327,7 +327,7 @@
                 "support.type.primitive"
             ],
             "settings": {
-                "foreground": "#6c71c4"
+                "foreground": "#cb4b16"
             }
         },
         {
@@ -339,7 +339,7 @@
                 "punctuation.separator"
             ],
             "settings":{
-                "foreground": "#d33682",
+                "foreground": "#b58900",
                 "fontStyle": "bold"
             }
         },
@@ -421,7 +421,7 @@
                 "punctuation.definition.entity.css"
             ],
             "settings": {
-                "foreground": "#b58900"
+                "foreground": "#859900"
             }
         },
         {
@@ -445,14 +445,14 @@
             "name": "HTML.XML.content",
             "scope": ["text.html.derivative"],
             "settings": {
-                "foreground": "#93a1a1"
+                "foreground": "#b58900"
             }
         },
         {
             "name": "HTML.XML.specialChar",
             "scope":["constant.character.entity.named.nbsp.html"],
             "settings": {
-                "foreground": "#cb4b16",
+                "foreground": "#859900",
                 "fontStyle": "bold"
             }
         },
@@ -462,7 +462,7 @@
                 "punctuation.definition.tag"
             ],
             "settings": {
-                "foreground": "#859900"
+                "foreground": "#268bd2"
             }
         },
         {
@@ -471,7 +471,7 @@
                 "entity.name.tag"
             ],
             "settings": {
-                "foreground": "#268bd2"
+                "foreground": "#d33682"
             }
         },
         {
@@ -480,7 +480,7 @@
                 "entity.other.attribute-name"
             ],
             "settings": {
-                "foreground": "#b58900",
+                "foreground": "#6c71c4",
                 "fontStyle": "bold"
             }
         },
@@ -488,7 +488,7 @@
             "name": "HTML.XML.attributeSeparator",
             "scope":["punctuation.separator.key-value.html"],
             "settings": {
-                "foreground": "#859900"
+                "foreground": "#268bd2"
             }
         },
         // JSON
@@ -501,7 +501,7 @@
                 "punctuation.support.type.property-name.end.json"
             ],
             "settings": {
-                "foreground": "#268bd2"
+                "foreground": "#b58900"
             }
         },
         {
@@ -510,7 +510,7 @@
                 "support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#b58900"
+                "foreground": "#6c71c4"
             }
         },
         // PHP
