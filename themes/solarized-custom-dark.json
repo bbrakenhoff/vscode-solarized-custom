@@ -27,13 +27,15 @@
         "dropdown.border": "#2AA19899",
         "button.background": "#2AA19899",
         // "button.foreground": "",
-        "list.activeSelectionBackground": "#a13d1290",
-        // "list.activeSelectionForeground": "",
-		"list.focusBackground": "#a13d1290",
-		"list.hoverBackground": "#a13d1290",
-		"list.inactiveSelectionBackground": "#cb4b1650",
-		"list.dropBackground": "#cb4b1660",
-		"list.highlightForeground": "#cb4b16",
+       
+        "list.activeSelectionBackground": "#005A6F",
+		// "list.activeSelectionForeground": "",
+		"list.focusBackground": "#005A6F",
+		"list.hoverBackground": "#004454AA",
+		"list.inactiveSelectionBackground": "#00445488",
+		"list.dropBackground": "#00445488",
+		"list.highlightForeground": "#1ebcc5",
+
         // "scrollbar.shadow": "",
         // "scrollbarSlider.activeBackground": "",
         // "scrollbarSlider.background": "",
@@ -107,20 +109,21 @@
         // Workbench: Editors
         // "editorGroupHeader.noTabsBackground": "",
         "editorGroup.border": "#00212B",
-        "editorGroup.background": "#011b23",
+        "editorGroup.background": "#00384780",
         "editorGroup.dropBackground": "#2AA19844",
-        "editorGroupHeader.tabsBackground": "#004052",
+        "editorGroupHeader.tabsBackground": "#00384780",
 
         // Workbench: Tabs
         "tab.activeForeground": "#d6dbdb",
         "tab.activeBackground": "#002B37",
         "tab.inactiveForeground": "#93A1A1",
-        "tab.inactiveBackground": "#004052",
+        "tab.inactiveBackground": "#00384780",
         "tab.border": "#003847",
         "tab.activeBorderTop": "#cb4b16",
 
         // Workbench: Activity Bar
-        "activityBar.background": "#003847",
+        "activityBar.background": "#002B36",
+        "activityBar.border": "#00212B",
 		"activityBar.foreground": "#FFFCF5",
 		"activityBar.dropBackground": "#eee8d5",
 		"activityBarBadge.background": "#cb4b16",
@@ -134,7 +137,8 @@
         // "panelTitle.inactiveForeground": "",
 
         // Workbench: Side Bar
-        "sideBar.background": "#00212B",
+        "sideBar.background": "#002B36",
+        "sideBar.border": "#00212B",
         "sideBarTitle.foreground": "#93A1A1",
         // "sideBarSectionHeader.background": "",
 
