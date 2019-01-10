@@ -6,7 +6,14 @@ function clean(){
 }
 
 function build(){
-
+ // clean current themes
+ // build syntax colors
+ // For each theme: 
+ // override theme specific syntax colors
+ // build workbench colors
+ // combine workbench colors and syntax colors to complete object according theme file structure
+ // convert to js
+ // save to themes folder
 }
 
 exports.clean = clean;
