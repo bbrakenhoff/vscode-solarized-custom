@@ -1,0 +1,171 @@
+export const base = [ //  General colors
+    {
+        settings: {
+            foreground: "#657b83ff",
+            background: "#fdf6e3ff"
+        }
+    },
+    {
+        name: "abstractClassesInterfaces",
+        scope: [
+            "entity.name.type.interface"
+        ],
+        settings: {
+            "foreground": "#859900",
+            "fontStyle": "italic"
+        }
+    },
+    {
+        name: "bracesParenthesesOperators",
+        scope: [
+            "punctuation.definition",
+            "meta.brace.round.ts",
+            "meta.brace.square.ts"
+        ],
+        settings: {
+            "fontStyle": "normal",
+            "foreground": "#93a1a1"
+        }
+    },
+    {
+        name: "classes",
+        scope: [
+            "entity.name.type",
+            "entity.other.inherited-class",
+            "storage.type.java"
+        ],
+        settings: {
+            "foreground": "#859900",
+            "fontStyle": "normal"
+        }
+    },
+    {
+        "name": "comments",
+        "scope": [
+            "comment",
+            "comment.block.documentation",
+            "punctuation.definition.comment",
+            "punctuation.definition.comment.php"
+        ],
+        "settings": {
+            "foreground": "#93a1a1"
+        }
+    },
+    {
+        "name": "commentTags",
+        "scope": [
+            "storage.type.class.jsdoc",
+            "punctuation.definition.block.tag.jsdoc"
+        ],
+        "settings": {
+            "foreground": "#93a1a1",
+            "fontStyle": "bold"
+        }
+    },
+    {
+        "name": "commentVariableType",
+        "scope": [
+            "entity.name.type.instance.jsdoc"
+        ],
+        "settings": {
+            "foreground": "#93a1a1",
+            "fontStyle": "italic"
+        }
+    },
+    {
+        "name": "functionNames",
+        "scope": [
+            "support.function",
+            "entity.name.function"
+        ],
+        "settings": {
+            "fontStyle": "normal",
+            "foreground": "#268bd2"
+        }
+    },
+    {
+        "name": "functionArguments",
+        "scope": [
+            "variable.parameter"
+        ],
+        "settings": {
+            "fontStyle": "italic"
+        }
+    },
+    {
+        "name": "keywords",
+        "scope": [
+            "keyword",
+            "storage.type",
+            "storage.modifier",
+            "constant.language.boolean",
+            "variable.language.this",
+            "keyword.operator.new",
+            "constant.language.null",
+            "constant.language.json",
+            "keyword.operator.expression.of.ts",
+            "keyword.operator.expression.in.ts",
+            "keyword.operator.expression.instanceof",
+            "keyword.operator.expression.typeof",
+            "constant.language.undefined",
+            "variable.language.super"
+        ],
+        "settings": {
+            "fontStyle": "bold",
+            "foreground": "#d33682"
+        }
+    },
+    {
+        "name": "instanceFields",
+        "scope": [
+            "variable.other.property",
+            "variable.other.object.property",
+            "meta.field.declaration"
+        ],
+        "settings": {
+            "foreground": "#6c71c4"
+        }
+    },
+    {
+        "name": "numbers",
+        "scope": [
+            "constant.numeric"
+        ],
+        "settings": {
+            "foreground": "#b58900"
+        }
+    },
+    {
+        "name": "primitives",
+        "scope": [
+            "support.type.primitive"
+        ],
+        "settings": {
+            "foreground": "#cb4b16"
+        }
+    },
+    {
+        "name": "punctuation",
+        "scope": [
+            "keyword.operator",
+            "punctuation.accessor",
+            "punctuation.terminator.statement.ts",
+            "punctuation.separator"
+        ],
+        "settings": {
+            "foreground": "#b58900",
+            "fontStyle": "bold"
+        }
+    },
+    {
+        "name": "strings",
+        "scope": [
+            "string.quoted.single",
+            "string.quoted.double",
+            "string.template"
+        ],
+        "settings": {
+            "foreground": "#2aa198"
+        }
+    }
+];

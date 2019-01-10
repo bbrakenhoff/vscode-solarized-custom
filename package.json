@@ -38,5 +38,10 @@
         "id": "1a8bca67-d8c0-4728-8e1b-8bd2d4aa0971",
         "publisherDisplayName": "bbrakenhoff",
         "publisherId": "b60c9515-f4ce-49eb-b537-93f7a2150625"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "del": "^3.0.0",
+        "gulp": "^4.0.0"
     }
 }
