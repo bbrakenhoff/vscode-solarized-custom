@@ -28,13 +28,13 @@
 		"dropdown.border": "#2AA19899",
 		"button.background": "#2AA19899",
 		// "button.foreground": "",
-        "list.activeSelectionBackground": "#b5890090",
+        "list.activeSelectionBackground": "#3B4449",
         // "list.activeSelectionForeground": "",
-		"list.focusBackground": "#99730090",
-		"list.hoverBackground": "#99730090",
-		"list.inactiveSelectionBackground": "#99730040",
-		"list.dropBackground": "#99730060",
-		"list.highlightForeground": "#b58900",
+		"list.focusBackground": "#4F575B70",
+		"list.hoverBackground": "#4F575B60",
+		"list.inactiveSelectionBackground": "#4F575B90",
+		"list.dropBackground": "#0c0f1070",
+		"list.highlightForeground": "#4F575B70",
 		// "scrollbar.shadow": "",
 		// "scrollbarSlider.activeBackground": "",
 		// "scrollbarSlider.background": "",
@@ -51,7 +51,8 @@
 		"editorIndentGuide.background": "#93A1A120",
 		"editorHoverWidget.background": "#242d32",
 		// "editorHoverWidget.border": "",
-        "editorLineNumber.foreground": "#93A1A1",
+        "editorLineNumber.foreground": "#93A1A150",
+        "editorLineNumber.activeForeground": "#93A1A1",
         "editorBracketMatch.background": "#151b1e40",
         "editorBracketMatch.border": "#586e7570",
 		// "editorMarkerNavigation.background": "",
@@ -113,6 +114,8 @@
 		"editorGroup.dropBackground": "#0c0f1070",
         "editorGroupHeader.tabsBackground": "#283237",
         "editorGroupHeader.tabsBorder": "#1d2528",
+        "editorGroupHeader.noTabsBackground": "#1d2528",
+
 
 		// Workbench: Tabs
 		"tab.activeForeground": "#93A1A1",
@@ -131,6 +134,7 @@
         "activityBarBadge.foreground": "#FFFCF5",
 
         // Workbench: Breadcrumbs
+        "breadcrumb.background": "#1d2528",
         "breadcrumbPicker.background": "#1d2528",
 
 		// Workbench: Panel
@@ -143,7 +147,8 @@
 		// Workbench: Side Bar
         "sideBar.background": "#283237",
         "sideBar.border": "#21292E",
-		"sideBarTitle.foreground": "#93A1A1",
+        "sideBarTitle.foreground": "#93A1A1",
+        "sideBarSectionHeader.background": "#181F21",
 		// "sideBarSectionHeader.background": "",
 
 		// Workbench: Status Bar
