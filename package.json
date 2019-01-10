@@ -42,6 +42,11 @@
     "dependencies": {},
     "devDependencies": {
         "del": "^3.0.0",
-        "gulp": "^4.0.0"
+        "fs": "0.0.1-security",
+        "gulp": "^4.0.0",
+        "gulp-concat": "^2.6.1"
+    },
+    "scripts": {
+        "build": "./node_modules/.bin/gulp"
     }
 }
