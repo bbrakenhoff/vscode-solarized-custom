@@ -9,6 +9,7 @@
         // "widget.shadow": "",
         "selection.background": "#2AA19899",
         "input.background": "#003847",
+        "input.border": "#00212B",
         "input.foreground": "#93A1A1",
         "input.placeholderForeground": "#93A1A1AA",
         // "input.border": "",
