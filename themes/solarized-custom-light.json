@@ -117,9 +117,13 @@
 
         // Workbench: Tabs
         // "tab.activeForeground": "",
-		"tab.activeBackground": "#d3cbb790",
+        "tab.activeBackground": "#fdf6e3",
+        "tab.activeForeground": "#586E75",
+		// "tab.activeBackground": "#d3cbb790",
 		"tab.inactiveForeground": "#586E75",
-		"tab.inactiveBackground": "#fdf6e3",
+		// "tab.inactiveForeground": "#586E75",
+		"tab.inactiveBackground": "#d3cbb790",
+		// "tab.inactiveBackground": "#fdf6e3",
         "tab.border": "#ddd6c1",
         "tab.activeBorderTop": "#dc322f",
 
@@ -132,7 +136,7 @@
         "activityBarBadge.foreground": "#FFFCF5",
         
         // Workbench: Breadcrumbs
-        "breadcrumb.background": "#d3cbb790",
+        "breadcrumb.background": "#fdf6e3",
         "breadcrumbPicker.background": "#d3cbb790",
 
         // Workbench: Panel
