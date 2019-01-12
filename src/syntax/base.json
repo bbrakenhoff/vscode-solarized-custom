@@ -1,44 +1,4 @@
-export const base = [ //  General colors
-    {
-        settings: {
-            foreground: "#657b83ff",
-            background: "#fdf6e3ff"
-        }
-    },
-    {
-        name: "abstractClassesInterfaces",
-        scope: [
-            "entity.name.type.interface"
-        ],
-        settings: {
-            "foreground": "#859900",
-            "fontStyle": "italic"
-        }
-    },
-    {
-        name: "bracesParenthesesOperators",
-        scope: [
-            "punctuation.definition",
-            "meta.brace.round.ts",
-            "meta.brace.square.ts"
-        ],
-        settings: {
-            "fontStyle": "normal",
-            "foreground": "#93a1a1"
-        }
-    },
-    {
-        name: "classes",
-        scope: [
-            "entity.name.type",
-            "entity.other.inherited-class",
-            "storage.type.java"
-        ],
-        settings: {
-            "foreground": "#859900",
-            "fontStyle": "normal"
-        }
-    },
+[
     {
         "name": "comments",
         "scope": [
@@ -48,7 +8,47 @@ export const base = [ //  General colors
             "punctuation.definition.comment.php"
         ],
         "settings": {
+            "foreground": "#ffff00"
+        }
+    },
+    {
+        "settings": {
+            "foreground": "#657b83ff",
+            "background": "#fdf6e3ff"
+        }
+    },
+    {
+        "name": "abstractClassesInterfaces",
+        "scope": [
+            "entity.name.type.interface"
+        ],
+        "settings": {
+            "foreground": "#859900",
+            "fontStyle": "italic"
+        }
+    },
+    {
+        "name": "bracesParenthesesOperators",
+        "scope": [
+            "punctuation.definition",
+            "meta.brace.round.ts",
+            "meta.brace.square.ts"
+        ],
+        "settings": {
+            "fontStyle": "normal",
             "foreground": "#93a1a1"
+        }
+    },
+    {
+        "name": "classes",
+        "scope": [
+            "entity.name.type",
+            "entity.other.inherited-class",
+            "storage.type.java"
+        ],
+        "settings": {
+            "foreground": "#859900",
+            "fontStyle": "normal"
         }
     },
     {
@@ -168,4 +168,4 @@ export const base = [ //  General colors
             "foreground": "#2aa198"
         }
     }
-];
+]

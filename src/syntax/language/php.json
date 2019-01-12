@@ -1,4 +1,4 @@
-export const php = [  // PHP
+[
     {
         "name": "PHP.tag",
         "scope": [
@@ -9,4 +9,5 @@ export const php = [  // PHP
             "foreground": "#cb4b16",
             "fontStyle": "italic"
         }
-    }];
+    }
+]

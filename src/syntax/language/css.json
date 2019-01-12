@@ -1,4 +1,4 @@
-export const css = [
+[
     {
         "name": "CSS.classes",
         "scope": [
@@ -58,7 +58,6 @@ export const css = [
             "fontStyle": "normal"
         }
     },
-    // SCSS/SASS
     {
         "name": "SCSS.nestedClasses",
         "scope": [
@@ -83,5 +82,5 @@ export const css = [
         "settings": {
             "foreground": "#6c71c4"
         }
-    },
-];
+    }
+]
