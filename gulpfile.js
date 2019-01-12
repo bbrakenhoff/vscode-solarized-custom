@@ -1,33 +1,29 @@
 const gulp = require("gulp");
 const del = require("del");
-const concat = require("gulp-concat");
-const flatmap = require("gulp-flatmap");
 const merge = require("gulp-merge-json");
-const fs = require("fs");
 const jeditor = require("gulp-json-editor");
+const json5 = require("gulp-json5-to-json");
+const file = require("gulp-file");
+const beautify = require("gulp-jsbeautifier");
 
-const destinationFolder = "./dist/";
-const Theme = {
-    Light: "light",
-    Dark: "dark",
-    ExtraDark: "extra-dark"
-}
-const theme = "./src/syntax/light.json";
+const dest = "./themes/";
 
-function clean() {
-    return del([destinationFolder])
+function cleanDest() {
+    return del([dest])
 }
 
 function buildSyntaxColors() {
     const base = "./src/syntax/base.json";
     const languages = "./src/syntax/language/*.json";
-    return gulp.src([base, languages, theme])
-        .pipe(merge({ startObj: [], endObj: [], concatArrays: true }))
-        .pipe(gulp.dest(destinationFolder));
+    const themeSpecific = "./src/syntax/light.json";
+    return gulp.src([base, languages, themeSpecific])
+        .pipe(json5({ beautify: true }))
+        .pipe(merge({ startObj: [], endObj: [], concatArrays: true, fileName: "syntax.json" }))
+        .pipe(gulp.dest(dest));
 }
 
-function buildWorkbenchSyntaxColors() {
-    return gulp.src(destinationFolder + "combined.json")
+function removeDuplicates() {
+    return gulp.src(dest + "syntax.json")
         .pipe(jeditor(function (json) {
 
             json.forEach(function (value) {
@@ -41,7 +37,6 @@ function buildWorkbenchSyntaxColors() {
                     firstEntry.settings = lastEntry.settings;
 
                     entriesWithSameName.shift();
-                    console.log("Bijoya - entriestoremove", entriesWithSameName);
                     json = json.filter((item) =>
                         entriesWithSameName.indexOf(item) === -1
                     )
@@ -50,10 +45,38 @@ function buildWorkbenchSyntaxColors() {
 
             return json;
         }))
-        .pipe(gulp.dest(destinationFolder));
+        .pipe(gulp.dest(dest));
 }
 
-gulp.task("build", gulp.series(buildSyntaxColors, buildWorkbenchSyntaxColors));
+function buildWorkbenchColors() {
+    return gulp.src("./src/workbench/light.json")
+        .pipe(json5({ beautify: true }))
+        .pipe(gulp.dest(dest))
+}
+
+function cleanExtraFiles() {
+    return del([dest + "light.json", dest + "syntax.json"]);
+}
+
+gulp.task("buildFullTheme", (cb) => {
+    const workbench = require(dest + "light.json");
+    const syntax = require(dest + "syntax.json");
+    const fullTheme = { type: "light", colors: workbench, tokenColors: syntax }
+    const json = JSON.stringify(fullTheme);
+    const outputfile = "solarized-custom-light.json";
+
+    return file(outputfile, json, { src: true })
+        .pipe(beautify())
+        .pipe(gulp.dest(dest));
+});
+
+gulp.task("build", gulp.series(
+    buildSyntaxColors,
+    removeDuplicates,
+    buildWorkbenchColors,
+    "buildFullTheme",
+    cleanExtraFiles
+));
 // clean current themes
 // build syntax colors
 // For each theme:
@@ -63,4 +86,4 @@ gulp.task("build", gulp.series(buildSyntaxColors, buildWorkbenchSyntaxColors));
 // convert to js
 // save to themes folder
 
-exports.default = gulp.series(clean, "build");
+exports.default = gulp.series(cleanDest, "build");
