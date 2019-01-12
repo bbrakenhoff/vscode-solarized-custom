@@ -15,7 +15,7 @@ function cleanDest() {
 function buildSyntaxColors() {
     const base = "./src/syntax/base.json";
     const languages = "./src/syntax/language/*.json";
-    const themeSpecific = "./src/syntax/light.json";
+    const themeSpecific = "./src/syntax/workbench/light.json";
     return gulp.src([base, languages, themeSpecific])
         .pipe(json5({ beautify: true }))
         .pipe(merge({ startObj: [], endObj: [], concatArrays: true, fileName: "syntax.json" }))

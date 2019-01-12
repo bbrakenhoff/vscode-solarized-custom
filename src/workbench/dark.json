@@ -1,4 +1,4 @@
-export const dark = {
+{
     // Base
     // "foreground": "",
     "focusBorder": "#2AA19899",
@@ -7,6 +7,7 @@ export const dark = {
     // "widget.shadow": "",
     "selection.background": "#2AA19899",
     "input.background": "#003847",
+    "input.border": "#00212B",
     "input.foreground": "#93A1A1",
     "input.placeholderForeground": "#93A1A1AA",
     // "input.border": "",
@@ -163,7 +164,7 @@ export const dark = {
     "pickerGroup.foreground": "#2AA19899",
     "pickerGroup.border": "#2AA19899",
 
-    // Extensions
+     // Extensions
     // "extensionButton.prominentBackground": "#b58900",
     // "extensionButton.prominentHoverBackground": "#584c27aa",
 
@@ -184,4 +185,4 @@ export const dark = {
     "terminal.ansiBrightMagenta": "#6c71c4",
     "terminal.ansiBrightCyan": "#93a1a1",
     "terminal.ansiBrightWhite": "#fdf6e3"
-};
+}
