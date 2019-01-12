@@ -1,4 +1,4 @@
-export const extraDark = {
+{
     // Base
     // "foreground": "",
     "focusBorder": "#dc322f50",
@@ -193,4 +193,4 @@ export const extraDark = {
     "terminal.ansiBrightMagenta": "#6c71c4",
     "terminal.ansiBrightCyan": "#93a1a1",
     "terminal.ansiBrightWhite": "#fdf6e3"
-};
+}
