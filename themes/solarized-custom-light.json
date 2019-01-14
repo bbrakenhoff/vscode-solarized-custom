@@ -101,7 +101,7 @@
         "name": "comments",
         "scope": ["comment", "comment.block.documentation", "punctuation.definition.comment", "punctuation.definition.comment.php"],
         "settings": {
-            "foreground": "#586e75"
+            "foreground": "#93a1a1"
         }
     }, {
         "settings": {
@@ -133,14 +133,14 @@
         "name": "commentTags",
         "scope": ["storage.type.class.jsdoc", "punctuation.definition.block.tag.jsdoc"],
         "settings": {
-            "foreground": "#586e75",
+            "foreground": "#93a1a1",
             "fontStyle": "bold"
         }
     }, {
         "name": "commentVariableType",
         "scope": ["entity.name.type.instance.jsdoc"],
         "settings": {
-            "foreground": "#586e75",
+            "foreground": "#93a1a1",
             "fontStyle": "italic"
         }
     }, {

@@ -6,7 +6,34 @@ const json5 = require("gulp-json5-to-json");
 const file = require("gulp-file");
 const beautify = require("gulp-jsbeautifier");
 
-const dest = "./themes/";
+let currentTheme = "";
+const Paths = {
+    src: {
+        syntax: {
+            base: "./src/syntax/base.json",
+            languageSpecific: "./src/syntax/language/*.json",
+            themeSpecific: ""
+        },
+        workbench: ""
+    },
+    dest: {
+        themes: "./themes/",
+        fileName: "",
+        temp: {
+            syntax: "./themes/syntax.json",
+            workbench: ""
+        }
+    }
+};;
+
+function dynamicPaths(cb) {
+    Paths.src.syntax.themeSpecific = `./src/syntax/workbench/${currentTheme}.json`;
+    Paths.src.workbench = `./src/workbench/${currentTheme}.json`;
+    Paths.dest.fileName = `solarized-custom-${currentTheme}.json`;
+    Paths.dest.temp.workbench = `./themes/${currentTheme}.json`;
+
+    cb();
+}
 
 const Theme = {
     Light: "light",
@@ -15,21 +42,18 @@ const Theme = {
 }
 
 function cleanDest() {
-    return del([dest])
+    return del(Paths.dest.themes + Paths.fileName)
 }
 
 /**
  * Build JSON for syntax highlighting
  * @param {string} theme Name of the theme being build
  */
-function syntaxColors(theme) {
-    const base = "./src/syntax/base.json";
-    const languages = "./src/syntax/language/*.json";
-    const themeSpecific = "./src/syntax/workbench/" + theme + ".json";
-    return gulp.src([base, languages, themeSpecific])
+function syntaxColors() {
+    return gulp.src([Paths.src.syntax.base, Paths.src.syntax.languageSpecific, Paths.src.syntax.themeSpecific])
         .pipe(json5({ beautify: true }))
         .pipe(merge({ startObj: [], endObj: [], concatArrays: true, fileName: "syntax.json" }))
-        .pipe(gulp.dest(dest));
+        .pipe(gulp.dest(Paths.dest.themes));
 }
 
 /**
@@ -37,7 +61,7 @@ function syntaxColors(theme) {
  * the one from the theme that overrides the base
  */
 function removeDuplicates() {
-    return gulp.src(dest + "syntax.json")
+    return gulp.src(Paths.dest.temp.syntax)
         .pipe(jeditor(function (json) {
 
             json.forEach(function (value) {
@@ -59,17 +83,17 @@ function removeDuplicates() {
 
             return json;
         }))
-        .pipe(gulp.dest(dest));
+        .pipe(gulp.dest(Paths.dest.themes));
 }
 
 /**
  * Build workbench colors for theme
  * @param {string} theme Name of the theme being build
  */
-function buildWorkbenchColors(theme) {
-    return gulp.src("./src/workbench/" + theme + ".json")
+function buildWorkbenchColors() {
+    return gulp.src(Paths.src.workbench)
         .pipe(json5({ beautify: true }))
-        .pipe(gulp.dest(dest))
+        .pipe(gulp.dest(Paths.dest.themes))
 }
 
 /**
@@ -77,60 +101,57 @@ function buildWorkbenchColors(theme) {
  * called after theme is generated
  * @param {string} theme Name of the theme being build
  */
-function cleanExtraFiles(theme) {
-    return del([dest + theme + ".json", dest + "syntax.json"]);
+function cleanTempFiles() {
+    return del([Paths.dest.temp.workbench, Paths.dest.temp.syntax]);
 }
 
 /**
  * Combine the workbench colors with the syntax colors
  * and create a file according the format of a vscode theme
  */
-function buildFullTheme(theme) {
-    const workbench = require(dest + theme + ".json");
-    const syntax = require(dest + "syntax.json");
+function buildFullTheme() {
+    const workbench = require(Paths.dest.temp.workbench);
+    const syntax = require(Paths.dest.temp.syntax);
     const fullTheme = { type: "dark", colors: workbench, tokenColors: syntax }
-    if (theme === Theme.Light) {
+    if (currentTheme === Theme.Light) {
         fullTheme.type = "light"
     }
 
     const json = JSON.stringify(fullTheme);
-    const outputfile = "solarized-custom-" + theme + ".json";
-
-    return file(outputfile, json, { src: true })
+    return file(Paths.dest.fileName, json, { src: true })
         .pipe(beautify())
-        .pipe(gulp.dest(dest));
+        .pipe(gulp.dest(Paths.dest.themes));
 }
 
 /**
  * Create full theme and concat all the tasks as series
  * @param {string} theme Name of the theme being build
  */
-function buildTheme(theme) {
-    return gulp.series(
-        () => syntaxColors(theme),
-        removeDuplicates,
-        () => buildWorkbenchColors(theme),
-        () => buildFullTheme(theme),
-        () => cleanExtraFiles(theme)
-    );
-}
-// gulp.task("buildTheme", (theme) => {
-//     gulp.series(
-//         () => buildSyntaxColors(theme),
-//         removeDuplicates,
-//         buildWorkbenchColors,
-//         "buildFullTheme",
-//         cleanExtraFiles
-//     );
-// });
+gulp.task("buildTheme", gulp.series(
+    dynamicPaths,
+    cleanDest,
+    syntaxColors,
+    removeDuplicates,
+    buildWorkbenchColors,
+    buildFullTheme,
+    cleanTempFiles
+));
 
-gulp.task("build:light", gulp.series(cleanDest, gulp.parallel(buildTheme(Theme.Light))));
-gulp.task("build:dark", gulp.series(cleanDest, gulp.parallel(buildTheme(Theme.Dark))));
-gulp.task("build:extra-dark", gulp.series(cleanDest, gulp.parallel(buildTheme(Theme.ExtraDark))));
-gulp.task("build:all", gulp.series(cleanDest, gulp.parallel(
-    buildTheme(Theme.Light),
-    buildTheme(Theme.Dark),
-    buildTheme(Theme.ExtraDark)
-)));
+gulp.task("build:light", gulp.series(function (cb) {
+    currentTheme = Theme.Light;
 
-exports.default = gulp.series(cleanDest, "build:all");
+    cb();
+}, "buildTheme"));
+gulp.task("build:dark", gulp.series(function (cb) {
+    currentTheme = Theme.Dark;
+
+    cb();
+}, "buildTheme"));
+gulp.task("build:extra-dark", gulp.series(function (cb) {
+    currentTheme = Theme.ExtraDark;
+
+    cb();
+}, "buildTheme"));
+gulp.task("build:all", gulp.parallel("build:light", "build:dark", "build:extra-dark"));
+
+gulp.task("default", gulp.series("build:all"));
