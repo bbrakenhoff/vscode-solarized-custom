@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const del = require("del");
+const rename = require("gulp-rename");
 const merge = require("gulp-merge-json");
 const jeditor = require("gulp-json-editor");
 const json5 = require("gulp-json5-to-json");
@@ -36,14 +37,14 @@ function dynamicPaths(cb) {
     Paths.src.syntax.themeSpecific = `./src/syntax/workbench/${currentTheme}.json`;
     Paths.src.workbench = `./src/workbench/${currentTheme}.json`;
     Paths.dest.fileName = `solarized-custom-${currentTheme}.json`;
-    Paths.dest.temp.workbench = `./themes/workbench-${currentTheme}.json`;
+    Paths.dest.temp.workbench = `workbench-${currentTheme}.json`;
     Paths.dest.temp.syntax = `syntax-${currentTheme}.json`
 
     cb();
 }
 
 /**
- * Remove theme from themes folder before generating again
+ * Remove theme from themes folder before generating
  */
 function cleanDest() {
     return del(Paths.dest.themes + Paths.fileName)
@@ -65,7 +66,7 @@ function syntaxColors() {
  * the one from the theme that overrides the base
  */
 function removeDuplicates() {
-    return gulp.src(Paths.dest.temp.syntax)
+    return gulp.src(Paths.dest.themes + Paths.dest.temp.syntax)
         .pipe(jeditor(function (json) {
 
             json.forEach(function (value) {
@@ -97,6 +98,7 @@ function removeDuplicates() {
 function buildWorkbenchColors() {
     return gulp.src(Paths.src.workbench)
         .pipe(json5({ beautify: true }))
+        .pipe(rename(Paths.dest.temp.workbench))
         .pipe(gulp.dest(Paths.dest.themes))
 }
 
@@ -105,8 +107,8 @@ function buildWorkbenchColors() {
  * and create a file according the format of a vscode theme
  */
 function buildFullTheme() {
-    const workbench = require(Paths.dest.temp.workbench);
-    const syntax = require(Paths.dest.temp.syntax);
+    const workbench = require(Paths.dest.themes + Paths.dest.temp.workbench);
+    const syntax = require(Paths.dest.themes + Paths.dest.temp.syntax);
     const fullTheme = { type: "dark", colors: workbench, tokenColors: syntax }
     if (currentTheme === Theme.Light) {
         fullTheme.type = "light"
@@ -125,7 +127,7 @@ function buildFullTheme() {
  * @param {string} theme Name of the theme being build
  */
 function cleanTempFiles() {
-    return del([Paths.dest.temp.workbench, Paths.dest.themes + Paths.dest.temp.syntax]);
+    return del([Paths.dest.themes + Paths.dest.temp.workbench, Paths.dest.themes + Paths.dest.temp.syntax]);
 }
 
 /**
