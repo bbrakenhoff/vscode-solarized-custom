@@ -20,27 +20,31 @@ const Paths = {
         themes: "./themes/",
         fileName: "",
         temp: {
-            syntax: "./themes/syntax.json",
+            syntax: "",
             workbench: ""
         }
     }
-};;
-
-function dynamicPaths(cb) {
-    Paths.src.syntax.themeSpecific = `./src/syntax/workbench/${currentTheme}.json`;
-    Paths.src.workbench = `./src/workbench/${currentTheme}.json`;
-    Paths.dest.fileName = `solarized-custom-${currentTheme}.json`;
-    Paths.dest.temp.workbench = `./themes/${currentTheme}.json`;
-
-    cb();
-}
+};
 
 const Theme = {
     Light: "light",
     Dark: "dark",
     ExtraDark: "extra-dark",
+};
+
+function dynamicPaths(cb) {
+    Paths.src.syntax.themeSpecific = `./src/syntax/workbench/${currentTheme}.json`;
+    Paths.src.workbench = `./src/workbench/${currentTheme}.json`;
+    Paths.dest.fileName = `solarized-custom-${currentTheme}.json`;
+    Paths.dest.temp.workbench = `./themes/workbench-${currentTheme}.json`;
+    Paths.dest.temp.syntax = `syntax-${currentTheme}.json`
+
+    cb();
 }
 
+/**
+ * Remove theme from themes folder before generating again
+ */
 function cleanDest() {
     return del(Paths.dest.themes + Paths.fileName)
 }
@@ -52,7 +56,7 @@ function cleanDest() {
 function syntaxColors() {
     return gulp.src([Paths.src.syntax.base, Paths.src.syntax.languageSpecific, Paths.src.syntax.themeSpecific])
         .pipe(json5({ beautify: true }))
-        .pipe(merge({ startObj: [], endObj: [], concatArrays: true, fileName: "syntax.json" }))
+        .pipe(merge({ startObj: [], endObj: [], concatArrays: true, fileName: Paths.dest.temp.syntax }))
         .pipe(gulp.dest(Paths.dest.themes));
 }
 
@@ -97,15 +101,6 @@ function buildWorkbenchColors() {
 }
 
 /**
- * Cleanup the files created for syntax colors and workbench colors,
- * called after theme is generated
- * @param {string} theme Name of the theme being build
- */
-function cleanTempFiles() {
-    return del([Paths.dest.temp.workbench, Paths.dest.temp.syntax]);
-}
-
-/**
  * Combine the workbench colors with the syntax colors
  * and create a file according the format of a vscode theme
  */
@@ -121,6 +116,16 @@ function buildFullTheme() {
     return file(Paths.dest.fileName, json, { src: true })
         .pipe(beautify())
         .pipe(gulp.dest(Paths.dest.themes));
+}
+
+
+/**
+ * Cleanup the files created for syntax colors and workbench colors,
+ * called after theme is generated
+ * @param {string} theme Name of the theme being build
+ */
+function cleanTempFiles() {
+    return del([Paths.dest.temp.workbench, Paths.dest.themes + Paths.dest.temp.syntax]);
 }
 
 /**
@@ -152,6 +157,6 @@ gulp.task("build:extra-dark", gulp.series(function (cb) {
 
     cb();
 }, "buildTheme"));
-gulp.task("build:all", gulp.parallel("build:light", "build:dark", "build:extra-dark"));
+gulp.task("build:all", gulp.series("build:light", "build:dark", "build:extra-dark"));
 
 gulp.task("default", gulp.series("build:all"));
