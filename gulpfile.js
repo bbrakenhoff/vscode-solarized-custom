@@ -34,7 +34,7 @@ const Theme = {
 };
 
 function dynamicPaths(cb) {
-    Paths.src.syntax.themeSpecific = `./src/syntax/workbench/${currentTheme}.json`;
+    Paths.src.syntax.themeSpecific = `./src/syntax/theme/${currentTheme}.json`;
     Paths.src.workbench = `./src/workbench/${currentTheme}.json`;
     Paths.dest.fileName = `solarized-custom-${currentTheme}.json`;
     Paths.dest.temp.workbench = `workbench-${currentTheme}.json`;
