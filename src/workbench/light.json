@@ -22,8 +22,8 @@
     "progressBar.background": "#b58900",
     "dropdown.background": "#eee8d5",
     // "dropdown.foreground": "",
-    "dropdown.border": "#d3af86",
-    "button.background": "#AC9D57",
+    "dropdown.border": "#dc322f99",
+    "button.background": "#dc322f99",
     // "button.foreground": "",
 
     // Workbench: Lists and trees
