@@ -88,6 +88,9 @@ All notable changes to the "solarized-light-custom" extension will be documented
 
 ## [3.0.0] - 2018/09
 
+### Added
+- Automation of generating themes out of different json files, so the syntax colors can easily be the same accross the different variants
+
 ### Changed
 - Dark themes now match the light theme colors except for the background
 - Highlight the active tab in extra dark theme
