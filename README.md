@@ -10,11 +10,11 @@ some other languages work too.
 ### Screenshots
 
 #### Solarized Custom Light
-![](https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/screenshots/solarized-light-custom.png)
+![](https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/screenshots/solarized-custom-light.png)
 
 #### Solarized Custom Dark 
-![](https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/screenshots/solarized-dark-custom.png)
+![](https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/screenshots/solarized-custom-dark.png)
 
 #### Solarized Custom Extra Dark
-![](https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/screenshots/solarized-extra-dark-custom.png)
+![](https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/screenshots/solarized-custom-extra-dark.png)
 
