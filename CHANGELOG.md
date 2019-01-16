@@ -92,14 +92,13 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Automation of generating themes out of different json files, so the syntax colors can easily be the same accross the different variants
 
 ### Changed
-- Dark themes now match the light theme colors except for the background
+- Dark themes now match the light theme syntax colors
 - Highlight the active tab in extra dark theme
 - Font style italic for function argument
 - Refactored order of tokens, so it is the same in all themes
-- Renamed theme files
 - Use solarized colors in workbench terminal
 - Change syntax highlighting for HTML/XML
-- Better workbench colors for extra dark theme
+- Better workbench colors for all themes
 - Highlight colors improved 
 - Better colors in the side bar
 - Highlight active tab
