@@ -86,7 +86,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ### Fixed
 - Default text color dark themes
 
-## [3.0.0] - 2018/09
+## [3.0.0] - 2018/01/16
 
 ### Added
 - Automation of generating themes out of different json files, so the syntax colors can easily be the same accross the different variants
@@ -104,3 +104,10 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Highlight active tab
 - Color for punctuation
 - Cursor color
+
+## [3.0.1] - 2018/01/17
+
+### Changed
+- Better tab colors in extra dark theme
+- Section header background
+- Better colors CSS/SSS

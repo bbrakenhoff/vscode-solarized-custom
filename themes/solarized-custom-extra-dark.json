@@ -60,9 +60,9 @@
         "editorGroupHeader.tabsBorder": "#1d2528",
         "editorGroupHeader.noTabsBackground": "#1d2528",
         "tab.activeForeground": "#93A1A1",
-        "tab.activeBackground": "#1d2528",
+        "tab.activeBackground": "#283237",
         "tab.inactiveForeground": "#d6dbdb",
-        "tab.inactiveBackground": "#283237",
+        "tab.inactiveBackground": "#3B4449",
         "tab.border": "#1d2528",
         "tab.activeBorderTop": "#dc322f",
         "activityBar.background": "#283237",
@@ -71,14 +71,14 @@
         "activityBar.dropBackground": "#eee8d5",
         "activityBarBadge.background": "#dc322f",
         "activityBarBadge.foreground": "#FFFCF5",
-        "breadcrumb.background": "#1d2528",
+        "breadcrumb.background": "#283237",
         "breadcrumbPicker.background": "#1d2528",
         "panel.border": "#21292E",
         "panelTitle.activeBorder": "#dc322f",
         "sideBar.background": "#283237",
         "sideBar.border": "#21292E",
         "sideBarTitle.foreground": "#93A1A1",
-        "sideBarSectionHeader.background": "#1d252890",
+        "sideBarSectionHeader.background": "#414E56",
         "statusBar.foreground": "#93A1A1",
         "statusBar.background": "#1d2528",
         "statusBar.border": "#181F21",
@@ -210,14 +210,14 @@
         "name": "CSS.classes",
         "scope": ["entity.other.attribute-name.class.css"],
         "settings": {
-            "foreground": "#859900",
+            "foreground": "#6c71c4",
             "fontStyle": "normal"
         }
     }, {
         "name": "CSS.id",
         "scope": ["entity.other.attribute-name.id.css"],
         "settings": {
-            "foreground": "#b58900",
+            "foreground": "#6c71c4",
             "fontStyle": "bold"
         }
     }, {
@@ -236,7 +236,8 @@
         "name": "CSS.pseudoElementsPseudoClasses",
         "scope": ["entity.other.attribute-name.pseudo-element.css", "entity.other.attribute-name.pseudo-class.css"],
         "settings": {
-            "fontStyle": "bold"
+            "fontStyle": "italic",
+            "foreground": "#859900"
         }
     }, {
         "name": "CSS.units",
@@ -249,7 +250,7 @@
         "name": "SCSS.nestedClasses",
         "scope": ["punctuation.definition.entity.css"],
         "settings": {
-            "foreground": "#859900"
+            "foreground": "#6c71c4"
         }
     }, {
         "name": "SCSS.mixins",
@@ -261,7 +262,7 @@
         "name": "SCSS.variable",
         "scope": "variable.scss",
         "settings": {
-            "foreground": "#6c71c4"
+            "foreground": "#859900"
         }
     }, {
         "name": "HTML.XML.content",

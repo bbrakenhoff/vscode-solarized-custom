@@ -199,14 +199,14 @@
         "name": "CSS.classes",
         "scope": ["entity.other.attribute-name.class.css"],
         "settings": {
-            "foreground": "#859900",
+            "foreground": "#6c71c4",
             "fontStyle": "normal"
         }
     }, {
         "name": "CSS.id",
         "scope": ["entity.other.attribute-name.id.css"],
         "settings": {
-            "foreground": "#b58900",
+            "foreground": "#6c71c4",
             "fontStyle": "bold"
         }
     }, {
@@ -225,7 +225,8 @@
         "name": "CSS.pseudoElementsPseudoClasses",
         "scope": ["entity.other.attribute-name.pseudo-element.css", "entity.other.attribute-name.pseudo-class.css"],
         "settings": {
-            "fontStyle": "bold"
+            "fontStyle": "italic",
+            "foreground": "#859900"
         }
     }, {
         "name": "CSS.units",
@@ -238,7 +239,7 @@
         "name": "SCSS.nestedClasses",
         "scope": ["punctuation.definition.entity.css"],
         "settings": {
-            "foreground": "#859900"
+            "foreground": "#6c71c4"
         }
     }, {
         "name": "SCSS.mixins",
@@ -250,7 +251,7 @@
         "name": "SCSS.variable",
         "scope": "variable.scss",
         "settings": {
-            "foreground": "#6c71c4"
+            "foreground": "#859900"
         }
     }, {
         "name": "HTML.XML.content",
