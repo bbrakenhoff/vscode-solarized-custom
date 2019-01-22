@@ -248,7 +248,7 @@
         }
     }, {
         "name": "SCSS.nestedClasses",
-        "scope": ["punctuation.definition.entity.css"],
+        "scope": ["entity.other.attribute-name.class.css"],
         "settings": {
             "foreground": "#6c71c4"
         }
