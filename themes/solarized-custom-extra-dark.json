@@ -195,7 +195,7 @@
         }
     }, {
         "name": "punctuation",
-        "scope": ["keyword.operator", "punctuation.accessor", "punctuation.terminator.statement.ts", "punctuation.separator"],
+        "scope": ["keyword.operator", "punctuation.accessor", "punctuation.terminator", "punctuation.separator", "punctuation.definition.entity.css"],
         "settings": {
             "foreground": "#b58900",
             "fontStyle": "bold"
