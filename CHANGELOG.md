@@ -105,9 +105,10 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Color for punctuation
 - Cursor color
 
-## [3.0.1] - 2018/01/17
+## [3.0.1] - 2018/02/13
 
 ### Changed
 - Better tab colors in extra dark theme
 - Section header background
 - Better colors CSS/SSS
+- Different accent color per theme
