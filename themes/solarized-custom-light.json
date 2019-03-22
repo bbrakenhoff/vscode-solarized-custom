@@ -159,7 +159,7 @@
         }
     }, {
         "name": "keywords",
-        "scope": ["keyword", "storage.type", "storage.modifier", "constant.language.boolean", "variable.language.this", "keyword.operator.new", "constant.language.null", "constant.language.json", "keyword.operator.expression.of.ts", "keyword.operator.expression.in.ts", "keyword.operator.expression.instanceof", "keyword.operator.expression.typeof", "constant.language.undefined", "variable.language.super"],
+        "scope": ["keyword", "storage.type", "storage.modifier", "constant.language.boolean", "variable.language.this", "keyword.operator.new", "constant.language.null", "constant.language.json", "keyword.operator.expression.of.ts", "keyword.operator.expression.in.ts", "keyword.operator.expression.instanceof", "keyword.operator.expression.typeof", "keyword.operator.expression.delete", "constant.language.undefined", "variable.language.super"],
         "settings": {
             "fontStyle": "bold",
             "foreground": "#d33682"

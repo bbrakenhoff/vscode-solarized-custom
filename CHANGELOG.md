@@ -86,7 +86,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ### Fixed
 - Default text color dark themes
 
-## [3.0.0] - 2018/01/16
+## [3.0.0] - 2019/01/16
 
 ### Added
 - Automation of generating themes out of different json files, so the syntax colors can easily be the same accross the different variants
@@ -105,10 +105,15 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Color for punctuation
 - Cursor color
 
-## [3.0.1] - 2018/02/13
+## [3.0.1] - 2019/02/13
 
 ### Changed
 - Better tab colors in extra dark theme
 - Section header background
 - Better colors CSS/SSS
 - Different accent color per theme
+
+## [3.0.2] - 2019/03/22
+
+### Fixed
+- Keyword delete in javascript/typescript

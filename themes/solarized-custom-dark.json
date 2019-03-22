@@ -18,18 +18,18 @@
         "badge.background": "#002b36",
         "progressBar.background": "#002b36",
         "dropdown.background": "#00212B",
-        "dropdown.border": "#002b3699",
-        "button.background": "#002b3699",
+        "dropdown.border": "#b58900",
+        "button.background": "#b58900",
         "list.activeSelectionBackground": "#005A6F",
         "list.focusBackground": "#005A6F",
         "list.hoverBackground": "#004454AA",
         "list.inactiveSelectionBackground": "#00445488",
         "list.dropBackground": "#00445488",
-        "list.highlightForeground": "#002b36",
+        "list.highlightForeground": "#b58900",
         "editor.background": "#002B36",
         "editor.foreground": "#839496",
         "editorWidget.background": "#00212B",
-        "editorCursor.foreground": "#002b36",
+        "editorCursor.foreground": "#b58900",
         "editorWhitespace.foreground": "#93A1A140",
         "editor.lineHighlightBackground": "#073642",
         "editor.selectionBackground": "#073642",
@@ -163,7 +163,7 @@
         }
     }, {
         "name": "keywords",
-        "scope": ["keyword", "storage.type", "storage.modifier", "constant.language.boolean", "variable.language.this", "keyword.operator.new", "constant.language.null", "constant.language.json", "keyword.operator.expression.of.ts", "keyword.operator.expression.in.ts", "keyword.operator.expression.instanceof", "keyword.operator.expression.typeof", "constant.language.undefined", "variable.language.super"],
+        "scope": ["keyword", "storage.type", "storage.modifier", "constant.language.boolean", "variable.language.this", "keyword.operator.new", "constant.language.null", "constant.language.json", "keyword.operator.expression.of.ts", "keyword.operator.expression.in.ts", "keyword.operator.expression.instanceof", "keyword.operator.expression.typeof", "keyword.operator.expression.delete", "constant.language.undefined", "variable.language.super"],
         "settings": {
             "fontStyle": "bold",
             "foreground": "#d33682"
