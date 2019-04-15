@@ -117,3 +117,8 @@ All notable changes to the "solarized-light-custom" extension will be documented
 
 ### Fixed
 - Keyword delete in javascript/typescript
+
+## [3.1.0] - 2019/04/15
+
+### Added
+- Italic themes, for use with fonts like Operator Mono or Dank Mono

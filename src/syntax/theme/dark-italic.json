@@ -1,0 +1,43 @@
+[
+    {
+        "name":"keywords",
+        "settings": {
+            "fontStyle": "italic",
+            "foreground": "#d33682"
+        }
+    },
+    {
+        "name": "comments",
+        "scope": [
+            "comment",
+            "comment.block.documentation",
+            "punctuation.definition.comment",
+            "punctuation.definition.comment.php"
+        ],
+        "settings": {
+            "fontStyle": "italic",
+            "foreground": "#586e75"
+        }
+    },
+    {
+        "name": "commentTags",
+        "scope": [
+            "storage.type.class.jsdoc",
+            "punctuation.definition.block.tag.jsdoc"
+        ],
+        "settings": {
+            "foreground": "#586e75",
+            "fontStyle": "bold"
+        }
+    },
+    {
+        "name": "commentVariableType",
+        "scope": [
+            "entity.name.type.instance.jsdoc"
+        ],
+        "settings": {
+            "foreground": "#586e75",
+            "fontStyle": "italic"
+        }
+    }
+]

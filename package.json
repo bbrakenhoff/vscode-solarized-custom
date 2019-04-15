@@ -2,7 +2,7 @@
     "name": "solarized-light-custom",
     "displayName": "Solarized Custom",
     "description": "Custom Solarized themes for vs-code",
-    "version": "3.0.2",
+    "version": "3.1.0",
     "publisher": "bbrakenhoff",
     "engines": {
         "vscode": "*"
@@ -22,14 +22,29 @@
                 "path": "./themes/solarized-custom-light.json"
             },
             {
+                "label": "Solarized Custom Light Italic",
+                "uiTheme": "vs",
+                "path": "./themes/solarized-custom-light-italic.json"
+            },
+            {
                 "label": "Solarized Custom Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/solarized-custom-dark.json"
             },
             {
+                "label": "Solarized Custom Dark Italic",
+                "uiTheme": "vs-dark",
+                "path": "./themes/solarized-custom-dark-italic.json"
+            },
+            {
                 "label": "Solarized Custom Extra Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/solarized-custom-extra-dark.json"
+            },
+            {
+                "label": "Solarized Custom Extra Dark Italic",
+                "uiTheme": "vs-dark",
+                "path": "./themes/solarized-custom-extra-dark-italic.json"
             }
         ]
     },

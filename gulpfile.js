@@ -29,13 +29,29 @@ const Paths = {
 
 const Theme = {
     Light: "light",
+    LightItalic: "light-italic",
     Dark: "dark",
+    DarkItalic: "dark-italic",
     ExtraDark: "extra-dark",
+    ExtraDarkItalic: "extra-dark-italic"
 };
 
 function dynamicPaths(cb) {
     Paths.src.syntax.themeSpecific = `./src/syntax/theme/${currentTheme}.json`;
-    Paths.src.workbench = `./src/workbench/${currentTheme}.json`;
+
+    switch (currentTheme) {
+        case Theme.ExtraDarkItalic:
+        case Theme.ExtraDark:
+            Paths.src.workbench = `./src/workbench/${Theme.ExtraDark}.json`;
+            break;
+        case Theme.LightItalic:
+        case Theme.Light:
+            Paths.src.workbench = `./src/workbench/${Theme.Light}.json`;
+            break;
+        case Theme.Dark:
+        case Theme.DarkItalic:
+            Paths.src.workbench = `./src/workbench/${Theme.Dark}.json`;
+    }
     Paths.dest.fileName = `solarized-custom-${currentTheme}.json`;
     Paths.dest.temp.workbench = `workbench-${currentTheme}.json`;
     Paths.dest.temp.syntax = `syntax-${currentTheme}.json`
@@ -149,16 +165,37 @@ gulp.task("build:light", gulp.series(function (cb) {
 
     cb();
 }, "buildTheme"));
+
+gulp.task("build:light:italic", gulp.series(function (cb) {
+    currentTheme = Theme.LightItalic;
+
+    cb();
+}, "buildTheme"));
+
 gulp.task("build:dark", gulp.series(function (cb) {
     currentTheme = Theme.Dark;
 
     cb();
 }, "buildTheme"));
+
+gulp.task("build:dark:italic", gulp.series(function (cb) {
+    currentTheme = Theme.DarkItalic;
+
+    cb();
+}, "buildTheme"))
+
 gulp.task("build:extra-dark", gulp.series(function (cb) {
     currentTheme = Theme.ExtraDark;
 
     cb();
 }, "buildTheme"));
-gulp.task("build:all", gulp.series("build:light", "build:dark", "build:extra-dark"));
+
+gulp.task("build:extra-dark:italic", gulp.series(function (cb) {
+    currentTheme = Theme.ExtraDarkItalic;
+
+    cb();
+}, "buildTheme"));
+
+gulp.task("build:all", gulp.series("build:light", "build:light:italic", "build:dark", "build:dark:italic", "build:extra-dark", "build:extra-dark:italic"));
 
 gulp.task("default", gulp.series("build:all"));
