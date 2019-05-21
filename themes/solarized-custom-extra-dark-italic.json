@@ -113,8 +113,8 @@
         "name": "comments",
         "scope": ["comment", "comment.block.documentation", "punctuation.definition.comment", "punctuation.definition.comment.php"],
         "settings": {
-            "fontStyle": "italic",
-            "foreground": "#586e75"
+            "foreground": "#586e75",
+            "fontStyle": "italic"
         }
     }, {
         "settings": {

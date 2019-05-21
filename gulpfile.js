@@ -15,20 +15,20 @@ const Paths = {
     src: {
         syntax: {
             base: "./src/syntax/base.json",
+            italicScopeNames: "./src/syntax/italic.json",
             languageSpecific: "./src/syntax/language/*.json",
-            themeSpecific: "./src/syntax/theme/"
+            themeSpecific: ""
         },
         workbench: "",
-        italicScopeNames: "./src/syntax/theme/italic.json"
-    },
-    dest: {
-        folder: "./themes/",
-        fileName: "",
     },
     temp: {
         folder: "./temp/",
         syntax: "",
         workbench: ""
+    },
+    dest: {
+        folder: "./themes/",
+        fileName: "",
     }
 };
 
@@ -38,23 +38,23 @@ const WorkbenchColor = {
     ExtraDark: "extra-dark",
 };
 
-function dynamicPaths(cb) {
-    Paths.src.syntax.themeSpecific += `${currentTheme.workbenchColor}.json`;
+function initDynamicBuildPaths(cb) {
+    Paths.src.syntax.themeSpecific = `./src/syntax/theme/${currentTheme.workbenchColor}.json`;
 
     switch (currentTheme.workbenchColor) {
         case WorkbenchColor.ExtraDark:
-            Paths.src.workbench += `./src/workbench/${WorkbenchColor.ExtraDark}.json`;
+            Paths.src.workbench = `./src/workbench/${WorkbenchColor.ExtraDark}.json`;
             break;
         case WorkbenchColor.Light:
-            Paths.src.workbench += `./src/workbench/${WorkbenchColor.Light}.json`;
+            Paths.src.workbench = `./src/workbench/${WorkbenchColor.Light}.json`;
             break;
         case WorkbenchColor.Dark:
-            Paths.src.workbench += `./src/workbench/${WorkbenchColor.Dark}.json`;
+            Paths.src.workbench = `./src/workbench/${WorkbenchColor.Dark}.json`;
     }
     const italicPostfix = currentTheme.isItalic ? '-italic' : ''
-    Paths.dest.fileName += `solarized-custom-${currentTheme.workbenchColor}${italicPostfix}.json`;
-    Paths.temp.workbench += `workbench-${currentTheme.workbenchColor}.json`;
-    Paths.temp.syntax += `syntax-${currentTheme.workbenchColor}${italicPostfix}.json`
+    Paths.temp.workbench = `workbench-${currentTheme.workbenchColor}.json`;
+    Paths.temp.syntax = `syntax-${currentTheme.workbenchColor}${italicPostfix}.json`
+    Paths.dest.fileName = `solarized-custom-${currentTheme.workbenchColor}${italicPostfix}.json`;
 
     cb();
 }
@@ -107,20 +107,20 @@ function removeDuplicates() {
         .pipe(gulp.dest(Paths.dest.folder + Paths.temp.folder));
 }
 
+/**
+ * Make items that are in the list of scope names italic
+ */
 function makeItalic() {
     if (!currentTheme.isItalic) {
         return gulp.src(Paths.dest.folder + Paths.temp.folder + Paths.temp.syntax)
             .pipe(gulp.dest(Paths.dest.folder + Paths.temp.folder));
     }
 
-    const italicScopeNames = require(Paths.src.italicScopeNames);
-    process.stdout.write(`Bijoya: gulpfile -> makeItalic ${italicScopeNames}`);
-
+    const italicScopeNames = require(Paths.src.syntax.italicScopeNames);
     return gulp.src(Paths.dest.folder + Paths.temp.folder + Paths.temp.syntax)
         .pipe(jeditor(function (json) {
             json.forEach(function (value) {
                 if (italicScopeNames.indexOf(value.name) > -1) {
-                    process.stdout.write(`Bijoya: gulpfile -> makeItalic -- in de if ${value}`);
                     value.settings.fontStyle = "italic";
                 }
             });
@@ -173,7 +173,7 @@ function cleanTempFiles() {
  * @param {string} theme Name of the theme being build
  */
 gulp.task("buildTheme", gulp.series(
-    dynamicPaths,
+    initDynamicBuildPaths,
     cleanDest,
     syntaxColors,
     removeDuplicates,
