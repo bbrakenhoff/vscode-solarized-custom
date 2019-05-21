@@ -7,54 +7,54 @@ const json5 = require("gulp-json5-to-json");
 const file = require("gulp-file");
 const beautify = require("gulp-jsbeautifier");
 
-let currentTheme = "";
+let currentTheme = {
+    workbenchColor: "",
+    isItalic: false
+};
 const Paths = {
     src: {
         syntax: {
             base: "./src/syntax/base.json",
             languageSpecific: "./src/syntax/language/*.json",
-            themeSpecific: ""
+            themeSpecific: "./src/syntax/theme/"
         },
-        workbench: ""
+        workbench: "",
+        italicScopeNames: "./src/syntax/theme/italic.json"
     },
     dest: {
-        themes: "./themes/",
+        folder: "./themes/",
         fileName: "",
-        temp: {
-            syntax: "",
-            workbench: ""
-        }
+    },
+    temp: {
+        folder: "./temp/",
+        syntax: "",
+        workbench: ""
     }
 };
 
-const Theme = {
+const WorkbenchColor = {
     Light: "light",
-    LightItalic: "light-italic",
     Dark: "dark",
-    DarkItalic: "dark-italic",
     ExtraDark: "extra-dark",
-    ExtraDarkItalic: "extra-dark-italic"
 };
 
 function dynamicPaths(cb) {
-    Paths.src.syntax.themeSpecific = `./src/syntax/theme/${currentTheme}.json`;
+    Paths.src.syntax.themeSpecific += `${currentTheme.workbenchColor}.json`;
 
-    switch (currentTheme) {
-        case Theme.ExtraDarkItalic:
-        case Theme.ExtraDark:
-            Paths.src.workbench = `./src/workbench/${Theme.ExtraDark}.json`;
+    switch (currentTheme.workbenchColor) {
+        case WorkbenchColor.ExtraDark:
+            Paths.src.workbench += `./src/workbench/${WorkbenchColor.ExtraDark}.json`;
             break;
-        case Theme.LightItalic:
-        case Theme.Light:
-            Paths.src.workbench = `./src/workbench/${Theme.Light}.json`;
+        case WorkbenchColor.Light:
+            Paths.src.workbench += `./src/workbench/${WorkbenchColor.Light}.json`;
             break;
-        case Theme.Dark:
-        case Theme.DarkItalic:
-            Paths.src.workbench = `./src/workbench/${Theme.Dark}.json`;
+        case WorkbenchColor.Dark:
+            Paths.src.workbench += `./src/workbench/${WorkbenchColor.Dark}.json`;
     }
-    Paths.dest.fileName = `solarized-custom-${currentTheme}.json`;
-    Paths.dest.temp.workbench = `workbench-${currentTheme}.json`;
-    Paths.dest.temp.syntax = `syntax-${currentTheme}.json`
+    const italicPostfix = currentTheme.isItalic ? '-italic' : ''
+    Paths.dest.fileName += `solarized-custom-${currentTheme.workbenchColor}${italicPostfix}.json`;
+    Paths.temp.workbench += `workbench-${currentTheme.workbenchColor}.json`;
+    Paths.temp.syntax += `syntax-${currentTheme.workbenchColor}${italicPostfix}.json`
 
     cb();
 }
@@ -63,7 +63,7 @@ function dynamicPaths(cb) {
  * Remove theme from themes folder before generating
  */
 function cleanDest() {
-    return del(Paths.dest.themes + Paths.fileName)
+    return del(Paths.dest.folder + Paths.dest.fileName)
 }
 
 /**
@@ -73,8 +73,8 @@ function cleanDest() {
 function syntaxColors() {
     return gulp.src([Paths.src.syntax.base, Paths.src.syntax.languageSpecific, Paths.src.syntax.themeSpecific])
         .pipe(json5({ beautify: true }))
-        .pipe(merge({ startObj: [], endObj: [], concatArrays: true, fileName: Paths.dest.temp.syntax }))
-        .pipe(gulp.dest(Paths.dest.themes));
+        .pipe(merge({ startObj: [], endObj: [], concatArrays: true, fileName: Paths.temp.syntax }))
+        .pipe(gulp.dest(Paths.dest.folder + Paths.temp.folder));
 }
 
 /**
@@ -82,15 +82,15 @@ function syntaxColors() {
  * the one from the theme that overrides the base
  */
 function removeDuplicates() {
-    return gulp.src(Paths.dest.themes + Paths.dest.temp.syntax)
+    return gulp.src(`./themes/temp/${Paths.temp.syntax}`)
         .pipe(jeditor(function (json) {
-
             json.forEach(function (value) {
                 const entriesWithSameName = json.filter((entry) =>
                     entry.name && entry.name == value.name
                 );
 
                 if (entriesWithSameName.length > 1) {
+                    process.stdout.write(entriesWithSameName);
                     const firstEntry = entriesWithSameName[0];
                     const lastEntry = entriesWithSameName[entriesWithSameName.length - 1];
                     firstEntry.settings = lastEntry.settings;
@@ -104,7 +104,30 @@ function removeDuplicates() {
 
             return json;
         }))
-        .pipe(gulp.dest(Paths.dest.themes));
+        .pipe(gulp.dest(Paths.dest.folder + Paths.temp.folder));
+}
+
+function makeItalic() {
+    if (!currentTheme.isItalic) {
+        return gulp.src(Paths.dest.folder + Paths.temp.folder + Paths.temp.syntax)
+            .pipe(gulp.dest(Paths.dest.folder + Paths.temp.folder));
+    }
+
+    const italicScopeNames = require(Paths.src.italicScopeNames);
+    process.stdout.write(`Bijoya: gulpfile -> makeItalic ${italicScopeNames}`);
+
+    return gulp.src(Paths.dest.folder + Paths.temp.folder + Paths.temp.syntax)
+        .pipe(jeditor(function (json) {
+            json.forEach(function (value) {
+                if (italicScopeNames.indexOf(value.name) > -1) {
+                    process.stdout.write(`Bijoya: gulpfile -> makeItalic -- in de if ${value}`);
+                    value.settings.fontStyle = "italic";
+                }
+            });
+
+            return json;
+        }))
+        .pipe(gulp.dest(Paths.dest.folder + Paths.temp.folder));
 }
 
 /**
@@ -114,28 +137,27 @@ function removeDuplicates() {
 function buildWorkbenchColors() {
     return gulp.src(Paths.src.workbench)
         .pipe(json5({ beautify: true }))
-        .pipe(rename(Paths.dest.temp.workbench))
-        .pipe(gulp.dest(Paths.dest.themes))
+        .pipe(rename(Paths.temp.workbench))
+        .pipe(gulp.dest(Paths.dest.folder + Paths.temp.folder))
 }
 
 /**
  * Combine the workbench colors with the syntax colors
  * and create a file according the format of a vscode theme
  */
-function buildFullTheme() {
-    const workbench = require(Paths.dest.themes + Paths.dest.temp.workbench);
-    const syntax = require(Paths.dest.themes + Paths.dest.temp.syntax);
+function combineThemeParts() {
+    const workbench = require(Paths.dest.folder + Paths.temp.folder + Paths.temp.workbench);
+    const syntax = require(Paths.dest.folder + Paths.temp.folder + Paths.temp.syntax);
     const fullTheme = { type: "dark", colors: workbench, tokenColors: syntax }
-    if (currentTheme === Theme.Light) {
+    if (currentTheme.workbenchColor === WorkbenchColor.Light) {
         fullTheme.type = "light"
     }
 
     const json = JSON.stringify(fullTheme);
-    return file(Paths.dest.fileName, json, { src: true })
+    return file(Paths.dest.folder + Paths.dest.fileName, json, { src: true })
         .pipe(beautify())
-        .pipe(gulp.dest(Paths.dest.themes));
+        .pipe(gulp.dest("./"));
 }
-
 
 /**
  * Cleanup the files created for syntax colors and workbench colors,
@@ -143,7 +165,7 @@ function buildFullTheme() {
  * @param {string} theme Name of the theme being build
  */
 function cleanTempFiles() {
-    return del([Paths.dest.themes + Paths.dest.temp.workbench, Paths.dest.themes + Paths.dest.temp.syntax]);
+    return del(Paths.dest.folder + Paths.temp.folder);
 }
 
 /**
@@ -155,43 +177,50 @@ gulp.task("buildTheme", gulp.series(
     cleanDest,
     syntaxColors,
     removeDuplicates,
+    makeItalic,
     buildWorkbenchColors,
-    buildFullTheme,
+    combineThemeParts,
     cleanTempFiles
 ));
 
 gulp.task("build:light", gulp.series(function (cb) {
-    currentTheme = Theme.Light;
+    currentTheme.workbenchColor = WorkbenchColor.Light;
+    currentTheme.isItalic = false;
 
     cb();
 }, "buildTheme"));
 
 gulp.task("build:light:italic", gulp.series(function (cb) {
-    currentTheme = Theme.LightItalic;
+    currentTheme.workbenchColor = WorkbenchColor.Light;
+    currentTheme.isItalic = true;
 
     cb();
 }, "buildTheme"));
 
 gulp.task("build:dark", gulp.series(function (cb) {
-    currentTheme = Theme.Dark;
+    currentTheme.workbenchColor = WorkbenchColor.Dark;
+    currentTheme.isItalic = false;
 
     cb();
 }, "buildTheme"));
 
 gulp.task("build:dark:italic", gulp.series(function (cb) {
-    currentTheme = Theme.DarkItalic;
+    currentTheme.workbenchColor = WorkbenchColor.Dark;
+    currentTheme.isItalic = true;
 
     cb();
 }, "buildTheme"))
 
 gulp.task("build:extra-dark", gulp.series(function (cb) {
-    currentTheme = Theme.ExtraDark;
+    currentTheme.workbenchColor = WorkbenchColor.ExtraDark;
+    currentTheme.isItalic = false;
 
     cb();
 }, "buildTheme"));
 
 gulp.task("build:extra-dark:italic", gulp.series(function (cb) {
-    currentTheme = Theme.ExtraDarkItalic;
+    currentTheme.workbenchColor = WorkbenchColor.ExtraDark;
+    currentTheme.isItalic = true;
 
     cb();
 }, "buildTheme"));
