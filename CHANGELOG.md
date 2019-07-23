@@ -122,3 +122,8 @@ All notable changes to the "solarized-light-custom" extension will be documented
 
 ### Added
 - Italic themes, for use with fonts like Operator Mono or Dank Mono
+
+## [3.1.1] - 2019/07/23
+
+### Added
+- Do not remove bold styles when applying italics

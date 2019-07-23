@@ -185,7 +185,7 @@
         "name": "numbers",
         "scope": ["constant.numeric"],
         "settings": {
-            "foreground": "#b58900"
+            "foreground": "#cb4b16"
         }
     }, {
         "name": "primitives",

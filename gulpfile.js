@@ -121,7 +121,11 @@ function makeItalic() {
         .pipe(jeditor(function (json) {
             json.forEach(function (value) {
                 if (italicScopeNames.indexOf(value.name) > -1) {
-                    value.settings.fontStyle = "italic";
+                    if (value.settings.fontStyle){
+                    value.settings.fontStyle += " italic";
+                    } else {
+                        value.settings.fontStyle="italic";
+                    }
                 }
             });
 

@@ -154,7 +154,7 @@
         "scope": ["entity.name.type.instance.jsdoc"],
         "settings": {
             "foreground": "#586e75",
-            "fontStyle": "italic"
+            "fontStyle": "italic italic"
         }
     }, {
         "name": "functionNames",
@@ -173,7 +173,7 @@
         "name": "keywords",
         "scope": ["keyword", "storage.type", "storage.modifier", "constant.language.boolean", "variable.language.this", "keyword.operator.new", "constant.language.null", "constant.language.json", "keyword.operator.expression.of.ts", "keyword.operator.expression.in.ts", "keyword.operator.expression.instanceof", "keyword.operator.expression.typeof", "keyword.operator.expression.delete", "constant.language.undefined", "variable.language.super"],
         "settings": {
-            "fontStyle": "italic",
+            "fontStyle": "bold italic",
             "foreground": "#d33682"
         }
     }, {
@@ -186,7 +186,7 @@
         "name": "numbers",
         "scope": ["constant.numeric"],
         "settings": {
-            "foreground": "#b58900"
+            "foreground": "#cb4b16"
         }
     }, {
         "name": "primitives",
