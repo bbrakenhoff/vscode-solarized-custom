@@ -99,7 +99,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 - Use solarized colors in workbench terminal
 - Change syntax highlighting for HTML/XML
 - Better workbench colors for all themes
-- Highlight colors improved 
+- Highlight colors improved
 - Better colors in the side bar
 - Highlight active tab
 - Color for punctuation
@@ -127,3 +127,8 @@ All notable changes to the "solarized-light-custom" extension will be documented
 
 ### Added
 - Do not remove bold styles when applying italics
+
+## [3.2.0] - 2020/05/11
+
+### Changed
+- Keywords not bold anymore

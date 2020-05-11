@@ -112,7 +112,6 @@
             "variable.language.super"
         ],
         "settings": {
-            "fontStyle": "bold",
             "foreground": "#d33682"
         }
     },
