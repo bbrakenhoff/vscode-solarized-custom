@@ -1,11 +1,12 @@
-const gulp = require("gulp");
-const del = require("del");
-const rename = require("gulp-rename");
-const merge = require("gulp-merge-json");
-const jeditor = require("gulp-json-editor");
-const json5 = require("gulp-json5-to-json");
-const file = require("gulp-file");
-const beautify = require("gulp-jsbeautifier");
+import * as gulp from 'gulp';
+import * as del from 'del'
+
+import * as rename from 'gulp-rename'
+import * as merge from 'gulp-merge-json'
+import * as jsonEditor from 'gulp-json-editor'
+import * as json5 from 'gulp-json5-to-json'
+import * as file from 'gulp-file'
+import * as beautify from 'gulp-jsbeautifier';
 
 let currentTheme = {
     workbenchColor: "",
@@ -83,7 +84,7 @@ function syntaxColors() {
  */
 function removeDuplicates() {
     return gulp.src(`./themes/temp/${Paths.temp.syntax}`)
-        .pipe(jeditor(function (json) {
+        .pipe(jsonEditor(function (json) {
             json.forEach(function (value) {
                 const entriesWithSameName = json.filter((entry) =>
                     entry.name && entry.name == value.name
@@ -118,7 +119,7 @@ function makeItalic() {
 
     const italicScopeNames = require(Paths.src.syntax.italicScopeNames);
     return gulp.src(Paths.dest.folder + Paths.temp.folder + Paths.temp.syntax)
-        .pipe(jeditor(function (json) {
+        .pipe(jsonEditor(function (json) {
             json.forEach(function (value) {
                 if (italicScopeNames.indexOf(value.name) > -1) {
                     if (value.settings.fontStyle){
