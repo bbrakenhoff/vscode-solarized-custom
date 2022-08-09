@@ -136,6 +136,32 @@
       }
     },
     {
+      "name": "comment",
+      "scope": ["comment"],
+      "settings": {
+        "foreground": "#93a1a1"
+      }
+    },
+    {
+      "name": "comment.tag",
+      "scope": [
+        "storage.type.class.jsdoc",
+        "punctuation.definition.block.tag.jsdoc"
+      ],
+      "settings": {
+        "foreground": "#93a1a1",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "comment.variableType",
+      "scope": ["entity.name.type.instance.jsdoc"],
+      "settings": {
+        "foreground": "#93a1a1",
+        "fontStyle": "italic"
+      }
+    },
+    {
       "name": "decorator",
       "scope": ["meta.decorator"],
       "settings": {
@@ -371,7 +397,7 @@
       "settings": {
         "foreground": "#d33682"
       }
-    },
+    }
     // </HTML+XML>
   ]
 }
