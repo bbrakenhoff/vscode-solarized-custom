@@ -1,0 +1,22 @@
+"use strict";
+exports.__esModule = true;
+exports.SolarizedColor = void 0;
+var SolarizedColor;
+(function (SolarizedColor) {
+    SolarizedColor["base03"] = "#002b36";
+    SolarizedColor["base02"] = "#073642";
+    SolarizedColor["base01"] = "#586e75";
+    SolarizedColor["base00"] = "#657b83";
+    SolarizedColor["base0"] = "#839496";
+    SolarizedColor["base1"] = "#93a1a1";
+    SolarizedColor["base2"] = "#eee8d5";
+    SolarizedColor["base3"] = "#fdf6e3";
+    SolarizedColor["yellow"] = "#b58900";
+    SolarizedColor["orange"] = "#cb4b16";
+    SolarizedColor["red"] = "#dc322f";
+    SolarizedColor["magenta"] = "#d33682";
+    SolarizedColor["violet"] = "#6c71c4";
+    SolarizedColor["blue"] = "#268bd2";
+    SolarizedColor["cyan"] = "#2aa198";
+    SolarizedColor["green"] = "#859900";
+})(SolarizedColor = exports.SolarizedColor || (exports.SolarizedColor = {}));
