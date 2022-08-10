@@ -17,9 +17,19 @@
   "contributes": {
     "themes": [
       {
-        "label": "Solarized Custom Light",
+        "label": "Solarized Custom Light test",
         "uiTheme": "vs",
         "path": "./themes/solarized-custom-light.json"
+      },
+      {
+        "label": "Solarized Custom Light",
+        "uiTheme": "vs",
+        "path": "./generated-themes/solarized-custom-light.json"
+      },
+      {
+        "label": "Solarized Custom Dark",
+        "uiTheme": "vs",
+        "path": "./generated-themes/solarized-custom-dark.json"
       }
     ]
   },
