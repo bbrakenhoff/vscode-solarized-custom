@@ -28,7 +28,7 @@
       },
       {
         "label": "Solarized Custom Dark",
-        "uiTheme": "vs",
+        "uiTheme": "vs-dark",
         "path": "./generated-themes/solarized-custom-dark.json"
       }
     ]

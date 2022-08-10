@@ -1,6 +1,6 @@
 import { SolarizedColor } from "../solarized-color";
 
-export const generateBasicTokenColors = (useColorsLightTheme:boolean) => {
+export const generateBasicTokenColors = (useColorsLightTheme: boolean) => {
   return [
     {
       name: "class",
@@ -13,7 +13,9 @@ export const generateBasicTokenColors = (useColorsLightTheme:boolean) => {
       name: "comment",
       scope: ["comment"],
       settings: {
-        foreground: SolarizedColor.Base1,
+        foreground: useColorsLightTheme
+          ? SolarizedColor.Base1
+          : SolarizedColor.Base01,
       },
     },
     {
