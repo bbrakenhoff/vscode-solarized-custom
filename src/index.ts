@@ -1,11 +1,11 @@
 import * as fs from "fs";
-import { generateThemeJson } from "./generate-theme-json";
+import { ThemeJsonGenerator } from "./theme-json-generator";
 import { ThemeVariant } from "./theme-variant";
 
 Object.values(ThemeVariant).forEach((themeVariant: ThemeVariant) => {
   fs.writeFile(
     `./generated-themes/solarized-custom-${themeVariant}.json`,
-    generateThemeJson(themeVariant),
+    ThemeJsonGenerator.generateJson(themeVariant),
     () => {}
   );
 });
