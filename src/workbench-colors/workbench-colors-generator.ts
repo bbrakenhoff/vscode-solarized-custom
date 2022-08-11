@@ -35,6 +35,7 @@ export class WorkbenchColorsGenerator extends ColorsGenerator {
       ...this.generateListAndTreesColors(),
       ...this.generateBreadcrumbColors(),
       ...this.generateStatusBarColors(),
+      ...this.generatePeekViewColors(),
       ...new EditorColorsGenerator(this.themeVariant).generate(),
       ...WorkbenchColorsGenerator.TERMINAL_COLORS,
     };
@@ -42,7 +43,7 @@ export class WorkbenchColorsGenerator extends ColorsGenerator {
 
   private generateBasicWorkbenchColors() {
     return {
-      "button.background": `${this.accentColor}99`,
+      "button.background": `${this.accentColor}`,
       errorForeground: `${SolarizedColor.Red}99`,
       focusBorder: `${this.accentColor}99`,
       "titleBar.activeBackground": this.isGeneratingLightTheme
@@ -52,7 +53,7 @@ export class WorkbenchColorsGenerator extends ColorsGenerator {
         ? "#ccc4b0"
         : `${SolarizedColor.Cyan}99`,
       "panel.border": this.borderColor,
-      "progressbar.background": this.accentColor,
+      "progressBar.background": this.accentColor,
     };
   }
 
@@ -190,7 +191,7 @@ export class WorkbenchColorsGenerator extends ColorsGenerator {
         : "#00212B",
       "statusBar.debuggingBackground": this.isGeneratingLightTheme
         ? SolarizedColor.Base2
-        : " #00212B",
+        : "#00212B",
       "statusBar.foreground": this.isGeneratingLightTheme
         ? SolarizedColor.Base01
         : SolarizedColor.Base1,
@@ -200,6 +201,28 @@ export class WorkbenchColorsGenerator extends ColorsGenerator {
       "statusBarItem.prominentBackground": this.borderColor,
       "statusBarItem.prominentHoverBackground": this.borderColor,
       "statusBarItem.remoteBackground": `${this.accentColor}99`,
+    };
+  }
+
+  private generatePeekViewColors() {
+    return {
+      "peekView.border":this.borderColor,
+      "peekViewEditor.background": this.isGeneratingLightTheme
+        ? "#ddd6c150"
+        : SolarizedColor.Base02,
+      "peekViewEditor.matchHighlightBorder": this.borderColor,
+      "peekViewEditor.matchHighlightBackground": `${this.accentColor}30`,
+      "peekViewResult.lineForeground": this.isGeneratingLightTheme
+        ? `${SolarizedColor.Base00}80`
+        : `${SolarizedColor.Base1}50`,
+      "peekViewResult.matchHighlightBackground": `${this.accentColor}40`,
+      "peekViewResult.background": this.isGeneratingLightTheme
+        ? "#d3cbb790"
+        : "#00384770",
+      "peekViewResult.selectionBackground": `${this.accentColor}30`,
+      "peekViewTitle.background": this.isGeneratingLightTheme
+        ? "#d3cbb790"
+        : "#00384770",
     };
   }
 }

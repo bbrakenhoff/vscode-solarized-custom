@@ -7,12 +7,12 @@ import { ScssTokenColorsGenerator } from "./scss-token-colors-generator";
 
 export class TextMateScopeTokenColorsGenerator extends ColorsGenerator {
   generate(): Object[] {
-    return {
+    return [
       ...new BasicTokenColorsGenerator(this.themeVariant).generate(),
       ...new CssTokenColorsGenerator(this.themeVariant).generate(),
       ...new ScssTokenColorsGenerator(this.themeVariant).generate(),
       ...new HtmlXmlTokenColorsGenerator(this.themeVariant).generate(),
       ...new JsonTokenColorsGenerator(this.themeVariant).generate()
-    };
+    ];
   }
 }

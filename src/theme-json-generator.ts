@@ -3,7 +3,7 @@ import { SemanticTokenColorGenerator } from "./semantic-token-color-generator";
 import { TextMateScopeTokenColorsGenerator } from "./text-mate-token-colors/text-mate-scope-token-color-generator";
 import { ThemeVariant } from "./theme-variant";
 import { WorkbenchColorsGenerator } from "./workbench-colors/workbench-colors-generator";
-
+import Ajv from "ajv";
 export class ThemeJsonGenerator extends ColorsGenerator {
   generate(): Object {
     return {

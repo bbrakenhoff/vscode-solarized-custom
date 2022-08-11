@@ -11,7 +11,6 @@ export class BasicTokenColorsGenerator extends ColorsGenerator {
           foreground: SolarizedColor.Green,
         },
       },
-      ,
       {
         name: "decorator",
         scope: ["meta.decorator"],
