@@ -43,6 +43,8 @@ export class WorkbenchColorsGenerator extends ColorsGenerator {
 
   private generateBasicWorkbenchColors() {
     return {
+      "badge.background": this.accentColor,
+      "badge.foreground": '#fffcf5',
       "button.background": `${this.accentColor}`,
       errorForeground: `${SolarizedColor.Red}99`,
       focusBorder: `${this.accentColor}99`,
@@ -100,7 +102,6 @@ export class WorkbenchColorsGenerator extends ColorsGenerator {
         : "#fffcf5",
       "activityBarBadge.background": this.accentColor,
       "activityBarBadge.foreground": "#fffcf5",
-      "badge.background": this.accentColor,
     };
   }
 
