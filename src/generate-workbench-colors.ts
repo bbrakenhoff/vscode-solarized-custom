@@ -5,7 +5,7 @@ export const generateWorkbenchColors = (useColorsLightTheme: boolean) => {
     ...generateBasicWorkbenchColors(useColorsLightTheme),
     ...generateActivityBarColors(useColorsLightTheme),
     ...generateSideBarColors(useColorsLightTheme),
-    ...generateCommanPaletteColors(useColorsLightTheme),
+    ...generateCommandPaletteColors(useColorsLightTheme),
     ...generateEditorGroupColors(useColorsLightTheme),
     ...generateTabColors(useColorsLightTheme),
     ...generateListAndTreesColors(useColorsLightTheme),
@@ -239,7 +239,7 @@ const generateSideBarColors = (useColorsLightTheme: boolean) => {
   };
 };
 
-const generateCommanPaletteColors = (useColorsLightTheme: boolean) => {
+const generateCommandPaletteColors = (useColorsLightTheme: boolean) => {
   return {
     "pickerGroup.border": getBorderColor(useColorsLightTheme),
     "pickerGroup.foreground": `${getAccentColor(useColorsLightTheme)}70`,
