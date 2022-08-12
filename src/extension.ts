@@ -1,13 +1,6 @@
 import * as vscode from 'vscode';
+import { AccentColorCommand } from './accent-color-manager/accent-color-command';
 
 export async function activate(context: vscode.ExtensionContext) {
-  // Register set accent color command
-  context.subscriptions.push(
-    vscode.commands.registerCommand(
-      'solarizedCustomTheme.setAccentColor',
-      () => {
-        vscode.window.showInformationMessage('Hello Bijoya!');
-      }
-    )
-  );
+  context.subscriptions.push(AccentColorCommand.register());
 }
