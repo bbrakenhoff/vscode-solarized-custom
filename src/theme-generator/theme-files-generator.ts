@@ -14,12 +14,9 @@ export class ThemeFilesGenerator {
     themeVariant: ThemeVariant,
     accentColor: SolarizedColor
   ) {
-    fs.writeFile(
+    fs.writeFileSync(
       this.getThemeFileName(themeVariant),
-      this.generatedThemeToJson(themeVariant, accentColor),
-      () => {
-        // Do nothing
-      }
+      this.generatedThemeToJson(themeVariant, accentColor)
     );
   }
 
