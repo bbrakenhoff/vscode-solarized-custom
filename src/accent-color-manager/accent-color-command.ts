@@ -1,10 +1,9 @@
 import * as vscode from 'vscode';
-import { SolarizedCustomThemeConfig } from './solarized-custom-theme-config';
 import { SolarizedColor } from '../solarized-color';
 export class AccentColorCommand {
   private static readonly IDENTIFIER = 'solarizedCustomTheme.setAccentColor';
 
-  private config: SolarizedCustomThemeConfig;
+  private accentColor: string;
 
   private constructor() {
     // Do nothing
@@ -19,24 +18,24 @@ export class AccentColorCommand {
 
   private static async onCommandSetAccentColor() {
     const accentColorCommand = new AccentColorCommand();
-    accentColorCommand.readSolarizedCustomThemeConfig();
-
-    const chosenAccentColor = await accentColorCommand.quickPick();
+    accentColorCommand.accentColor =
+      await accentColorCommand.quickPickAccentColor();
+    await accentColorCommand.updateSolarizedCustomThemeConfig();
 
     vscode.window.showInformationMessage(
-      'onSetAccentColorCommandTriggered ' + chosenAccentColor
+      'onSetAccentColorCommandTriggered ' + accentColorCommand.accentColor
     );
   }
 
-  private async quickPick() {
+  private async quickPickAccentColor() {
     return vscode.window.showQuickPick(
       this.getSolarizedColorKeysWithoutBaseColors()
     );
   }
 
   private getSolarizedColorKeysWithoutBaseColors() {
-    return Object.keys(SolarizedColor).filter((key: string) =>
-      key.includes('Base')
+    return Object.keys(SolarizedColor).filter(
+      (key: string) => !key.includes('Base')
     );
   }
 
@@ -44,6 +43,17 @@ export class AccentColorCommand {
     const rawConfig = vscode.workspace.getConfiguration(
       'solarizedCustomTheme'
     ) as unknown;
-    this.config = rawConfig as SolarizedCustomThemeConfig;
+    this.accentColor = (rawConfig as { accentColor: string }).accentColor;
+  }
+
+  private async updateSolarizedCustomThemeConfig() {
+    try {
+      await vscode.workspace
+        .getConfiguration()
+        .update('solarizedCustomTheme.accentColor', this.accentColor, true);
+      return true;
+    } catch (error) {
+      vscode.window.showErrorMessage(error);
+    }
   }
 }
