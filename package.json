@@ -5,7 +5,8 @@
   "version": "4.0.0",
   "publisher": "bbrakenhoff",
   "engines": {
-    "vscode": "*"
+    "node": ">=12",
+    "vscode": "^1.51.0"
   },
   "repository": {
     "type": "git",
@@ -13,6 +14,10 @@
   },
   "categories": [
     "Themes"
+  ],
+  "main": "./dist/extension/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
   ],
   "contributes": {
     "themes": [
@@ -25,6 +30,13 @@
         "label": "Solarized Custom Dark",
         "uiTheme": "vs-dark",
         "path": "./dist/themes/solarized-custom-dark.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "solarizedCustomTheme.setAccentColor",
+        "title": "Set accent color",
+        "category": "Solarized Custom Theme"
       }
     ]
   },
@@ -51,8 +63,9 @@
     "vscode": "^1.1.37"
   },
   "scripts": {
+    "clean": "rm -r -f dist && mkdir dist",
     "build:generate-themes": "ts-node ./src/theme-generation/generate-themes.ts",
     "build:extension": "tsc ./src/extension.ts --outDir ./dist/extension",
-    "build": "npm run build:extension && npm run build:generate-themes"
+    "build": "npm run clean && npm run build:extension && npm run build:generate-themes"
   }
 }

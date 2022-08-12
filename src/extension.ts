@@ -1,42 +1,13 @@
-import { ExtensionContext } from 'vscode';
+import * as vscode from 'vscode';
 
-export async function activate(context: ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
   // Register set accent color command
-  // context.subscriptions.push(
-  //   commands.registerCommand('solarizedCustomTheme.setAccentColor', () => {
-  //     // window.showInformationMessage('Hello Bijoya!');
-  //   })
-  // );
-
- 
-  // "commands": [
-  //   {
-  //     "command": "solarizedCustomTheme.setAccentColor",
-  //     "title": "Set accent color",
-  //     "category": "Solarized Custom Theme"
-  //   }
-  // ]
-  // "configuration": {
-  //   "type": "object",
-  //   "title": "Solarized Custom Theme",
-  //   "properties": {
-  //     "solarizedCustomTheme.accentColor": {
-  //       "type": "string",
-  //       "default": "Magenta",
-  //       "enum": [
-  //         "Blue",
-  //         "Cyan",
-  //         "Green",
-  //         "Magenta",
-  //         "Orange",
-  //         "Red",
-  //         "Violet",
-  //         "Yellow"
-  //       ],
-  //       "description": "Current accent color selected",
-  //       "scope": "window"
-  //     }
-  //   }
-  // }
-  // }
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      'solarizedCustomTheme.setAccentColor',
+      () => {
+        vscode.window.showInformationMessage('Hello Bijoya!');
+      }
+    )
+  );
 }
