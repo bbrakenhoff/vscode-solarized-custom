@@ -2,7 +2,7 @@ import { SolarizedColor } from "../solarized-color";
 import { ColorsGenerator } from "./colors-generator";
 
 export class SemanticTokenColorGenerator extends ColorsGenerator {
-  generate(): Object {
+  generate() {
     return {
       class: SolarizedColor.Green,
       comment: this.isGeneratingLightTheme

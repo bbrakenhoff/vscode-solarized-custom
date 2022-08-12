@@ -18,5 +18,5 @@ export abstract class ColorsGenerator {
     return this.isGeneratingLightTheme ? '#ddd6c1' : '#003847';
   }
 
-  abstract generate(): Object;
+  abstract generate(): any;
 }

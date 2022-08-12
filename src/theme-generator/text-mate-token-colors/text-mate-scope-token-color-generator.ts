@@ -6,7 +6,7 @@ import { JsonTokenColorsGenerator } from './json-token-colors-generator';
 import { ScssTokenColorsGenerator } from './scss-token-colors-generator';
 
 export class TextMateScopeTokenColorsGenerator extends ColorsGenerator {
-  generate(): Object[] {
+  generate() {
     return [
       ...new BasicTokenColorsGenerator(this.themeVariant).generate(),
       ...new CssTokenColorsGenerator(this.themeVariant).generate(),

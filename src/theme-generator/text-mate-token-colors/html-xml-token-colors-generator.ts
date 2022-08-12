@@ -2,7 +2,7 @@ import { ColorsGenerator } from '../colors-generator';
 import { SolarizedColor } from '../../solarized-color';
 
 export class HtmlXmlTokenColorsGenerator extends ColorsGenerator {
-  generate(): Object[] {
+  generate() {
     return [
       {
         name: 'HTML+XML.attribute',

@@ -5,7 +5,7 @@ import { ThemeVariant } from './theme-variant';
 import { WorkbenchColorsGenerator } from './workbench-colors/workbench-colors-generator';
 
 export class ThemeGenerator extends ColorsGenerator {
-  generate(): Object {
+  generate() {
     return {
       $schema: 'vscode://schemas/color-theme',
       type: this.themeVariant,

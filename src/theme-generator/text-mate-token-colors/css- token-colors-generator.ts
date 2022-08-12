@@ -2,7 +2,7 @@ import { ColorsGenerator } from '../colors-generator';
 import { SolarizedColor } from '../../solarized-color';
 
 export class CssTokenColorsGenerator extends ColorsGenerator {
-  generate(): Object[] {
+  generate() {
     return [
       {
         name: 'CSS.class',

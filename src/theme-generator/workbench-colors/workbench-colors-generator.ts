@@ -22,7 +22,7 @@ export class WorkbenchColorsGenerator extends ColorsGenerator {
     'terminal.ansiBrightWhite': SolarizedColor.Base3
   };
 
-  generate(): Object {
+  generate() {
     return {
       ...this.generateBasicWorkbenchColors(),
       ...this.generateInputColors(),
