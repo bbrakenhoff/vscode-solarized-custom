@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { SolarizedColor } from '../solarized-color';
+import { SolarizedColor } from './solarized-color';
 export class AccentColorCommand {
   static readonly IDENTIFIER = 'solarizedCustomTheme.setAccentColor';
   private static readonly CONFIG_KEY='solarizedCustomTheme.accentColor';

@@ -4,7 +4,7 @@ import { TextMateScopeTokenColorsGenerator } from './text-mate-token-colors/text
 import { ThemeVariant } from './theme-variant';
 import { WorkbenchColorsGenerator } from './workbench-colors/workbench-colors-generator';
 
-export class ThemeJsonGenerator extends ColorsGenerator {
+export class ThemeGenerator extends ColorsGenerator {
   generate(): Object {
     return {
       $schema: 'vscode://schemas/color-theme',
@@ -21,6 +21,6 @@ export class ThemeJsonGenerator extends ColorsGenerator {
   }
 
   static generateJson(themeVariant: ThemeVariant): string {
-    return JSON.stringify(new ThemeJsonGenerator(themeVariant).generate());
+    return JSON.stringify(new ThemeGenerator(themeVariant).generate());
   }
 }
