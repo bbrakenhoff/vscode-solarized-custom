@@ -84,7 +84,7 @@
   },
   "scripts": {
     "clean": "rm -r -f dist && mkdir dist",
-    "build:generate-themes": "ts-node ./src/theme-generator/theme-files-generator.ts",
+    "build:generate-themes": "ts-node ./src/theme-generator/index.ts",
     "build:extension": "tsc ./src/extension-main.ts --outDir ./dist/extension",
     "build": "npm run clean && npm run build:extension && npm run build:generate-themes"
   }

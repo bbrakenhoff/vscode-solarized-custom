@@ -28,4 +28,3 @@ export class ThemeFilesGenerator {
   }
 }
 
-ThemeFilesGenerator.generateAllThemes();
