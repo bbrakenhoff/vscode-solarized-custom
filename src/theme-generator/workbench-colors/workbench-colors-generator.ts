@@ -36,7 +36,7 @@ export class WorkbenchColorsGenerator extends ColorsGenerator {
       ...this.generateBreadcrumbColors(),
       ...this.generateStatusBarColors(),
       ...this.generatePeekViewColors(),
-      ...new EditorColorsGenerator(this.themeVariant).generate(),
+      ...new EditorColorsGenerator(this.themeVariant, this.accentColor).generate(),
       ...WorkbenchColorsGenerator.TERMINAL_COLORS
     };
   }

@@ -1,3 +1,4 @@
+import { SolarizedColor } from '../solarized-color';
 import { ColorsGenerator } from './colors-generator';
 import { SemanticTokenColorGenerator } from './semantic-token-color-generator';
 import { TextMateScopeTokenColorsGenerator } from './text-mate-token-colors/text-mate-scope-token-color-generator';
@@ -9,18 +10,16 @@ export class ThemeGenerator extends ColorsGenerator {
     return {
       $schema: 'vscode://schemas/color-theme',
       type: this.themeVariant,
-      colors: new WorkbenchColorsGenerator(this.themeVariant).generate(),
+      colors: new WorkbenchColorsGenerator(this.themeVariant, this.accentColor).generate(),
       semanticHighlighting: true,
       semanticTokenColors: new SemanticTokenColorGenerator(
-        this.themeVariant
+        this.themeVariant,
+        this.accentColor
       ).generate(),
       tokenColors: new TextMateScopeTokenColorsGenerator(
-        this.themeVariant
+        this.themeVariant,
+        this.accentColor
       ).generate()
     };
-  }
-
-  static generateJson(themeVariant: ThemeVariant): string {
-    return JSON.stringify(new ThemeGenerator(themeVariant).generate());
   }
 }

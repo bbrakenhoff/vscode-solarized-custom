@@ -8,11 +8,26 @@ import { ScssTokenColorsGenerator } from './scss-token-colors-generator';
 export class TextMateScopeTokenColorsGenerator extends ColorsGenerator {
   generate() {
     return [
-      ...new BasicTokenColorsGenerator(this.themeVariant).generate(),
-      ...new CssTokenColorsGenerator(this.themeVariant).generate(),
-      ...new ScssTokenColorsGenerator(this.themeVariant).generate(),
-      ...new HtmlXmlTokenColorsGenerator(this.themeVariant).generate(),
-      ...new JsonTokenColorsGenerator(this.themeVariant).generate()
+      ...new BasicTokenColorsGenerator(
+        this.themeVariant,
+        this.accentColor
+      ).generate(),
+      ...new CssTokenColorsGenerator(
+        this.themeVariant,
+        this.accentColor
+      ).generate(),
+      ...new ScssTokenColorsGenerator(
+        this.themeVariant,
+        this.accentColor
+      ).generate(),
+      ...new HtmlXmlTokenColorsGenerator(
+        this.themeVariant,
+        this.accentColor
+      ).generate(),
+      ...new JsonTokenColorsGenerator(
+        this.themeVariant,
+        this.accentColor
+      ).generate()
     ];
   }
 }
