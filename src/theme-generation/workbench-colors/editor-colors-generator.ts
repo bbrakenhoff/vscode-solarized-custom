@@ -1,5 +1,5 @@
 import { ColorsGenerator } from "../colors-generator";
-import { SolarizedColor } from "../solarized-color";
+import { SolarizedColor } from "../../solarized-color";
 
 export class EditorColorsGenerator extends ColorsGenerator {
   generate(): Object {

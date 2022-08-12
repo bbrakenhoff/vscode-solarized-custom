@@ -1,5 +1,5 @@
+import { SolarizedColor } from "../solarized-color";
 import { ColorsGenerator } from "./colors-generator";
-import { SolarizedColor } from "./solarized-color";
 
 export class SemanticTokenColorGenerator extends ColorsGenerator {
   generate(): Object {

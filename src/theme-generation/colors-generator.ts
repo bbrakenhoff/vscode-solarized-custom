@@ -1,5 +1,5 @@
-import { SolarizedColor } from "./solarized-color";
-import { ThemeVariant } from "./theme-variant";
+import { SolarizedColor } from '../solarized-color';
+import { ThemeVariant } from './theme-variant';
 
 export abstract class ColorsGenerator {
   constructor(protected readonly themeVariant: ThemeVariant) {}
@@ -15,7 +15,7 @@ export abstract class ColorsGenerator {
   }
 
   protected get borderColor() {
-    return this.isGeneratingLightTheme ? "#ddd6c1" : "#003847";
+    return this.isGeneratingLightTheme ? '#ddd6c1' : '#003847';
   }
 
   abstract generate(): Object;

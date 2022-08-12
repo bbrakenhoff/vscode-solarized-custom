@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "types": ["node"],
-    "target": "ES2022",
-    "moduleResolution": "node"
-  }
+    "target": "ES6",
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "exclude": ["node_modules" , "vscode"]
 }
