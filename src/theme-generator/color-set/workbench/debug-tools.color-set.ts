@@ -1,7 +1,7 @@
 import { SolarizedColor } from '../../../solarized-color';
-import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
+import { ColorSet } from '../color-set';
 
-export class DebugToolsColorsGenerator extends ThemeDependentColorSet {
+export class DebugToolsColorsGenerator extends ColorSet {
   get() {
     return {
       'debugExceptionWidget.background': this.colorPalette.border,

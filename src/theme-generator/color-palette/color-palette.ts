@@ -14,19 +14,23 @@ export abstract class ColorPalette {
   };
 
   abstract readonly workbench: {
+    selectionBackground: string;
+    activityBar: { foreground: string };
+    dropdown: { background: string };
     editor: {
       lineNumber: {
         activeForeground: string;
         foreground: string;
       };
-      brackets: { matchBackground: string; matchBorder: string };
+      brackets: {
+        matchBackground: string;
+        matchBorder: string;
+      };
       indentGuide: {
         activeBackground: string;
         background: string;
       };
-      wordHighlight: {
-        background: string;
-      };
+      wordHighlight: { background: string };
     };
   };
 }

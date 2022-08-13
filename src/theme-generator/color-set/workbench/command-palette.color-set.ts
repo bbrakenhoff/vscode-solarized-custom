@@ -1,7 +1,6 @@
-import { SolarizedColor } from '../../../solarized-color';
-import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
+import { ColorSet } from '../color-set';
 
-export class CommandPaletteColorSet extends ThemeDependentColorSet {
+export class CommandPaletteColorSet extends ColorSet {
   get() {
     return {
       'pickerGroup.border': this.colorPalette.border,

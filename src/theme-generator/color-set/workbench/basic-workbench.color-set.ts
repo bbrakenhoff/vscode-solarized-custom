@@ -10,9 +10,7 @@ export class BasicWorkbenchColorSet extends ThemeDependentColorSet {
       errorForeground: `${SolarizedColor.Red}99`,
       focusBorder: `${this.colorPalette.accentColor}99`,
       'titleBar.activeBackground': this.colorPalette.defaultHighlightBackground,
-      'selection.background': this.isGeneratingLightTheme
-        ? '#ccc4b0'
-        : `${SolarizedColor.Cyan}99`,
+      'selection.background': this.colorPalette.workbench.selectionBackground,
       'panel.border': this.colorPalette.border,
       'progressBar.background': this.colorPalette.accentColor
     };

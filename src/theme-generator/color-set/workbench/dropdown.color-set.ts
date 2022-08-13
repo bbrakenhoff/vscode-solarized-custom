@@ -1,12 +1,9 @@
-import { SolarizedColor } from '../../../solarized-color';
-import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
+import { ColorSet } from '../color-set';
 
-export class DropdownColorSet extends ThemeDependentColorSet {
+export class DropdownColorSet extends ColorSet {
   get() {
     return {
-      'dropdown.background': this.isGeneratingLightTheme
-        ? SolarizedColor.Base2
-        : '#00212B',
+      'dropdown.background': this.colorPalette.workbench.dropdown,
       'dropdown.border': `${this.colorPalette.accentColor}80`
     };
   }

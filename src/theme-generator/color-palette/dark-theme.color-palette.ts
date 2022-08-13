@@ -11,6 +11,9 @@ export class DarkThemeColorPalette extends ColorPalette {
   };
 
   workbench = {
+    selectionBackground: `${SolarizedColor.Cyan}99`,
+    activityBar: { foreground: '#fffcf5' },
+    dropdown: { background: '#00212B' },
     editor: {
       brackets: {
         matchBackground: '#00212B',
@@ -24,9 +27,7 @@ export class DarkThemeColorPalette extends ColorPalette {
         activeBackground: SolarizedColor.Base1,
         background: `${SolarizedColor.Base1}20`
       },
-      wordHighlight: {
-        background: SolarizedColor.Base01
-      }
+      wordHighlight: { background: SolarizedColor.Base01 }
     }
   };
 }
