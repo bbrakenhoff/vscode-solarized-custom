@@ -16,4 +16,4 @@ _Please let me know any suggestions, requests or issues in Github_
 
 ![](https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/screenshots/solarized-custom-dark.png)
 
-_Code should speak for itself, but a little explanation can be found in the [architecture documentation](./architecture.md)_
+_Code should speak for itself, but a little explanation can be found in the [architecture documentation](./architecture.md)._

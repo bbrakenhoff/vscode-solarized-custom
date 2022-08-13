@@ -23,7 +23,7 @@ Generates the JSON theme files in the dist folder.
 
 ## Color set
 
-Mainly split in syntax highlighighting colors and workbench.
+Vscode key bind to a color. Mainly split in syntax highlighighting colors and workbench.
 
 ### Syntax 
 #### SemanticTokenColorSet
