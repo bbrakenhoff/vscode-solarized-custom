@@ -20,7 +20,7 @@ export class EditorGroupColorSet extends ColorSet {
   private generateTabs() {
     return {
       'tab.activeBackground': this.colorPalette.defaultBackground,
-      'tab.activeBorderTop': this.colorPalette.accentColor,
+      'tab.activeBorderTop': this.colorPalette.accent,
       'tab.activeForeground':
         this.colorPalette.workbench.editorGroup.tab.activeForeground,
       'tab.border': this.colorPalette.border,

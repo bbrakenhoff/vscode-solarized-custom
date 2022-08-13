@@ -9,6 +9,7 @@ import { EditorGroupColorSet } from './editor-group.color-set';
 import { EditorColorsSet as EditorColorSet } from './editor/editor.color-set';
 import { InputColorSet } from './input-colors-generator';
 import { ListColorSet } from './list.color-set';
+import { NotifcicationColorSet } from './notification-center.color-set';
 import { PeekViewColorSet } from './peek-view.color-set';
 import { SideBarColorSet } from './side-bar.color-set';
 import { StatusBarColorSet } from './status-bar.color-set';
@@ -29,6 +30,7 @@ export class WorkbenchColorSet extends ColorSet {
       ...new BreadcrumbsColorSet(this.colorPalette).get(),
       ...new StatusBarColorSet(this.colorPalette).get(),
       ...new PeekViewColorSet(this.colorPalette).get(),
+      ...new NotifcicationColorSet(this.colorPalette).get(),
       ...new EditorColorSet(this.colorPalette).get(),
       ...TERMINAL_COLORS
     };

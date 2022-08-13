@@ -6,7 +6,7 @@ export class InputColorSet extends ColorSet {
       'input.background': this.colorPalette.border,
       'input.foreground': this.colorPalette.workbench.input.foreground,
       'input.placeholderForeground': `${this.colorPalette.workbench.input.foreground}aa`,
-      'inputOption.activeBorder': `${this.colorPalette.accentColor}70`
+      'inputOption.activeBorder': `${this.colorPalette.accent}70`
     };
   }
 }

@@ -1,7 +1,7 @@
 import { SolarizedColor } from '../../solarized-color';
 
 export abstract class ColorPalette {
-  constructor(readonly accentColor: SolarizedColor) {}
+  constructor(readonly accent: SolarizedColor) {}
 
   abstract readonly border: string;
 

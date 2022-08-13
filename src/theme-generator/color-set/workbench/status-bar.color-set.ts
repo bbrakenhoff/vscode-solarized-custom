@@ -11,7 +11,7 @@ export class StatusBarColorSet extends ColorSet {
         this.colorPalette.workbench.statusBar.noFolderBackground,
       'statusBarItem.prominentBackground': this.colorPalette.border,
       'statusBarItem.prominentHoverBackground': this.colorPalette.border,
-      'statusBarItem.remoteBackground': `${this.colorPalette.accentColor}99`
+      'statusBarItem.remoteBackground': `${this.colorPalette.accent}99`
     };
   }
 }

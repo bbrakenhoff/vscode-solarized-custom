@@ -4,10 +4,10 @@ export class CommandPaletteColorSet extends ColorSet {
   get() {
     return {
       'pickerGroup.border': this.colorPalette.border,
-      'pickerGroup.foreground': `${this.colorPalette.accentColor}70`,
+      'pickerGroup.foreground': `${this.colorPalette.accent}70`,
       'quickInput.background': this.colorPalette.defaultBackground,
-      'quickInputList.focusBackground': `${this.colorPalette.accentColor}30`,
-      'quickInputList.focusForeground': this.colorPalette.accentColor
+      'quickInputList.focusBackground': `${this.colorPalette.accent}30`,
+      'quickInputList.focusForeground': this.colorPalette.accent
     };
   }
 }
