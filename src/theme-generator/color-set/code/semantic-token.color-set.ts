@@ -5,9 +5,7 @@ export class SemanticTokenColorSet extends ColorSet {
   generate() {
     return {
       class: SolarizedColor.Green,
-      comment: this.isGeneratingLightTheme
-        ? SolarizedColor.Base1
-        : SolarizedColor.Base01,
+      comment: this.colorPalette.code.comments,
       decorator: SolarizedColor.Orange,
       enum: SolarizedColor.Green,
       enumMember: SolarizedColor.Violet,

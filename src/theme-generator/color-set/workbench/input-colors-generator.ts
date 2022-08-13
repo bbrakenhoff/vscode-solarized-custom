@@ -4,7 +4,7 @@ import { ColorSet } from '../colors-set';
 export class InputColorsGenerator extends ColorSet {
   generate() {
     return {
-      'input.background': this.colorPalette.borderColor,
+      'input.background': this.colorPalette.border,
       'input.foreground': this.isGeneratingLightTheme
         ? SolarizedColor.Base01
         : SolarizedColor.Base1,

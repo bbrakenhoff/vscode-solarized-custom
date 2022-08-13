@@ -4,11 +4,11 @@ import { ColorSet } from '../colors-set';
 export class PeekViewColorSet extends ColorSet {
   generate() {
     return {
-      'peekView.border': this.colorPalette.borderColor,
+      'peekView.border': this.colorPalette.border,
       'peekViewEditor.background': this.isGeneratingLightTheme
         ? '#ddd6c150'
         : SolarizedColor.Base02,
-      'peekViewEditor.matchHighlightBorder': this.colorPalette.borderColor,
+      'peekViewEditor.matchHighlightBorder': this.colorPalette.border,
       'peekViewEditor.matchHighlightBackground': `${this.colorPalette.accentColor}30`,
       'peekViewResult.lineForeground': this.isGeneratingLightTheme
         ? `${SolarizedColor.Base00}80`

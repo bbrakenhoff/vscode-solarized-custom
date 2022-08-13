@@ -4,10 +4,8 @@ import { ColorSet } from '../colors-set';
 export class ActivityBarColorSet extends ColorSet {
   generate() {
     return {
-      'activityBar.background': this.isGeneratingLightTheme
-        ? SolarizedColor.Base3
-        : SolarizedColor.Base03,
-      'activityBar.border': this.isGeneratingLightTheme ? '#ddd6c1' : '#00212B',
+      'activityBar.background': this.colorPalette.defaultBackground,
+      'activityBar.border': this.colorPalette.border,
       'activityBar.foreground': this.isGeneratingLightTheme
         ? SolarizedColor.Base03
         : '#fffcf5',

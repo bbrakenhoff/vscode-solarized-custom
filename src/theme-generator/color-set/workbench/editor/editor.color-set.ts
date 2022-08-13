@@ -7,27 +7,17 @@ import { ColorSet } from '../../colors-set';
 export class EditorColorsSet extends ColorSet {
   generate() {
     return {
-      'editor.background': this.isGeneratingLightTheme
-        ? SolarizedColor.Base3
-        : SolarizedColor.Base03,
-      'editor.foreground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base00
-        : SolarizedColor.Base0,
+      'editor.background': this.colorPalette.defaultBackground,
+      'editor.foreground': this.colorPalette.defaultForeground,
       'editorLineNumber.activeForeground': this.isGeneratingLightTheme
         ? SolarizedColor.Base00
         : SolarizedColor.Base1,
       'editorLineNumber.foreground': this.isGeneratingLightTheme
         ? `${SolarizedColor.Base00}80`
         : `${SolarizedColor.Base1}50`,
-      'editor.lineHighlightBackground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base2
-        : SolarizedColor.Base02,
-      'editor.selectionBackground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base2
-        : SolarizedColor.Base02,
-      'editorCursor.foreground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base00
-        : SolarizedColor.Base0,
+      'editor.lineHighlightBackground': this.colorPalette.defaultHighlightBackground,
+      'editor.selectionBackground': this.colorPalette.defaultHighlightBackground,
+      'editorCursor.foreground': this.colorPalette.defaultForeground,
       ...new BracketsColorSet(this.themeVariant,this.colorPalette).generate(),
       ...new WordHighlightColorSet(
         this.themeVariant,

@@ -16,8 +16,8 @@ export class StatusBarColorSet extends ColorSet {
       'statusBar.noFolderBackground': this.isGeneratingLightTheme
         ? SolarizedColor.Base2
         : '#00212B',
-      'statusBarItem.prominentBackground': this.colorPalette.borderColor,
-      'statusBarItem.prominentHoverBackground': this.colorPalette.borderColor,
+      'statusBarItem.prominentBackground': this.colorPalette.border,
+      'statusBarItem.prominentHoverBackground': this.colorPalette.border,
       'statusBarItem.remoteBackground': `${this.colorPalette.accentColor}99`
     };
   }

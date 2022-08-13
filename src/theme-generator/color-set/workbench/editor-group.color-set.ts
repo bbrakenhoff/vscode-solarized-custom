@@ -11,11 +11,11 @@ export class EditorGroupColorSet extends ColorSet {
 
   private generateEditorGroup() {
     return {
-      'editorGroup.border': this.colorPalette.borderColor,
+      'editorGroup.border': this.colorPalette.border,
       'editorGroup.dropBackground': this.isGeneratingLightTheme
         ? '#ddd6c1aa'
         : `${SolarizedColor.Cyan}44`,
-      'editorGroupHeader.tabsBackground': `${this.colorPalette.borderColor}${
+      'editorGroupHeader.tabsBackground': `${this.colorPalette.border}${
         this.isGeneratingLightTheme ? 50 : 80
       }`
     };
@@ -23,14 +23,12 @@ export class EditorGroupColorSet extends ColorSet {
 
   private generateTabs() {
     return {
-      'tab.activeBackground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base3
-        : SolarizedColor.Base03,
+      'tab.activeBackground': this.colorPalette.defaultBackground,
       'tab.activeBorderTop': this.colorPalette.accentColor,
       'tab.activeForeground': this.isGeneratingLightTheme
         ? SolarizedColor.Base01
         : SolarizedColor.Base1,
-      'tab.border': this.colorPalette.borderColor,
+      'tab.border': this.colorPalette.border,
       'tab.inactiveBackground': this.isGeneratingLightTheme
         ? '#d3cbb790'
         : '#00384770',
