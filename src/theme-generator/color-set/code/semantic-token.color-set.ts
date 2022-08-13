@@ -1,7 +1,7 @@
 import { SolarizedColor } from '../../../solarized-color';
-import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
+import { ColorSet } from '../color-set';
 
-export class SemanticTokenColorSet extends ThemeDependentColorSet {
+export class SemanticTokenColorSet extends ColorSet {
   get() {
     return {
       class: SolarizedColor.Green,

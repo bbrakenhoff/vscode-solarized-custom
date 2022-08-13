@@ -1,7 +1,7 @@
-import { ThemeDependentColorSet } from '../../theme-dependent-colors-set';
 import { SolarizedColor } from '../../../../solarized-color';
+import { ColorSet } from '../../color-set';
 
-export class HtmlXmlTokenColorSet extends ThemeDependentColorSet {
+export class HtmlXmlTokenColorSet extends ColorSet {
   get() {
     return [
       {
