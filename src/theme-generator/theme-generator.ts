@@ -1,24 +1,22 @@
-import { SolarizedColor } from '../solarized-color';
-import { ColorsGenerator } from './colors-generator';
-import { SemanticTokenColorGenerator } from './semantic-token-color-generator';
-import { TextMateScopeTokenColorsGenerator } from './text-mate-token-colors/text-mate-scope-token-color-generator';
-import { ThemeVariant } from './theme-variant';
-import { WorkbenchColorsGenerator } from './workbench-colors/workbench-colors-generator';
+import { SemanticTokenColorSet } from './color-set/code/semantic-token.color-set';
+import { TextMateScopeTokenColorSet } from './color-set/code/text-mate-token/text-mate-scope-token.color-set';
+import { ColorSet } from './color-set/colors-set';
+import { WorkbenchColorSet } from './color-set/workbench/workbench.color-set';
 
-export class ThemeGenerator extends ColorsGenerator {
+export class ThemeColorSet extends ColorSet {
   generate() {
     return {
       $schema: 'vscode://schemas/color-theme',
       type: this.themeVariant,
-      colors: new WorkbenchColorsGenerator(this.themeVariant, this.accentColor).generate(),
+      colors: new WorkbenchColorSet(this.themeVariant, this.colorPalette).generate(),
       semanticHighlighting: true,
-      semanticTokenColors: new SemanticTokenColorGenerator(
+      semanticTokenColors: new SemanticTokenColorSet(
         this.themeVariant,
-        this.accentColor
+        this.colorPalette
       ).generate(),
-      tokenColors: new TextMateScopeTokenColorsGenerator(
+      tokenColors: new TextMateScopeTokenColorSet(
         this.themeVariant,
-        this.accentColor
+        this.colorPalette
       ).generate()
     };
   }

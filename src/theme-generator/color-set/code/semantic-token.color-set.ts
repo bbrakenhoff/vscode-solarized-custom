@@ -1,7 +1,7 @@
-import { SolarizedColor } from "../solarized-color";
-import { ColorsGenerator } from "./colors-generator";
+import { SolarizedColor } from '../../../solarized-color';
+import { ColorSet } from '../colors-set';
 
-export class SemanticTokenColorGenerator extends ColorsGenerator {
+export class SemanticTokenColorSet extends ColorSet {
   generate() {
     return {
       class: SolarizedColor.Green,
@@ -15,7 +15,7 @@ export class SemanticTokenColorGenerator extends ColorsGenerator {
       function: { foreground: SolarizedColor.Blue, bold: false },
       interface: {
         italic: true,
-        foreground: SolarizedColor.Green,
+        foreground: SolarizedColor.Green
       },
       keyword: SolarizedColor.Magenta,
       method: { foreground: SolarizedColor.Blue, bold: false },
@@ -29,12 +29,12 @@ export class SemanticTokenColorGenerator extends ColorsGenerator {
       typeParameter: {
         foreground: SolarizedColor.Cyan,
         italic: true,
-        bold: true,
+        bold: true
       },
       variable: SolarizedColor.Violet,
-      "*.readonly": {
-        underline: true,
-      },
+      '*.readonly': {
+        underline: true
+      }
     };
   }
 }

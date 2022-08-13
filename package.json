@@ -83,9 +83,10 @@
     "vscode": "^1.1.37"
   },
   "scripts": {
-    "clean": "rm -r -f dist && mkdir dist",
-    "build:generate-themes": "ts-node ./src/theme-generator/index.ts",
+    "lint": "eslint --fix --ext .ts",
+    "clean": "rm -r -f dist && mkdir ./dist && mkdir ./dist/themes",
+    "build:themes": "ts-node ./src/index.ts",
     "build:extension": "tsc --outDir ./dist/extension",
-    "build": "npm run clean && npm run build:extension && npm run build:generate-themes"
+    "build": "npm run clean && npm run build:extension && npm run build:themes"
   }
 }

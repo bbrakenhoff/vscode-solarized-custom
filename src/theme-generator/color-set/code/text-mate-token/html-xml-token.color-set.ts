@@ -1,7 +1,7 @@
-import { ColorsGenerator } from '../colors-generator';
-import { SolarizedColor } from '../../solarized-color';
+import { ColorSet } from '../../colors-set';
+import { SolarizedColor } from '../../../../solarized-color';
 
-export class HtmlXmlTokenColorsGenerator extends ColorsGenerator {
+export class HtmlXmlTokenColorSet extends ColorSet {
   generate() {
     return [
       {

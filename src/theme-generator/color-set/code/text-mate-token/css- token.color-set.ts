@@ -1,7 +1,7 @@
-import { ColorsGenerator } from '../colors-generator';
-import { SolarizedColor } from '../../solarized-color';
+import { ColorSet } from '../../colors-set';
+import { SolarizedColor } from '../../../../solarized-color';
 
-export class CssTokenColorsGenerator extends ColorsGenerator {
+export class CssTokenColorSet extends ColorSet {
   generate() {
     return [
       {

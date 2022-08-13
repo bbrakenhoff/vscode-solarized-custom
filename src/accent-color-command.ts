@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import { SolarizedColor } from './solarized-color';
 export class AccentColorCommand {
   static readonly IDENTIFIER = 'solarizedCustomTheme.setAccentColor';
-  private static readonly CONFIG_KEY='solarizedCustomTheme.accentColor';
+  private static readonly CONFIG_KEY = 'solarizedCustomTheme.accentColor';
 
   static async execute() {
     const selectedAccentColor = await AccentColorCommand.quickPickAccentColor();
@@ -26,7 +26,7 @@ export class AccentColorCommand {
   //   const rawConfig = vscode.workspace.getConfiguration(
   //     'solarizedCustomTheme'
   //   ) as unknown;
-  //   this.accentColor = (rawConfig as { accentColor: string }).accentColor;
+  //   this.colorPalette.accentColor = (rawConfig as { accentColor: string }).accentColor;
   // }
 
   private static async updateAccentColorInConfig(selectedAccentColor: string) {

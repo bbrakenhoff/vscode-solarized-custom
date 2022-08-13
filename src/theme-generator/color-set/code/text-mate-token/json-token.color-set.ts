@@ -1,7 +1,7 @@
-import { ColorsGenerator } from '../colors-generator';
-import { SolarizedColor } from '../../solarized-color';
+import { ColorSet } from '../../colors-set';
+import { SolarizedColor } from '../../../../solarized-color';
 
-export class JsonTokenColorsGenerator extends ColorsGenerator {
+export class JsonTokenColorSet extends ColorSet {
   generate() {
     return [
       {

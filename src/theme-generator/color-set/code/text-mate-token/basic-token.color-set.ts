@@ -1,7 +1,7 @@
-import { ColorsGenerator } from '../colors-generator';
-import { SolarizedColor } from '../../solarized-color';
+import { ColorSet } from '../../colors-set';
+import { SolarizedColor } from '../../../../solarized-color';
 
-export class BasicTokenColorsGenerator extends ColorsGenerator {
+export class BasicTokenColorSet extends ColorSet {
   generate() {
     return [
       {
@@ -91,7 +91,7 @@ export class BasicTokenColorsGenerator extends ColorsGenerator {
       ...this.generateCommentsTokenColors()
     ];
   }
-  private generateCommentsTokenColors(): Object[] {
+  private generateCommentsTokenColors() {
     return [
       {
         name: 'comment',

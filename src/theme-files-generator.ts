@@ -1,7 +1,7 @@
 import * as fs from 'fs';
-import { SolarizedColor } from '../solarized-color';
-import { ThemeGenerator } from './theme-generator';
-import { ThemeVariant } from './theme-variant';
+import { SolarizedColor } from './solarized-color';
+import { ThemeColorSet } from './theme-generator/theme-generator';
+import { getColorPalette as getColorPaletteForThemeVariant, ThemeVariant } from './theme-generator/theme-variant';
 
 export class ThemeFilesGenerator {
   static generateAllThemes(accentColor: SolarizedColor) {
@@ -29,7 +29,10 @@ export class ThemeFilesGenerator {
     accentColor: SolarizedColor
   ) {
     return JSON.stringify(
-      new ThemeGenerator(themeVariant, accentColor).generate()
+      new ThemeColorSet(
+        themeVariant,
+        getColorPaletteForThemeVariant(themeVariant, accentColor)
+      ).generate()
     );
   }
 }
