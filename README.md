@@ -1,20 +1,19 @@
 # Solarized Light (Custom)
+
 Custom solarized theme for [Visual Studio Code](https://code.visualstudio.com),
-optimized for JavaScript, CSS, HTML, Java and JSON, with light support for PHP, but maybe
+optimized for JavaScript, TypeScript, (S)CSS, HTML and JSON, but maybe
 some other languages work too.
 
-*Please let me know any suggestions, requests or issues in Github*
-
-<div style="color: #dc322f; font-weight:bold; font-size: 2rem"> In version 3.0.0 I renamed the themes, meaning that you have to update your settings by selecting the theme again </div>
+_Please let me know any suggestions, requests or issues in Github_
 
 ### Screenshots
 
 #### Solarized Custom Light
+
 ![](https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/screenshots/solarized-custom-light.png)
 
-#### Solarized Custom Dark 
+#### Solarized Custom Dark
+
 ![](https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/screenshots/solarized-custom-dark.png)
 
-#### Solarized Custom Extra Dark
-![](https://raw.githubusercontent.com/bbrakenhoff/solarized-light-custom/master/screenshots/solarized-custom-extra-dark.png)
-
+_Code should speak for itself, but a little explanation can be found in the [architecture documentation](./architecture.md)_
