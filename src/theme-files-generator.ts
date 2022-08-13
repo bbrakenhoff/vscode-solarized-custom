@@ -32,7 +32,7 @@ export class ThemeFilesGenerator {
       new ThemeColorSet(
         themeVariant,
         getColorPaletteForThemeVariant(themeVariant, accentColor)
-      ).generate()
+      ).get()
     );
   }
 }

@@ -1,8 +1,8 @@
 import { SolarizedColor } from '../../../solarized-color';
-import { ColorSet } from '../colors-set';
+import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
 
-export class ActivityBarColorSet extends ColorSet {
-  generate() {
+export class ActivityBarColorSet extends ThemeDependentColorSet {
+  get() {
     return {
       'activityBar.background': this.colorPalette.defaultBackground,
       'activityBar.border': this.colorPalette.border,

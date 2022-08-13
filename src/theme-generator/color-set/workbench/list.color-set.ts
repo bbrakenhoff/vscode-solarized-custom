@@ -1,8 +1,8 @@
-import { ColorSet } from "../colors-set";
+import { ThemeDependentColorSet } from "../theme-dependent-colors-set";
 
-export class ListColorSet extends ColorSet{
+export class ListColorSet extends ThemeDependentColorSet{
 
-  generate() {
+  get() {
     return {
       'list.activeSelectionBackground': `${this.colorPalette.accentColor}30`,
       'list.activeSelectionForeground': this.colorPalette.accentColor,

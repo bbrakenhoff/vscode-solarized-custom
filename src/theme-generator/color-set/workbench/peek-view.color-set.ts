@@ -1,8 +1,8 @@
 import { SolarizedColor } from '../../../solarized-color';
-import { ColorSet } from '../colors-set';
+import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
 
-export class PeekViewColorSet extends ColorSet {
-  generate() {
+export class PeekViewColorSet extends ThemeDependentColorSet {
+  get() {
     return {
       'peekView.border': this.colorPalette.border,
       'peekViewEditor.background': this.isGeneratingLightTheme

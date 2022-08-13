@@ -12,4 +12,21 @@ export abstract class ColorPalette {
   abstract readonly code: {
     comments: string;
   };
+
+  abstract readonly workbench: {
+    editor: {
+      lineNumber: {
+        activeForeground: string;
+        foreground: string;
+      };
+      brackets: { matchBackground: string; matchBorder: string };
+      indentGuide: {
+        activeBackground: string;
+        background: string;
+      };
+      wordHighlight: {
+        background: string;
+      };
+    };
+  };
 }

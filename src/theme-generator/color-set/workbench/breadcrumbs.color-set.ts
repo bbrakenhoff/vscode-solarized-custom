@@ -1,8 +1,8 @@
 import { SolarizedColor } from '../../../solarized-color';
-import { ColorSet } from '../colors-set';
+import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
 
-export class BreadcrumbsColorSet extends ColorSet {
-  generate() {
+export class BreadcrumbsColorSet extends ThemeDependentColorSet {
+  get() {
     return {
       'breadcrumb.background': this.colorPalette.defaultBackground,
       'breadcrumbPicker.background': this.colorPalette.defaultBackground

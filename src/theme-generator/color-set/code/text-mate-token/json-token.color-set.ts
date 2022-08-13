@@ -1,8 +1,8 @@
-import { ColorSet } from '../../colors-set';
+import { ThemeDependentColorSet } from '../../theme-dependent-colors-set';
 import { SolarizedColor } from '../../../../solarized-color';
 
-export class JsonTokenColorSet extends ColorSet {
-  generate() {
+export class JsonTokenColorSet extends ThemeDependentColorSet {
+  get() {
     return [
       {
         name: 'JSON.quotes',

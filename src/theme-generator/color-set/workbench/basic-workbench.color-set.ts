@@ -1,8 +1,8 @@
 import { SolarizedColor } from '../../../solarized-color';
-import { ColorSet } from '../colors-set';
+import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
 
-export class BasicWorkbenchColorSet extends ColorSet {
-  generate() {
+export class BasicWorkbenchColorSet extends ThemeDependentColorSet {
+  get() {
     return {
       'badge.background': this.colorPalette.accentColor,
       'badge.foreground': '#fffcf5',

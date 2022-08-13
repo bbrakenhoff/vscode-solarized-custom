@@ -1,8 +1,8 @@
-import { ColorSet } from '../../colors-set';
+import { ThemeDependentColorSet } from '../../theme-dependent-colors-set';
 import { SolarizedColor } from '../../../../solarized-color';
 
-export class BasicTokenColorSet extends ColorSet {
-  generate() {
+export class BasicTokenColorSet extends ThemeDependentColorSet {
+  get() {
     return [
       {
         name: 'class',

@@ -1,8 +1,8 @@
 import { SolarizedColor } from '../../../solarized-color';
-import { ColorSet } from '../colors-set';
+import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
 
-export class StatusBarColorSet extends ColorSet {
-  generate() {
+export class StatusBarColorSet extends ThemeDependentColorSet {
+  get() {
     return {
       'statusBar.background': this.isGeneratingLightTheme
         ? SolarizedColor.Base2

@@ -1,15 +1,13 @@
 import { SolarizedColor } from '../../../../solarized-color';
-import { ColorSet } from '../../colors-set';
+import { ColorSet } from '../../color-set';
 
 export class IndentGuideColorSet extends ColorSet {
-  generate() {
+  get() {
     return {
-      'editorIndentGuide.background': `${SolarizedColor.Base1}${
-        this.isGeneratingLightTheme ? 50 : 20
-      }`,
-      'editorIndentGuide.activeBackground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base01
-        : SolarizedColor.Base1
+      'editorIndentGuide.activeBackground':
+        this.colorPalette.workbench.editor.indentGuide.activeBackground,
+      'editorIndentGuide.background':
+        this.colorPalette.workbench.editor.indentGuide.background
     };
   }
 }

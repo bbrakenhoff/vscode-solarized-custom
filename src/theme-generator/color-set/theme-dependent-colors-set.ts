@@ -1,15 +1,16 @@
 import { ColorPalette } from '../color-palette/color-palette';
 import { ThemeVariant } from '../theme-variant';
+import { ColorSet } from './color-set';
 
-export abstract class ColorSet {
+export abstract class ThemeDependentColorSet extends ColorSet {
   constructor(
     protected readonly themeVariant: ThemeVariant,
-    protected readonly colorPalette: ColorPalette
-  ) {}
+   colorPalette: ColorPalette
+  ) {
+    super(colorPalette)
+  }
 
   protected get isGeneratingLightTheme(): boolean {
     return this.themeVariant === ThemeVariant.Light;
   }
-
-  abstract generate(): any;
 }

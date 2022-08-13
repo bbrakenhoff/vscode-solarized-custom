@@ -1,20 +1,11 @@
-import { SolarizedColor } from '../../../../solarized-color';
-import { ColorSet } from '../../colors-set';
+import { ColorSet } from '../../color-set';
 
 export class WordHighlightColorSet extends ColorSet {
-  generate() {
+  get() {
     return {
-      'editor.wordHighlightBackground': `${
-        this.isGeneratingLightTheme
-          ? SolarizedColor.Base1
-          : SolarizedColor.Base01
-      }50`,
+      'editor.wordHighlightBackground': `${this.colorPalette.workbench.editor.wordHighlight.background}50`,
       'editor.wordHighlightBorder': `${this.colorPalette.accentColor}50`,
-      'editor.wordHighlightStrongBackground': `${
-        this.isGeneratingLightTheme
-          ? SolarizedColor.Base1
-          : SolarizedColor.Base01
-      }30`,
+      'editor.wordHighlightStrongBackground': `${this.colorPalette.workbench.editor.wordHighlight.background}30`,
       'editor.wordHighlightStrongBorder': `${this.colorPalette.accentColor}30`
     };
   }

@@ -1,8 +1,8 @@
-import { ColorSet } from '../../colors-set';
+import { ThemeDependentColorSet } from '../../theme-dependent-colors-set';
 import { SolarizedColor } from '../../../../solarized-color';
 
-export class HtmlXmlTokenColorSet extends ColorSet {
-  generate() {
+export class HtmlXmlTokenColorSet extends ThemeDependentColorSet {
+  get() {
     return [
       {
         name: 'HTML+XML.attribute',

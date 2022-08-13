@@ -1,8 +1,8 @@
 import { SolarizedColor } from '../../../solarized-color';
-import { ColorSet } from '../colors-set';
+import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
 
-export class EditorGroupColorSet extends ColorSet {
-  generate() {
+export class EditorGroupColorSet extends ThemeDependentColorSet {
+  get() {
     return {
       ...this.generateEditorGroup(),
       ...this.generateTabs()

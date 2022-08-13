@@ -1,8 +1,8 @@
-import { ColorSet } from '../../colors-set';
+import { ThemeDependentColorSet } from '../../theme-dependent-colors-set';
 import { SolarizedColor } from '../../../../solarized-color';
 
-export class ScssTokenColorSet extends ColorSet {
-  generate() {
+export class ScssTokenColorSet extends ThemeDependentColorSet {
+  get() {
     return [
       {
         name: 'SCSS.abstractClass',

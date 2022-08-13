@@ -9,4 +9,24 @@ export class DarkThemeColorPalette extends ColorPalette {
   code = {
     comments: SolarizedColor.Base01
   };
+
+  workbench = {
+    editor: {
+      brackets: {
+        matchBackground: '#00212B',
+        matchBorder: `${SolarizedColor.Base01}70`
+      },
+      lineNumber: {
+        activeForeground: SolarizedColor.Base00,
+        foreground: `${SolarizedColor.Base00}80`
+      },
+      indentGuide: {
+        activeBackground: SolarizedColor.Base1,
+        background: `${SolarizedColor.Base1}20`
+      },
+      wordHighlight: {
+        background: SolarizedColor.Base01
+      }
+    }
+  };
 }

@@ -1,8 +1,8 @@
 import { SolarizedColor } from '../../../solarized-color';
-import { ColorSet } from '../colors-set';
+import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
 
-export class InputColorsGenerator extends ColorSet {
-  generate() {
+export class InputColorsGenerator extends ThemeDependentColorSet {
+  get() {
     return {
       'input.background': this.colorPalette.border,
       'input.foreground': this.isGeneratingLightTheme

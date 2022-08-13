@@ -1,8 +1,8 @@
 import { SolarizedColor } from '../../../solarized-color';
-import { ColorSet } from '../colors-set';
+import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
 
-export class SemanticTokenColorSet extends ColorSet {
-  generate() {
+export class SemanticTokenColorSet extends ThemeDependentColorSet {
+  get() {
     return {
       class: SolarizedColor.Green,
       comment: this.colorPalette.code.comments,
