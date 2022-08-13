@@ -1,21 +1,14 @@
-import { SolarizedColor } from '../../../solarized-color';
-import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
+import { ColorSet } from '../color-set';
 
-export class StatusBarColorSet extends ThemeDependentColorSet {
+export class StatusBarColorSet extends ColorSet {
   get() {
     return {
-      'statusBar.background': this.isGeneratingLightTheme
-        ? SolarizedColor.Base2
-        : '#00212B',
-      'statusBar.debuggingBackground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base2
-        : '#00212B',
-      'statusBar.foreground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base01
-        : SolarizedColor.Base1,
-      'statusBar.noFolderBackground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base2
-        : '#00212B',
+      'statusBar.background': this.colorPalette.workbench.statusBar.background,
+      'statusBar.debuggingBackground':
+        this.colorPalette.workbench.statusBar.debuggingBackground,
+      'statusBar.foreground': this.colorPalette.workbench.statusBar.foreground,
+      'statusBar.noFolderBackground':
+        this.colorPalette.workbench.statusBar.noFolderBackground,
       'statusBarItem.prominentBackground': this.colorPalette.border,
       'statusBarItem.prominentHoverBackground': this.colorPalette.border,
       'statusBarItem.remoteBackground': `${this.colorPalette.accentColor}99`

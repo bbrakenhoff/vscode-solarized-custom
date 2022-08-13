@@ -97,7 +97,7 @@ export class BasicTokenColorSet extends ColorSet {
         name: 'comment',
         scope: ['comment'],
         settings: {
-          foreground: this.colorPalette.code.comments
+          foreground: this.colorPalette.syntax.comments
         }
       },
       {
@@ -107,7 +107,7 @@ export class BasicTokenColorSet extends ColorSet {
           'punctuation.definition.block.tag.jsdoc'
         ],
         settings: {
-          foreground: this.colorPalette.code.comments,
+          foreground: this.colorPalette.syntax.comments,
           fontStyle: 'bold'
         }
       },
@@ -115,7 +115,7 @@ export class BasicTokenColorSet extends ColorSet {
         name: 'comment.variableType',
         scope: ['entity.name.type.instance.jsdoc'],
         settings: {
-          foreground: this.colorPalette.code.comments,
+          foreground: this.colorPalette.syntax.comments,
           fontStyle: 'italic'
         }
       }

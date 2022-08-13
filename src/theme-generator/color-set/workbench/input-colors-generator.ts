@@ -1,18 +1,11 @@
-import { SolarizedColor } from '../../../solarized-color';
-import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
+import { ColorSet } from '../color-set';
 
-export class InputColorsGenerator extends ThemeDependentColorSet {
+export class InputColorSet extends ColorSet {
   get() {
     return {
       'input.background': this.colorPalette.border,
-      'input.foreground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base01
-        : SolarizedColor.Base1,
-      'input.placeholderForeground': `${
-        this.isGeneratingLightTheme
-          ? SolarizedColor.Base01
-          : SolarizedColor.Base1
-      }aa`,
+      'input.foreground': this.colorPalette.workbench.input.foreground,
+      'input.placeholderForeground': `${this.colorPalette.workbench.input.foreground}aa`,
       'inputOption.activeBorder': `${this.colorPalette.accentColor}70`
     };
   }

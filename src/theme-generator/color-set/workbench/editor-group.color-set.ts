@@ -1,7 +1,6 @@
-import { SolarizedColor } from '../../../solarized-color';
-import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
+import { ColorSet } from '../color-set';
 
-export class EditorGroupColorSet extends ThemeDependentColorSet {
+export class EditorGroupColorSet extends ColorSet {
   get() {
     return {
       ...this.generateEditorGroup(),
@@ -12,12 +11,9 @@ export class EditorGroupColorSet extends ThemeDependentColorSet {
   private generateEditorGroup() {
     return {
       'editorGroup.border': this.colorPalette.border,
-      'editorGroup.dropBackground': this.isGeneratingLightTheme
-        ? '#ddd6c1aa'
-        : `${SolarizedColor.Cyan}44`,
-      'editorGroupHeader.tabsBackground': `${this.colorPalette.border}${
-        this.isGeneratingLightTheme ? 50 : 80
-      }`
+      'editorGroup.dropBackground':
+        this.colorPalette.workbench.editorGroup.editorGroup.dropBackground,
+      'editorGroupHeader.tabsBackground': `${this.colorPalette.border}${this.colorPalette.workbench.editorGroup.editorGroup.tabsBackgroundOpacity}`
     };
   }
 
@@ -25,16 +21,13 @@ export class EditorGroupColorSet extends ThemeDependentColorSet {
     return {
       'tab.activeBackground': this.colorPalette.defaultBackground,
       'tab.activeBorderTop': this.colorPalette.accentColor,
-      'tab.activeForeground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base01
-        : SolarizedColor.Base1,
+      'tab.activeForeground':
+        this.colorPalette.workbench.editorGroup.tab.activeForeground,
       'tab.border': this.colorPalette.border,
-      'tab.inactiveBackground': this.isGeneratingLightTheme
-        ? '#d3cbb790'
-        : '#00384770',
-      'tab.inactiveForeground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base01
-        : SolarizedColor.Base1
+      'tab.inactiveBackground':
+        this.colorPalette.workbench.editorGroup.tab.inactiveBackground,
+      'tab.inactiveForeground':
+        this.colorPalette.workbench.editorGroup.tab.inactiveForeground
     };
   }
 }

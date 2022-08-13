@@ -5,7 +5,7 @@ export class SemanticTokenColorSet extends ColorSet {
   get() {
     return {
       class: SolarizedColor.Green,
-      comment: this.colorPalette.code.comments,
+      comment: this.colorPalette.syntax.comments,
       decorator: SolarizedColor.Orange,
       enum: SolarizedColor.Green,
       enumMember: SolarizedColor.Violet,

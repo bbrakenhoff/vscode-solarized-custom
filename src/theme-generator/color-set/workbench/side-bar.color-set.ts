@@ -1,14 +1,12 @@
-import { SolarizedColor } from '../../../solarized-color';
-import { ThemeDependentColorSet } from '../theme-dependent-colors-set';
+import { ColorSet } from '../color-set';
 
-export class SideBarColorSet extends ThemeDependentColorSet {
+export class SideBarColorSet extends ColorSet {
   get() {
     return {
       'sideBar.background': this.colorPalette.defaultBackground,
       'sideBar.border': this.colorPalette.border,
-      'sideBarTitle.foreground': this.isGeneratingLightTheme
-        ? SolarizedColor.Base01
-        : SolarizedColor.Base1
+      'sideBarTitle.foreground':
+        this.colorPalette.workbench.sideBar.titleForeground
     };
   }
 }
