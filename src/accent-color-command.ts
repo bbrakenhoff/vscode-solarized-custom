@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { AccentColorCustomizer } from './accent-color-customizer';
-import { DebugLogChannel } from './log-channel';
+import { DebugLogChannel } from './debug-log-channel';
 import { SolarizedColor } from './solarized-color';
 export class AccentColorCommand {
   static readonly IDENTIFIER = 'solarizedCustomTheme.setAccentColor';
@@ -8,9 +8,7 @@ export class AccentColorCommand {
     'solarizedCustomTheme.accentColor';
 
   static async execute() {
-    DebugLogChannel.log(`accent-color-command.ts[ln:10] >>> execute()`);
     if (AccentColorCommand.isSolarizedCustomActivated()) {
-      DebugLogChannel.log(`accent-color-command.ts[ln:13] >>> theme activated`);
       return await AccentColorCommand.selectAndUpdateAccentColor();
     }
 

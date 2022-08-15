@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { AccentColorCommand } from './accent-color-command';
-import { DebugLogChannel } from './log-channel';
+import { DebugLogChannel } from './debug-log-channel';
 
 export async function activate(context: vscode.ExtensionContext) {
   DebugLogChannel.create();

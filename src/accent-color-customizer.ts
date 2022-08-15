@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { DebugLogChannel } from './log-channel';
+import { DebugLogChannel } from './debug-log-channel';
 import { SolarizedColor } from './solarized-color';
 
 export class AccentColorCustomizer {
@@ -14,9 +14,6 @@ export class AccentColorCustomizer {
   }
 
   async customizeAccentColor() {
-    DebugLogChannel.log(
-      `accent-color-customizer.ts[ln:17] >>> customizeAccentColor()`
-    );
     if (this.accentColorEqualsDefaultColor()) {
       return await this.deleteSolarizedCustomThemeConfig();
     } else {
@@ -39,9 +36,6 @@ export class AccentColorCustomizer {
       ...cleanedConfig
     } = currentColorCustomizations;
 
-    DebugLogChannel.log(
-      `accent-color-customizer.ts[ln:39] >>> deleteSolarizedCustomThemeConfig()`
-    );
     return await this.updateColorCustomizationsConifg(cleanedConfig);
   }
 
@@ -52,9 +46,6 @@ export class AccentColorCustomizer {
   }
 
   private async updateColorCustomizationsConifg(config: any) {
-    DebugLogChannel.log(
-      `accent-color-customizer.ts[ln:55] >>> updatecolorCustomizationsConfig()`
-    );
     try {
       await vscode.workspace
         .getConfiguration()
@@ -71,7 +62,6 @@ export class AccentColorCustomizer {
   }
 
   private createColorCustomizationsForScopedTheme() {
-    DebugLogChannel.log(`accent-color-customizer.ts[ln:76] >>> createColorCustomizationsForScopedTheme()`);
     return {
       [`[${this.activatedTheme}]`]: {
         'activityBarBadge.background': this.accentColor
