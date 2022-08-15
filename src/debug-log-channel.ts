@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 export class DebugLogChannel {
-  private static readonly CHANNEL_NAME = 'bijoya.solarizedCustomTheme';
+  private static readonly CHANNEL_NAME = 'debug.solarizedCustomTheme';
   private static instance: vscode.OutputChannel;
 
   static create() {
