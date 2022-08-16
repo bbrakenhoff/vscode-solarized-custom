@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { AccentColorCustomizer } from './accent-color-customizer';
-import { DebugLogChannel } from './debug-log-channel';
 import { SolarizedColor } from './solarized-color';
+import { ThemeConfigManager } from './theme-config-manager';
 export class AccentColorCommand {
   static readonly IDENTIFIER = 'solarizedCustomTheme.setAccentColor';
   private static readonly CONFIG_IDENTIFIER =
@@ -13,15 +13,13 @@ export class AccentColorCommand {
     }
 
     await vscode.window.showWarningMessage(
-      'Solarized Custom is not the selected theme. Changes could not be applied'
+      'Solarized Custom is not the selected theme. Changes could not be applied.'
     );
     return false;
   }
 
   private static isSolarizedCustomActivated(): boolean {
-    const activatedTheme = vscode.workspace
-      .getConfiguration()
-      .get<string>('workbench.colorTheme');
+    const activatedTheme = ThemeConfigManager.getCurrentColorTheme();
     return activatedTheme.startsWith('Solarized Custom');
   }
   private static async selectAndUpdateAccentColor() {
@@ -47,18 +45,6 @@ export class AccentColorCommand {
   }
 
   private static async updateAccentColorInConfig(selectedAccentColor: string) {
-    try {
-      await vscode.workspace
-        .getConfiguration()
-        .update(
-          AccentColorCommand.CONFIG_IDENTIFIER,
-          selectedAccentColor,
-          true
-        );
-      return true;
-    } catch (error) {
-      vscode.window.showErrorMessage(error);
-      return false;
-    }
+    return await ThemeConfigManager.updateAccentColor(selectedAccentColor);
   }
 }
