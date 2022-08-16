@@ -2,7 +2,7 @@ import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
 export class BracketsColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return {
       'editorBracketHighlight.foreground1': SolarizedColor.Yellow,
       'editorBracketHighlight.foreground2': SolarizedColor.Orange,

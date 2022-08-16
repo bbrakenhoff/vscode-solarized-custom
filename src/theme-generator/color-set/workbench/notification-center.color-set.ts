@@ -2,7 +2,7 @@ import { SolarizedColor } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
 export class NotifcicationColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return {
       'notifications.background': this.colorPalette.border,
       'notifications.foreground': this.colorPalette.defaultForeground,

@@ -10,14 +10,14 @@ export class ThemeColorSet extends ColorSet {
     super(colorPalette);
   }
 
-  get() {
+  propertiesAll() {
     return {
       $schema: 'vscode://schemas/color-theme',
       type: this.themeVariant,
-      colors: new WorkbenchColorSet(this.colorPalette).get(),
+      colors: new WorkbenchColorSet(this.colorPalette).propertiesAll(),
       semanticHighlighting: true,
-      semanticTokenColors: new SemanticTokenColorSet(this.colorPalette).get(),
-      tokenColors: new TextMateScopeTokenColorSet(this.colorPalette).get()
+      semanticTokenColors: new SemanticTokenColorSet(this.colorPalette).propertiesAll(),
+      tokenColors: new TextMateScopeTokenColorSet(this.colorPalette).propertiesAll()
     };
   }
 }

@@ -16,22 +16,22 @@ import { StatusBarColorSet } from './status-bar.color-set';
 import { TERMINAL_COLORS } from './terminal-colors';
 
 export class WorkbenchColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return {
-      ...new BasicWorkbenchColorSet(this.colorPalette).get(),
-      ...new InputColorSet(this.colorPalette).get(),
-      ...new DebugToolsColorsGenerator(this.colorPalette).get(),
-      ...new DropdownColorSet(this.colorPalette).get(),
-      ...new ActivityBarColorSet(this.colorPalette).get(),
-      ...new SideBarColorSet(this.colorPalette).get(),
-      ...new CommandPaletteColorSet(this.colorPalette).get(),
-      ...new EditorGroupColorSet(this.colorPalette).get(),
-      ...new ListColorSet(this.colorPalette).get(),
-      ...new BreadcrumbsColorSet(this.colorPalette).get(),
-      ...new StatusBarColorSet(this.colorPalette).get(),
-      ...new PeekViewColorSet(this.colorPalette).get(),
-      ...new NotifcicationColorSet(this.colorPalette).get(),
-      ...new EditorColorSet(this.colorPalette).get(),
+      ...new BasicWorkbenchColorSet(this.colorPalette).propertiesAll(),
+      ...new InputColorSet(this.colorPalette).propertiesAll(),
+      ...new DebugToolsColorsGenerator(this.colorPalette).propertiesAll(),
+      ...new DropdownColorSet(this.colorPalette).propertiesAll(),
+      ...new ActivityBarColorSet(this.colorPalette).propertiesAll(),
+      ...new SideBarColorSet(this.colorPalette).propertiesAll(),
+      ...new CommandPaletteColorSet(this.colorPalette).propertiesAll(),
+      ...new EditorGroupColorSet(this.colorPalette).propertiesAll(),
+      ...new ListColorSet(this.colorPalette).propertiesAll(),
+      ...new BreadcrumbsColorSet(this.colorPalette).propertiesAll(),
+      ...new StatusBarColorSet(this.colorPalette).propertiesAll(),
+      ...new PeekViewColorSet(this.colorPalette).propertiesAll(),
+      ...new NotifcicationColorSet(this.colorPalette).propertiesAll(),
+      ...new EditorColorSet(this.colorPalette).propertiesAll(),
       ...TERMINAL_COLORS
     };
   }

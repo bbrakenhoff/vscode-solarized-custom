@@ -2,7 +2,7 @@ import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
 export class BasicTokenColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return [
       {
         name: 'class',

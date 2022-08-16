@@ -6,13 +6,13 @@ import { JsonTokenColorSet } from './json-token.color-set';
 import { ScssTokenColorSet } from './scss-token.color-set';
 
 export class TextMateScopeTokenColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return [
-      ...new BasicTokenColorSet(this.colorPalette).get(),
-      ...new CssTokenColorSet(this.colorPalette).get(),
-      ...new ScssTokenColorSet(this.colorPalette).get(),
-      ...new HtmlXmlTokenColorSet(this.colorPalette).get(),
-      ...new JsonTokenColorSet(this.colorPalette).get()
+      ...new BasicTokenColorSet(this.colorPalette).propertiesAll(),
+      ...new CssTokenColorSet(this.colorPalette).propertiesAll(),
+      ...new ScssTokenColorSet(this.colorPalette).propertiesAll(),
+      ...new HtmlXmlTokenColorSet(this.colorPalette).propertiesAll(),
+      ...new JsonTokenColorSet(this.colorPalette).propertiesAll()
     ];
   }
 }

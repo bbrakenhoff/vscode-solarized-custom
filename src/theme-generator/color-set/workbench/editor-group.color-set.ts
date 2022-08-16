@@ -1,7 +1,7 @@
 import { ColorSet } from '../color-set';
 
 export class EditorGroupColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return {
       ...this.generateEditorGroup(),
       ...this.generateTabs()

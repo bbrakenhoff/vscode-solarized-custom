@@ -1,7 +1,7 @@
 import { ColorSet } from '../color-set';
 
 export class SideBarColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return {
       'sideBar.background': this.colorPalette.defaultBackground,
       'sideBar.border': this.colorPalette.border,

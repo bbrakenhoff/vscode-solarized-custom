@@ -1,7 +1,7 @@
 import { ColorSet } from '../color-set';
 
 export class StatusBarColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return {
       'statusBar.background': this.colorPalette.workbench.statusBar.background,
       'statusBar.debuggingBackground':
@@ -11,6 +11,12 @@ export class StatusBarColorSet extends ColorSet {
         this.colorPalette.workbench.statusBar.noFolderBackground,
       'statusBarItem.prominentBackground': this.colorPalette.border,
       'statusBarItem.prominentHoverBackground': this.colorPalette.border,
+      ...this.propertiesUsingAccentColor()
+    };
+  }
+
+  propertiesUsingAccentColor() {
+    return {
       'statusBarItem.remoteBackground': `${this.colorPalette.accent}99`
     };
   }

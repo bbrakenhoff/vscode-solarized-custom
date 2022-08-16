@@ -1,12 +1,16 @@
 import { ColorSet } from '../color-set';
 
 export class InputColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return {
       'input.background': this.colorPalette.border,
       'input.foreground': this.colorPalette.workbench.input.foreground,
       'input.placeholderForeground': `${this.colorPalette.workbench.input.foreground}aa`,
-      'inputOption.activeBorder': `${this.colorPalette.accent}70`
+      ...this.propertiesUsingAccentColor()
     };
+  }
+
+  propertiesUsingAccentColor() {
+    return { 'inputOption.activeBorder': `${this.colorPalette.accent}70` };
   }
 }

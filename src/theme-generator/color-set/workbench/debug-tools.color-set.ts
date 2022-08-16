@@ -2,7 +2,7 @@ import { SolarizedColor } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
 export class DebugToolsColorsGenerator extends ColorSet {
-  get() {
+  propertiesAll() {
     return {
       'debugExceptionWidget.background': this.colorPalette.border,
       'debugExceptionWidget.border': SolarizedColor.Red,

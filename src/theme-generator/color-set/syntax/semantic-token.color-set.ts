@@ -2,7 +2,7 @@ import { SolarizedColor } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
 export class SemanticTokenColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return {
       class: SolarizedColor.Green,
       comment: this.colorPalette.syntax.comments,

@@ -2,7 +2,7 @@ import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
 export class ScssTokenColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return [
       {
         name: 'SCSS.abstractClass',

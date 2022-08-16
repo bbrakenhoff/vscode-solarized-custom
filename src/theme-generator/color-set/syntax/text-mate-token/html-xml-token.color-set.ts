@@ -2,7 +2,7 @@ import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
 export class HtmlXmlTokenColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return [
       {
         name: 'HTML+XML.attribute',

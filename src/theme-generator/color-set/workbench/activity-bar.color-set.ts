@@ -1,14 +1,18 @@
 import { ColorSet } from '../color-set';
 
 export class ActivityBarColorSet extends ColorSet {
-  get() {
+  propertiesAll() {
     return {
       'activityBar.background': this.colorPalette.defaultBackground,
       'activityBar.border': this.colorPalette.border,
       'activityBar.foreground':
         this.colorPalette.workbench.activityBar.foreground,
-      'activityBarBadge.background': this.colorPalette.accent,
-      'activityBarBadge.foreground': '#fffcf5'
+      'activityBarBadge.foreground': '#fffcf5',
+      ...this.propertiesUsingAccentColor()
     };
+  }
+
+  propertiesUsingAccentColor() {
+    return { 'activityBarBadge.background': this.colorPalette.accent };
   }
 }
