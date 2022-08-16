@@ -16,23 +16,40 @@ import { StatusBarColorSet } from './status-bar.color-set';
 import { TERMINAL_COLORS } from './terminal-colors';
 
 export class WorkbenchColorSet extends ColorSet {
+  private workbenchColorSetsUsingAccentColor = [
+    new ActivityBarColorSet(this.colorPalette),
+    new BasicWorkbenchColorSet(this.colorPalette),
+    new CommandPaletteColorSet(this.colorPalette),
+    new DropdownColorSet(this.colorPalette),
+    new InputColorSet(this.colorPalette),
+    new ListColorSet(this.colorPalette),
+    new PeekViewColorSet(this.colorPalette),
+    new StatusBarColorSet(this.colorPalette)
+  ];
+
   propertiesAll() {
-    return {
-      ...new BasicWorkbenchColorSet(this.colorPalette).propertiesAll(),
-      ...new InputColorSet(this.colorPalette).propertiesAll(),
-      ...new DebugToolsColorsGenerator(this.colorPalette).propertiesAll(),
-      ...new DropdownColorSet(this.colorPalette).propertiesAll(),
-      ...new ActivityBarColorSet(this.colorPalette).propertiesAll(),
-      ...new SideBarColorSet(this.colorPalette).propertiesAll(),
-      ...new CommandPaletteColorSet(this.colorPalette).propertiesAll(),
-      ...new EditorGroupColorSet(this.colorPalette).propertiesAll(),
-      ...new ListColorSet(this.colorPalette).propertiesAll(),
-      ...new BreadcrumbsColorSet(this.colorPalette).propertiesAll(),
-      ...new StatusBarColorSet(this.colorPalette).propertiesAll(),
-      ...new PeekViewColorSet(this.colorPalette).propertiesAll(),
-      ...new NotifcicationColorSet(this.colorPalette).propertiesAll(),
-      ...new EditorColorSet(this.colorPalette).propertiesAll(),
-      ...TERMINAL_COLORS
-    };
+    return Object.assign(
+      {
+        ...TERMINAL_COLORS,
+        ...new BreadcrumbsColorSet(this.colorPalette).propertiesAll(),
+        ...new DebugToolsColorsGenerator(this.colorPalette).propertiesAll(),
+        ...new EditorColorSet(this.colorPalette).propertiesAll(),
+        ...new EditorGroupColorSet(this.colorPalette).propertiesAll(),
+        ...new NotifcicationColorSet(this.colorPalette).propertiesAll(),
+        ...new SideBarColorSet(this.colorPalette).propertiesAll(),
+      },
+      ...this.workbenchColorSetsUsingAccentColor.map((colorSet) =>
+        colorSet.propertiesAll()
+      )
+    );
+  }
+
+  propertiesUsingAccentColor() {
+    return Object.assign(
+      {},
+      ...this.workbenchColorSetsUsingAccentColor.map((colorSet) =>
+        colorSet.propertiesUsingAccentColor()
+      )
+    );
   }
 }

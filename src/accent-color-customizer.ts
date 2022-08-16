@@ -1,6 +1,9 @@
 import * as vscode from 'vscode';
 import { DebugLogChannel } from './debug-log-channel';
 import { SolarizedColor } from './solarized-color';
+import { ColorPaletteFactory } from './theme-generator/color-palette/color-palette-factory';
+import { ThemeVariant } from './theme-generator/theme-variant';
+import { ThemeColorSet } from './theme-generator/theme.color-set';
 
 export class AccentColorCustomizer {
   private static readonly CONFIG_IDENTIFIER_COLOR_CUSTOMIZATIONS =
@@ -62,11 +65,28 @@ export class AccentColorCustomizer {
   }
 
   private createColorCustomizationsForScopedTheme() {
-    return {
-      [`[${this.activatedTheme}]`]: {
-        'activityBarBadge.background': this.accentColor
-      },
-      ...this.getCurrentColorCustomizations()
-    };
+    const themeVariant = this.activatedTheme.includes('Light')
+      ? ThemeVariant.Light
+      : ThemeVariant.Dark;
+    const themeGenerator = new ThemeColorSet(
+      themeVariant,
+      ColorPaletteFactory.createColorPaletteForThemeVariant(
+        themeVariant,
+        this.accentColor
+      )
+    );
+
+    DebugLogChannel.log(
+      `accent-color-customizer.ts[ln:83] >>> ${JSON.stringify(
+        Object.assign(this.getCurrentColorCustomizations(), {
+          [`[${this.activatedTheme}]`]:
+            themeGenerator.propertiesUsingAccentColor()
+        })
+      )}`
+    );
+    return Object.assign(this.getCurrentColorCustomizations(), {
+      [`[${this.activatedTheme}]`]:
+        themeGenerator.propertiesUsingAccentColor()
+    });
   }
 }
