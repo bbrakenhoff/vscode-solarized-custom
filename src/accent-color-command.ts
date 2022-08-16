@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import { AccentColorCustomizer } from './accent-color-customizer';
 import { SolarizedColor } from './solarized-color';
 import { ThemeConfigManager } from './theme-config-manager';
+
 export class AccentColorCommand {
   static readonly IDENTIFIER = 'solarizedCustomTheme.setAccentColor';
   private static readonly CONFIG_IDENTIFIER =
