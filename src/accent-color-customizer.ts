@@ -1,5 +1,4 @@
 import * as vscode from 'vscode';
-import { DebugLogChannel } from './debug-log-channel';
 import { SolarizedColor } from './solarized-color';
 import { ColorPaletteFactory } from './theme-generator/color-palette/color-palette-factory';
 import { ThemeVariant } from './theme-generator/theme-variant';
@@ -35,7 +34,7 @@ export class AccentColorCustomizer {
     const {
       // solarizedCustomConfig is the config to be deleted
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      [`[${this.activatedTheme}]`]: solarizedCustomConfig,
+      [this.getThemeScopeIdentifier()]: solarizedCustomConfig,
       ...cleanedConfig
     } = currentColorCustomizations;
 
@@ -46,6 +45,10 @@ export class AccentColorCustomizer {
     return vscode.workspace
       .getConfiguration()
       .get(AccentColorCustomizer.CONFIG_IDENTIFIER_COLOR_CUSTOMIZATIONS);
+  }
+
+  private getThemeScopeIdentifier() {
+    return `[${this.activatedTheme}]`;
   }
 
   private async updateColorCustomizationsConifg(config: any) {
@@ -65,28 +68,27 @@ export class AccentColorCustomizer {
   }
 
   private createColorCustomizationsForScopedTheme() {
-    const themeVariant = this.activatedTheme.includes('Light')
+    return {
+      ...this.getCurrentColorCustomizations(),
+      [this.getThemeScopeIdentifier()]:
+        this.createThemeColorSetForAccentColors().propertiesUsingAccentColor()
+    };
+  }
+
+  private getThemeVariantActivatedTheme() {
+    return this.activatedTheme.includes('Light')
       ? ThemeVariant.Light
       : ThemeVariant.Dark;
-    const themeGenerator = new ThemeColorSet(
+  }
+
+  private createThemeColorSetForAccentColors() {
+    const themeVariant = this.getThemeVariantActivatedTheme();
+    return new ThemeColorSet(
       themeVariant,
       ColorPaletteFactory.createColorPaletteForThemeVariant(
         themeVariant,
         this.accentColor
       )
     );
-
-    DebugLogChannel.log(
-      `accent-color-customizer.ts[ln:83] >>> ${JSON.stringify(
-        Object.assign(this.getCurrentColorCustomizations(), {
-          [`[${this.activatedTheme}]`]:
-            themeGenerator.propertiesUsingAccentColor()
-        })
-      )}`
-    );
-    return Object.assign(this.getCurrentColorCustomizations(), {
-      [`[${this.activatedTheme}]`]:
-        themeGenerator.propertiesUsingAccentColor()
-    });
   }
 }
