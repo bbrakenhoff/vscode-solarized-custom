@@ -8,21 +8,21 @@ export class BasicTokenColorSet extends ColorSet {
         name: 'class',
         scope: ['entity.name.type', 'entity.name.type.class'],
         settings: {
-          foreground: SolarizedColor.Green.color.hex()
+          foreground: SolarizedColor.Green.color.hexa()
         }
       },
       {
         name: 'decorator',
         scope: ['meta.decorator'],
         settings: {
-          foreground: SolarizedColor.Orange.color.hex()
+          foreground: SolarizedColor.Orange.color.hexa()
         }
       },
       {
         name: 'function',
         scope: ['meta.function-call', 'entity.name.function'],
         settings: {
-          foreground: SolarizedColor.Blue.color.hex()
+          foreground: SolarizedColor.Blue.color.hexa()
         }
       },
       {
@@ -38,14 +38,14 @@ export class BasicTokenColorSet extends ColorSet {
         ],
         settings: {
           fontStyle: '',
-          foreground: SolarizedColor.Magenta.color.hex()
+          foreground: SolarizedColor.Magenta.color.hexa()
         }
       },
       {
         name: 'primitives',
         scope: ['constant.numeric'],
         settings: {
-          foreground: SolarizedColor.Orange.color.hex()
+          foreground: SolarizedColor.Orange.color.hexa()
         }
       },
       {
@@ -56,7 +56,7 @@ export class BasicTokenColorSet extends ColorSet {
           'meta.field.declaration'
         ],
         settings: {
-          foreground: SolarizedColor.Violet.color.hex()
+          foreground: SolarizedColor.Violet.color.hexa()
         }
       },
       {
@@ -77,7 +77,7 @@ export class BasicTokenColorSet extends ColorSet {
         name: 'string',
         scope: 'string',
         settings: {
-          foreground: SolarizedColor.Cyan.color.hex()
+          foreground: SolarizedColor.Cyan.color.hexa()
         }
       },
       {

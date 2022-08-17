@@ -13,7 +13,7 @@ export class SemanticTokenColorSet extends ColorSet {
       function: { foreground: SolarizedColor.Blue.color.hexa(), bold: false },
       interface: {
         italic: true,
-        foreground: SolarizedColor.Green.color.hex()
+        foreground: SolarizedColor.Green.color.hexa()
       },
       keyword: SolarizedColor.Magenta.color.hexa(),
       method: { foreground: SolarizedColor.Blue.color.hexa(), bold: false },

@@ -24,7 +24,7 @@ export class DarkThemeColorPalette extends ColorPalette {
       tab: {
         activeForeground: SolarizedColor.Base1.color.hexa(),
         inactiveBackground: '#00384770',
-        inactiveForeground: SolarizedColor.Base1.color.hex()
+        inactiveForeground: SolarizedColor.Base1.color.hexa()
       }
     },
     list: { focusBackground: '005A6F' },

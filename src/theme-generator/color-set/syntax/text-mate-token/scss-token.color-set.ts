@@ -16,7 +16,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.nestedClass',
         scope: ['entity.other.attribute-name.class.css'],
         settings: {
-          foreground: SolarizedColor.Green.color.hex()
+          foreground: SolarizedColor.Green.color.hexa()
         }
       },
       {
@@ -38,7 +38,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.variable',
         scope: 'variable.scss',
         settings: {
-          foreground: SolarizedColor.Violet.color.hex()
+          foreground: SolarizedColor.Violet.color.hexa()
         }
       }
     ];

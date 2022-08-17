@@ -15,7 +15,7 @@ export class CommandPaletteColorSet extends ColorSet {
       'quickInputList.focusBackground': this.colorPalette.accent
         .alpha(0.2)
         .hexa(),
-      'quickInputList.focusForeground': this.colorPalette.accent.hex()
+      'quickInputList.focusForeground': this.colorPalette.accent.hexa()
     };
   }
 }

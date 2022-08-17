@@ -16,5 +16,5 @@ export const TERMINAL_COLORS = {
   'terminal.ansiBrightBlue': SolarizedColor.Base0.color.hexa(),
   'terminal.ansiBrightMagenta': SolarizedColor.Violet.color.hexa(),
   'terminal.ansiBrightCyan': SolarizedColor.Base1.color.hexa(),
-  'terminal.ansiBrightWhite': SolarizedColor.Base3.color.hex()
+  'terminal.ansiBrightWhite': SolarizedColor.Base3.color.hexa()
 };

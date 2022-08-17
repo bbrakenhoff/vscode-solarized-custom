@@ -10,7 +10,7 @@ export class NotifcicationColorSet extends ColorSet {
       'notifications.border': this.colorPalette.border,
       'notificationsErrorIcon.foreground': SolarizedColor.Red.color.hexa(),
       'notificationsWarningIcon.foreground': SolarizedColor.Yellow.color.hexa(),
-      'notificationsInfoIcon.foreground': SolarizedColor.Blue.color.hex()
+      'notificationsInfoIcon.foreground': SolarizedColor.Blue.color.hexa()
     };
   }
 }

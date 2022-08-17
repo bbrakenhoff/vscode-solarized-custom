@@ -8,7 +8,7 @@ export class LightThemeColorPalette extends ColorPalette {
   defaultForeground = SolarizedColor.Base00.color.hex();
   defaultHighlightBackground = SolarizedColor.Base2.color.hex();
   syntax = {
-    comments: SolarizedColor.Base1.color.hex()
+    comments: SolarizedColor.Base1.color.hexa()
   };
   workbench = {
     selectionBackground: '#ccc4b0',
@@ -24,7 +24,7 @@ export class LightThemeColorPalette extends ColorPalette {
       tab: {
         activeForeground: SolarizedColor.Base01.color.hexa(),
         inactiveBackground: '#d3cbb790',
-        inactiveForeground: SolarizedColor.Base01.color.hex()
+        inactiveForeground: SolarizedColor.Base01.color.hexa()
       }
     },
     list: { focusBackground: '#D1CBB895' },
@@ -32,7 +32,7 @@ export class LightThemeColorPalette extends ColorPalette {
       background: SolarizedColor.Base2.color.hexa(),
       debuggingBackground: SolarizedColor.Base2.color.hexa(),
       foreground: SolarizedColor.Base01.color.hexa(),
-      noFolderBackground: SolarizedColor.Base2.color.hex()
+      noFolderBackground: SolarizedColor.Base2.color.hexa()
     },
     peekView: {
       editor: { background: '#ddd6c150' },
