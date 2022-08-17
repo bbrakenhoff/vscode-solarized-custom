@@ -11,9 +11,11 @@ export class CommandPaletteColorSet extends ColorSet {
 
   propertiesUsingAccentColor() {
     return {
-      'pickerGroup.foreground': `${this.colorPalette.accent}70`,
-      'quickInputList.focusBackground': `${this.colorPalette.accent}30`,
-      'quickInputList.focusForeground': this.colorPalette.accent
+      'pickerGroup.foreground': this.colorPalette.accent.alpha(0.5).hexa(),
+      'quickInputList.focusBackground': this.colorPalette.accent
+        .alpha(0.2)
+        .hexa(),
+      'quickInputList.focusForeground': this.colorPalette.accent.hex()
     };
   }
 }

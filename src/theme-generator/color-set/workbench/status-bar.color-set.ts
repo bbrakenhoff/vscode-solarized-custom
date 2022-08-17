@@ -17,7 +17,9 @@ export class StatusBarColorSet extends ColorSet {
 
   propertiesUsingAccentColor() {
     return {
-      'statusBarItem.remoteBackground': `${this.colorPalette.accent}99`
+      'statusBarItem.remoteBackground': this.colorPalette.accent
+        .alpha(0.5)
+        .hexa()
     };
   }
 }

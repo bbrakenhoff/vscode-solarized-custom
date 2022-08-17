@@ -10,12 +10,12 @@ export class ListColorSet extends ColorSet {
 
   propertiesUsingAccentColor() {
     return {
-      'list.activeSelectionBackground': `${this.colorPalette.accent}30`,
-      'list.activeSelectionForeground': this.colorPalette.accent,
-      'list.hoverBackground': `${this.colorPalette.accent}10`,
-      'list.inactiveSelectionBackground': `${this.colorPalette.accent}20`,
-      'list.inactiveSelectionForeground': this.colorPalette.accent,
-      'list.highlightForeground': this.colorPalette.accent
+      'list.activeSelectionBackground': this.colorPalette.accent.alpha(.2).hexa(),
+      'list.activeSelectionForeground': this.colorPalette.accent.hexa(),
+      'list.hoverBackground': this.colorPalette.accent.alpha(.1).hexa(),
+      'list.inactiveSelectionBackground': this.colorPalette.accent.alpha(.15).hexa(),
+      'list.inactiveSelectionForeground': this.colorPalette.accent.hexa(),
+      'list.highlightForeground': this.colorPalette.accent.hexa()
     };
   }
 }

@@ -5,12 +5,15 @@ export class InputColorSet extends ColorSet {
     return {
       'input.background': this.colorPalette.border,
       'input.foreground': this.colorPalette.workbench.input.foreground,
-      'input.placeholderForeground': `${this.colorPalette.workbench.input.foreground}aa`,
+      'input.placeholderForeground':
+        this.colorPalette.workbench.input.foreground.alpha(0.65).hexa(),
       ...this.propertiesUsingAccentColor()
     };
   }
 
   propertiesUsingAccentColor() {
-    return { 'inputOption.activeBorder': `${this.colorPalette.accent}70` };
+    return {
+      'inputOption.activeBorder': this.colorPalette.accent.alpha(0.5).hexa()
+    };
   }
 }

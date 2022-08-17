@@ -13,6 +13,6 @@ export class ActivityBarColorSet extends ColorSet {
   }
 
   propertiesUsingAccentColor() {
-    return { 'activityBarBadge.background': this.colorPalette.accent };
+    return { 'activityBarBadge.background': this.colorPalette.accent.hexa() };
   }
 }

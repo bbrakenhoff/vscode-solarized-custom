@@ -19,9 +19,15 @@ export class PeekViewColorSet extends ColorSet {
 
   propertiesUsingAccentColor() {
     return {
-      'peekViewEditor.matchHighlightBackground': `${this.colorPalette.accent}30`,
-      'peekViewResult.matchHighlightBackground': `${this.colorPalette.accent}40`,
-      'peekViewResult.selectionBackground': `${this.colorPalette.accent}30`
+      'peekViewEditor.matchHighlightBackground': this.colorPalette.accent
+        .alpha(0.2)
+        .hexa(),
+      'peekViewResult.matchHighlightBackground': this.colorPalette.accent
+        .alpha(0.25)
+        .hexa(),
+      'peekViewResult.selectionBackground': this.colorPalette.accent
+        .alpha(0.2)
+        .hexa()
     };
   }
 }

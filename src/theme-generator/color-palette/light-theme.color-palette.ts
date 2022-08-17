@@ -12,7 +12,7 @@ export class LightThemeColorPalette extends ColorPalette {
   };
   workbench = {
     selectionBackground: '#ccc4b0',
-    input: { foreground: SolarizedColor.Base01.color.hex() },
+    input: { foreground: SolarizedColor.Base01.color },
     activityBar: { foreground: SolarizedColor.Base03.color.hex() },
     dropdown: { background: SolarizedColor.Base2.color.hex() },
     sideBar: { titleForeground: SolarizedColor.Base01.color.hex() },
@@ -55,7 +55,7 @@ export class LightThemeColorPalette extends ColorPalette {
         activeBackground: SolarizedColor.Base01.color.hex(),
         background: `${SolarizedColor.Base1.color.hex()}50`
       },
-      wordHighlight: { background: SolarizedColor.Base1.color.hex() }
+      wordHighlight: { background: SolarizedColor.Base1.color }
     }
   };
 }

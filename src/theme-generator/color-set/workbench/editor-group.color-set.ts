@@ -11,7 +11,7 @@ export class EditorGroupColorSet extends ColorSet {
 
   propertiesUsingAccentColor() {
     return {
-      'tab.activeBorderTop': this.colorPalette.accent
+      'tab.activeBorderTop': this.colorPalette.accent.hexa()
     };
   }
 

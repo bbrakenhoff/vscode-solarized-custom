@@ -2,17 +2,17 @@ import { SolarizedColor } from '../../solarized-color';
 import { ColorPalette } from './color-palette';
 
 export class DarkThemeColorPalette extends ColorPalette {
-  border = '#003847';
-  defaultBackground = SolarizedColor.Base03.color.hex();
-  defaultForeground = SolarizedColor.Base0.color.hex();
-  defaultHighlightBackground = SolarizedColor.Base02.color.hex();
+  border = SolarizedColor.Base03.color.lighten(0.35).hexa();
+  defaultBackground = SolarizedColor.Base03.color.hexa();
+  defaultForeground = SolarizedColor.Base0.color.hexa();
+  defaultHighlightBackground = SolarizedColor.Base02.color.hexa();
   syntax = {
-    comments: SolarizedColor.Base01.color.hex()
+    comments: SolarizedColor.Base01.color.hexa()
   };
 
   workbench = {
-    selectionBackground: `${SolarizedColor.Cyan.color.hex()}99`,
-    input: { foreground: SolarizedColor.Base1.color.hex() },
+    selectionBackground:  SolarizedColor.Cyan.color.alpha(.5).hexa(),
+    input: { foreground: SolarizedColor.Base1.color },
     activityBar: { foreground: '#fffcf5' },
     dropdown: { background: '#00212B' },
     sideBar: { titleForeground: SolarizedColor.Base1.color.hex() },
@@ -55,7 +55,7 @@ export class DarkThemeColorPalette extends ColorPalette {
         activeBackground: SolarizedColor.Base1.color.hex(),
         background: `${SolarizedColor.Base1.color.hex()}20`
       },
-      wordHighlight: { background: SolarizedColor.Base01.color.hex() }
+      wordHighlight: { background: SolarizedColor.Base01.color }
     }
   };
 }

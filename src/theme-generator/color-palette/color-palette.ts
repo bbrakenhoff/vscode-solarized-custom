@@ -1,10 +1,11 @@
+import * as Color from 'color'
 import { SolarizedColor } from '../../solarized-color';
 
 export abstract class ColorPalette {
-  readonly accent: string;
+  readonly accent: Color;
 
   constructor({ color }: SolarizedColor) {
-    this.accent = color.hex();
+    this.accent = color;
   }
 
   abstract readonly border: string;
@@ -19,7 +20,7 @@ export abstract class ColorPalette {
 
   abstract readonly workbench: {
     selectionBackground: string;
-    input: { foreground: string };
+    input: { foreground: Color };
     activityBar: { foreground: string };
     dropdown: { background: string };
     sideBar: { titleForeground: string };
@@ -62,7 +63,7 @@ export abstract class ColorPalette {
         activeBackground: string;
         background: string;
       };
-      wordHighlight: { background: string };
+      wordHighlight: { background: Color };
     };
   };
 }
