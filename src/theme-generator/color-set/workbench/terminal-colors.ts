@@ -1,20 +1,20 @@
-import { SolarizedColor } from '../../../solarized-color';
+import { SolarizedColorEnum } from '../../../solarized-color';
 
 export const TERMINAL_COLORS = {
-  'terminal.ansiBlack': SolarizedColor.Base02,
-  'terminal.ansiRed': SolarizedColor.Red,
-  'terminal.ansiGreen': SolarizedColor.Green,
-  'terminal.ansiYellow': SolarizedColor.Yellow,
-  'terminal.ansiBlue': SolarizedColor.Blue,
-  'terminal.ansiMagenta': SolarizedColor.Magenta,
-  'terminal.ansiCyan': SolarizedColor.Cyan,
-  'terminal.ansiWhite': SolarizedColor.Base2,
-  'terminal.ansiBrightBlack': SolarizedColor.Base01,
-  'terminal.ansiBrightRed': SolarizedColor.Orange,
-  'terminal.ansiBrightGreen': SolarizedColor.Base01,
-  'terminal.ansiBrightYellow': SolarizedColor.Base00,
-  'terminal.ansiBrightBlue': SolarizedColor.Base0,
-  'terminal.ansiBrightMagenta': SolarizedColor.Violet,
-  'terminal.ansiBrightCyan': SolarizedColor.Base1,
-  'terminal.ansiBrightWhite': SolarizedColor.Base3
+  'terminal.ansiBlack': SolarizedColorEnum.Base02,
+  'terminal.ansiRed': SolarizedColorEnum.Red,
+  'terminal.ansiGreen': SolarizedColorEnum.Green,
+  'terminal.ansiYellow': SolarizedColorEnum.Yellow,
+  'terminal.ansiBlue': SolarizedColorEnum.Blue,
+  'terminal.ansiMagenta': SolarizedColorEnum.Magenta,
+  'terminal.ansiCyan': SolarizedColorEnum.Cyan,
+  'terminal.ansiWhite': SolarizedColorEnum.Base2,
+  'terminal.ansiBrightBlack': SolarizedColorEnum.Base01,
+  'terminal.ansiBrightRed': SolarizedColorEnum.Orange,
+  'terminal.ansiBrightGreen': SolarizedColorEnum.Base01,
+  'terminal.ansiBrightYellow': SolarizedColorEnum.Base00,
+  'terminal.ansiBrightBlue': SolarizedColorEnum.Base0,
+  'terminal.ansiBrightMagenta': SolarizedColorEnum.Violet,
+  'terminal.ansiBrightCyan': SolarizedColorEnum.Base1,
+  'terminal.ansiBrightWhite': SolarizedColorEnum.Base3
 };

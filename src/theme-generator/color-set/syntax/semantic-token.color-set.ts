@@ -1,35 +1,35 @@
-import { SolarizedColor } from '../../../solarized-color';
+import { SolarizedColorEnum } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
 export class SemanticTokenColorSet extends ColorSet {
   propertiesAll() {
     return {
-      class: SolarizedColor.Green,
+      class: SolarizedColorEnum.Green,
       comment: this.colorPalette.syntax.comments,
-      decorator: SolarizedColor.Orange,
-      enum: SolarizedColor.Green,
-      enumMember: SolarizedColor.Violet,
-      event: SolarizedColor.Orange,
-      function: { foreground: SolarizedColor.Blue, bold: false },
+      decorator: SolarizedColorEnum.Orange,
+      enum: SolarizedColorEnum.Green,
+      enumMember: SolarizedColorEnum.Violet,
+      event: SolarizedColorEnum.Orange,
+      function: { foreground: SolarizedColorEnum.Blue, bold: false },
       interface: {
         italic: true,
-        foreground: SolarizedColor.Green
+        foreground: SolarizedColorEnum.Green
       },
-      keyword: SolarizedColor.Magenta,
-      method: { foreground: SolarizedColor.Blue, bold: false },
-      namespace: SolarizedColor.Green,
-      number: SolarizedColor.Orange,
-      operator: SolarizedColor.Yellow,
+      keyword: SolarizedColorEnum.Magenta,
+      method: { foreground: SolarizedColorEnum.Blue, bold: false },
+      namespace: SolarizedColorEnum.Green,
+      number: SolarizedColorEnum.Orange,
+      operator: SolarizedColorEnum.Yellow,
       parameter: {},
-      property: { foreground: SolarizedColor.Violet, bold: false },
-      regexp: SolarizedColor.Orange,
-      string: SolarizedColor.Cyan,
+      property: { foreground: SolarizedColorEnum.Violet, bold: false },
+      regexp: SolarizedColorEnum.Orange,
+      string: SolarizedColorEnum.Cyan,
       typeParameter: {
-        foreground: SolarizedColor.Cyan,
+        foreground: SolarizedColorEnum.Cyan,
         italic: true,
         bold: true
       },
-      variable: SolarizedColor.Violet,
+      variable: SolarizedColorEnum.Violet,
       '*.readonly': {
         underline: true
       }

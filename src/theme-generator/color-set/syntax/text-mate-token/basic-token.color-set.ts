@@ -1,4 +1,4 @@
-import { SolarizedColor } from '../../../../solarized-color';
+import { SolarizedColorEnum } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
 export class BasicTokenColorSet extends ColorSet {
@@ -8,21 +8,21 @@ export class BasicTokenColorSet extends ColorSet {
         name: 'class',
         scope: ['entity.name.type', 'entity.name.type.class'],
         settings: {
-          foreground: SolarizedColor.Green
+          foreground: SolarizedColorEnum.Green
         }
       },
       {
         name: 'decorator',
         scope: ['meta.decorator'],
         settings: {
-          foreground: SolarizedColor.Orange
+          foreground: SolarizedColorEnum.Orange
         }
       },
       {
         name: 'function',
         scope: ['meta.function-call', 'entity.name.function'],
         settings: {
-          foreground: SolarizedColor.Blue
+          foreground: SolarizedColorEnum.Blue
         }
       },
       {
@@ -38,14 +38,14 @@ export class BasicTokenColorSet extends ColorSet {
         ],
         settings: {
           fontStyle: '',
-          foreground: SolarizedColor.Magenta
+          foreground: SolarizedColorEnum.Magenta
         }
       },
       {
         name: 'primitives',
         scope: ['constant.numeric'],
         settings: {
-          foreground: SolarizedColor.Orange
+          foreground: SolarizedColorEnum.Orange
         }
       },
       {
@@ -56,7 +56,7 @@ export class BasicTokenColorSet extends ColorSet {
           'meta.field.declaration'
         ],
         settings: {
-          foreground: SolarizedColor.Violet
+          foreground: SolarizedColorEnum.Violet
         }
       },
       {
@@ -69,7 +69,7 @@ export class BasicTokenColorSet extends ColorSet {
           'punctuation.definition.entity.css'
         ],
         settings: {
-          foreground: SolarizedColor.Yellow,
+          foreground: SolarizedColorEnum.Yellow,
           fontStyle: 'bold'
         }
       },
@@ -77,14 +77,14 @@ export class BasicTokenColorSet extends ColorSet {
         name: 'string',
         scope: 'string',
         settings: {
-          foreground: SolarizedColor.Cyan
+          foreground: SolarizedColorEnum.Cyan
         }
       },
       {
         name: 'variable.parameter',
         scope: 'variable.parameter',
         settings: {
-          foreground: SolarizedColor.Violet,
+          foreground: SolarizedColorEnum.Violet,
           fontStyle: ''
         }
       },

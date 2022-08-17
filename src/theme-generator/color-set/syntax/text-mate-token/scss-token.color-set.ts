@@ -1,4 +1,4 @@
-import { SolarizedColor } from '../../../../solarized-color';
+import { SolarizedColorEnum } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
 export class ScssTokenColorSet extends ColorSet {
@@ -8,7 +8,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.abstractClass',
         scope: 'entity.other.attribute-name.placeholder.css',
         settings: {
-          foreground: SolarizedColor.Green,
+          foreground: SolarizedColorEnum.Green,
           fontStyle: 'italic'
         }
       },
@@ -16,7 +16,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.nestedClass',
         scope: ['entity.other.attribute-name.class.css'],
         settings: {
-          foreground: SolarizedColor.Green
+          foreground: SolarizedColorEnum.Green
         }
       },
       {
@@ -30,7 +30,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.supportFunction',
         scope: 'support.function.misc.scss',
         settings: {
-          foreground: SolarizedColor.Blue,
+          foreground: SolarizedColorEnum.Blue,
           fontStyle: 'italic'
         }
       },
@@ -38,7 +38,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.variable',
         scope: 'variable.scss',
         settings: {
-          foreground: SolarizedColor.Violet
+          foreground: SolarizedColorEnum.Violet
         }
       }
     ];

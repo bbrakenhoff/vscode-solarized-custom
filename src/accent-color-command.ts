@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { AccentColorCustomizer } from './accent-color-customizer';
-import { SolarizedColor } from './solarized-color';
+import { SolarizedColor, SolarizedColorEnum } from './solarized-color';
 import { ThemeConfigManager } from './theme-config-manager';
 
 export class AccentColorCommand {
@@ -26,10 +26,11 @@ export class AccentColorCommand {
   private static async selectAndUpdateAccentColor() {
     const selectedAccentColorName =
       await AccentColorCommand.quickPickAccentColor();
-    await AccentColorCommand.updateAccentColorInConfig(selectedAccentColorName);
-    const customizer = new AccentColorCustomizer(
-      SolarizedColor[selectedAccentColorName]
+    const selectedAccentColor = this.getSolarizedColorByName(
+      selectedAccentColorName
     );
+    await ThemeConfigManager.updateAccentColor(selectedAccentColor);
+    const customizer = new AccentColorCustomizer(selectedAccentColor);
     return await customizer.customizeAccentColor();
   }
 
@@ -39,13 +40,18 @@ export class AccentColorCommand {
     );
   }
 
-  private static getSolarizedColorNamesWithoutBaseColors() {
-    return Object.keys(SolarizedColor).filter(
-      (key: string) => !key.includes('Base')
-    );
+  private static getSolarizedColorNamesWithoutBaseColors(): string[] {
+    return SolarizedColor.values()
+      .filter(
+        (solarizedColor: SolarizedColor) =>
+          !solarizedColor.name.includes('Base')
+      )
+      .map((solarizedColor) => solarizedColor.name);
   }
 
-  private static async updateAccentColorInConfig(selectedAccentColor: string) {
-    return await ThemeConfigManager.updateAccentColor(selectedAccentColor);
+  private static getSolarizedColorByName(name: string): SolarizedColor {
+    return SolarizedColor.values().find(
+      (solarizedColor) => solarizedColor.name === name
+    );
   }
 }

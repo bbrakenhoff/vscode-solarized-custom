@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { SolarizedColor } from './solarized-color';
 
 export class ThemeConfigManager {
   private static readonly CONFIG_IDENTIFIER_COLOR_CUSTOMIZATIONS =
@@ -45,10 +46,10 @@ export class ThemeConfigManager {
       .get(ThemeConfigManager.CONFIG_IDENTIFIER_ACCENT_COLOR);
   }
 
-  static async updateAccentColor(accentColor: string) {
+  static async updateAccentColor({ name }: SolarizedColor) {
     return await ThemeConfigManager.update(
       ThemeConfigManager.CONFIG_IDENTIFIER_ACCENT_COLOR,
-      accentColor
+      name
     );
   }
 }

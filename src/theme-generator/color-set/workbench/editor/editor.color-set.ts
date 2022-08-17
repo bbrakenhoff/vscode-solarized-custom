@@ -4,6 +4,10 @@ import { IndentGuideColorSet } from './indent-guide.color-set';
 import { WordHighlightColorSet } from './word-highlight.color-set';
 
 export class EditorColorsSet extends ColorSet {
+  private readonly wordHighlightColorSet = new WordHighlightColorSet(
+    this.colorPalette
+  );
+
   propertiesAll() {
     return {
       'editor.background': this.colorPalette.defaultBackground,
@@ -19,7 +23,11 @@ export class EditorColorsSet extends ColorSet {
       'editorCursor.foreground': this.colorPalette.defaultForeground,
       ...new BracketsColorSet(this.colorPalette).propertiesAll(),
       ...new IndentGuideColorSet(this.colorPalette).propertiesAll(),
-      ...new WordHighlightColorSet(this.colorPalette).propertiesAll()
+      ...this.wordHighlightColorSet.propertiesAll()
     };
+  }
+
+  propertiesUsingAccentColor() {
+    return this.wordHighlightColorSet.propertiesUsingAccentColor();
   }
 }

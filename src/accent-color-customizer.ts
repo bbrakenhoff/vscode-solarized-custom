@@ -5,9 +5,9 @@ import { ThemeVariant } from './theme-generator/theme-variant';
 import { ThemeColorSet } from './theme-generator/theme.color-set';
 
 export class AccentColorCustomizer {
-  private activatedTheme: string;
+  private readonly activatedTheme: string;
 
-  constructor(private readonly accentColor: string) {
+  constructor(private readonly accentColor: SolarizedColor) {
     this.activatedTheme = ThemeConfigManager.getCurrentColorTheme();
   }
 
@@ -22,7 +22,7 @@ export class AccentColorCustomizer {
   }
 
   private accentColorEqualsDefaultColor() {
-    return this.accentColor === SolarizedColor.Magenta;
+    return this.accentColor.name === SolarizedColor.Magenta.name;
   }
 
   private async deleteSolarizedCustomThemeConfig() {

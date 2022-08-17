@@ -1,4 +1,4 @@
-import { SolarizedColor } from '../../solarized-color';
+import { SolarizedColor, SolarizedColorEnum } from '../../solarized-color';
 import { ThemeVariant } from '../theme-variant';
 import { DarkThemeColorPalette } from './dark-theme.color-palette';
 import { LightThemeColorPalette } from './light-theme.color-palette';
@@ -6,7 +6,7 @@ import { LightThemeColorPalette } from './light-theme.color-palette';
 export class ColorPaletteFactory {
   static createColorPaletteForThemeVariant(
     themeVariant: ThemeVariant,
-    accentColor: string
+    accentColor: SolarizedColor
   ) {
     switch (themeVariant) {
       case ThemeVariant.Dark:

@@ -1,4 +1,4 @@
-import { SolarizedColor } from '../../../../solarized-color';
+import { SolarizedColorEnum } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
 export class CssTokenColorSet extends ColorSet {
@@ -8,14 +8,14 @@ export class CssTokenColorSet extends ColorSet {
         name: 'CSS.class',
         scope: ['entity.other.attribute-name.class.css'],
         settings: {
-          foreground: SolarizedColor.Green
+          foreground: SolarizedColorEnum.Green
         }
       },
       {
         name: 'CSS.id',
         scope: ['entity.other.attribute-name.id.css'],
         settings: {
-          foreground: SolarizedColor.Green,
+          foreground: SolarizedColorEnum.Green,
           fontStyle: 'bold'
         }
       },
@@ -30,7 +30,7 @@ export class CssTokenColorSet extends ColorSet {
         name: 'CSS.propertyValue',
         scope: ['support.constant.property-value.css'],
         settings: {
-          foreground: SolarizedColor.Orange
+          foreground: SolarizedColorEnum.Orange
         }
       },
       {
@@ -41,21 +41,21 @@ export class CssTokenColorSet extends ColorSet {
         ],
         settings: {
           fontStyle: 'italic',
-          foreground: SolarizedColor.Magenta
+          foreground: SolarizedColorEnum.Magenta
         }
       },
       {
         name: 'CSS.tag',
         scope: 'entity.name.tag.css',
         settings: {
-          foreground: SolarizedColor.Magenta
+          foreground: SolarizedColorEnum.Magenta
         }
       },
       {
         name: 'CSS.unit',
         scope: ['keyword.other.unit'],
         settings: {
-          foreground: SolarizedColor.Yellow
+          foreground: SolarizedColorEnum.Yellow
         }
       }
     ];

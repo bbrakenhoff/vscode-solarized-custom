@@ -1,6 +1,11 @@
+import { SolarizedColor } from '../../solarized-color';
 
 export abstract class ColorPalette {
-  constructor(readonly accent: string) {}
+  readonly accent: string;
+
+  constructor({ hexCode }: SolarizedColor) {
+    this.accent = hexCode;
+  }
 
   abstract readonly border: string;
 

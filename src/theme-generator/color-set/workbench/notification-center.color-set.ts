@@ -1,4 +1,4 @@
-import { SolarizedColor } from '../../../solarized-color';
+import { SolarizedColorEnum } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
 export class NotifcicationColorSet extends ColorSet {
@@ -8,9 +8,9 @@ export class NotifcicationColorSet extends ColorSet {
       'notifications.foreground': this.colorPalette.defaultForeground,
       'notificationCenter.border': this.colorPalette.border,
       'notifications.border': this.colorPalette.border,
-      'notificationsErrorIcon.foreground': SolarizedColor.Red,
-      'notificationsWarningIcon.foreground': SolarizedColor.Yellow,
-      'notificationsInfoIcon.foreground': SolarizedColor.Blue
+      'notificationsErrorIcon.foreground': SolarizedColorEnum.Red,
+      'notificationsWarningIcon.foreground': SolarizedColorEnum.Yellow,
+      'notificationsInfoIcon.foreground': SolarizedColorEnum.Blue
     };
   }
 }
