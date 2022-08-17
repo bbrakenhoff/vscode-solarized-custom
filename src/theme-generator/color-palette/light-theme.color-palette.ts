@@ -2,11 +2,11 @@ import { SolarizedColor } from '../../solarized-color';
 import { ColorPalette } from './color-palette';
 
 export class LightThemeColorPalette extends ColorPalette {
-  border = SolarizedColor.Base2.color.darken(0.05).hex();
+  border = SolarizedColor.Base2.color.darken(0.05).hexa();
   // border = '#ddd6c1';
-  defaultBackground = SolarizedColor.Base3.color.hex();
-  defaultForeground = SolarizedColor.Base00.color.hex();
-  defaultHighlightBackground = SolarizedColor.Base2.color.hex();
+  defaultBackground = SolarizedColor.Base3.color.hexa();
+  defaultForeground = SolarizedColor.Base00.color.hexa();
+  defaultHighlightBackground = SolarizedColor.Base2.color.hexa();
   syntax = {
     comments: SolarizedColor.Base1.color.hexa()
   };
@@ -38,22 +38,22 @@ export class LightThemeColorPalette extends ColorPalette {
       editor: { background: '#ddd6c150' },
       result: {
         background: '#d3cbb790',
-        lineForeground: `${SolarizedColor.Base00.color.hex()}80`
+        lineForeground: SolarizedColor.Base00.color.alpha(0.5).hexa()
       },
       title: { background: '#d3cbb790' }
     },
     editor: {
       brackets: {
-        matchBackground: `${SolarizedColor.Base1.color.hex()}50`,
+        matchBackground: SolarizedColor.Base1.color.alpha(0.3).hexa(),
         matchBorder: '#ccc4b0'
       },
       lineNumber: {
         activeForeground: SolarizedColor.Base1.color.hexa(),
-        foreground: `${SolarizedColor.Base1.color.hex()}50`
+        foreground: SolarizedColor.Base1.color.alpha(0.3).hexa()
       },
       indentGuide: {
         activeBackground: SolarizedColor.Base01.color.hexa(),
-        background: `${SolarizedColor.Base1.color.hex()}50`
+        background: SolarizedColor.Base1.color.alpha(0.3).hexa()
       },
       wordHighlight: { background: SolarizedColor.Base1.color }
     }

@@ -11,14 +11,14 @@ export class DarkThemeColorPalette extends ColorPalette {
   };
 
   workbench = {
-    selectionBackground:  SolarizedColor.Cyan.color.alpha(.5).hexa(),
+    selectionBackground: SolarizedColor.Cyan.color.alpha(0.5).hexa(),
     input: { foreground: SolarizedColor.Base1.color },
     activityBar: { foreground: '#fffcf5' },
     dropdown: { background: '#00212B' },
     sideBar: { titleForeground: SolarizedColor.Base1.color.hexa() },
     editorGroup: {
       editorGroup: {
-        dropBackground: `${SolarizedColor.Cyan.color.hex()}44`,
+        dropBackground: SolarizedColor.Cyan.color.alpha(0.25).hexa(),
         tabsBackgroundOpacity: 80
       },
       tab: {
@@ -38,22 +38,22 @@ export class DarkThemeColorPalette extends ColorPalette {
       editor: { background: SolarizedColor.Base02.color.hexa() },
       result: {
         background: '#00384770',
-        lineForeground: `${SolarizedColor.Base1.color.hex()}50`
+        lineForeground: SolarizedColor.Base1.color.alpha(0.3).hexa()
       },
       title: { background: '#00384770' }
     },
     editor: {
       brackets: {
         matchBackground: '#00212B',
-        matchBorder: `${SolarizedColor.Base01.color.hex()}70`
+        matchBorder: SolarizedColor.Base01.color.alpha(0.5).hexa()
       },
       lineNumber: {
         activeForeground: SolarizedColor.Base00.color.hexa(),
-        foreground: `${SolarizedColor.Base00.color.hex()}80`
+        foreground: SolarizedColor.Base00.color.alpha(0.5).hexa()
       },
       indentGuide: {
         activeBackground: SolarizedColor.Base1.color.hexa(),
-        background: `${SolarizedColor.Base1.color.hex()}20`
+        background: SolarizedColor.Base1.color.alpha(0.15).hexa()
       },
       wordHighlight: { background: SolarizedColor.Base01.color }
     }
