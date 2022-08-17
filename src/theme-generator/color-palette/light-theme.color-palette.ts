@@ -1,60 +1,61 @@
-import { SolarizedColorEnum } from '../../solarized-color';
+import { SolarizedColor } from '../../solarized-color';
 import { ColorPalette } from './color-palette';
 
 export class LightThemeColorPalette extends ColorPalette {
-  border = '#ddd6c1';
-  defaultBackground = SolarizedColorEnum.Base3;
-  defaultForeground = SolarizedColorEnum.Base00;
-  defaultHighlightBackground = SolarizedColorEnum.Base2;
+  border = SolarizedColor.Base2.color.darken(0.05).hex();
+  // border = '#ddd6c1';
+  defaultBackground = SolarizedColor.Base3.color.hex();
+  defaultForeground = SolarizedColor.Base00.color.hex();
+  defaultHighlightBackground = SolarizedColor.Base2.color.hex();
   syntax = {
-    comments: SolarizedColorEnum.Base1
+    comments: SolarizedColor.Base1.color.hex()
   };
   workbench = {
     selectionBackground: '#ccc4b0',
-    input: { foreground: SolarizedColorEnum.Base01 },
-    activityBar: { foreground: SolarizedColor.Base03.name },
-    dropdown: { background: SolarizedColorEnum.Base2 },
-    sideBar: { titleForeground: SolarizedColorEnum.Base01 },
+    input: { foreground: SolarizedColor.Base01.color.hex() },
+    activityBar: { foreground: SolarizedColor.Base03.color.hex() },
+    dropdown: { background: SolarizedColor.Base2.color.hex() },
+    sideBar: { titleForeground: SolarizedColor.Base01.color.hex() },
     editorGroup: {
       editorGroup: {
         dropBackground: '#ddd6c1aa',
         tabsBackgroundOpacity: 50
       },
       tab: {
-        activeForeground: SolarizedColorEnum.Base01,
+        activeForeground: SolarizedColor.Base01.color.hex(),
         inactiveBackground: '#d3cbb790',
-        inactiveForeground: SolarizedColorEnum.Base01
+        inactiveForeground: SolarizedColor.Base01.color.hex()
       }
     },
     list: { focusBackground: '#D1CBB895' },
     statusBar: {
-      background: SolarizedColorEnum.Base2,
-      debuggingBackground: SolarizedColorEnum.Base2,
-      foreground: SolarizedColorEnum.Base01,
-      noFolderBackground: SolarizedColorEnum.Base2
+      background: SolarizedColor.Base2.color.hex(),
+      debuggingBackground: SolarizedColor.Base2.color.hex(),
+      foreground: SolarizedColor.Base01.color.hex(),
+      noFolderBackground: SolarizedColor.Base2.color.hex()
     },
     peekView: {
       editor: { background: '#ddd6c150' },
       result: {
         background: '#d3cbb790',
-        lineForeground: `${SolarizedColorEnum.Base00}80`
+        lineForeground: `${SolarizedColor.Base00.color.hex()}80`
       },
       title: { background: '#d3cbb790' }
     },
     editor: {
       brackets: {
-        matchBackground: `${SolarizedColorEnum.Base1}50`,
+        matchBackground: `${SolarizedColor.Base1.color.hex()}50`,
         matchBorder: '#ccc4b0'
       },
       lineNumber: {
-        activeForeground: SolarizedColorEnum.Base1,
-        foreground: `${SolarizedColorEnum.Base1}50`
+        activeForeground: SolarizedColor.Base1.color.hex(),
+        foreground: `${SolarizedColor.Base1.color.hex()}50`
       },
       indentGuide: {
-        activeBackground: SolarizedColorEnum.Base01,
-        background: `${SolarizedColorEnum.Base1}50`
+        activeBackground: SolarizedColor.Base01.color.hex(),
+        background: `${SolarizedColor.Base1.color.hex()}50`
       },
-      wordHighlight: { background: SolarizedColorEnum.Base1 }
+      wordHighlight: { background: SolarizedColor.Base1.color.hex() }
     }
   };
 }

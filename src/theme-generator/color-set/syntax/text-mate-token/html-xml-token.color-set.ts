@@ -1,4 +1,4 @@
-import { SolarizedColorEnum } from '../../../../solarized-color';
+import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
 export class HtmlXmlTokenColorSet extends ColorSet {
@@ -8,28 +8,28 @@ export class HtmlXmlTokenColorSet extends ColorSet {
         name: 'HTML+XML.attribute',
         scope: ['entity.other.attribute-name'],
         settings: {
-          foreground: SolarizedColorEnum.Violet
+          foreground: SolarizedColor.Violet.color.hex()
         }
       },
       {
         name: 'HTML+XML.attributeSeparator',
         scope: ['punctuation.separator.key-value.html'],
         settings: {
-          foreground: SolarizedColorEnum.Blue
+          foreground: SolarizedColor.Blue.color.hex()
         }
       },
       {
         name: 'HTML+XML.content',
         scope: ['text.html.derivative'],
         settings: {
-          foreground: SolarizedColorEnum.Yellow
+          foreground: SolarizedColor.Yellow.color.hex()
         }
       },
       {
         name: 'HTML+XML.specialChar',
         scope: ['constant.character.entity.named.nbsp.html'],
         settings: {
-          foreground: SolarizedColorEnum.Green,
+          foreground: SolarizedColor.Green.color.hex(),
           fontStyle: 'bold'
         }
       },
@@ -37,14 +37,14 @@ export class HtmlXmlTokenColorSet extends ColorSet {
         name: 'HTML+XML.tag',
         scope: ['punctuation.definition.tag'],
         settings: {
-          foreground: SolarizedColorEnum.Blue
+          foreground: SolarizedColor.Blue.color.hex()
         }
       },
       {
         name: 'HTML+XML.tagName',
         scope: ['entity.name.tag'],
         settings: {
-          foreground: SolarizedColorEnum.Magenta
+          foreground: SolarizedColor.Magenta.color.hex()
         }
       }
     ];

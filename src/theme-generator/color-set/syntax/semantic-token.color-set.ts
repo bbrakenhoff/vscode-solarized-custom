@@ -1,35 +1,35 @@
-import { SolarizedColorEnum } from '../../../solarized-color';
+import { SolarizedColor } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
 export class SemanticTokenColorSet extends ColorSet {
   propertiesAll() {
     return {
-      class: SolarizedColorEnum.Green,
+      class: SolarizedColor.Green.color.hex(),
       comment: this.colorPalette.syntax.comments,
-      decorator: SolarizedColorEnum.Orange,
-      enum: SolarizedColorEnum.Green,
-      enumMember: SolarizedColorEnum.Violet,
-      event: SolarizedColorEnum.Orange,
-      function: { foreground: SolarizedColorEnum.Blue, bold: false },
+      decorator: SolarizedColor.Orange.color.hex(),
+      enum: SolarizedColor.Green.color.hex(),
+      enumMember: SolarizedColor.Violet.color.hex(),
+      event: SolarizedColor.Orange.color.hex(),
+      function: { foreground: SolarizedColor.Blue.color.hex(), bold: false },
       interface: {
         italic: true,
-        foreground: SolarizedColorEnum.Green
+        foreground: SolarizedColor.Green.color.hex()
       },
-      keyword: SolarizedColorEnum.Magenta,
-      method: { foreground: SolarizedColorEnum.Blue, bold: false },
-      namespace: SolarizedColorEnum.Green,
-      number: SolarizedColorEnum.Orange,
-      operator: SolarizedColorEnum.Yellow,
+      keyword: SolarizedColor.Magenta.color.hex(),
+      method: { foreground: SolarizedColor.Blue.color.hex(), bold: false },
+      namespace: SolarizedColor.Green.color.hex(),
+      number: SolarizedColor.Orange.color.hex(),
+      operator: SolarizedColor.Yellow.color.hex(),
       parameter: {},
-      property: { foreground: SolarizedColorEnum.Violet, bold: false },
-      regexp: SolarizedColorEnum.Orange,
-      string: SolarizedColorEnum.Cyan,
+      property: { foreground: SolarizedColor.Violet.color.hex(), bold: false },
+      regexp: SolarizedColor.Orange.color.hex(),
+      string: SolarizedColor.Cyan.color.hex(),
       typeParameter: {
-        foreground: SolarizedColorEnum.Cyan,
+        foreground: SolarizedColor.Cyan.color.hex(),
         italic: true,
         bold: true
       },
-      variable: SolarizedColorEnum.Violet,
+      variable: SolarizedColor.Violet.color.hex(),
       '*.readonly': {
         underline: true
       }

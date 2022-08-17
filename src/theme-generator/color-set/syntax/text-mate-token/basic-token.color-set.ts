@@ -1,4 +1,4 @@
-import { SolarizedColorEnum } from '../../../../solarized-color';
+import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
 export class BasicTokenColorSet extends ColorSet {
@@ -8,21 +8,21 @@ export class BasicTokenColorSet extends ColorSet {
         name: 'class',
         scope: ['entity.name.type', 'entity.name.type.class'],
         settings: {
-          foreground: SolarizedColorEnum.Green
+          foreground: SolarizedColor.Green.color.hex()
         }
       },
       {
         name: 'decorator',
         scope: ['meta.decorator'],
         settings: {
-          foreground: SolarizedColorEnum.Orange
+          foreground: SolarizedColor.Orange.color.hex()
         }
       },
       {
         name: 'function',
         scope: ['meta.function-call', 'entity.name.function'],
         settings: {
-          foreground: SolarizedColorEnum.Blue
+          foreground: SolarizedColor.Blue.color.hex()
         }
       },
       {
@@ -38,14 +38,14 @@ export class BasicTokenColorSet extends ColorSet {
         ],
         settings: {
           fontStyle: '',
-          foreground: SolarizedColorEnum.Magenta
+          foreground: SolarizedColor.Magenta.color.hex()
         }
       },
       {
         name: 'primitives',
         scope: ['constant.numeric'],
         settings: {
-          foreground: SolarizedColorEnum.Orange
+          foreground: SolarizedColor.Orange.color.hex()
         }
       },
       {
@@ -56,7 +56,7 @@ export class BasicTokenColorSet extends ColorSet {
           'meta.field.declaration'
         ],
         settings: {
-          foreground: SolarizedColorEnum.Violet
+          foreground: SolarizedColor.Violet.color.hex()
         }
       },
       {
@@ -69,7 +69,7 @@ export class BasicTokenColorSet extends ColorSet {
           'punctuation.definition.entity.css'
         ],
         settings: {
-          foreground: SolarizedColorEnum.Yellow,
+          foreground: SolarizedColor.Yellow.color.hex(),
           fontStyle: 'bold'
         }
       },
@@ -77,14 +77,14 @@ export class BasicTokenColorSet extends ColorSet {
         name: 'string',
         scope: 'string',
         settings: {
-          foreground: SolarizedColorEnum.Cyan
+          foreground: SolarizedColor.Cyan.color.hex()
         }
       },
       {
         name: 'variable.parameter',
         scope: 'variable.parameter',
         settings: {
-          foreground: SolarizedColorEnum.Violet,
+          foreground: SolarizedColor.Violet.color.hex(),
           fontStyle: ''
         }
       },

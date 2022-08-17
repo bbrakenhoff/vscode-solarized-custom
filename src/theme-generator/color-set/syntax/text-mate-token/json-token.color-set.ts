@@ -1,4 +1,6 @@
-import { SolarizedColorEnum } from '../../../../solarized-color';
+import {
+  SolarizedColor
+} from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
 export class JsonTokenColorSet extends ColorSet {
@@ -13,14 +15,14 @@ export class JsonTokenColorSet extends ColorSet {
           'punctuation.support.type.property-name.end.json'
         ],
         settings: {
-          foreground: SolarizedColorEnum.Yellow
+          foreground: SolarizedColor.Yellow.color.hex()
         }
       },
       {
         name: 'JSON.propertyName',
         scope: ['support.type.property-name.json'],
         settings: {
-          foreground: SolarizedColorEnum.Violet
+          foreground: SolarizedColor.Violet.color.hex()
         }
       }
     ];

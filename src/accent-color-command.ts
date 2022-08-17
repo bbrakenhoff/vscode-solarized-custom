@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { AccentColorCustomizer } from './accent-color-customizer';
-import { SolarizedColor, SolarizedColorEnum } from './solarized-color';
+import { SolarizedColor } from './solarized-color';
 import { ThemeConfigManager } from './theme-config-manager';
 
 export class AccentColorCommand {

@@ -1,61 +1,61 @@
-import { SolarizedColorEnum } from '../../solarized-color';
+import { SolarizedColor } from '../../solarized-color';
 import { ColorPalette } from './color-palette';
 
 export class DarkThemeColorPalette extends ColorPalette {
   border = '#003847';
-  defaultBackground = SolarizedColor.Base03.name;
-  defaultForeground = SolarizedColorEnum.Base0;
-  defaultHighlightBackground = SolarizedColorEnum.Base02;
+  defaultBackground = SolarizedColor.Base03.color.hex();
+  defaultForeground = SolarizedColor.Base0.color.hex();
+  defaultHighlightBackground = SolarizedColor.Base02.color.hex();
   syntax = {
-    comments: SolarizedColorEnum.Base01
+    comments: SolarizedColor.Base01.color.hex()
   };
 
   workbench = {
-    selectionBackground: `${SolarizedColorEnum.Cyan}99`,
-    input: { foreground: SolarizedColorEnum.Base1 },
+    selectionBackground: `${SolarizedColor.Cyan.color.hex()}99`,
+    input: { foreground: SolarizedColor.Base1.color.hex() },
     activityBar: { foreground: '#fffcf5' },
     dropdown: { background: '#00212B' },
-    sideBar: { titleForeground: SolarizedColorEnum.Base1 },
+    sideBar: { titleForeground: SolarizedColor.Base1.color.hex() },
     editorGroup: {
       editorGroup: {
-        dropBackground: `${SolarizedColorEnum.Cyan}44`,
+        dropBackground: `${SolarizedColor.Cyan.color.hex()}44`,
         tabsBackgroundOpacity: 80
       },
       tab: {
-        activeForeground: SolarizedColorEnum.Base1,
+        activeForeground: SolarizedColor.Base1.color.hex(),
         inactiveBackground: '#00384770',
-        inactiveForeground: SolarizedColorEnum.Base1
+        inactiveForeground: SolarizedColor.Base1.color.hex()
       }
     },
     list: { focusBackground: '005A6F' },
     statusBar: {
-      background:  '#00212B',
-      debuggingBackground:  '#00212B',
-      foreground:SolarizedColorEnum.Base1,
+      background: '#00212B',
+      debuggingBackground: '#00212B',
+      foreground: SolarizedColor.Base1.color.hex(),
       noFolderBackground: '#00212B'
     },
     peekView: {
-      editor: { background: SolarizedColorEnum.Base02 },
+      editor: { background: SolarizedColor.Base02.color.hex() },
       result: {
         background: '#00384770',
-        lineForeground: `${SolarizedColorEnum.Base1}50`
+        lineForeground: `${SolarizedColor.Base1.color.hex()}50`
       },
       title: { background: '#00384770' }
     },
     editor: {
       brackets: {
         matchBackground: '#00212B',
-        matchBorder: `${SolarizedColorEnum.Base01}70`
+        matchBorder: `${SolarizedColor.Base01.color.hex()}70`
       },
       lineNumber: {
-        activeForeground: SolarizedColorEnum.Base00,
-        foreground: `${SolarizedColorEnum.Base00}80`
+        activeForeground: SolarizedColor.Base00.color.hex(),
+        foreground: `${SolarizedColor.Base00.color.hex()}80`
       },
       indentGuide: {
-        activeBackground: SolarizedColorEnum.Base1,
-        background: `${SolarizedColorEnum.Base1}20`
+        activeBackground: SolarizedColor.Base1.color.hex(),
+        background: `${SolarizedColor.Base1.color.hex()}20`
       },
-      wordHighlight: { background: SolarizedColorEnum.Base01 }
+      wordHighlight: { background: SolarizedColor.Base01.color.hex() }
     }
   };
 }

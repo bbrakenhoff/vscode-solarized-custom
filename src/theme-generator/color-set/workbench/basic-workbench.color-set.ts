@@ -1,11 +1,11 @@
-import { SolarizedColorEnum } from '../../../solarized-color';
+import { SolarizedColor } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
 export class BasicWorkbenchColorSet extends ColorSet {
   propertiesAll() {
     return {
       'badge.foreground': '#fffcf5',
-      errorForeground: `${SolarizedColorEnum.Red}99`,
+      errorForeground: `${SolarizedColor.Red.color.hex()}99`,
       'titleBar.activeBackground': this.colorPalette.defaultHighlightBackground,
       'selection.background': this.colorPalette.workbench.selectionBackground,
       'panel.border': this.colorPalette.border,

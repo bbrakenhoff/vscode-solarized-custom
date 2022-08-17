@@ -1,4 +1,4 @@
-import { SolarizedColor, SolarizedColorEnum } from '../../solarized-color';
+import { SolarizedColor } from '../../solarized-color';
 import { ThemeVariant } from '../theme-variant';
 import { DarkThemeColorPalette } from './dark-theme.color-palette';
 import { LightThemeColorPalette } from './light-theme.color-palette';

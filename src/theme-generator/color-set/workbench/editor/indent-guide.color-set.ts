@@ -1,4 +1,3 @@
-import { SolarizedColorEnum } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
 export class IndentGuideColorSet extends ColorSet {
