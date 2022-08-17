@@ -29,7 +29,7 @@ export class HtmlXmlTokenColorSet extends ColorSet {
         name: 'HTML+XML.specialChar',
         scope: ['constant.character.entity.named.nbsp.html'],
         settings: {
-          foreground: SolarizedColor.Green.color.hex(),
+          foreground: SolarizedColor.Green.color.hexa(),
           fontStyle: 'bold'
         }
       },

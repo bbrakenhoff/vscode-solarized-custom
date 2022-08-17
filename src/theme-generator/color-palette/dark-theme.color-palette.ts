@@ -15,14 +15,14 @@ export class DarkThemeColorPalette extends ColorPalette {
     input: { foreground: SolarizedColor.Base1.color },
     activityBar: { foreground: '#fffcf5' },
     dropdown: { background: '#00212B' },
-    sideBar: { titleForeground: SolarizedColor.Base1.color.hex() },
+    sideBar: { titleForeground: SolarizedColor.Base1.color.hexa() },
     editorGroup: {
       editorGroup: {
         dropBackground: `${SolarizedColor.Cyan.color.hex()}44`,
         tabsBackgroundOpacity: 80
       },
       tab: {
-        activeForeground: SolarizedColor.Base1.color.hex(),
+        activeForeground: SolarizedColor.Base1.color.hexa(),
         inactiveBackground: '#00384770',
         inactiveForeground: SolarizedColor.Base1.color.hex()
       }
@@ -31,11 +31,11 @@ export class DarkThemeColorPalette extends ColorPalette {
     statusBar: {
       background: '#00212B',
       debuggingBackground: '#00212B',
-      foreground: SolarizedColor.Base1.color.hex(),
+      foreground: SolarizedColor.Base1.color.hexa(),
       noFolderBackground: '#00212B'
     },
     peekView: {
-      editor: { background: SolarizedColor.Base02.color.hex() },
+      editor: { background: SolarizedColor.Base02.color.hexa() },
       result: {
         background: '#00384770',
         lineForeground: `${SolarizedColor.Base1.color.hex()}50`
@@ -48,11 +48,11 @@ export class DarkThemeColorPalette extends ColorPalette {
         matchBorder: `${SolarizedColor.Base01.color.hex()}70`
       },
       lineNumber: {
-        activeForeground: SolarizedColor.Base00.color.hex(),
+        activeForeground: SolarizedColor.Base00.color.hexa(),
         foreground: `${SolarizedColor.Base00.color.hex()}80`
       },
       indentGuide: {
-        activeBackground: SolarizedColor.Base1.color.hex(),
+        activeBackground: SolarizedColor.Base1.color.hexa(),
         background: `${SolarizedColor.Base1.color.hex()}20`
       },
       wordHighlight: { background: SolarizedColor.Base01.color }

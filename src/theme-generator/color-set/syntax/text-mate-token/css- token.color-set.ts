@@ -15,7 +15,7 @@ export class CssTokenColorSet extends ColorSet {
         name: 'CSS.id',
         scope: ['entity.other.attribute-name.id.css'],
         settings: {
-          foreground: SolarizedColor.Green.color.hex(),
+          foreground: SolarizedColor.Green.color.hexa(),
           fontStyle: 'bold'
         }
       },

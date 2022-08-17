@@ -4,12 +4,12 @@ import { ColorSet } from '../../color-set';
 export class BracketsColorSet extends ColorSet {
   propertiesAll() {
     return {
-      'editorBracketHighlight.foreground1': SolarizedColor.Yellow.color.hex(),
-      'editorBracketHighlight.foreground2': SolarizedColor.Orange.color.hex(),
-      'editorBracketHighlight.foreground3': SolarizedColor.Violet.color.hex(),
-      'editorBracketHighlight.foreground4': SolarizedColor.Blue.color.hex(),
-      'editorBracketHighlight.foreground5': SolarizedColor.Cyan.color.hex(),
-      'editorBracketHighlight.foreground6': SolarizedColor.Green.color.hex(),
+      'editorBracketHighlight.foreground1': SolarizedColor.Yellow.color.hexa(),
+      'editorBracketHighlight.foreground2': SolarizedColor.Orange.color.hexa(),
+      'editorBracketHighlight.foreground3': SolarizedColor.Violet.color.hexa(),
+      'editorBracketHighlight.foreground4': SolarizedColor.Blue.color.hexa(),
+      'editorBracketHighlight.foreground5': SolarizedColor.Cyan.color.hexa(),
+      'editorBracketHighlight.foreground6': SolarizedColor.Green.color.hexa(),
       'editorBracketMatch.background':
         this.colorPalette.workbench.editor.brackets.matchBackground,
       'editorBracketMatch.border':

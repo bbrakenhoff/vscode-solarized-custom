@@ -69,7 +69,7 @@ export class BasicTokenColorSet extends ColorSet {
           'punctuation.definition.entity.css'
         ],
         settings: {
-          foreground: SolarizedColor.Yellow.color.hex(),
+          foreground: SolarizedColor.Yellow.color.hexa(),
           fontStyle: 'bold'
         }
       },
@@ -84,7 +84,7 @@ export class BasicTokenColorSet extends ColorSet {
         name: 'variable.parameter',
         scope: 'variable.parameter',
         settings: {
-          foreground: SolarizedColor.Violet.color.hex(),
+          foreground: SolarizedColor.Violet.color.hexa(),
           fontStyle: ''
         }
       },

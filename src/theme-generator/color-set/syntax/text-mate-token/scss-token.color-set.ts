@@ -8,7 +8,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.abstractClass',
         scope: 'entity.other.attribute-name.placeholder.css',
         settings: {
-          foreground: SolarizedColor.Green.color.hex(),
+          foreground: SolarizedColor.Green.color.hexa(),
           fontStyle: 'italic'
         }
       },
@@ -30,7 +30,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.supportFunction',
         scope: 'support.function.misc.scss',
         settings: {
-          foreground: SolarizedColor.Blue.color.hex(),
+          foreground: SolarizedColor.Blue.color.hexa(),
           fontStyle: 'italic'
         }
       },

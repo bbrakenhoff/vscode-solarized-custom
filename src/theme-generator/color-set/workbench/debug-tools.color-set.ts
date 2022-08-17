@@ -5,7 +5,7 @@ export class DebugToolsColorsGenerator extends ColorSet {
   propertiesAll() {
     return {
       'debugExceptionWidget.background': this.colorPalette.border,
-      'debugExceptionWidget.border': SolarizedColor.Red.color.hex(),
+      'debugExceptionWidget.border': SolarizedColor.Red.color.hexa(),
       'debugToolBar.background': this.colorPalette.border
     };
   }
