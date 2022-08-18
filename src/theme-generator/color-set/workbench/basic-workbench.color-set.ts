@@ -4,7 +4,7 @@ import { ColorSet } from '../color-set';
 export class BasicWorkbenchColorSet extends ColorSet {
   propertiesAll() {
     return {
-      'badge.foreground': '#fffcf5',
+      'badge.foreground': SolarizedColor.Base3.color.hexa(),
       errorForeground: SolarizedColor.Red.color.alpha(0.5).hexa(),
       'titleBar.activeBackground': this.colorPalette.defaultHighlightBackground,
       'selection.background': this.colorPalette.workbench.selectionBackground,

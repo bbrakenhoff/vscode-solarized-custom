@@ -8,7 +8,7 @@ export class WordHighlightColorSet extends ColorSet {
           .alpha(0.3)
           .hexa(),
       'editor.wordHighlightStrongBackground':
-        this.colorPalette.workbench.editor.wordHighlight.background.alpha(0.2),
+        this.colorPalette.workbench.editor.wordHighlight.background.alpha(0.2).hexa(),
       ...this.propertiesUsingAccentColor()
     };
   }

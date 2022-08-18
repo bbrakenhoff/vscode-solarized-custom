@@ -1,3 +1,4 @@
+import { SolarizedColor } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
 export class ActivityBarColorSet extends ColorSet {
@@ -7,7 +8,8 @@ export class ActivityBarColorSet extends ColorSet {
       'activityBar.border': this.colorPalette.border,
       'activityBar.foreground':
         this.colorPalette.workbench.activityBar.foreground,
-      'activityBarBadge.foreground': '#fffcf5',
+      'activityBarBadge.foreground': SolarizedColor.Base3.color
+        .hexa(),
       ...this.propertiesUsingAccentColor()
     };
   }

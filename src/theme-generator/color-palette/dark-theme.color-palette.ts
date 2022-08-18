@@ -2,7 +2,7 @@ import { SolarizedColor } from '../../solarized-color';
 import { ColorPalette } from './color-palette';
 
 export class DarkThemeColorPalette extends ColorPalette {
-  border = SolarizedColor.Base03.color.lighten(0.35).hexa();
+  border = SolarizedColor.Base03.color.lighten(0.35).hex();
   defaultBackground = SolarizedColor.Base03.color.hexa();
   defaultForeground = SolarizedColor.Base0.color.hexa();
   defaultHighlightBackground = SolarizedColor.Base02.color.hexa();

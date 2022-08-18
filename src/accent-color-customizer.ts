@@ -36,7 +36,7 @@ export class AccentColorCustomizer {
     return await ThemeConfigManager.updateColorCustomizations(cleanedConfig);
   }
 
-  private getThemeScopeIdentifier() {
+  private getThemeScopeIdentifier(): string {
     return `[${this.activatedTheme}]`;
   }
 

@@ -4,7 +4,7 @@ export class InputColorSet extends ColorSet {
   propertiesAll() {
     return {
       'input.background': this.colorPalette.border,
-      'input.foreground': this.colorPalette.workbench.input.foreground,
+      'input.foreground': this.colorPalette.workbench.input.foreground.hexa(),
       'input.placeholderForeground':
         this.colorPalette.workbench.input.foreground.alpha(0.65).hexa(),
       ...this.propertiesUsingAccentColor()

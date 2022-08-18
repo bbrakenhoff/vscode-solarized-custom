@@ -2,8 +2,8 @@ import { SolarizedColor } from '../../solarized-color';
 import { ColorPalette } from './color-palette';
 
 export class LightThemeColorPalette extends ColorPalette {
-  border = SolarizedColor.Base2.color.darken(0.05).hexa();
-  // border = '#ddd6c1';
+  // FIXME: use hexa
+  border = SolarizedColor.Base2.color.darken(0.05).hex();
   defaultBackground = SolarizedColor.Base3.color.hexa();
   defaultForeground = SolarizedColor.Base00.color.hexa();
   defaultHighlightBackground = SolarizedColor.Base2.color.hexa();
@@ -11,23 +11,35 @@ export class LightThemeColorPalette extends ColorPalette {
     comments: SolarizedColor.Base1.color.hexa()
   };
   workbench = {
-    selectionBackground: '#ccc4b0',
+    selectionBackground: SolarizedColor.Base3.color
+      .darken(0.2)
+      .desaturate(0.5)
+      .hexa(),
     input: { foreground: SolarizedColor.Base01.color },
     activityBar: { foreground: SolarizedColor.Base03.color.hexa() },
     dropdown: { background: SolarizedColor.Base2.color.hexa() },
     sideBar: { titleForeground: SolarizedColor.Base01.color.hexa() },
     editorGroup: {
       editorGroup: {
-        dropBackground: '#ddd6c1aa',
+        dropBackground: SolarizedColor.Base3.color
+          .darken(0.3)
+          .desaturate(0.8)
+          .alpha(0.5)
+          .hexa(),
         tabsBackgroundOpacity: 50
       },
       tab: {
         activeForeground: SolarizedColor.Base01.color.hexa(),
-        inactiveBackground: '#d3cbb790',
+        inactiveBackground: SolarizedColor.Base2.color
+          .darken(0.1)
+          .desaturate(0.2)
+          .hexa(),
         inactiveForeground: SolarizedColor.Base01.color.hexa()
       }
     },
-    list: { focusBackground: '#D1CBB895' },
+    list: {
+      focusBackground: SolarizedColor.Base2.color.darken(0.1).alpha(0.5).hexa()
+    },
     statusBar: {
       background: SolarizedColor.Base2.color.hexa(),
       debuggingBackground: SolarizedColor.Base2.color.hexa(),
@@ -35,17 +47,35 @@ export class LightThemeColorPalette extends ColorPalette {
       noFolderBackground: SolarizedColor.Base2.color.hexa()
     },
     peekView: {
-      editor: { background: '#ddd6c150' },
+      editor: {
+        background: SolarizedColor.Base2.color
+          .darken(0.02)
+          .desaturate(0.1)
+          .alpha(0.3)
+          .hexa()
+      },
       result: {
-        background: '#d3cbb790',
+        background: SolarizedColor.Base2.color
+          .darken(0.1)
+          .desaturate(0.3)
+          .alpha(.3)
+          .hexa(),
         lineForeground: SolarizedColor.Base00.color.alpha(0.5).hexa()
       },
-      title: { background: '#d3cbb790' }
+      title: {
+        background: SolarizedColor.Base2.color
+          .darken(0.1)
+          .desaturate(0.2)
+          .hexa()
+      }
     },
     editor: {
       brackets: {
         matchBackground: SolarizedColor.Base1.color.alpha(0.3).hexa(),
-        matchBorder: '#ccc4b0'
+        matchBorder: SolarizedColor.Base3.color
+          .darken(0.2)
+          .desaturate(0.5)
+          .hexa()
       },
       lineNumber: {
         activeForeground: SolarizedColor.Base1.color.hexa(),
