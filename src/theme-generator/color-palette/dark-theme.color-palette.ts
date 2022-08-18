@@ -13,8 +13,8 @@ export class DarkThemeColorPalette extends ColorPalette {
   workbench = {
     selectionBackground: SolarizedColor.Cyan.color.alpha(0.5).hexa(),
     input: { foreground: SolarizedColor.Base1.color },
-    activityBar: { foreground: '#fffcf5' },
-    dropdown: { background: '#00212B' },
+    activityBar: { foreground: SolarizedColor.Base3.color.lighten(0.05).hexa() },
+    dropdown: { background: SolarizedColor.Base03.color.darken(0.5).hexa() },
     sideBar: { titleForeground: SolarizedColor.Base1.color.hexa() },
     editorGroup: {
       editorGroup: {
@@ -23,28 +23,28 @@ export class DarkThemeColorPalette extends ColorPalette {
       },
       tab: {
         activeForeground: SolarizedColor.Base1.color.hexa(),
-        inactiveBackground: '#00384770',
+        inactiveBackground:SolarizedColor.Base00.color.alpha(.2).hexa(),
         inactiveForeground: SolarizedColor.Base1.color.hexa()
       }
     },
     list: { focusBackground: '005A6F' },
     statusBar: {
-      background: '#00212B',
-      debuggingBackground: '#00212B',
+      background: SolarizedColor.Base03.color.darken(0.3).hexa(),
+      debuggingBackground: SolarizedColor.Base03.color.darken(0.3).hexa(),
       foreground: SolarizedColor.Base1.color.hexa(),
-      noFolderBackground: '#00212B'
+      noFolderBackground: SolarizedColor.Base03.color.darken(0.3).hexa()
     },
     peekView: {
-      editor: { background: SolarizedColor.Base02.color.hexa() },
+      editor: { background: SolarizedColor.Base02.color.lighten(.05).hexa() },
       result: {
-        background: '#00384770',
+        background:SolarizedColor.Base02.color.darken(0.1).hexa(),
         lineForeground: SolarizedColor.Base1.color.alpha(0.3).hexa()
       },
-      title: { background: '#00384770' }
+      title: { background: SolarizedColor.Base02.color.darken(0.1).hexa() }
     },
     editor: {
       brackets: {
-        matchBackground: '#00212B',
+        matchBackground: SolarizedColor.Base03.color.darken(0.3).hexa(),
         matchBorder: SolarizedColor.Base01.color.alpha(0.5).hexa()
       },
       lineNumber: {
