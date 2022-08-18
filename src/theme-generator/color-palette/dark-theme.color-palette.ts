@@ -2,7 +2,7 @@ import { SolarizedColor } from '../../solarized-color';
 import { ColorPalette } from './color-palette';
 
 export class DarkThemeColorPalette extends ColorPalette {
-  border = SolarizedColor.Base03.color.lighten(0.35).hex();
+  border = SolarizedColor.Base03.color.lighten(0.35);
   defaultBackground = SolarizedColor.Base03.color.hexa();
   defaultForeground = SolarizedColor.Base0.color.hexa();
   defaultHighlightBackground = SolarizedColor.Base02.color.hexa();
@@ -19,7 +19,7 @@ export class DarkThemeColorPalette extends ColorPalette {
     editorGroup: {
       editorGroup: {
         dropBackground: SolarizedColor.Cyan.color.alpha(0.25).hexa(),
-        tabsBackgroundOpacity: 80
+        tabsBackground: this.border.alpha(.5).hexa()
       },
       tab: {
         activeForeground: SolarizedColor.Base1.color.hexa(),

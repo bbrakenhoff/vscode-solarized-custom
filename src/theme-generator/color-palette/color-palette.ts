@@ -8,7 +8,7 @@ export abstract class ColorPalette {
     this.accent = color;
   }
 
-  abstract readonly border: string;
+  abstract readonly border: Color;
 
   abstract readonly defaultBackground: string;
   abstract readonly defaultForeground: string;
@@ -27,7 +27,7 @@ export abstract class ColorPalette {
     editorGroup: {
       editorGroup: {
         dropBackground: string;
-        tabsBackgroundOpacity: number;
+        tabsBackground: string;
       };
       tab: {
         activeForeground: string;

@@ -9,8 +9,8 @@ export class StatusBarColorSet extends ColorSet {
       'statusBar.foreground': this.colorPalette.workbench.statusBar.foreground,
       'statusBar.noFolderBackground':
         this.colorPalette.workbench.statusBar.noFolderBackground,
-      'statusBarItem.prominentBackground': this.colorPalette.border,
-      'statusBarItem.prominentHoverBackground': this.colorPalette.border,
+      'statusBarItem.prominentBackground': this.colorPalette.border.hexa(),
+      'statusBarItem.prominentHoverBackground': this.colorPalette.border.hexa(),
       ...this.propertiesUsingAccentColor()
     };
   }

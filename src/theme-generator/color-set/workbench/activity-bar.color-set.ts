@@ -5,7 +5,7 @@ export class ActivityBarColorSet extends ColorSet {
   propertiesAll() {
     return {
       'activityBar.background': this.colorPalette.defaultBackground,
-      'activityBar.border': this.colorPalette.border,
+      'activityBar.border': this.colorPalette.border.hexa(),
       'activityBar.foreground':
         this.colorPalette.workbench.activityBar.foreground,
       'activityBarBadge.foreground': SolarizedColor.Base3.color

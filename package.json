@@ -22,14 +22,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Solarized Custom Light",
-        "uiTheme": "vs",
-        "path": "./dist/themes/solarized-custom-light.json"
-      },
-      {
         "label": "Solarized Custom Dark",
         "uiTheme": "vs-dark",
         "path": "./dist/themes/solarized-custom-dark.json"
+      },
+      {
+        "label": "Solarized Custom Light",
+        "uiTheme": "vs",
+        "path": "./dist/themes/solarized-custom-light.json"
       }
     ],
     "commands": [

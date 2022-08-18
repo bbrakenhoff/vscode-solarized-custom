@@ -2,8 +2,7 @@ import { SolarizedColor } from '../../solarized-color';
 import { ColorPalette } from './color-palette';
 
 export class LightThemeColorPalette extends ColorPalette {
-  // FIXME: use hexa
-  border = SolarizedColor.Base2.color.darken(0.05).hex();
+  border = SolarizedColor.Base2.color.darken(0.05);
   defaultBackground = SolarizedColor.Base3.color.hexa();
   defaultForeground = SolarizedColor.Base00.color.hexa();
   defaultHighlightBackground = SolarizedColor.Base2.color.hexa();
@@ -26,7 +25,7 @@ export class LightThemeColorPalette extends ColorPalette {
           .desaturate(0.8)
           .alpha(0.5)
           .hexa(),
-        tabsBackgroundOpacity: 50
+        tabsBackground: this.border.alpha(.3).hexa()
       },
       tab: {
         activeForeground: SolarizedColor.Base01.color.hexa(),

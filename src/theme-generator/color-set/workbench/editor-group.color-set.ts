@@ -3,8 +3,8 @@ import { ColorSet } from '../color-set';
 export class EditorGroupColorSet extends ColorSet {
   propertiesAll() {
     return {
-      ...this.generateEditorGroup(),
-      ...this.generateTabs(),
+      ...this.propertiesEditorGroup(),
+      ...this.propertiesTabs(),
       ...this.propertiesUsingAccentColor()
     };
   }
@@ -15,21 +15,21 @@ export class EditorGroupColorSet extends ColorSet {
     };
   }
 
-  private generateEditorGroup() {
+  private propertiesEditorGroup() {
     return {
-      'editorGroup.border': this.colorPalette.border,
+      'editorGroup.border': this.colorPalette.border.hexa(),
       'editorGroup.dropBackground':
         this.colorPalette.workbench.editorGroup.editorGroup.dropBackground,
-      'editorGroupHeader.tabsBackground': `${this.colorPalette.border}${this.colorPalette.workbench.editorGroup.editorGroup.tabsBackgroundOpacity}`
+      'editorGroupHeader.tabsBackground': this.colorPalette.workbench.editorGroup.editorGroup.tabsBackground
     };
   }
 
-  private generateTabs() {
+  private propertiesTabs() {
     return {
       'tab.activeBackground': this.colorPalette.defaultBackground,
       'tab.activeForeground':
         this.colorPalette.workbench.editorGroup.tab.activeForeground,
-      'tab.border': this.colorPalette.border,
+      'tab.border': this.colorPalette.border.hexa(),
       'tab.inactiveBackground':
         this.colorPalette.workbench.editorGroup.tab.inactiveBackground,
       'tab.inactiveForeground':

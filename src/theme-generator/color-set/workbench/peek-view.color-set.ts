@@ -3,10 +3,10 @@ import { ColorSet } from '../color-set';
 export class PeekViewColorSet extends ColorSet {
   propertiesAll() {
     return {
-      'peekView.border': this.colorPalette.border,
+      'peekView.border': this.colorPalette.border.hexa(),
       'peekViewEditor.background':
         this.colorPalette.workbench.peekView.editor.background,
-      'peekViewEditor.matchHighlightBorder': this.colorPalette.border,
+      'peekViewEditor.matchHighlightBorder': this.colorPalette.border.hexa(),
       'peekViewResult.background':
         this.colorPalette.workbench.peekView.result.background,
       'peekViewResult.lineForeground':

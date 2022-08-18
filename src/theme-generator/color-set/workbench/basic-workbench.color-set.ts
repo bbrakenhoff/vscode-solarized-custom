@@ -8,7 +8,7 @@ export class BasicWorkbenchColorSet extends ColorSet {
       errorForeground: SolarizedColor.Red.color.alpha(0.5).hexa(),
       'titleBar.activeBackground': this.colorPalette.defaultHighlightBackground,
       'selection.background': this.colorPalette.workbench.selectionBackground,
-      'panel.border': this.colorPalette.border,
+      'panel.border': this.colorPalette.border.hexa(),
       ...this.propertiesUsingAccentColor()
     };
   }
