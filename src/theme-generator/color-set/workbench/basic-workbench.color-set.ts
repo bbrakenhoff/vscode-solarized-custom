@@ -6,8 +6,8 @@ export class BasicWorkbenchColorSet extends ColorSet {
     return {
       'badge.foreground': SolarizedColor.Base3.color.hexa(),
       errorForeground: SolarizedColor.Red.color.alpha(0.5).hexa(),
-      'titleBar.activeBackground': this.colorPalette.defaultHighlightBackground,
-      'selection.background': this.colorPalette.workbench.selectionBackground,
+      'titleBar.activeBackground': this.colorPalette.defaultHighlightBackground.hexa(),
+      'selection.background': this.colorPalette.workbench.selectionBackground.hexa(),
       'panel.border': this.colorPalette.border.hexa(),
       ...this.propertiesUsingAccentColor()
     };

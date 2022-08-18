@@ -3,7 +3,7 @@ import { ColorSet } from '../color-set';
 export class ListColorSet extends ColorSet {
   propertiesAll() {
     return {
-      'list.focusBackground': this.colorPalette.workbench.list.focusBackground,
+      'list.focusBackground': this.colorPalette.workbench.list.focusBackground.hexa(),
       ...this.propertiesUsingAccentColor()
     };
   }

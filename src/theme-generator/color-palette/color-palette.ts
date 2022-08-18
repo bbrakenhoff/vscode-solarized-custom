@@ -10,58 +10,58 @@ export abstract class ColorPalette {
 
   abstract readonly border: Color;
 
-  abstract readonly defaultBackground: string;
-  abstract readonly defaultForeground: string;
-  abstract readonly defaultHighlightBackground: string;
+  abstract readonly defaultBackground: Color;
+  abstract readonly defaultForeground: Color;
+  abstract readonly defaultHighlightBackground: Color;
 
   abstract readonly syntax: {
-    comments: string;
+    comments: Color;
   };
 
   abstract readonly workbench: {
-    selectionBackground: string;
+    selectionBackground: Color;
     input: { foreground: Color };
-    activityBar: { foreground: string };
-    dropdown: { background: string };
-    sideBar: { titleForeground: string };
+    activityBar: { foreground: Color };
+    dropdown: { background: Color };
+    sideBar: { titleForeground: Color };
     editorGroup: {
       editorGroup: {
-        dropBackground: string;
-        tabsBackground: string;
+        dropBackground: Color;
+        tabsBackground: Color;
       };
       tab: {
-        activeForeground: string;
-        inactiveBackground: string;
-        inactiveForeground: string;
+        activeForeground: Color;
+        inactiveBackground: Color;
+        inactiveForeground: Color;
       };
     };
-    list: { focusBackground: string };
+    list: { focusBackground: Color };
     statusBar: {
-      background: string;
-      debuggingBackground: string;
-      foreground: string;
-      noFolderBackground: string;
+      background: Color;
+      debuggingBackground: Color;
+      foreground: Color;
+      noFolderBackground: Color;
     };
     peekView: {
-      editor: { background: string };
+      editor: { background: Color };
       result: {
-        background: string;
-        lineForeground: string;
+        background: Color;
+        lineForeground: Color;
       };
-      title: { background: string };
+      title: { background: Color };
     };
     editor: {
       lineNumber: {
-        activeForeground: string;
-        foreground: string;
+        activeForeground: Color;
+        foreground: Color;
       };
       brackets: {
-        matchBackground: string;
-        matchBorder: string;
+        matchBackground: Color;
+        matchBorder: Color;
       };
       indentGuide: {
-        activeBackground: string;
-        background: string;
+        activeBackground: Color;
+        background: Color;
       };
       wordHighlight: { background: Color };
     };

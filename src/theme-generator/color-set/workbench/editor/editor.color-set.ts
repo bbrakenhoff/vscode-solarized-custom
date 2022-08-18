@@ -10,17 +10,17 @@ export class EditorColorsSet extends ColorSet {
 
   propertiesAll() {
     return {
-      'editor.background': this.colorPalette.defaultBackground,
-      'editor.foreground': this.colorPalette.defaultForeground,
+      'editor.background': this.colorPalette.defaultBackground.hexa(),
+      'editor.foreground': this.colorPalette.defaultForeground.hexa(),
       'editorLineNumber.activeForeground':
-        this.colorPalette.workbench.editor.lineNumber.activeForeground,
+        this.colorPalette.workbench.editor.lineNumber.activeForeground.hexa(),
       'editorLineNumber.foreground':
-        this.colorPalette.workbench.editor.lineNumber.foreground,
+        this.colorPalette.workbench.editor.lineNumber.foreground.hexa(),
       'editor.lineHighlightBackground':
-        this.colorPalette.defaultHighlightBackground,
+        this.colorPalette.defaultHighlightBackground.hexa(),
       'editor.selectionBackground':
-        this.colorPalette.defaultHighlightBackground,
-      'editorCursor.foreground': this.colorPalette.defaultForeground,
+        this.colorPalette.defaultHighlightBackground.hexa(),
+      'editorCursor.foreground': this.colorPalette.defaultForeground.hexa(),
       ...new BracketsColorSet(this.colorPalette).propertiesAll(),
       ...new IndentGuideColorSet(this.colorPalette).propertiesAll(),
       ...this.wordHighlightColorSet.propertiesAll()

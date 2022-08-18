@@ -19,21 +19,22 @@ export class EditorGroupColorSet extends ColorSet {
     return {
       'editorGroup.border': this.colorPalette.border.hexa(),
       'editorGroup.dropBackground':
-        this.colorPalette.workbench.editorGroup.editorGroup.dropBackground,
-      'editorGroupHeader.tabsBackground': this.colorPalette.workbench.editorGroup.editorGroup.tabsBackground
+        this.colorPalette.workbench.editorGroup.editorGroup.dropBackground.hexa(),
+      'editorGroupHeader.tabsBackground':
+        this.colorPalette.workbench.editorGroup.editorGroup.tabsBackground.hexa()
     };
   }
 
   private propertiesTabs() {
     return {
-      'tab.activeBackground': this.colorPalette.defaultBackground,
+      'tab.activeBackground': this.colorPalette.defaultBackground.hexa(),
       'tab.activeForeground':
-        this.colorPalette.workbench.editorGroup.tab.activeForeground,
+        this.colorPalette.workbench.editorGroup.tab.activeForeground.hexa(),
       'tab.border': this.colorPalette.border.hexa(),
       'tab.inactiveBackground':
-        this.colorPalette.workbench.editorGroup.tab.inactiveBackground,
+        this.colorPalette.workbench.editorGroup.tab.inactiveBackground.hexa(),
       'tab.inactiveForeground':
-        this.colorPalette.workbench.editorGroup.tab.inactiveForeground
+        this.colorPalette.workbench.editorGroup.tab.inactiveForeground.hexa()
     };
   }
 }

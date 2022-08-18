@@ -11,9 +11,9 @@ export class BracketsColorSet extends ColorSet {
       'editorBracketHighlight.foreground5': SolarizedColor.Cyan.color.hexa(),
       'editorBracketHighlight.foreground6': SolarizedColor.Green.color.hexa(),
       'editorBracketMatch.background':
-        this.colorPalette.workbench.editor.brackets.matchBackground,
+        this.colorPalette.workbench.editor.brackets.matchBackground.hexa(),
       'editorBracketMatch.border':
-        this.colorPalette.workbench.editor.brackets.matchBorder
+        this.colorPalette.workbench.editor.brackets.matchBorder.hexa()
     };
   }
 }

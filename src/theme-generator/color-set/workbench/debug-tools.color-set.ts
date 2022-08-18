@@ -4,9 +4,9 @@ import { ColorSet } from '../color-set';
 export class DebugToolsColorsGenerator extends ColorSet {
   propertiesAll() {
     return {
-      'debugExceptionWidget.background': this.colorPalette.border,
+      'debugExceptionWidget.background': this.colorPalette.border.hexa(),
       'debugExceptionWidget.border': SolarizedColor.Red.color.hexa(),
-      'debugToolBar.background': this.colorPalette.border
+      'debugToolBar.background': this.colorPalette.border.hexa()
     };
   }
 }

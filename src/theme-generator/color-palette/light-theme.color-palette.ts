@@ -3,47 +3,47 @@ import { ColorPalette } from './color-palette';
 
 export class LightThemeColorPalette extends ColorPalette {
   border = SolarizedColor.Base2.color.darken(0.05);
-  defaultBackground = SolarizedColor.Base3.color.hexa();
-  defaultForeground = SolarizedColor.Base00.color.hexa();
-  defaultHighlightBackground = SolarizedColor.Base2.color.hexa();
+  defaultBackground = SolarizedColor.Base3.color;
+  defaultForeground = SolarizedColor.Base00.color;
+  defaultHighlightBackground = SolarizedColor.Base2.color;
   syntax = {
-    comments: SolarizedColor.Base1.color.hexa()
+    comments: SolarizedColor.Base1.color
   };
   workbench = {
     selectionBackground: SolarizedColor.Base3.color
       .darken(0.2)
       .desaturate(0.5)
-      .hexa(),
+      ,
     input: { foreground: SolarizedColor.Base01.color },
-    activityBar: { foreground: SolarizedColor.Base03.color.hexa() },
-    dropdown: { background: SolarizedColor.Base2.color.hexa() },
-    sideBar: { titleForeground: SolarizedColor.Base01.color.hexa() },
+    activityBar: { foreground: SolarizedColor.Base03.color },
+    dropdown: { background: SolarizedColor.Base2.color },
+    sideBar: { titleForeground: SolarizedColor.Base01.color },
     editorGroup: {
       editorGroup: {
         dropBackground: SolarizedColor.Base3.color
           .darken(0.3)
           .desaturate(0.8)
           .alpha(0.5)
-          .hexa(),
-        tabsBackground: this.border.alpha(.3).hexa()
+          ,
+        tabsBackground: this.border.alpha(.3)
       },
       tab: {
-        activeForeground: SolarizedColor.Base01.color.hexa(),
+        activeForeground: SolarizedColor.Base01.color,
         inactiveBackground: SolarizedColor.Base2.color
           .darken(0.1)
           .desaturate(0.2)
-          .hexa(),
-        inactiveForeground: SolarizedColor.Base01.color.hexa()
+          ,
+        inactiveForeground: SolarizedColor.Base01.color
       }
     },
     list: {
-      focusBackground: SolarizedColor.Base2.color.darken(0.1).alpha(0.5).hexa()
+      focusBackground: SolarizedColor.Base2.color.darken(0.1).alpha(0.5)
     },
     statusBar: {
-      background: SolarizedColor.Base2.color.hexa(),
-      debuggingBackground: SolarizedColor.Base2.color.hexa(),
-      foreground: SolarizedColor.Base01.color.hexa(),
-      noFolderBackground: SolarizedColor.Base2.color.hexa()
+      background: SolarizedColor.Base2.color,
+      debuggingBackground: SolarizedColor.Base2.color,
+      foreground: SolarizedColor.Base01.color,
+      noFolderBackground: SolarizedColor.Base2.color
     },
     peekView: {
       editor: {
@@ -51,38 +51,38 @@ export class LightThemeColorPalette extends ColorPalette {
           .darken(0.02)
           .desaturate(0.1)
           .alpha(0.3)
-          .hexa()
+          
       },
       result: {
         background: SolarizedColor.Base2.color
           .darken(0.1)
           .desaturate(0.3)
           .alpha(.3)
-          .hexa(),
-        lineForeground: SolarizedColor.Base00.color.alpha(0.5).hexa()
+          ,
+        lineForeground: SolarizedColor.Base00.color.alpha(0.5)
       },
       title: {
         background: SolarizedColor.Base2.color
           .darken(0.1)
           .desaturate(0.2)
-          .hexa()
+          
       }
     },
     editor: {
       brackets: {
-        matchBackground: SolarizedColor.Base1.color.alpha(0.3).hexa(),
+        matchBackground: SolarizedColor.Base1.color.alpha(0.3),
         matchBorder: SolarizedColor.Base3.color
           .darken(0.2)
           .desaturate(0.5)
-          .hexa()
+          
       },
       lineNumber: {
-        activeForeground: SolarizedColor.Base1.color.hexa(),
-        foreground: SolarizedColor.Base1.color.alpha(0.3).hexa()
+        activeForeground: SolarizedColor.Base1.color,
+        foreground: SolarizedColor.Base1.color.alpha(0.3)
       },
       indentGuide: {
-        activeBackground: SolarizedColor.Base01.color.hexa(),
-        background: SolarizedColor.Base1.color.alpha(0.3).hexa()
+        activeBackground: SolarizedColor.Base01.color,
+        background: SolarizedColor.Base1.color.alpha(0.3)
       },
       wordHighlight: { background: SolarizedColor.Base1.color }
     }
