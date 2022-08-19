@@ -11,7 +11,7 @@ export class DarkThemeColorPalette extends ColorPalette {
   };
 
   workbench = {
-    selectionBackground: SolarizedColor.Cyan.color.alpha(0.5),
+    selectionBackground: SolarizedColor.Cyan.color.alpha(0.2),
     input: { foreground: SolarizedColor.Base1.color },
     activityBar: { foreground: SolarizedColor.Base3.color.lighten(0.05) },
     dropdown: { background: SolarizedColor.Base03.color.darken(0.5) },
