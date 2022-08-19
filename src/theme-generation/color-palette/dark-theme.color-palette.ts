@@ -27,7 +27,7 @@ export class DarkThemeColorPalette extends ColorPalette {
         inactiveForeground: SolarizedColor.Base1.color
       }
     },
-    list: { focusBackground: SolarizedColor.Base2.color.lighten(0.05) },
+    list: { focusBackground: SolarizedColor.Base02.color.lighten(0.05) },
     statusBar: {
       background: SolarizedColor.Base03.color.darken(0.3),
       debuggingBackground: SolarizedColor.Base03.color.darken(0.3),

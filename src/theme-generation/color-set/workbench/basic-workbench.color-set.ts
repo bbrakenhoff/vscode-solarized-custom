@@ -16,7 +16,7 @@ export class BasicWorkbenchColorSet extends ColorSet {
   propertiesUsingAccentColor() {
     return {
       'badge.background': this.colorPalette.accent,
-      'button.background': `${this.colorPalette.accent}`,
+      'button.background': this.colorPalette.accent,
       focusBorder: this.colorPalette.accent.alpha(0.5),
       'progressBar.background': this.colorPalette.accent
     };
