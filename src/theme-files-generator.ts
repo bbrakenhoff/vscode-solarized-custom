@@ -3,7 +3,7 @@ import { SolarizedColor } from './solarized-color';
 import { ColorPaletteFactory } from './theme-generation/color-palette/color-palette-factory';
 import { ThemeGenerator } from './theme-generation/theme-generator';
 import { ThemeVariant } from './theme-generation/theme-variant';
-import { ThemeColorSet } from './theme-generation/theme.color-set';
+import { ThemeColorSet } from './theme-generation/color-set/theme.color-set';
 
 export class ThemeFilesGenerator {
   static generateAllThemes(accentColor: SolarizedColor) {

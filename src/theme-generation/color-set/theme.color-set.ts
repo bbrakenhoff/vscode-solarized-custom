@@ -1,10 +1,10 @@
-import { DebugLogChannel } from '../debug-log-channel';
-import { ColorPalette } from './color-palette/color-palette';
-import { ColorSet } from './color-set/color-set';
-import { SemanticTokenColorSet } from './color-set/syntax/semantic-token.color-set';
-import { TextMateScopeTokenColorSet } from './color-set/syntax/text-mate-token/text-mate-scope-token.color-set';
-import { WorkbenchColorSet } from './color-set/workbench/workbench.color-set';
-import { ThemeVariant } from './theme-variant';
+import { DebugLogChannel } from '../../debug-log-channel';
+import { ColorPalette } from '../color-palette/color-palette';
+import { ColorSet } from './color-set';
+import { SemanticTokenColorSet } from './syntax/semantic-token.color-set';
+import { TextMateScopeTokenColorSet } from './syntax/text-mate-token/text-mate-scope-token.color-set';
+import { WorkbenchColorSet } from './workbench/workbench.color-set';
+import { ThemeVariant } from '../theme-variant';
 
 export class ThemeColorSet extends ColorSet {
   private readonly workbenchColorSet: WorkbenchColorSet;

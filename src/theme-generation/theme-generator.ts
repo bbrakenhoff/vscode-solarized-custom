@@ -1,4 +1,4 @@
-import { ThemeColorSet } from './theme.color-set';
+import { ThemeColorSet } from './color-set/theme.color-set';
 import * as Color from 'color';
 
 export class ThemeGenerator {
