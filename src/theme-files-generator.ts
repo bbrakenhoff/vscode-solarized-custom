@@ -1,9 +1,9 @@
 import * as fs from 'fs';
 import { SolarizedColor } from './solarized-color';
-import { ColorPaletteFactory } from './theme-generator/color-palette/color-palette-factory';
-import { ThemeGenerator } from './theme-generator/theme-generator';
-import { ThemeVariant } from './theme-generator/theme-variant';
-import { ThemeColorSet } from './theme-generator/theme.color-set';
+import { ColorPaletteFactory } from './theme-generation/color-palette/color-palette-factory';
+import { ThemeGenerator } from './theme-generation/theme-generator';
+import { ThemeVariant } from './theme-generation/theme-variant';
+import { ThemeColorSet } from './theme-generation/theme.color-set';
 
 export class ThemeFilesGenerator {
   static generateAllThemes(accentColor: SolarizedColor) {
