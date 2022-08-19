@@ -11,30 +11,30 @@ export class EditorGroupColorSet extends ColorSet {
 
   propertiesUsingAccentColor() {
     return {
-      'tab.activeBorderTop': this.colorPalette.accent.hexa()
+      'tab.activeBorderTop': this.colorPalette.accent
     };
   }
 
   private propertiesEditorGroup() {
     return {
-      'editorGroup.border': this.colorPalette.border.hexa(),
+      'editorGroup.border': this.colorPalette.border,
       'editorGroup.dropBackground':
-        this.colorPalette.workbench.editorGroup.editorGroup.dropBackground.hexa(),
+        this.colorPalette.workbench.editorGroup.editorGroup.dropBackground,
       'editorGroupHeader.tabsBackground':
-        this.colorPalette.workbench.editorGroup.editorGroup.tabsBackground.hexa()
+        this.colorPalette.workbench.editorGroup.editorGroup.tabsBackground
     };
   }
 
   private propertiesTabs() {
     return {
-      'tab.activeBackground': this.colorPalette.defaultBackground.hexa(),
+      'tab.activeBackground': this.colorPalette.defaultBackground,
       'tab.activeForeground':
-        this.colorPalette.workbench.editorGroup.tab.activeForeground.hexa(),
-      'tab.border': this.colorPalette.border.hexa(),
+        this.colorPalette.workbench.editorGroup.tab.activeForeground,
+      'tab.border': this.colorPalette.border,
       'tab.inactiveBackground':
-        this.colorPalette.workbench.editorGroup.tab.inactiveBackground.hexa(),
+        this.colorPalette.workbench.editorGroup.tab.inactiveBackground,
       'tab.inactiveForeground':
-        this.colorPalette.workbench.editorGroup.tab.inactiveForeground.hexa()
+        this.colorPalette.workbench.editorGroup.tab.inactiveForeground
     };
   }
 }

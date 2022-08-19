@@ -9,6 +9,6 @@ export class DropdownColorSet extends ColorSet {
   }
 
   propertiesUsingAccentColor() {
-    return { 'dropdown.border': this.colorPalette.accent.alpha(0.5).hexa() };
+    return { 'dropdown.border': this.colorPalette.accent.alpha(0.5) };
   }
 }

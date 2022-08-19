@@ -3,16 +3,16 @@ import { ColorSet } from '../color-set';
 export class PeekViewColorSet extends ColorSet {
   propertiesAll() {
     return {
-      'peekView.border': this.colorPalette.border.hexa(),
+      'peekView.border': this.colorPalette.border,
       'peekViewEditor.background':
-        this.colorPalette.workbench.peekView.editor.background.hexa(),
-      'peekViewEditor.matchHighlightBorder': this.colorPalette.border.hexa(),
+        this.colorPalette.workbench.peekView.editor.background,
+      'peekViewEditor.matchHighlightBorder': this.colorPalette.border,
       'peekViewResult.background':
-        this.colorPalette.workbench.peekView.result.background.hexa(),
+        this.colorPalette.workbench.peekView.result.background,
       'peekViewResult.lineForeground':
-        this.colorPalette.workbench.peekView.result.lineForeground.hexa(),
+        this.colorPalette.workbench.peekView.result.lineForeground,
       'peekViewTitle.background':
-        this.colorPalette.workbench.peekView.title.background.hexa(),
+        this.colorPalette.workbench.peekView.title.background,
       ...this.propertiesUsingAccentColor()
     };
   }
@@ -21,13 +21,13 @@ export class PeekViewColorSet extends ColorSet {
     return {
       'peekViewEditor.matchHighlightBackground': this.colorPalette.accent
         .alpha(0.2)
-        .hexa(),
+        ,
       'peekViewResult.matchHighlightBackground': this.colorPalette.accent
         .alpha(0.25)
-        .hexa(),
+        ,
       'peekViewResult.selectionBackground': this.colorPalette.accent
         .alpha(0.2)
-        .hexa()
+        
     };
   }
 }

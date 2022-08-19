@@ -4,17 +4,17 @@ import { ColorSet } from '../color-set';
 export class ActivityBarColorSet extends ColorSet {
   propertiesAll() {
     return {
-      'activityBar.background': this.colorPalette.defaultBackground.hexa(),
-      'activityBar.border': this.colorPalette.border.hexa(),
+      'activityBar.background': this.colorPalette.defaultBackground,
+      'activityBar.border': this.colorPalette.border,
       'activityBar.foreground':
-        this.colorPalette.workbench.activityBar.foreground.hexa(),
+        this.colorPalette.workbench.activityBar.foreground,
       'activityBarBadge.foreground': SolarizedColor.Base3.color
-        .hexa(),
+        ,
       ...this.propertiesUsingAccentColor()
     };
   }
 
   propertiesUsingAccentColor() {
-    return { 'activityBarBadge.background': this.colorPalette.accent.hexa() };
+    return { 'activityBarBadge.background': this.colorPalette.accent };
   }
 }

@@ -4,9 +4,9 @@ export class IndentGuideColorSet extends ColorSet {
   propertiesAll() {
     return {
       'editorIndentGuide.activeBackground':
-        this.colorPalette.workbench.editor.indentGuide.activeBackground.hexa(),
+        this.colorPalette.workbench.editor.indentGuide.activeBackground,
       'editorIndentGuide.background':
-        this.colorPalette.workbench.editor.indentGuide.background.hexa()
+        this.colorPalette.workbench.editor.indentGuide.background
     };
   }
 }

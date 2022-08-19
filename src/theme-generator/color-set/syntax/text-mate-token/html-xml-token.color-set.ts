@@ -8,28 +8,28 @@ export class HtmlXmlTokenColorSet extends ColorSet {
         name: 'HTML+XML.attribute',
         scope: ['entity.other.attribute-name'],
         settings: {
-          foreground: SolarizedColor.Violet.color.hexa()
+          foreground: SolarizedColor.Violet.color
         }
       },
       {
         name: 'HTML+XML.attributeSeparator',
         scope: ['punctuation.separator.key-value.html'],
         settings: {
-          foreground: SolarizedColor.Blue.color.hexa()
+          foreground: SolarizedColor.Blue.color
         }
       },
       {
         name: 'HTML+XML.content',
         scope: ['text.html.derivative'],
         settings: {
-          foreground: SolarizedColor.Yellow.color.hexa()
+          foreground: SolarizedColor.Yellow.color
         }
       },
       {
         name: 'HTML+XML.specialChar',
         scope: ['constant.character.entity.named.nbsp.html'],
         settings: {
-          foreground: SolarizedColor.Green.color.hexa(),
+          foreground: SolarizedColor.Green.color,
           fontStyle: 'bold'
         }
       },
@@ -37,14 +37,14 @@ export class HtmlXmlTokenColorSet extends ColorSet {
         name: 'HTML+XML.tag',
         scope: ['punctuation.definition.tag'],
         settings: {
-          foreground: SolarizedColor.Blue.color.hexa()
+          foreground: SolarizedColor.Blue.color
         }
       },
       {
         name: 'HTML+XML.tagName',
         scope: ['entity.name.tag'],
         settings: {
-          foreground: SolarizedColor.Magenta.color.hexa()
+          foreground: SolarizedColor.Magenta.color
         }
       }
     ];

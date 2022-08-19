@@ -8,7 +8,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.abstractClass',
         scope: 'entity.other.attribute-name.placeholder.css',
         settings: {
-          foreground: SolarizedColor.Green.color.hexa(),
+          foreground: SolarizedColor.Green.color,
           fontStyle: 'italic'
         }
       },
@@ -16,7 +16,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.nestedClass',
         scope: ['entity.other.attribute-name.class.css'],
         settings: {
-          foreground: SolarizedColor.Green.color.hexa()
+          foreground: SolarizedColor.Green.color
         }
       },
       {
@@ -30,7 +30,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.supportFunction',
         scope: 'support.function.misc.scss',
         settings: {
-          foreground: SolarizedColor.Blue.color.hexa(),
+          foreground: SolarizedColor.Blue.color,
           fontStyle: 'italic'
         }
       },
@@ -38,7 +38,7 @@ export class ScssTokenColorSet extends ColorSet {
         name: 'SCSS.variable',
         scope: 'variable.scss',
         settings: {
-          foreground: SolarizedColor.Violet.color.hexa()
+          foreground: SolarizedColor.Violet.color
         }
       }
     ];

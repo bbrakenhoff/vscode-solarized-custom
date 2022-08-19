@@ -8,14 +8,14 @@ export class CssTokenColorSet extends ColorSet {
         name: 'CSS.class',
         scope: ['entity.other.attribute-name.class.css'],
         settings: {
-          foreground: SolarizedColor.Green.color.hexa()
+          foreground: SolarizedColor.Green.color
         }
       },
       {
         name: 'CSS.id',
         scope: ['entity.other.attribute-name.id.css'],
         settings: {
-          foreground: SolarizedColor.Green.color.hexa(),
+          foreground: SolarizedColor.Green.color,
           fontStyle: 'bold'
         }
       },
@@ -30,7 +30,7 @@ export class CssTokenColorSet extends ColorSet {
         name: 'CSS.propertyValue',
         scope: ['support.constant.property-value.css'],
         settings: {
-          foreground: SolarizedColor.Orange.color.hexa()
+          foreground: SolarizedColor.Orange.color
         }
       },
       {
@@ -41,21 +41,21 @@ export class CssTokenColorSet extends ColorSet {
         ],
         settings: {
           fontStyle: 'italic',
-          foreground: SolarizedColor.Magenta.color.hexa()
+          foreground: SolarizedColor.Magenta.color
         }
       },
       {
         name: 'CSS.tag',
         scope: 'entity.name.tag.css',
         settings: {
-          foreground: SolarizedColor.Magenta.color.hexa()
+          foreground: SolarizedColor.Magenta.color
         }
       },
       {
         name: 'CSS.unit',
         scope: ['keyword.other.unit'],
         settings: {
-          foreground: SolarizedColor.Yellow.color.hexa()
+          foreground: SolarizedColor.Yellow.color
         }
       }
     ];

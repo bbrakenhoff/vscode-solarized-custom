@@ -15,14 +15,14 @@ export class JsonTokenColorSet extends ColorSet {
           'punctuation.support.type.property-name.end.json'
         ],
         settings: {
-          foreground: SolarizedColor.Yellow.color.hexa()
+          foreground: SolarizedColor.Yellow.color
         }
       },
       {
         name: 'JSON.propertyName',
         scope: ['support.type.property-name.json'],
         settings: {
-          foreground: SolarizedColor.Violet.color.hexa()
+          foreground: SolarizedColor.Violet.color
         }
       }
     ];

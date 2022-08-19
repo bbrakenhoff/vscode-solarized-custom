@@ -1,6 +1,7 @@
 import { SolarizedColor } from './solarized-color';
 import { ThemeConfigManager } from './theme-config-manager';
 import { ColorPaletteFactory } from './theme-generator/color-palette/color-palette-factory';
+import { ThemeGenerator } from './theme-generator/theme-generator';
 import { ThemeVariant } from './theme-generator/theme-variant';
 import { ThemeColorSet } from './theme-generator/theme.color-set';
 
@@ -56,12 +57,14 @@ export class AccentColorCustomizer {
 
   private createThemeColorSetForAccentColors() {
     const themeVariant = this.getThemeVariantActivatedTheme();
-    return new ThemeColorSet(
-      themeVariant,
-      ColorPaletteFactory.createColorPaletteForThemeVariant(
+    return new ThemeGenerator(
+      new ThemeColorSet(
         themeVariant,
-        this.accentColor
+        ColorPaletteFactory.createColorPaletteForThemeVariant(
+          themeVariant,
+          this.accentColor
+        )
       )
-    );
+    ).generateAccentColorCustomizations();
   }
 }

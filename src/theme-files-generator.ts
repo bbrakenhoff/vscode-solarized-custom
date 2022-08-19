@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import { SolarizedColor } from './solarized-color';
 import { ColorPaletteFactory } from './theme-generator/color-palette/color-palette-factory';
+import { ThemeGenerator } from './theme-generator/theme-generator';
 import { ThemeVariant } from './theme-generator/theme-variant';
 import { ThemeColorSet } from './theme-generator/theme.color-set';
 
@@ -30,13 +31,25 @@ export class ThemeFilesGenerator {
     accentColor: SolarizedColor
   ) {
     return JSON.stringify(
+      ThemeFilesGenerator.generateThemeColorSetToTheme(
+        themeVariant,
+        accentColor
+      )
+    );
+  }
+
+  private static generateThemeColorSetToTheme(
+    themeVariant: ThemeVariant,
+    accentColor: SolarizedColor
+  ) {
+    return new ThemeGenerator(
       new ThemeColorSet(
         themeVariant,
         ColorPaletteFactory.createColorPaletteForThemeVariant(
           themeVariant,
           accentColor
         )
-      ).propertiesAll()
-    );
+      )
+    ).generateFull();
   }
 }

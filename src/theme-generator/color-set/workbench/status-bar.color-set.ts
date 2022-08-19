@@ -3,14 +3,14 @@ import { ColorSet } from '../color-set';
 export class StatusBarColorSet extends ColorSet {
   propertiesAll() {
     return {
-      'statusBar.background': this.colorPalette.workbench.statusBar.background.hexa(),
+      'statusBar.background': this.colorPalette.workbench.statusBar.background,
       'statusBar.debuggingBackground':
-        this.colorPalette.workbench.statusBar.debuggingBackground.hexa(),
-      'statusBar.foreground': this.colorPalette.workbench.statusBar.foreground.hexa(),
+        this.colorPalette.workbench.statusBar.debuggingBackground,
+      'statusBar.foreground': this.colorPalette.workbench.statusBar.foreground,
       'statusBar.noFolderBackground':
-        this.colorPalette.workbench.statusBar.noFolderBackground.hexa(),
-      'statusBarItem.prominentBackground': this.colorPalette.border.hexa(),
-      'statusBarItem.prominentHoverBackground': this.colorPalette.border.hexa(),
+        this.colorPalette.workbench.statusBar.noFolderBackground,
+      'statusBarItem.prominentBackground': this.colorPalette.border,
+      'statusBarItem.prominentHoverBackground': this.colorPalette.border,
       ...this.propertiesUsingAccentColor()
     };
   }
@@ -19,7 +19,7 @@ export class StatusBarColorSet extends ColorSet {
     return {
       'statusBarItem.remoteBackground': this.colorPalette.accent
         .alpha(0.5)
-        .hexa()
+        
     };
   }
 }
