@@ -1,6 +1,6 @@
 import { ColorSet } from '../color-set';
 
-export class ListColorSet extends ColorSet {
+export class ListAndTreesColorSet extends ColorSet {
   propertiesAll() {
     return {
       'list.focusBackground': this.colorPalette.workbench.list.focusBackground,

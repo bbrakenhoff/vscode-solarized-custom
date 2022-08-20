@@ -1,6 +1,9 @@
 import { SolarizedColor } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
+/**
+ * @See https://code.visualstudio.com/api/references/theme-color#activity-bar
+ */
 export class ActivityBarColorSet extends ColorSet {
   propertiesAll() {
     return {

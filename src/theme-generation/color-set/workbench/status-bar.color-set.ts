@@ -1,5 +1,8 @@
 import { ColorSet } from '../color-set';
 
+/**
+ * @See https://code.visualstudio.com/api/references/theme-color#status-bar-colors
+ */
 export class StatusBarColorSet extends ColorSet {
   propertiesAll() {
     return {

@@ -1,6 +1,9 @@
 import { ColorSet } from '../color-set';
 
-export class EditorGroupColorSet extends ColorSet {
+/**
+ * @See https://code.visualstudio.com/api/references/theme-color#editor-groups-tabs
+ */
+export class EditorGroupsAndTabsColorSet extends ColorSet {
   propertiesAll() {
     return {
       ...this.propertiesEditorGroup(),

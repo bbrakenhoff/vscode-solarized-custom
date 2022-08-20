@@ -1,5 +1,8 @@
 import { ColorSet } from '../color-set';
 
+/**
+ * @See https://code.visualstudio.com/api/references/theme-color#side-bar
+ */
 export class SideBarColorSet extends ColorSet {
   propertiesAll() {
     return {

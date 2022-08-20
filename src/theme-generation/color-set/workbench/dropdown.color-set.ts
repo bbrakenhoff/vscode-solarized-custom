@@ -1,5 +1,8 @@
 import { ColorSet } from '../color-set';
 
+/**
+ * @See https://code.visualstudio.com/api/references/theme-color#dropdown-control
+ */
 export class DropdownColorSet extends ColorSet {
   propertiesAll() {
     return {

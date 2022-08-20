@@ -1,6 +1,10 @@
 import { ColorSet } from '../color-set';
 
-export class CommandPaletteColorSet extends ColorSet {
+/**
+ * Used for Command Palette 
+ * @See https://code.visualstudio.com/api/references/theme-color#quick-picker-colors
+ */
+export class QuickPickerColorSet extends ColorSet {
   propertiesAll() {
     return {
       'pickerGroup.border': this.colorPalette.border,

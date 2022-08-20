@@ -1,7 +1,10 @@
 import { SolarizedColor } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
-export class NotifcicationColorSet extends ColorSet {
+/**
+ * @See https://code.visualstudio.com/api/references/theme-color#notification-colors
+ */
+export class NotifcicationsColorSet extends ColorSet {
   propertiesAll() {
     return {
       'notifications.background': this.colorPalette.border,

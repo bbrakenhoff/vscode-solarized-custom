@@ -1,6 +1,9 @@
 import { ColorSet } from '../color-set';
 
-export class InputColorSet extends ColorSet {
+/**
+ * @See https://code.visualstudio.com/api/references/theme-color#input-control
+ */
+export class InputControlColorSet extends ColorSet {
   propertiesAll() {
     return {
       'input.background': this.colorPalette.border,

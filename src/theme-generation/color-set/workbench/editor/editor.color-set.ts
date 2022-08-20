@@ -1,10 +1,13 @@
-import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
-import { BracketsColorSet } from './brackets.color-set';
+import { EditorWidgetColorSet } from '../editor-widget.color-set';
+import { BracketMatchesColorSet } from './bracket-matches.color-set';
+import { BracketPairColorizationColorSet } from './brackets-pair-colorizations.color-set';
 import { IndentGuideColorSet } from './indent-guide.color-set';
-import { WidgetColorSet } from './widget.color-set';
 import { WordHighlightColorSet } from './word-highlight.color-set';
 
+/**
+ * @See https://code.visualstudio.com/api/references/theme-color#editor-colors
+ */
 export class EditorColorsSet extends ColorSet {
   private readonly wordHighlightColorSet = new WordHighlightColorSet(
     this.colorPalette
@@ -14,6 +17,7 @@ export class EditorColorsSet extends ColorSet {
     return {
       'editor.background': this.colorPalette.defaultBackground,
       'editor.foreground': this.colorPalette.defaultForeground,
+      'editorCursor.foreground': this.colorPalette.defaultForeground,
       'editorLineNumber.activeForeground':
         this.colorPalette.workbench.editor.lineNumber.activeForeground,
       'editorLineNumber.foreground':
@@ -22,10 +26,10 @@ export class EditorColorsSet extends ColorSet {
         this.colorPalette.defaultHighlightBackground,
       'editor.selectionBackground':
         this.colorPalette.defaultHighlightBackground,
-      'editorCursor.foreground': this.colorPalette.defaultForeground,
-      ...new BracketsColorSet(this.colorPalette).propertiesAll(),
+      ...new BracketMatchesColorSet(this.colorPalette).propertiesAll(),
+      ...new BracketPairColorizationColorSet(this.colorPalette).propertiesAll(),
       ...new IndentGuideColorSet(this.colorPalette).propertiesAll(),
-      ...new WidgetColorSet(this.colorPalette).propertiesAll(),
+      ...new EditorWidgetColorSet(this.colorPalette).propertiesAll(),
       ...this.wordHighlightColorSet.propertiesAll()
     };
   }

@@ -1,5 +1,8 @@
 import { ColorSet } from '../color-set';
 
+/**
+ * @See https://code.visualstudio.com/api/references/theme-color#peek-view-colors
+ */
 export class PeekViewColorSet extends ColorSet {
   propertiesAll() {
     return {

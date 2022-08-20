@@ -1,7 +1,7 @@
 import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 
-export class BracketsColorSet extends ColorSet {
+export class BracketPairColorizationColorSet extends ColorSet {
   propertiesAll() {
     return {
       'editorBracketHighlight.foreground1': SolarizedColor.Yellow.color,
@@ -10,10 +10,6 @@ export class BracketsColorSet extends ColorSet {
       'editorBracketHighlight.foreground4': SolarizedColor.Blue.color,
       'editorBracketHighlight.foreground5': SolarizedColor.Cyan.color,
       'editorBracketHighlight.foreground6': SolarizedColor.Green.color,
-      'editorBracketMatch.background':
-        this.colorPalette.workbench.editor.brackets.matchBackground,
-      'editorBracketMatch.border':
-        this.colorPalette.workbench.editor.brackets.matchBorder
     };
   }
 }
