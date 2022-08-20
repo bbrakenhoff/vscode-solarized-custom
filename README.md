@@ -4,8 +4,6 @@ Custom solarized theme for [Visual Studio Code](https://code.visualstudio.com),
 optimized for JavaScript, TypeScript, (S)CSS, HTML and JSON, but maybe
 some other languages work too.
 
-_Please let me know any suggestions, requests or issues in Github_
-
 ### Screenshots
 
 #### Solarized Custom Light

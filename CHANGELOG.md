@@ -181,11 +181,11 @@ All notable changes to the "solarized-light-custom" extension will be documented
 
 ## [4.0.0] - 2022/08/
 
-### Changed
-
-- Completely rebuild themes
-
 ### Added
 
 - Support semantic colors
 - Option to set acction color
+
+### Changed
+
+- Completely rebuild themes
