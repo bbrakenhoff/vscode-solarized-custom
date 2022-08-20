@@ -55,6 +55,10 @@ export class DarkThemeColorPalette extends ColorPalette {
         activeBackground: SolarizedColor.Base1.color,
         background: SolarizedColor.Base1.color.alpha(0.15)
       },
+      widget: {
+        background: SolarizedColor.Base03.color.darken(0.3),
+        border: this.border
+      },
       wordHighlight: { background: SolarizedColor.Base01.color }
     }
   };

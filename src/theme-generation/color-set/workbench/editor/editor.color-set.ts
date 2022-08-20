@@ -1,6 +1,8 @@
+import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
 import { BracketsColorSet } from './brackets.color-set';
 import { IndentGuideColorSet } from './indent-guide.color-set';
+import { WidgetColorSet } from './widget.color-set';
 import { WordHighlightColorSet } from './word-highlight.color-set';
 
 export class EditorColorsSet extends ColorSet {
@@ -23,6 +25,7 @@ export class EditorColorsSet extends ColorSet {
       'editorCursor.foreground': this.colorPalette.defaultForeground,
       ...new BracketsColorSet(this.colorPalette).propertiesAll(),
       ...new IndentGuideColorSet(this.colorPalette).propertiesAll(),
+      ...new WidgetColorSet(this.colorPalette).propertiesAll(),
       ...this.wordHighlightColorSet.propertiesAll()
     };
   }

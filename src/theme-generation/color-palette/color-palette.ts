@@ -1,4 +1,4 @@
-import * as Color from 'color'
+import * as Color from 'color';
 import { SolarizedColor } from '../../solarized-color';
 
 export abstract class ColorPalette {
@@ -62,6 +62,10 @@ export abstract class ColorPalette {
       indentGuide: {
         activeBackground: Color;
         background: Color;
+      };
+      widget: {
+        background: Color;
+        border: Color;
       };
       wordHighlight: { background: Color };
     };
