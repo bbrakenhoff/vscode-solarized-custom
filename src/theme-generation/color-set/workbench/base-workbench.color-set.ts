@@ -8,7 +8,7 @@ export class BaseWorkbenchColorSet extends ColorSet {
   propertiesAll() {
     return {
       errorForeground: SolarizedColor.Red.color.alpha(0.5),
-      'selection.background': this.colorPalette.workbench.selectionBackground,
+      'selection.background': this.colorPalette.workbench.base.selectionBackground,
       ...this.propertiesUsingAccentColor()
     };
   }

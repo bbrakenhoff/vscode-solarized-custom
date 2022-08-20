@@ -10,12 +10,30 @@ export class LightThemeColorPalette extends ColorPalette {
     comments: SolarizedColor.Base1.color
   };
   workbench = {
-    selectionBackground: SolarizedColor.Base3.color.darken(0.2).desaturate(0.5),
-    input: { foreground: SolarizedColor.Base01.color },
     activityBar: { foreground: SolarizedColor.Base03.color },
+    base: {
+      selectionBackground: SolarizedColor.Base3.color
+        .darken(0.2)
+        .desaturate(0.5)
+    },
     dropdown: { background: SolarizedColor.Base2.color },
-    sideBar: { titleForeground: SolarizedColor.Base01.color },
-    editorGroup: {
+    editor: {
+      brackets: {
+        matchBackground: SolarizedColor.Base1.color.alpha(0.3),
+        matchBorder: SolarizedColor.Base3.color.darken(0.2).desaturate(0.5)
+      },
+      lineNumber: {
+        activeForeground: SolarizedColor.Base1.color,
+        foreground: SolarizedColor.Base1.color.alpha(0.3)
+      },
+      indentGuide: {
+        activeBackground: SolarizedColor.Base01.color,
+        background: SolarizedColor.Base1.color.alpha(0.3)
+      },
+
+      wordHighlight: { background: SolarizedColor.Base1.color }
+    },
+    editorGroupAndTabs: {
       editorGroup: {
         dropBackground: SolarizedColor.Base3.color
           .darken(0.3)
@@ -31,14 +49,13 @@ export class LightThemeColorPalette extends ColorPalette {
         inactiveForeground: SolarizedColor.Base01.color
       }
     },
+    editorWidget: {
+      background: SolarizedColor.Base2.color,
+      border: this.border
+    },
+    inputControl: { foreground: SolarizedColor.Base01.color },
     list: {
       focusBackground: SolarizedColor.Base2.color.darken(0.1).alpha(0.5)
-    },
-    statusBar: {
-      background: SolarizedColor.Base2.color,
-      debuggingBackground: SolarizedColor.Base2.color,
-      foreground: SolarizedColor.Base01.color,
-      noFolderBackground: SolarizedColor.Base2.color
     },
     peekView: {
       editor: {
@@ -58,24 +75,12 @@ export class LightThemeColorPalette extends ColorPalette {
         background: SolarizedColor.Base2.color.darken(0.1).desaturate(0.2)
       }
     },
-    editor: {
-      brackets: {
-        matchBackground: SolarizedColor.Base1.color.alpha(0.3),
-        matchBorder: SolarizedColor.Base3.color.darken(0.2).desaturate(0.5)
-      },
-      lineNumber: {
-        activeForeground: SolarizedColor.Base1.color,
-        foreground: SolarizedColor.Base1.color.alpha(0.3)
-      },
-      indentGuide: {
-        activeBackground: SolarizedColor.Base01.color,
-        background: SolarizedColor.Base1.color.alpha(0.3)
-      },
-      widget: {
-        background: SolarizedColor.Base2.color,
-        border: this.border
-      },
-      wordHighlight: { background: SolarizedColor.Base1.color }
-    }
+    sideBar: { titleForeground: SolarizedColor.Base01.color },
+    statusBar: {
+      background: SolarizedColor.Base2.color,
+      debuggingBackground: SolarizedColor.Base2.color,
+      foreground: SolarizedColor.Base01.color,
+      noFolderBackground: SolarizedColor.Base2.color
+    },
   };
 }

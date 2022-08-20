@@ -22,9 +22,9 @@ export class EditorGroupsAndTabsColorSet extends ColorSet {
     return {
       'editorGroup.border': this.colorPalette.border,
       'editorGroup.dropBackground':
-        this.colorPalette.workbench.editorGroup.editorGroup.dropBackground,
+        this.colorPalette.workbench.editorGroupAndTabs.editorGroup.dropBackground,
       'editorGroupHeader.tabsBackground':
-        this.colorPalette.workbench.editorGroup.editorGroup.tabsBackground
+        this.colorPalette.workbench.editorGroupAndTabs.editorGroup.tabsBackground
     };
   }
 
@@ -32,12 +32,12 @@ export class EditorGroupsAndTabsColorSet extends ColorSet {
     return {
       'tab.activeBackground': this.colorPalette.defaultBackground,
       'tab.activeForeground':
-        this.colorPalette.workbench.editorGroup.tab.activeForeground,
+        this.colorPalette.workbench.editorGroupAndTabs.tab.activeForeground,
       'tab.border': this.colorPalette.border,
       'tab.inactiveBackground':
-        this.colorPalette.workbench.editorGroup.tab.inactiveBackground,
+        this.colorPalette.workbench.editorGroupAndTabs.tab.inactiveBackground,
       'tab.inactiveForeground':
-        this.colorPalette.workbench.editorGroup.tab.inactiveForeground
+        this.colorPalette.workbench.editorGroupAndTabs.tab.inactiveForeground
     };
   }
 }

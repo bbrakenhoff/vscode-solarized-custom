@@ -19,37 +19,11 @@ export abstract class ColorPalette {
   };
 
   abstract readonly workbench: {
-    selectionBackground: Color;
-    input: { foreground: Color };
     activityBar: { foreground: Color };
+    base: {
+      selectionBackground: Color;
+    };
     dropdown: { background: Color };
-    sideBar: { titleForeground: Color };
-    editorGroup: {
-      editorGroup: {
-        dropBackground: Color;
-        tabsBackground: Color;
-      };
-      tab: {
-        activeForeground: Color;
-        inactiveBackground: Color;
-        inactiveForeground: Color;
-      };
-    };
-    list: { focusBackground: Color };
-    statusBar: {
-      background: Color;
-      debuggingBackground: Color;
-      foreground: Color;
-      noFolderBackground: Color;
-    };
-    peekView: {
-      editor: { background: Color };
-      result: {
-        background: Color;
-        lineForeground: Color;
-      };
-      title: { background: Color };
-    };
     editor: {
       lineNumber: {
         activeForeground: Color;
@@ -63,11 +37,40 @@ export abstract class ColorPalette {
         activeBackground: Color;
         background: Color;
       };
-      widget: {
-        background: Color;
-        border: Color;
-      };
+
       wordHighlight: { background: Color };
+    };
+    editorGroupAndTabs: {
+      editorGroup: {
+        dropBackground: Color;
+        tabsBackground: Color;
+      };
+      tab: {
+        activeForeground: Color;
+        inactiveBackground: Color;
+        inactiveForeground: Color;
+      };
+    };
+    editorWidget: {
+      background: Color;
+      border: Color;
+    };
+    inputControl: { foreground: Color };
+    list: { focusBackground: Color };
+    peekView: {
+      editor: { background: Color };
+      result: {
+        background: Color;
+        lineForeground: Color;
+      };
+      title: { background: Color };
+    };
+    sideBar: { titleForeground: Color };
+    statusBar: {
+      background: Color;
+      debuggingBackground: Color;
+      foreground: Color;
+      noFolderBackground: Color;
     };
   };
 }
