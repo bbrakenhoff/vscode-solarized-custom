@@ -1,9 +1,7 @@
 import { SolarizedColor } from './solarized-color';
 import { ThemeConfigManager } from './theme-config-manager';
 import { ThemeGeneratorFactory } from './theme-generation/theme-generator-factory';
-import { ThemeGenerator } from './theme-generation/theme-generator';
 import { ThemeVariant } from './theme-generation/theme-variant';
-import { ThemeColorSet } from './theme-generation/color-set/theme.color-set';
 
 export class AccentColorCustomizer {
   private readonly activatedTheme: string;
@@ -45,7 +43,7 @@ export class AccentColorCustomizer {
     return {
       ...ThemeConfigManager.getCurrentColorCustomizations(),
       [this.getThemeScopeIdentifier()]:
-        this.createThemeColorSetForAccentColors().propertiesUsingAccentColor()
+        this.createThemeColorSetForAccentColors()
     };
   }
 

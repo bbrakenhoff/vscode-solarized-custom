@@ -15,6 +15,12 @@ export class ThemeConfigManager {
       .get<string>(ThemeConfigManager.CONFIG_IDENTIFIER_COLOR_THEME);
   }
 
+  static isSolarizedCustomActivated(): boolean {
+    return ThemeConfigManager.getCurrentColorTheme().startsWith(
+      'Solarized Custom'
+    );
+  }
+
   static getCurrentColorCustomizations(): any {
     return vscode.workspace
       .getConfiguration()
@@ -40,10 +46,14 @@ export class ThemeConfigManager {
     }
   }
 
-  static getCurrentAccentColor() {
-    return vscode.workspace
+  static getCurrentAccentColor(): SolarizedColor {
+    const nameCurrentAccentColor = vscode.workspace
       .getConfiguration()
       .get(ThemeConfigManager.CONFIG_IDENTIFIER_ACCENT_COLOR);
+
+    return SolarizedColor.values().find((solarizedColor) => {
+      return solarizedColor.name === nameCurrentAccentColor;
+    });
   }
 
   static async updateAccentColor({ name }: SolarizedColor) {
