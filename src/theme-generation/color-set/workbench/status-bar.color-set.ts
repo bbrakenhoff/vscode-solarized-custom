@@ -1,10 +1,11 @@
+import * as Color from 'color';
 import { ColorSet } from '../color-set';
 
 /**
  * @See https://code.visualstudio.com/api/references/theme-color#status-bar-colors
  */
 export class StatusBarColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): Record<string, Color> {
     return {
       'statusBar.background': this.colorPalette.workbench.statusBar.background,
       'statusBar.debuggingBackground':
@@ -18,11 +19,9 @@ export class StatusBarColorSet extends ColorSet {
     };
   }
 
-  propertiesUsingAccentColor() {
+  propertiesUsingAccentColor(): Record<string, Color> {
     return {
-      'statusBarItem.remoteBackground': this.colorPalette.accent
-        .alpha(0.5)
-        
+      'statusBarItem.remoteBackground': this.colorPalette.accent.alpha(0.5)
     };
   }
 }

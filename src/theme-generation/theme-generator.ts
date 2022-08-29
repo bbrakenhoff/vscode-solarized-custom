@@ -1,5 +1,6 @@
 import { ThemeColorSet } from './color-set/theme.color-set';
 import * as Color from 'color';
+import { TextMateToken } from './color-set/syntax/text-mate-token/text-mate-token';
 
 export class ThemeGenerator {
   constructor(private readonly themeColorSet: ThemeColorSet) {}
@@ -8,23 +9,27 @@ export class ThemeGenerator {
     return this.convertColorsToHexa(this.themeColorSet.propertiesAll());
   }
 
-  private convertColorsToHexa(colorSet: any): any {
-    if (Array.isArray(colorSet)) {
-      return this.convertArray(colorSet);
+  private convertColorsToHexa(colorSet: unknown): unknown {
+    if (this.isGeneratingTextMateTokens(colorSet)) {
+      return this.convertTextMateTokens(colorSet as TextMateToken[]);
     } else {
-      return this.convertObject(colorSet);
+      return this.convertObject(colorSet as Record<string, unknown>);
     }
   }
 
-  private convertArray(colorSet: any[]) {
-    const convertedArray = [];
+  private isGeneratingTextMateTokens(colorSet: unknown) {
+    return Array.isArray(colorSet);
+  }
+
+  private convertTextMateTokens(colorSet: TextMateToken[]) {
+    const convertedArray: unknown[] = [];
     colorSet.forEach((item) => {
       convertedArray.push(this.convertColorsToHexa(item));
     });
     return convertedArray;
   }
 
-  private convertObject(colorSet: any): any {
+  private convertObject(colorSet: Record<string, unknown>): unknown {
     Object.keys(colorSet).forEach((key) => {
       if (this.shouldConvertValue(colorSet[key])) {
         colorSet[key] = this.convertValueOfColorSet(colorSet[key]);
@@ -34,7 +39,7 @@ export class ThemeGenerator {
     return colorSet;
   }
 
-  private shouldConvertValue(value): boolean {
+  private shouldConvertValue(value: unknown): boolean {
     return (
       value instanceof Color ||
       typeof value === 'object' ||

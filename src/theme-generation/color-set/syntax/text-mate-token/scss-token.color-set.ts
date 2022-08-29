@@ -1,12 +1,13 @@
 import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
+import { TextMateToken } from './text-mate-token';
 
 export class ScssTokenColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): TextMateToken[] {
     return [
       {
         name: 'SCSS.abstractClass',
-        scope: 'entity.other.attribute-name.placeholder.css',
+        scope: ['entity.other.attribute-name.placeholder.css'],
         settings: {
           foreground: SolarizedColor.Green.color,
           fontStyle: 'italic'
@@ -28,7 +29,7 @@ export class ScssTokenColorSet extends ColorSet {
       },
       {
         name: 'SCSS.supportFunction',
-        scope: 'support.function.misc.scss',
+        scope: ['support.function.misc.scss'],
         settings: {
           foreground: SolarizedColor.Blue.color,
           fontStyle: 'italic'
@@ -36,7 +37,7 @@ export class ScssTokenColorSet extends ColorSet {
       },
       {
         name: 'SCSS.variable',
-        scope: 'variable.scss',
+        scope: ['variable.scss'],
         settings: {
           foreground: SolarizedColor.Violet.color
         }

@@ -1,3 +1,4 @@
+import * as Color from 'color';
 import { ColorSet } from '../../color-set';
 import { EditorWidgetColorSet } from '../editor-widget.color-set';
 import { BracketMatchesColorSet } from './bracket-matches.color-set';
@@ -13,7 +14,7 @@ export class EditorColorsSet extends ColorSet {
     this.colorPalette
   );
 
-  propertiesAll() {
+  propertiesAll(): Record<string, Color> {
     return {
       'editor.background': this.colorPalette.defaultBackground,
       'editor.foreground': this.colorPalette.defaultForeground,
@@ -34,7 +35,7 @@ export class EditorColorsSet extends ColorSet {
     };
   }
 
-  propertiesUsingAccentColor() {
+  propertiesUsingAccentColor(): Record<string, Color> {
     return this.wordHighlightColorSet.propertiesUsingAccentColor();
   }
 }

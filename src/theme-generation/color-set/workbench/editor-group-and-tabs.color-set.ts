@@ -1,10 +1,11 @@
+import * as Color from 'color';
 import { ColorSet } from '../color-set';
 
 /**
  * @See https://code.visualstudio.com/api/references/theme-color#editor-groups-tabs
  */
 export class EditorGroupsAndTabsColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): Record<string, Color> {
     return {
       ...this.propertiesEditorGroup(),
       ...this.propertiesTabs(),
@@ -12,23 +13,25 @@ export class EditorGroupsAndTabsColorSet extends ColorSet {
     };
   }
 
-  propertiesUsingAccentColor() {
+  propertiesUsingAccentColor(): Record<string, Color> {
     return {
       'tab.activeBorderTop': this.colorPalette.accent
     };
   }
 
-  private propertiesEditorGroup() {
+  private propertiesEditorGroup(): Record<string, Color> {
     return {
       'editorGroup.border': this.colorPalette.border,
       'editorGroup.dropBackground':
-        this.colorPalette.workbench.editorGroupAndTabs.editorGroup.dropBackground,
+        this.colorPalette.workbench.editorGroupAndTabs.editorGroup
+          .dropBackground,
       'editorGroupHeader.tabsBackground':
-        this.colorPalette.workbench.editorGroupAndTabs.editorGroup.tabsBackground
+        this.colorPalette.workbench.editorGroupAndTabs.editorGroup
+          .tabsBackground
     };
   }
 
-  private propertiesTabs() {
+  private propertiesTabs(): Record<string, Color> {
     return {
       'tab.activeBackground': this.colorPalette.defaultBackground,
       'tab.activeForeground':

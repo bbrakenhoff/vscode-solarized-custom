@@ -1,7 +1,8 @@
+import * as Color from 'color';
 import { ColorSet } from '../../color-set';
 
 export class BracketMatchesColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): Record<string, Color> {
     return {
       'editorBracketMatch.background':
         this.colorPalette.workbench.editor.brackets.matchBackground,

@@ -14,7 +14,6 @@ export class DebugLogChannel {
 
   static destroy() {
     DebugLogChannel.instance.dispose();
-    DebugLogChannel.instance = undefined;
   }
 
   static log(message: string) {

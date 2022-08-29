@@ -1,10 +1,11 @@
+import * as Color from 'color';
 import { ColorSet } from '../color-set';
 
 /**
  * @See https://code.visualstudio.com/api/references/theme-color#peek-view-colors
  */
 export class PeekViewColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): Record<string, Color> {
     return {
       'peekView.border': this.colorPalette.border,
       'peekViewEditor.background':
@@ -20,17 +21,13 @@ export class PeekViewColorSet extends ColorSet {
     };
   }
 
-  propertiesUsingAccentColor() {
+  propertiesUsingAccentColor(): Record<string, Color> {
     return {
-      'peekViewEditor.matchHighlightBackground': this.colorPalette.accent
-        .alpha(0.2)
-        ,
-      'peekViewResult.matchHighlightBackground': this.colorPalette.accent
-        .alpha(0.25)
-        ,
-      'peekViewResult.selectionBackground': this.colorPalette.accent
-        .alpha(0.2)
-        
+      'peekViewEditor.matchHighlightBackground':
+        this.colorPalette.accent.alpha(0.2),
+      'peekViewResult.matchHighlightBackground':
+        this.colorPalette.accent.alpha(0.25),
+      'peekViewResult.selectionBackground': this.colorPalette.accent.alpha(0.2)
     };
   }
 }

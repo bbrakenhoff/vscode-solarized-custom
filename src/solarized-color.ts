@@ -39,5 +39,17 @@ export class SolarizedColor {
     ];
   }
 
+  static findByName(name?: string): SolarizedColor {
+    const foundColor = SolarizedColor.values().find(
+      (solarizedColor) => solarizedColor.name === name
+    );
+
+    if (foundColor) {
+      return foundColor;
+    } else {
+      throw new Error(`Invalid color name given ${name}`);
+    }
+  }
+
   private constructor(readonly name: string, readonly color: Color) {}
 }

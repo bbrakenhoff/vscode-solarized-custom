@@ -1,8 +1,9 @@
 import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
+import { TextMateToken } from './text-mate-token';
 
 export class CssTokenColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): TextMateToken[] {
     return [
       {
         name: 'CSS.class',
@@ -46,7 +47,7 @@ export class CssTokenColorSet extends ColorSet {
       },
       {
         name: 'CSS.tag',
-        scope: 'entity.name.tag.css',
+        scope: ['entity.name.tag.css'],
         settings: {
           foreground: SolarizedColor.Magenta.color
         }

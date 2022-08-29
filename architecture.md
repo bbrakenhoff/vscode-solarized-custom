@@ -4,7 +4,7 @@
 
 The entry point when generating themes in development environment. This can be done by running `npm run build:themes`.
 
-## extension-main.ts
+## extension.ts
 
 The entry point of the extension. Subscribing and registering of the accent color command is done here.
 

@@ -1,3 +1,4 @@
+import * as Color from 'color';
 import { ColorSet } from '../color-set';
 import { ActivityBarColorSet } from './activity-bar.color-set';
 import { BadgeColorSet } from './badge.color-set';
@@ -9,9 +10,7 @@ import { DropdownColorSet } from './dropdown.color-set';
 import { EditorGroupsAndTabsColorSet } from './editor-group-and-tabs.color-set';
 import { EditorColorsSet as EditorColorSet } from './editor/editor.color-set';
 import { InputControlColorSet } from './input-control.colors-generator';
-import {
-  IntegratedTerminalColorSet
-} from './integrated-terminal-colors';
+import { IntegratedTerminalColorSet } from './integrated-terminal-colors';
 import { ListAndTreesColorSet } from './list-and-trees.color-set';
 import { NotifcicationsColorSet } from './notifications.color-set';
 import { PanelColorSet } from './panel.color-set';
@@ -39,7 +38,7 @@ export class WorkbenchColorSet extends ColorSet {
     new StatusBarColorSet(this.colorPalette)
   ];
 
-  propertiesAll() {
+  propertiesAll(): Record<string, Color> {
     return Object.assign(
       {
         ...new IntegratedTerminalColorSet(this.colorPalette).propertiesAll(),
@@ -56,7 +55,7 @@ export class WorkbenchColorSet extends ColorSet {
     );
   }
 
-  propertiesUsingAccentColor() {
+  propertiesUsingAccentColor(): Record<string, Color> {
     return Object.assign(
       {},
       ...this.workbenchColorSetsUsingAccentColor.map((colorSet) =>

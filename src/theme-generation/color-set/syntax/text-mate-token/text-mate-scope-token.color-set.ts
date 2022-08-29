@@ -4,9 +4,10 @@ import { CssTokenColorSet } from './css- token.color-set';
 import { HtmlXmlTokenColorSet } from './html-xml-token.color-set';
 import { JsonTokenColorSet } from './json-token.color-set';
 import { ScssTokenColorSet } from './scss-token.color-set';
+import { TextMateToken } from './text-mate-token';
 
 export class TextMateScopeTokenColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): TextMateToken[] {
     return [
       ...new BasicTokenColorSet(this.colorPalette).propertiesAll(),
       ...new CssTokenColorSet(this.colorPalette).propertiesAll(),

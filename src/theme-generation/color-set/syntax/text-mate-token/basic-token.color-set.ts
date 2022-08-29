@@ -1,8 +1,9 @@
 import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
+import { TextMateToken } from './text-mate-token';
 
 export class BasicTokenColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): TextMateToken[] {
     return [
       {
         name: 'class',
@@ -75,14 +76,14 @@ export class BasicTokenColorSet extends ColorSet {
       },
       {
         name: 'string',
-        scope: 'string',
+        scope: ['string'],
         settings: {
           foreground: SolarizedColor.Cyan.color
         }
       },
       {
         name: 'variable.parameter',
-        scope: 'variable.parameter',
+        scope: ['variable.parameter'],
         settings: {
           foreground: SolarizedColor.Violet.color,
           fontStyle: ''

@@ -1,8 +1,10 @@
+import * as Color from 'color';
 import { SolarizedColor } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
+import { SymanticTokenSetting } from './syntax-token-setting';
 
 export class SemanticTokenColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): Record<string, Color | SymanticTokenSetting> {
     return {
       class: SolarizedColor.Green.color,
       comment: this.colorPalette.syntax.comments,
@@ -11,10 +13,7 @@ export class SemanticTokenColorSet extends ColorSet {
       enumMember: SolarizedColor.Violet.color,
       event: SolarizedColor.Orange.color,
       function: { foreground: SolarizedColor.Blue.color, bold: false },
-      interface: {
-        italic: true,
-        foreground: SolarizedColor.Green.color
-      },
+      interface: { italic: true, foreground: SolarizedColor.Green.color },
       keyword: SolarizedColor.Magenta.color,
       method: { foreground: SolarizedColor.Blue.color, bold: false },
       namespace: SolarizedColor.Green.color,
@@ -30,9 +29,7 @@ export class SemanticTokenColorSet extends ColorSet {
         bold: true
       },
       variable: SolarizedColor.Violet.color,
-      '*.readonly': {
-        underline: true
-      }
+      '*.readonly': { underline: true }
     };
   }
 }

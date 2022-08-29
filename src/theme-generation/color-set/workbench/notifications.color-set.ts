@@ -1,3 +1,4 @@
+import * as Color from 'color';
 import { SolarizedColor } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
@@ -5,7 +6,7 @@ import { ColorSet } from '../color-set';
  * @See https://code.visualstudio.com/api/references/theme-color#notification-colors
  */
 export class NotifcicationsColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): Record<string, Color> {
     return {
       'notifications.background': this.colorPalette.border,
       'notifications.foreground': this.colorPalette.defaultForeground,

@@ -21,18 +21,29 @@ export class AccentColorCommand {
   private static async selectAndUpdateAccentColor() {
     const selectedAccentColorName =
       await AccentColorCommand.quickPickAccentColor();
-    const selectedAccentColor = this.getSolarizedColorByName(
-      selectedAccentColorName
-    );
-    await ThemeConfigManager.updateAccentColor(selectedAccentColor);
-    const customizer = new AccentColorCustomizer(selectedAccentColor);
-    return await customizer.customizeAccentColor();
+
+    if (selectedAccentColorName) {
+      return await AccentColorCommand.onAccentColorSelectedInQuickPick(
+        selectedAccentColorName
+      );
+    }
+
+    return false;
   }
 
   private static async quickPickAccentColor() {
     return vscode.window.showQuickPick(
       this.getSolarizedColorNamesWithoutBaseColors()
     );
+  }
+
+  private static async onAccentColorSelectedInQuickPick(
+    selectedAccentColorName: string
+  ) {
+    const selectedAccentColor = SolarizedColor.findByName(selectedAccentColorName);
+    await ThemeConfigManager.updateAccentColor(selectedAccentColor);
+    const customizer = new AccentColorCustomizer(selectedAccentColor);
+    return await customizer.customizeAccentColor();
   }
 
   private static getSolarizedColorNamesWithoutBaseColors(): string[] {
@@ -42,11 +53,5 @@ export class AccentColorCommand {
           !solarizedColor.name.includes('Base')
       )
       .map((solarizedColor) => solarizedColor.name);
-  }
-
-  private static getSolarizedColorByName(name: string): SolarizedColor {
-    return SolarizedColor.values().find(
-      (solarizedColor) => solarizedColor.name === name
-    );
   }
 }

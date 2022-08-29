@@ -1,8 +1,9 @@
 import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
+import { TextMateToken } from './text-mate-token';
 
 export class HtmlXmlTokenColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): TextMateToken[] {
     return [
       {
         name: 'HTML+XML.attribute',

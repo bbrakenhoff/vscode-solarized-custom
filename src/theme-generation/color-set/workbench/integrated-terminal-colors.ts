@@ -1,3 +1,4 @@
+import * as Color from 'color';
 import { SolarizedColor } from '../../../solarized-color';
 import { ColorSet } from '../color-set';
 
@@ -5,7 +6,7 @@ import { ColorSet } from '../color-set';
  * @See https://code.visualstudio.com/api/references/theme-color#integrated-terminal-colors
  */
 export class IntegratedTerminalColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): Record<string, Color> {
     return {
       'terminal.ansiBrightBlack': SolarizedColor.Base01.color,
       'terminal.ansiBrightBlue': SolarizedColor.Base0.color,
@@ -22,7 +23,7 @@ export class IntegratedTerminalColorSet extends ColorSet {
       'terminal.ansiMagenta': SolarizedColor.Magenta.color,
       'terminal.ansiRed': SolarizedColor.Red.color,
       'terminal.ansiWhite': SolarizedColor.Base2.color,
-      'terminal.ansiYellow': SolarizedColor.Yellow.color,
+      'terminal.ansiYellow': SolarizedColor.Yellow.color
     };
   }
 }

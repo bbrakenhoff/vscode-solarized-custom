@@ -1,10 +1,9 @@
-import {
-  SolarizedColor
-} from '../../../../solarized-color';
+import { SolarizedColor } from '../../../../solarized-color';
 import { ColorSet } from '../../color-set';
+import { TextMateToken } from './text-mate-token';
 
 export class JsonTokenColorSet extends ColorSet {
-  propertiesAll() {
+  propertiesAll(): TextMateToken[] {
     return [
       {
         name: 'JSON.quotes',

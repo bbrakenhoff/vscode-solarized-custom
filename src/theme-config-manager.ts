@@ -9,51 +9,54 @@ export class ThemeConfigManager {
   private static readonly CONFIG_IDENTIFIER_COLOR_THEME =
     'workbench.colorTheme';
 
-  static getCurrentColorTheme() {
+  static getCurrentColorTheme(): string | undefined {
     return vscode.workspace
       .getConfiguration()
       .get<string>(ThemeConfigManager.CONFIG_IDENTIFIER_COLOR_THEME);
   }
 
   static isSolarizedCustomActivated(): boolean {
-    return ThemeConfigManager.getCurrentColorTheme().startsWith(
-      'Solarized Custom'
+    const currentColorTheme: string | undefined =
+      ThemeConfigManager.getCurrentColorTheme();
+    return (
+      !!currentColorTheme && currentColorTheme.startsWith('Solarized Custom')
     );
   }
 
-  static getCurrentColorCustomizations(): any {
+  static getCurrentColorCustomizations(): unknown {
     return vscode.workspace
       .getConfiguration()
       .get(ThemeConfigManager.CONFIG_IDENTIFIER_COLOR_CUSTOMIZATIONS);
   }
 
-  static async updateColorCustomizations(config: any) {
+  static async updateColorCustomizations(config: unknown) {
     return ThemeConfigManager.update(
       ThemeConfigManager.CONFIG_IDENTIFIER_COLOR_CUSTOMIZATIONS,
       config
     );
   }
 
-  private static async update(identifier: string, config: any) {
+  private static async update(identifier: string, config: unknown) {
     try {
       await vscode.workspace
         .getConfiguration()
         .update(identifier, config, true);
       return true;
     } catch (error) {
-      await vscode.window.showErrorMessage(error);
+      await vscode.window.showErrorMessage(`${error}`);
       return false;
     }
   }
 
   static getCurrentAccentColor(): SolarizedColor {
-    const nameCurrentAccentColor = vscode.workspace
+    const nameCurrentAccentColor: string | undefined = vscode.workspace
       .getConfiguration()
       .get(ThemeConfigManager.CONFIG_IDENTIFIER_ACCENT_COLOR);
 
-    return SolarizedColor.values().find((solarizedColor) => {
-      return solarizedColor.name === nameCurrentAccentColor;
-    });
+    return (
+      SolarizedColor.findByName(nameCurrentAccentColor) ||
+      SolarizedColor.Magenta
+    );
   }
 
   static async updateAccentColor({ name }: SolarizedColor) {
