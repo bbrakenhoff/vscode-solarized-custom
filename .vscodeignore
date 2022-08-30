@@ -1,2 +1,5 @@
-./src/**
-./node_modules/
+node_modules
+.vscode/**
+src/**
+vsc-extension-quickstart.md
+.vscode/** 
