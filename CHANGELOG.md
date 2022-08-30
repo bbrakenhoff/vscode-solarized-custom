@@ -179,7 +179,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 
 - Keywords not bold anymore
 
-## [4.0.0] - 2022/08/
+## [4.0.0] - 2022/08/30
 
 ### Added
 
@@ -189,3 +189,6 @@ All notable changes to the "solarized-light-custom" extension will be documented
 ### Changed
 
 - Completely rebuild themes
+
+### Deleted
+- Solarized Custom Extra Dark Theme

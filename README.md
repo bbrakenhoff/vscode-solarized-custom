@@ -4,7 +4,11 @@ Custom solarized theme for [Visual Studio Code](https://code.visualstudio.com),
 optimized for JavaScript, TypeScript, (S)CSS, HTML and JSON, but maybe
 some other languages work too.
 
-### Screenshots
+## Accent color
+You can change the accent color through the command palette, or by setting `solarizedCustomTheme.accentColor` inside `settings.json`
+Type solarized custom, choose Solarized custom Theme: Set accent color, and pick one color from the list.
+
+## Screenshots
 
 #### Solarized Custom Light
 
