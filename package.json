@@ -2,7 +2,7 @@
   "name": "solarized-light-custom",
   "displayName": "Solarized Custom",
   "description": "Custom Solarized themes for vs-code",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "publisher": "bbrakenhoff",
   "engines": {
     "node": ">=12",

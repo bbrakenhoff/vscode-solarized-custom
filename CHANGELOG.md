@@ -179,7 +179,7 @@ All notable changes to the "solarized-light-custom" extension will be documented
 
 - Keywords not bold anymore
 
-## [4.0.0] - 2022/08/30
+## [4.0.1] - 2022/08/30
 
 ### Added
 
